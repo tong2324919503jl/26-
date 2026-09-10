@@ -1,0 +1,89 @@
+{
+  "status": "polygon",
+  "vertices": [
+    [
+      587.6633415579438,
+      406.76668879718375
+    ],
+    [
+      599.25215404201,
+      384.56636354095184
+    ],
+    [
+      612.0929892496945,
+      392.80689011618324
+    ],
+    [
+      600.9992900944385,
+      415.99751747841214
+    ]
+  ],
+  "feasible_point": [
+    587.6633415579438,
+    406.76668879718375
+  ],
+  "diameter_m": 31.47967474778005,
+  "diameter_endpoints": [
+    [
+      599.25215404201,
+      384.56636354095184
+    ],
+    [
+      600.9992900944385,
+      415.99751747841214
+    ]
+  ],
+  "diameter_circle": {
+    "center": [
+      600.1257220682243,
+      400.281940509682
+    ],
+    "radius_m": 15.739837373890024,
+    "diameter_m": 31.47967474778005,
+    "support_points": [
+      [
+        599.25215404201,
+        384.56636354095184
+      ],
+      [
+        600.9992900944385,
+        415.99751747841214
+      ]
+    ],
+    "covers_region": true
+  },
+  "diameter_circle_covers": true,
+  "minimum_enclosing_circle": {
+    "center": [
+      600.1257220682243,
+      400.281940509682
+    ],
+    "radius_m": 15.739837373890024,
+    "diameter_m": 31.47967474778005,
+    "support_points": [
+      [
+        599.25215404201,
+        384.56636354095184
+      ],
+      [
+        600.9992900944385,
+        415.99751747841214
+      ]
+    ]
+  },
+  "area_m2": 396.1208423987789,
+  "max_distance_from_diameter_center_m": 15.739837373890024,
+  "optical_localization": {
+    "radius_m": 20.0,
+    "guaranteed_from_enclosing_center": true,
+    "radius_margin_m": 4.260162626109976,
+    "diameter_only_sufficient": true,
+    "diameter_only_necessary": true,
+    "scope": "Geometric coverage of the angular region; no travel or simulator action implied."
+  },
+  "measurement_count": 2,
+  "model": "Closed angular sectors only; no range or target-disk clipping.",
+  "angle_convention": "Degrees counterclockwise from the positive x-axis.",
+  "example_name": "队友算例合并：800米基线两站交会",
+  "data_origin": "Team-created example adapted from B题第一二问_GitHub项目.zip / b-question1-2/examples/q1_two_bearings.json; not official simulator data."
+}

@@ -1,0 +1,729 @@
+{
+  "method": "four_disk_target_conditioned_continuous_minimax_upper_bound",
+  "data_provenance": "自建示例/用户输入；不是官方模拟器测试数据",
+  "first_station_xy_m": [
+    1500.0,
+    0.0
+  ],
+  "first_bearing_deg": 0.0,
+  "error_deg": 1.0,
+  "move_budget_m": 1100.0,
+  "grid_step_m": 10.0,
+  "near_best_tolerance": 0.1,
+  "guaranteed_reception": true,
+  "guaranteed_direction": true,
+  "optimization_scope": "已访问有限候选集、统一精度下的保证上界最小；未证明连续域全局最优",
+  "continuous_candidate_region": "四圆盘交集 ∩ 移动预算圆 ∩ {到首扇形垂距>5} ∩ {min(D_strip,B_geometry)<=threshold}",
+  "candidate_threshold_m": 17.345662734262188,
+  "selected": {
+    "local_xy_m": [
+      220.9419376327556,
+      195.47291422364256
+    ],
+    "xy_m": [
+      1720.9419376327555,
+      195.47291422364256
+    ],
+    "diameter_upper_bound_m": 15.768784303874716,
+    "analytic_diameter_upper_bound_m": 856.0853101947221,
+    "geometric_diameter_upper_bound_m": 15.768784303874716,
+    "worst_cell_center_local_deg": 290.40000000000003,
+    "worst_cell_outer_polygon_local_xy_m": [
+      [
+        295.7157224159114,
+        5.16173713606465
+      ],
+      [
+        287.82284770996995,
+        5.023966495602156
+      ],
+      [
+        291.3731934708544,
+        -5.085938011376099
+      ],
+      [
+        299.7998533985372,
+        -5.233025907541811
+      ]
+    ],
+    "move_distance_m": 295.0,
+    "move_and_detect_time_s": 64.0,
+    "direction_clearance_m": 191.5871742574042
+  },
+  "fastest_near_best": {
+    "local_xy_m": [
+      199.1715552109343,
+      167.1247785185002
+    ],
+    "xy_m": [
+      1699.1715552109342,
+      167.1247785185002
+    ],
+    "diameter_upper_bound_m": 17.142573708796878,
+    "analytic_diameter_upper_bound_m": 1086.323894442709,
+    "geometric_diameter_upper_bound_m": 17.142573708796878,
+    "worst_cell_center_local_deg": 299.2,
+    "worst_cell_outer_polygon_local_xy_m": [
+      [
+        293.64667114659306,
+        5.125621711818889
+      ],
+      [
+        285.9249291173429,
+        4.99083820333938
+      ],
+      [
+        291.31620024171457,
+        -5.084943190860994
+      ],
+      [
+        299.6865020308535,
+        -5.231047352059189
+      ]
+    ],
+    "move_distance_m": 260.0,
+    "move_and_detect_time_s": 57.0,
+    "direction_clearance_m": 163.62330167295772
+  },
+  "pareto_frontier": [
+    {
+      "local_xy_m": [
+        42.261826174069945,
+        90.63077870366499
+      ],
+      "xy_m": [
+        1542.26182617407,
+        90.63077870366499
+      ],
+      "diameter_upper_bound_m": 50.23107801919154,
+      "analytic_diameter_upper_bound_m": 3867.9671464795124,
+      "geometric_diameter_upper_bound_m": 50.23107801919154,
+      "worst_cell_center_local_deg": 338.5,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          272.5529797794364,
+          4.757429959429386
+        ],
+        [
+          250.01520048754182,
+          4.364031558551528
+        ],
+        [
+          271.9570666519479,
+          -4.747028257097577
+        ],
+        [
+          299.32257844606886,
+          -5.224695042257864
+        ]
+      ],
+      "move_distance_m": 99.99999999999999,
+      "move_and_detect_time_s": 24.999999999999996,
+      "direction_clearance_m": 89.87940462991669
+    },
+    {
+      "local_xy_m": [
+        50.000000000000014,
+        86.60254037844386
+      ],
+      "xy_m": [
+        1550.0,
+        86.60254037844386
+      ],
+      "diameter_upper_bound_m": 49.95778258455886,
+      "analytic_diameter_upper_bound_m": 4262.023757010529,
+      "geometric_diameter_upper_bound_m": 49.95778258455886,
+      "worst_cell_center_local_deg": 338.8,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          273.02643253590725,
+          4.765694108034029
+        ],
+        [
+          250.97666947035862,
+          4.380814062073063
+        ],
+        [
+          273.34740812582976,
+          -4.771296757796579
+        ],
+        [
+          300.000000001,
+          -5.236519479482961
+        ],
+        [
+          300.000000001,
+          -5.1319295455150025
+        ]
+      ],
+      "move_distance_m": 100.0,
+      "move_and_detect_time_s": 25.0,
+      "direction_clearance_m": 85.71673007021123
+    },
+    {
+      "local_xy_m": [
+        12.159354561253496,
+        138.9820586029472
+      ],
+      "xy_m": [
+        1512.1593545612534,
+        138.9820586029472
+      ],
+      "diameter_upper_bound_m": 43.31444657968133,
+      "analytic_diameter_upper_bound_m": 1796.9421261616694,
+      "geometric_diameter_upper_bound_m": 43.31444657968133,
+      "worst_cell_center_local_deg": 332.3,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          279.37910106342997,
+          4.876580349649381
+        ],
+        [
+          257.303722025469,
+          4.49125317522676
+        ],
+        [
+          274.21471572385474,
+          -4.7864356682328415
+        ],
+        [
+          299.5136357642864,
+          -5.228029960152362
+        ]
+      ],
+      "move_distance_m": 139.51294748825046,
+      "move_and_detect_time_s": 32.90258949765009,
+      "direction_clearance_m": 138.74868096442924
+    },
+    {
+      "local_xy_m": [
+        181.26155740732997,
+        84.52365234813989
+      ],
+      "xy_m": [
+        1681.26155740733,
+        84.52365234813989
+      ],
+      "diameter_upper_bound_m": 23.271216178321207,
+      "analytic_diameter_upper_bound_m": 3682.3982462965387,
+      "geometric_diameter_upper_bound_m": 23.271216178321207,
+      "worst_cell_center_local_deg": 321.8,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          286.22533930073655,
+          4.996081882595615
+        ],
+        [
+          278.75797431535386,
+          4.865738541933061
+        ],
+        [
+          290.9287224082638,
+          -5.078179740119865
+        ],
+        [
+          299.7244012373419,
+          -5.231708885169173
+        ]
+      ],
+      "move_distance_m": 199.99999999999997,
+      "move_and_detect_time_s": 44.99999999999999,
+      "direction_clearance_m": 81.34732861516004
+    },
+    {
+      "local_xy_m": [
+        163.83040885779835,
+        114.71528727020922
+      ],
+      "xy_m": [
+        1663.8304088577984,
+        114.71528727020922
+      ],
+      "diameter_upper_bound_m": 22.648700197852747,
+      "analytic_diameter_upper_bound_m": 2037.6383648130588,
+      "geometric_diameter_upper_bound_m": 22.648700197852747,
+      "worst_cell_center_local_deg": 317.5,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          288.02806932572935,
+          5.02754865222991
+        ],
+        [
+          279.3742384410968,
+          4.876495472260835
+        ],
+        [
+          289.82570726138977,
+          -5.058926539114371
+        ],
+        [
+          299.6428496690011,
+          -5.230285397248786
+        ]
+      ],
+      "move_distance_m": 200.0,
+      "move_and_detect_time_s": 45.0,
+      "direction_clearance_m": 111.83858069414937
+    },
+    {
+      "local_xy_m": [
+        168.52977748617516,
+        141.41327413103863
+      ],
+      "xy_m": [
+        1668.5297774861751,
+        141.41327413103863
+      ],
+      "diameter_upper_bound_m": 20.5211989338251,
+      "analytic_diameter_upper_bound_m": 1440.369669809669,
+      "geometric_diameter_upper_bound_m": 20.5211989338251,
+      "worst_cell_center_local_deg": 310.8,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          290.6460920566926,
+          5.073246408982425
+        ],
+        [
+          282.0474105831061,
+          4.92315586556391
+        ],
+        [
+          290.3571357517481,
+          -5.068202657918281
+        ],
+        [
+          299.87838731211394,
+          -5.23439672210236
+        ]
+      ],
+      "move_distance_m": 219.99999999999997,
+      "move_and_detect_time_s": 48.99999999999999,
+      "direction_clearance_m": 138.4504860309642
+    },
+    {
+      "local_xy_m": [
+        183.8506663485547,
+        154.2690263247694
+      ],
+      "xy_m": [
+        1683.8506663485548,
+        154.2690263247694
+      ],
+      "diameter_upper_bound_m": 18.62279718647478,
+      "analytic_diameter_upper_bound_m": 1241.0921355239748,
+      "geometric_diameter_upper_bound_m": 18.62279718647478,
+      "worst_cell_center_local_deg": 305.0,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          292.42420520342716,
+          5.104283489408393
+        ],
+        [
+          284.3689346755159,
+          4.963678219329344
+        ],
+        [
+          291.13189841896457,
+          -5.081726190578503
+        ],
+        [
+          299.9504044932154,
+          -5.235653786674433
+        ]
+      ],
+      "move_distance_m": 239.99999999999997,
+      "move_and_detect_time_s": 52.99999999999999,
+      "direction_clearance_m": 151.03689385196097
+    },
+    {
+      "local_xy_m": [
+        199.1715552109343,
+        167.1247785185002
+      ],
+      "xy_m": [
+        1699.1715552109342,
+        167.1247785185002
+      ],
+      "diameter_upper_bound_m": 17.142573708796878,
+      "analytic_diameter_upper_bound_m": 1086.323894442709,
+      "geometric_diameter_upper_bound_m": 17.142573708796878,
+      "worst_cell_center_local_deg": 299.2,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          293.64667114659306,
+          5.125621711818889
+        ],
+        [
+          285.9249291173429,
+          4.99083820333938
+        ],
+        [
+          291.31620024171457,
+          -5.084943190860994
+        ],
+        [
+          299.6865020308535,
+          -5.231047352059189
+        ]
+      ],
+      "move_distance_m": 260.0,
+      "move_and_detect_time_s": 57.0,
+      "direction_clearance_m": 163.62330167295772
+    },
+    {
+      "local_xy_m": [
+        199.99803875903459,
+        173.85564268248442
+      ],
+      "xy_m": [
+        1699.9980387590347,
+        173.85564268248442
+      ],
+      "diameter_upper_bound_m": 17.06719814040713,
+      "analytic_diameter_upper_bound_m": 1027.5800970957528,
+      "geometric_diameter_upper_bound_m": 17.06719814040713,
+      "worst_cell_center_local_deg": 298.1,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          294.1004997546885,
+          5.133543319639476
+        ],
+        [
+          286.2220089021935,
+          4.996023750272808
+        ],
+        [
+          291.3700845424927,
+          -5.085883744829688
+        ],
+        [
+          299.88312370787355,
+          -5.23447939619787
+        ]
+      ],
+      "move_distance_m": 265.0,
+      "move_and_detect_time_s": 58.0,
+      "direction_clearance_m": 170.33871656693293
+    },
+    {
+      "local_xy_m": [
+        203.77158666014844,
+        177.13593782743698
+      ],
+      "xy_m": [
+        1703.7715866601484,
+        177.13593782743698
+      ],
+      "diameter_upper_bound_m": 16.771746902127532,
+      "analytic_diameter_upper_bound_m": 996.9943089146029,
+      "geometric_diameter_upper_bound_m": 16.771746902127532,
+      "worst_cell_center_local_deg": 296.7,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          294.26491422029477,
+          5.136413184811773
+        ],
+        [
+          286.4302505664067,
+          4.99965862204241
+        ],
+        [
+          291.2724405962092,
+          -5.084179363407461
+        ],
+        [
+          299.7198049149132,
+          -5.231628656062749
+        ]
+      ],
+      "move_distance_m": 270.0,
+      "move_and_detect_time_s": 59.0,
+      "direction_clearance_m": 173.5526546153656
+    },
+    {
+      "local_xy_m": [
+        207.5451345612623,
+        180.4162329723895
+      ],
+      "xy_m": [
+        1707.5451345612623,
+        180.4162329723895
+      ],
+      "diameter_upper_bound_m": 16.53178790688654,
+      "analytic_diameter_upper_bound_m": 967.9786258725245,
+      "geometric_diameter_upper_bound_m": 16.53178790688654,
+      "worst_cell_center_local_deg": 295.40000000000003,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          294.74139040355806,
+          5.144730107527383
+        ],
+        [
+          286.92917417163045,
+          5.00836736596581
+        ],
+        [
+          291.4985268847832,
+          -5.0881257142539
+        ],
+        [
+          299.9051605139338,
+          -5.234864050078462
+        ]
+      ],
+      "move_distance_m": 275.0,
+      "move_and_detect_time_s": 60.0,
+      "direction_clearance_m": 176.76659266379832
+    },
+    {
+      "local_xy_m": [
+        214.49244407331383,
+        179.980530712231
+      ],
+      "xy_m": [
+        1714.492444073314,
+        179.980530712231
+      ],
+      "diameter_upper_bound_m": 16.07146191563354,
+      "analytic_diameter_upper_bound_m": 962.7270114851206,
+      "geometric_diameter_upper_bound_m": 16.07146191563354,
+      "worst_cell_center_local_deg": 293.7,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          295.09004654175106,
+          5.150815923057164
+        ],
+        [
+          287.501372740929,
+          5.018355129144751
+        ],
+        [
+          291.7202612486198,
+          -5.0919961019714854
+        ],
+        [
+          299.8776895328837,
+          -5.2343845423205915
+        ]
+      ],
+      "move_distance_m": 280.0,
+      "move_and_detect_time_s": 61.0,
+      "direction_clearance_m": 176.20970949395448
+    },
+    {
+      "local_xy_m": [
+        215.09223036349002,
+        186.97682326229457
+      ],
+      "xy_m": [
+        1715.09223036349,
+        186.97682326229457
+      ],
+      "diameter_upper_bound_m": 16.04363611569958,
+      "analytic_diameter_upper_bound_m": 914.2020340553466,
+      "geometric_diameter_upper_bound_m": 16.04363611569958,
+      "worst_cell_center_local_deg": 292.7,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          295.09753090089805,
+          5.15094656303202
+        ],
+        [
+          287.31968696763096,
+          5.0151837921753
+        ],
+        [
+          291.3288973328781,
+          -5.085164819411652
+        ],
+        [
+          299.66555668630946,
+          -5.23068174971023
+        ]
+      ],
+      "move_distance_m": 285.0,
+      "move_and_detect_time_s": 62.0,
+      "direction_clearance_m": 183.1944687606637
+    },
+    {
+      "local_xy_m": [
+        218.86577826460388,
+        190.2571184072471
+      ],
+      "xy_m": [
+        1718.865778264604,
+        190.2571184072471
+      ],
+      "diameter_upper_bound_m": 15.83798454103564,
+      "analytic_diameter_upper_bound_m": 889.2402453207491,
+      "geometric_diameter_upper_bound_m": 15.83798454103564,
+      "worst_cell_center_local_deg": 291.5,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          295.72404339258054,
+          5.161882379252677
+        ],
+        [
+          287.9366920186154,
+          5.025953655401271
+        ],
+        [
+          291.70950784744514,
+          -5.091808400655783
+        ],
+        [
+          300.000000001,
+          -5.236519479482961
+        ],
+        [
+          300.000000001,
+          -5.135763506640681
+        ]
+      ],
+      "move_distance_m": 290.0,
+      "move_and_detect_time_s": 63.0,
+      "direction_clearance_m": 186.4084068090964
+    },
+    {
+      "local_xy_m": [
+        220.9419376327556,
+        195.47291422364256
+      ],
+      "xy_m": [
+        1720.9419376327555,
+        195.47291422364256
+      ],
+      "diameter_upper_bound_m": 15.768784303874716,
+      "analytic_diameter_upper_bound_m": 856.0853101947221,
+      "geometric_diameter_upper_bound_m": 15.768784303874716,
+      "worst_cell_center_local_deg": 290.40000000000003,
+      "worst_cell_outer_polygon_local_xy_m": [
+        [
+          295.7157224159114,
+          5.16173713606465
+        ],
+        [
+          287.82284770996995,
+          5.023966495602156
+        ],
+        [
+          291.3731934708544,
+          -5.085938011376099
+        ],
+        [
+          299.7998533985372,
+          -5.233025907541811
+        ]
+      ],
+      "move_distance_m": 295.0,
+      "move_and_detect_time_s": 64.0,
+      "direction_clearance_m": 191.5871742574042
+    }
+  ],
+  "safe_finite_bound_grid_count": 716,
+  "near_best_grid_count": 196,
+  "search_history": [
+    {
+      "level": 1,
+      "candidate_count": 320,
+      "radial_step_m": 100.0,
+      "azimuth_step_deg": 5.0,
+      "angle_step_deg": 1.0,
+      "selected_local_xy_m": [
+        212.13203435596427,
+        212.13203435596427
+      ],
+      "diameter_upper_bound_m": 20.785743777986607
+    },
+    {
+      "level": 2,
+      "candidate_count": 560,
+      "radial_step_m": 20.0,
+      "azimuth_step_deg": 1.0,
+      "angle_step_deg": 0.5,
+      "selected_local_xy_m": [
+        208.08055113367038,
+        187.3565697804803
+      ],
+      "diameter_upper_bound_m": 17.58982869716342
+    },
+    {
+      "level": 3,
+      "candidate_count": 716,
+      "radial_step_m": 5.0,
+      "azimuth_step_deg": 0.25,
+      "angle_step_deg": 0.25,
+      "selected_local_xy_m": [
+        215.09223036349002,
+        186.97682326229457
+      ],
+      "diameter_upper_bound_m": 16.413796676252943
+    }
+  ],
+  "circle_sides": 360,
+  "final_angle_step_deg": 0.1,
+  "widened_error_deg": 1.05,
+  "first_outer_polygon_local_xy_m": [
+    [
+      300.000000001,
+      5.2365194794828795
+    ],
+    [
+      4.999238474781976,
+      0.08726203316911008
+    ],
+    [
+      4.999238474781956,
+      -0.08726203316918113
+    ],
+    [
+      300.000000001,
+      -5.236519479482961
+    ]
+  ],
+  "baseline_analytic_selected": {
+    "local_xy_m": [
+      750.0,
+      660.0
+    ],
+    "xy_m": [
+      2250.0,
+      660.0
+    ],
+    "diameter_upper_bound_m": 131.22100725349134,
+    "move_distance_m": 999.0495483208027,
+    "move_and_detect_time_s": 204.80990966416056
+  },
+  "numerical_note": "圆外包和半步增宽保证连续集合包含；双精度容差计算，不是区间算术认证",
+  "synthetic_observation": {
+    "status": "direction",
+    "source_xy_m": [
+      1720.0,
+      2.0
+    ],
+    "reception_radius_m": 1000.0,
+    "second_bearing_deg": 270.1210533333104,
+    "second_fixed_error_deg": 0.4,
+    "source_distance_from_second_m": 193.4752071576432,
+    "posterior_outer_polygon_xy_m": [
+      [
+        1724.6903152228847,
+        3.9219840419572756
+      ],
+      [
+        1718.0014262929662,
+        3.8052290513879137
+      ],
+      [
+        1717.8847000585022,
+        -3.803191587386597
+      ],
+      [
+        1724.8438629007367,
+        -3.92466422664384
+      ]
+    ],
+    "posterior_outer_polygon_diameter_m": 10.323283819653382,
+    "polygon_note": "与评分共用首验外包，含首距下界的有效约束x>=5cos(error)；圆用360个局部相切半平面，另裁入第二扇区、接收圆与两条有效条带；未完整扣除5米近区"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": "自建边界先验示例：首点(1500,0)向东，1800m目标圆将可能源范围缩短；不是官方数据。",
+  "selection_mode": "refined",
+  "first_station_xy_m": [1500.0, 0.0],
+  "first_bearing_deg": 0.0,
+  "grid_step_m": 10.0,
+  "move_budget_m": 1100.0,
+  "near_best_tolerance": 0.10,
+  "circle_sides": 360,
+  "final_angle_step_deg": 0.1,
+  "synthetic_source_xy_m": [1720.0, 2.0],
+  "synthetic_reception_radius_m": 1000.0,
+  "synthetic_second_error_deg": 0.4
+}

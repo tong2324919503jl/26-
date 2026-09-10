@@ -1,0 +1,11 @@
+{
+  "name": "队友算例合并：800米基线两站交会",
+  "plot_title": "800 m baseline: two bearing intersection",
+  "data_origin": "Team-created example adapted from B题第一二问_GitHub项目.zip / b-question1-2/examples/q1_two_bearings.json; not official simulator data.",
+  "reference_source": [600.0, 400.0],
+  "compatible_reception_radius_m": 1200,
+  "measurements": [
+    {"x": 0.0, "y": 0.0, "bearing_deg": 33.690067525979785},
+    {"x": 800.0, "y": 0.0, "bearing_deg": 116.56505117707799}
+  ]
+}

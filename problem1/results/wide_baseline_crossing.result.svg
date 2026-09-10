@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="660" viewBox="0 0 860 660">
+<rect width="860" height="660" fill="#f6f8fc"/>
+<g font-family="Arial, sans-serif" fill="#172b4d">
+<text x="42" y="43" font-size="23" font-weight="700">800 m baseline: two bearing intersection</text>
+<text x="42" y="72" font-size="14">Self-created example; coordinates in metres</text>
+<circle cx="430.0" cy="325" r="188.0" fill="none" stroke="#187c6c" stroke-width="2.5"/>
+<circle cx="430.0" cy="325.0" r="188.0" fill="none" stroke="#df7524" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="281.14665,247.54477 419.56592,512.71023 572.93961,414.28361 440.43408,137.28977" fill="#467fe633" stroke="#315a9c" stroke-width="2.5"/>
+<circle cx="281.1466490867761" cy="247.5447729166068" r="4" fill="#315a9c"/>
+<text x="290.1466490867761" y="237.5447729166068" font-size="14">V1</text>
+<circle cx="419.56591576983453" cy="512.71022850734" r="4" fill="#315a9c"/>
+<text x="428.56591576983453" y="502.71022850734005" font-size="14">V2</text>
+<circle cx="572.9396109167272" cy="414.2836082480088" r="4" fill="#315a9c"/>
+<text x="581.9396109167272" y="404.2836082480088" font-size="14">V3</text>
+<circle cx="440.43408423016547" cy="137.28977149265995" r="4" fill="#315a9c"/>
+<text x="449.43408423016547" y="127.28977149265995" font-size="14">V4</text>
+<text x="42" y="555" font-size="16">Region diameter D = 31.479675 m</text>
+<text x="42" y="580" font-size="16">Minimum covering radius R = 15.739837 m</text>
+<text x="42" y="605" font-size="16">Diameter-D disk covers region: TRUE</text>
+<line x1="480" y1="557" x2="520" y2="557" stroke="#187c6c" stroke-width="3"/>
+<text x="532" y="562" font-size="14">Minimum covering circle</text>
+<line x1="480" y1="588" x2="520" y2="588" stroke="#df7524" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="532" y="593" font-size="14">Circle with diameter D</text>
+</g></svg>

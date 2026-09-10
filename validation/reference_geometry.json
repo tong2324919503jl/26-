@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "reference": "scipy.optimize.linprog / HiGHS",
+  "scipy_version": "1.13.1",
+  "seed": 611209,
+  "random_halfplane_systems": 500,
+  "explicit_edge_cases": 8,
+  "classification_counts": {
+    "empty": 332,
+    "unbounded": 131,
+    "bounded": 45
+  },
+  "bounded_support_values_checked": 360,
+  "failures": [],
+  "scope": "Deterministic synthetic geometry; no official simulator. HiGHS has floating tolerances; extreme near-parallel cases remain in the exact solver's own regression suite."
+}

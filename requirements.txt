@@ -1,3 +1,4 @@
-# Solve and verification use the Python standard library.
+# Core solve and default verification use the Python standard library.
+# The optional verify_project.py --reference check additionally needs SciPy.
 # Only rebuilding PDF searchable text requires this dependency.
 pypdf>=5,<7

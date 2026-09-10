@@ -17,8 +17,9 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from problem1.solve import (HalfPlane, Measurement, analyze_halfplanes, bearing_halfplanes,
+                            convex_hull, diameter_squared_bruteforce, diameter_squared_calipers,
                             direction, distance_squared, intersection_vertices,
-                            load_measurements, localize, minimum_enclosing_circle)
+                            load_measurements, localize, minimum_enclosing_circle, polygon_area)
 
 
 class HalfPlaneGeometryTests(unittest.TestCase):
@@ -105,6 +106,78 @@ class HalfPlaneGeometryTests(unittest.TestCase):
         self.assertEqual(analyze_halfplanes(base), analyze_halfplanes(changed))
 
 
+class CalipersAndCoverageTests(unittest.TestCase):
+    def test_calipers_matches_independent_exact_pairs_on_random_hulls(self):
+        rng = random.Random(20260911)
+        for _ in range(200):
+            hull = convex_hull((Fraction(rng.randint(-1000, 1000)),
+                                Fraction(rng.randint(-1000, 1000))) for _ in range(35))
+            self.assertEqual(diameter_squared_calipers(hull), diameter_squared_bruteforce(hull))
+
+    def test_parallel_support_ties_and_large_translation(self):
+        for offset in (0, 10**12):
+            for coordinates in ([(0, 0), (3, 0), (3, 4), (0, 4)],
+                                [(-4, 0), (-2, -3), (2, -3), (4, 0), (2, 3), (-2, 3)]):
+                hull = convex_hull((Fraction(x + offset), Fraction(y - offset)) for x, y in coordinates)
+                self.assertEqual(diameter_squared_calipers(hull), diameter_squared_bruteforce(hull))
+
+    def test_calipers_degenerate_cases(self):
+        point = (Fraction(2), Fraction(3))
+        self.assertEqual(diameter_squared_calipers([point]), (0, (point, point)))
+        second = (Fraction(5), Fraction(7))
+        self.assertEqual(diameter_squared_calipers([point, second]), (25, (point, second)))
+        with self.assertRaises(ValueError):
+            diameter_squared_calipers([])
+
+    def test_area_is_translation_invariant_and_zero_for_degenerate_sets(self):
+        rectangle = [(0, 0), (3, 0), (3, 4), (0, 4)]
+        for offset in (0, 10**12):
+            points = [(Fraction(x + offset), Fraction(y - offset)) for x, y in rectangle]
+            self.assertEqual(polygon_area(points), 12)
+            self.assertEqual(polygon_area(list(reversed(points))), 12)
+            self.assertEqual(polygon_area(points[:2]), 0)
+        self.assertEqual(polygon_area([]), 0)
+
+    def test_optical_decision_uses_radius_and_preserves_exact_threshold(self):
+        # A length-40 segment satisfies the radius condition exactly, while
+        # the diameter-only sufficient condition deliberately cannot certify it.
+        result = analyze_halfplanes([HalfPlane(-1, 0, 0), HalfPlane(1, 0, 40),
+                                     HalfPlane(0, -1, 0), HalfPlane(0, 1, 0)])
+        decision = result["optical_localization"]
+        self.assertTrue(decision["guaranteed_from_enclosing_center"])
+        self.assertTrue(decision["diameter_only_necessary"])
+        self.assertFalse(decision["diameter_only_sufficient"])
+        self.assertEqual(decision["radius_margin_m"], 0)
+        # A tiny true excess cannot be accepted by a floating tolerance.
+        length = Fraction(40) + Fraction(1, 10**12)
+        too_long = analyze_halfplanes([HalfPlane(-1, 0, 0), HalfPlane(1, 0, length),
+                                       HalfPlane(0, -1, 0), HalfPlane(0, 1, 0)])
+        self.assertFalse(too_long["optical_localization"]["guaranteed_from_enclosing_center"])
+        self.assertFalse(too_long["optical_localization"]["diameter_only_necessary"])
+
+    def test_diameter_midpoint_can_be_worse_than_minimum_circle_center(self):
+        result = analyze_halfplanes([HalfPlane(0, -1, 0), HalfPlane(-3, 2, 0),
+                                     HalfPlane(3, 2, 12)])
+        self.assertEqual(result["area_m2"], 6)
+        self.assertEqual(result["max_distance_from_diameter_center_m"], 3)
+        self.assertLess(result["minimum_enclosing_circle"]["radius_m"], 3)
+
+    def test_exact_diameter_40_is_necessary_but_not_sufficient(self):
+        # Exact acute triangle (0,0), (40,0), (20,30), avoiding trig rounding.
+        result = analyze_halfplanes([HalfPlane(0, -1, 0), HalfPlane(-3, 2, 0),
+                                     HalfPlane(3, 2, 120)])
+        self.assertEqual(result["diameter_m"], 40)
+        self.assertTrue(result["optical_localization"]["diameter_only_necessary"])
+        self.assertFalse(result["optical_localization"]["guaranteed_from_enclosing_center"])
+        self.assertAlmostEqual(result["minimum_enclosing_circle"]["radius_m"], 65 / 3)
+
+    def test_empty_and_unbounded_have_no_finite_coverage_decision(self):
+        for planes in ([], [HalfPlane(0, 0, -1)]):
+            result = analyze_halfplanes(planes)
+            self.assertIsNone(result["area_m2"])
+            self.assertIsNone(result["optical_localization"])
+
+
 class BearingModelTests(unittest.TestCase):
     def test_angles_wrap_consistently(self):
         self.assertEqual(direction(0), direction(360))
@@ -175,6 +248,34 @@ class BearingModelTests(unittest.TestCase):
             distance = math.hypot(float(source[0]) - measurement.x, float(source[1]) - measurement.y)
             self.assertGreater(distance, 5)
             self.assertLess(distance, 1500)
+
+    def test_teammate_optical_counterexample_is_physically_compatible(self):
+        document, measurements = load_measurements(ROOT / "problem1/examples/triangle_optical_counterexample.json")
+        result = localize(measurements)
+        self.assertEqual(result["status"], "polygon")
+        self.assertEqual(len(result["vertices"]), 3)
+        self.assertAlmostEqual(result["diameter_m"], 40, places=9)
+        self.assertAlmostEqual(result["minimum_enclosing_circle"]["radius_m"], 40 / math.sqrt(3), places=9)
+        self.assertFalse(result["optical_localization"]["guaranteed_from_enclosing_center"])
+        source = tuple(Fraction(value) for value in document["reference_source"])
+        self.assertTrue(all(p.contains(source) for p in bearing_halfplanes(measurements)))
+        for measurement in measurements:
+            actual = math.degrees(math.atan2(float(source[1]) - measurement.y, float(source[0]) - measurement.x))
+            error = (measurement.bearing_deg - actual + 180) % 360 - 180
+            self.assertLessEqual(abs(error), 1)
+            distance = math.hypot(float(source[0]) - measurement.x, float(source[1]) - measurement.y)
+            self.assertGreater(distance, 5)
+            self.assertLess(distance, document["compatible_reception_radius_m"])
+
+    def test_teammate_wide_baseline_source_and_coverage(self):
+        document, measurements = load_measurements(ROOT / "problem1/examples/wide_baseline_crossing.json")
+        source = tuple(Fraction(value) for value in document["reference_source"])
+        planes = bearing_halfplanes(measurements)
+        self.assertTrue(all(plane.contains(source) for plane in planes))
+        result = localize(measurements)
+        self.assertEqual(result["status"], "polygon")
+        self.assertEqual(len(result["vertices"]), 4)
+        self.assertTrue(result["optical_localization"]["guaranteed_from_enclosing_center"])
 
     def test_random_consistent_sources_and_vertex_feasibility(self):
         rng = random.Random(20260910)

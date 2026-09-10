@@ -1,10 +1,13 @@
 {
   "description": "自建演示案例，不是官方模拟器案例；第一点误差由源位置和给定读数决定，第二点固定为 +0.4 度。",
+  "selection_mode": "refined",
   "first_station_xy_m": [0.0, 0.0],
   "first_bearing_deg": 0.0,
   "grid_step_m": 10.0,
   "move_budget_m": 1100.0,
   "near_best_tolerance": 0.10,
+  "circle_sides": 360,
+  "final_angle_step_deg": 0.1,
   "synthetic_source_xy_m": [1200.0, 15.0],
   "synthetic_reception_radius_m": 1300.0,
   "synthetic_second_error_deg": 0.4

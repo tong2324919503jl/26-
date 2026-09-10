@@ -2,6 +2,7 @@
 import importlib.util
 import json
 import math
+import random
 from pathlib import Path
 import tempfile
 import unittest
@@ -97,6 +98,8 @@ class SecondPointTests(unittest.TestCase):
     def test_example_is_reproducible_and_writes_parseable_outputs(self):
         config=json.loads((MODULE_PATH.parent/"examples"/"synthetic_case.json").read_text(encoding="utf-8"))
         config["grid_step_m"]=25
+        config["search_stages"]=[[250,15,5]]
+        config["final_angle_step_deg"]=2
         with tempfile.TemporaryDirectory() as tmp:
             result=solve.run_example(config,Path(tmp))
             reread=json.loads((Path(tmp)/"selection.json").read_text(encoding="utf-8"))
@@ -106,6 +109,92 @@ class SecondPointTests(unittest.TestCase):
             self.assertTrue((Path(tmp)/"second_point_candidates.csv").is_file())
             import xml.etree.ElementTree as ET
             ET.parse(Path(tmp)/"candidate_region.svg")
+
+    def test_four_disk_boundary_extends_teammate_three_disk_region(self):
+        for beta in (10,33,45,59):
+            r=solve.safe_radial_limit(beta)
+            q=(r*math.cos(math.radians(beta)),r*math.sin(math.radians(beta)))
+            self.assertTrue(solve.guaranteed_reception(q))
+            self.assertFalse(solve.guaranteed_reception((q[0]*1.000001,q[1]*1.000001)))
+        r=solve.safe_radial_limit(33)
+        self.assertGreater(r,1000)
+        self.assertAlmostEqual(solve.safe_radial_limit(33,move_budget_m=600),600)
+
+    def test_conditioned_outer_prior_contains_physical_sources(self):
+        # 特别覆盖目标圆边界，世界坐标不能误作局部坐标。
+        first, theta=(1500.,0.),0.
+        poly=solve.first_region_outer_local(first,theta,circle_sides=720)
+        self.assertLessEqual(max(p[0] for p in poly),300+1e-7)
+        self.assertGreater(min(p[0] for p in poly),4.99)
+        for r in (5.001,25,150,299.9):
+            for angle in (-1,0,1):
+                t=math.radians(angle)
+                source=(r*math.cos(t),r*math.sin(t))
+                for a,b in zip(poly,poly[1:]+poly[:1]):
+                    self.assertGreaterEqual((b[0]-a[0])*(source[1]-a[1])-(b[1]-a[1])*(source[0]-a[0]),-1e-6)
+
+    def test_widened_cells_cover_non_grid_observations(self):
+        poly=solve.first_region_outer_local((0,0),0)
+        q=(800.,600.)
+        evaluator=solve.ContinuousDiameterEvaluator(poly,angle_step_deg=2)
+        bound=evaluator.evaluate(q)["geometric_diameter_upper_bound_m"]
+        rng=random.Random(71023)
+        for _ in range(250):
+            # 任意第二读数而不只取离散噪声端点。
+            theta=rng.uniform(0,360)
+            exact=solve.clip_bearing(poly,q,theta)
+            self.assertLessEqual(solve.polygon_diameter(exact),bound+1e-7)
+            nearest=round(theta/evaluator.step)*evaluator.step
+            widened=solve.clip_bearing(poly,q,nearest,evaluator.widened_error)
+            self.assertLessEqual(solve.polygon_diameter(exact),solve.polygon_diameter(widened)+1e-7)
+
+    def test_refined_selection_retains_baseline_and_shorter_option(self):
+        p=solve.choose_second_refined((0,0),0,stages=((250,15,5),),final_angle_step_deg=2,
+                                     baseline_grid_step_m=25)
+        q=p["selected"]["local_xy_m"]
+        self.assertTrue(solve.guaranteed_reception(q))
+        self.assertGreater(solve.direction_clearance(q),5)
+        evaluator=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((0,0),0),angle_step_deg=2)
+        baseline=solve._candidate_row(tuple(p["baseline_analytic_selected"]["local_xy_m"]),(0,0),0,evaluator)
+        self.assertLessEqual(p["selected"]["diameter_upper_bound_m"],baseline["diameter_upper_bound_m"]+1e-7)
+        self.assertLessEqual(p["fastest_near_best"]["diameter_upper_bound_m"],p["candidate_threshold_m"]+1e-7)
+        self.assertLessEqual(p["fastest_near_best"]["move_distance_m"],p["selected"]["move_distance_m"]+1e-7)
+        self.assertGreater(len(p["pareto_frontier"]),1)
+
+    def test_boundary_conditioning_changes_selection_and_allows_robot_outside(self):
+        p=solve.choose_second_refined((1500,0),0,stages=((250,15,5),(50,3,2)),final_angle_step_deg=1)
+        evaluator=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((1500,0),0),angle_step_deg=1)
+        baseline=evaluator.evaluate((750.,660.))["geometric_diameter_upper_bound_m"]
+        self.assertLess(p["selected"]["diameter_upper_bound_m"],baseline)
+        self.assertLess(p["selected"]["move_distance_m"],600)
+        outside=solve.choose_second_refined((2200,0),180,stages=((250,15,5),),final_angle_step_deg=2)
+        self.assertTrue(outside["guaranteed_reception"])
+
+    def test_refined_input_rejects_invalid_precision_and_stages(self):
+        for kwargs in ({"circle_sides":3},{"stages":()}, {"stages":((1,-1,1),)},
+                       {"final_angle_step_deg":0}, {"move_budget_m":float("nan")}):
+            with self.assertRaises(ValueError):
+                solve.choose_second_refined((0,0),0,**kwargs)
+
+    def test_clipping_tolerance_does_not_extrapolate_vertices(self):
+        poly=[(0,9e-10),(1,1.1e-9),(1,1),(0,1)]
+        clipped=solve.clip_polygon(poly,(0,1),0)
+        self.assertTrue(clipped)
+        for x,y in clipped:
+            self.assertGreaterEqual(x,0)
+            self.assertLessEqual(x,1)
+            self.assertLessEqual(y,solve.EPS+1e-16)
+
+    def test_thin_boundary_posterior_uses_same_first_distance_lower_bound(self):
+        for x,source_x in ((1794.,1799.5),(1794.9,1799.95)):
+            first=(x,0.)
+            p=solve.choose_second_refined(first,0,stages=((100,30,10),),
+                                          final_angle_step_deg=1,baseline_grid_step_m=50)
+            q=tuple(p["selected"]["xy_m"])
+            theta=solve.bearing((source_x,0.),q)
+            poly=solve.posterior_outer_polygon(first,0,q,theta,circle_sides=p["circle_sides"])
+            self.assertLessEqual(solve.polygon_diameter(poly),p["selected"]["diameter_upper_bound_m"]+1e-7)
+            self.assertGreaterEqual(min(v[0] for v in poly),x+5*math.cos(math.radians(1))-1e-7)
 
 
 if __name__ == "__main__":

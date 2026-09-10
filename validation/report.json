@@ -1,7 +1,11 @@
 {
-  "verified_at_utc": "2026-09-10T12:13:54.890609+00:00",
-  "python_version": "3.12.14",
+  "verified_at_utc": "2026-09-10T14:44:45.172274+00:00",
+  "python_version": "3.12.7",
   "passed": true,
+  "unit_test_counts": {
+    "problem1": 36,
+    "problem2": 19
+  },
   "scope": "Local problems 1 and 2 only; synthetic examples; no official simulator run.",
   "checks": [
     {
@@ -12,43 +16,61 @@
         "searchable_text_files_checked": 3,
         "method": "SHA-256 and byte counts; DOCX ZIP CRC and XML parsing; PDF signature"
       },
-      "elapsed_seconds": 0.058
+      "elapsed_seconds": 0.036
     },
     {
       "name": "problem1_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.335s\n\nOK"
+        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_teammate_optical_counterexample_is_physically_compatible (test_geometry.BearingModelTests.test_teammate_optical_counterexample_is_physically_compatible) ... ok\ntest_teammate_wide_baseline_source_and_coverage (test_geometry.BearingModelTests.test_teammate_wide_baseline_source_and_coverage) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_area_is_translation_invariant_and_zero_for_degenerate_sets (test_geometry.CalipersAndCoverageTests.test_area_is_translation_invariant_and_zero_for_degenerate_sets) ... ok\ntest_calipers_degenerate_cases (test_geometry.CalipersAndCoverageTests.test_calipers_degenerate_cases) ... ok\ntest_calipers_matches_independent_exact_pairs_on_random_hulls (test_geometry.CalipersAndCoverageTests.test_calipers_matches_independent_exact_pairs_on_random_hulls) ... ok\ntest_diameter_midpoint_can_be_worse_than_minimum_circle_center (test_geometry.CalipersAndCoverageTests.test_diameter_midpoint_can_be_worse_than_minimum_circle_center) ... ok\ntest_empty_and_unbounded_have_no_finite_coverage_decision (test_geometry.CalipersAndCoverageTests.test_empty_and_unbounded_have_no_finite_coverage_decision) ... ok\ntest_exact_diameter_40_is_necessary_but_not_sufficient (test_geometry.CalipersAndCoverageTests.test_exact_diameter_40_is_necessary_but_not_sufficient) ... ok\ntest_optical_decision_uses_radius_and_preserves_exact_threshold (test_geometry.CalipersAndCoverageTests.test_optical_decision_uses_radius_and_preserves_exact_threshold) ... ok\ntest_parallel_support_ties_and_large_translation (test_geometry.CalipersAndCoverageTests.test_parallel_support_ties_and_large_translation) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.387s\n\nOK"
       },
-      "elapsed_seconds": 0.506
+      "elapsed_seconds": 0.772
     },
     {
       "name": "problem1_solve_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "inconsistent_measurements.json: status=empty, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\inconsistent_measurements.result.json\nparallel_unbounded.json: status=unbounded, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\parallel_unbounded.result.json\ntriangle_counterexample.json: status=polygon, diameter=20.000000000000046, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_counterexample.result.json\ntwo_station_crossing.json: status=polygon, diameter=4.938542582373425, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\two_station_crossing.result.json"
+        "output": "inconsistent_measurements.json: status=empty, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\inconsistent_measurements.result.json\nparallel_unbounded.json: status=unbounded, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\parallel_unbounded.result.json\ntriangle_counterexample.json: status=polygon, diameter=20.000000000000046, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_counterexample.result.json\ntriangle_optical_counterexample.json: status=polygon, diameter=40.00000000000003, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_optical_counterexample.result.json\ntwo_station_crossing.json: status=polygon, diameter=4.938542582373425, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\two_station_crossing.result.json\nwide_baseline_crossing.json: status=polygon, diameter=31.47967474778005, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\wide_baseline_crossing.result.json"
       },
-      "elapsed_seconds": 0.171
+      "elapsed_seconds": 0.118
     },
     {
       "name": "problem2_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.389s\n\nOK"
+        "output": "test_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_boundary_conditioning_changes_selection_and_allows_robot_outside (test_solve.SecondPointTests.test_boundary_conditioning_changes_selection_and_allows_robot_outside) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_clipping_tolerance_does_not_extrapolate_vertices (test_solve.SecondPointTests.test_clipping_tolerance_does_not_extrapolate_vertices) ... ok\ntest_conditioned_outer_prior_contains_physical_sources (test_solve.SecondPointTests.test_conditioned_outer_prior_contains_physical_sources) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_boundary_extends_teammate_three_disk_region (test_solve.SecondPointTests.test_four_disk_boundary_extends_teammate_three_disk_region) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_refined_input_rejects_invalid_precision_and_stages (test_solve.SecondPointTests.test_refined_input_rejects_invalid_precision_and_stages) ... ok\ntest_refined_selection_retains_baseline_and_shorter_option (test_solve.SecondPointTests.test_refined_selection_retains_baseline_and_shorter_option) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_thin_boundary_posterior_uses_same_first_distance_lower_bound (test_solve.SecondPointTests.test_thin_boundary_posterior_uses_same_first_distance_lower_bound) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\ntest_widened_cells_cover_non_grid_observations (test_solve.SecondPointTests.test_widened_cells_cover_non_grid_observations) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 4.999s\n\nOK"
       },
-      "elapsed_seconds": 0.547
+      "elapsed_seconds": 5.109
     },
     {
       "name": "problem2_solve_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "{\n  \"selected\": {\n    \"local_xy_m\": [\n      750.0,\n      660.0\n    ],\n    \"xy_m\": [\n      750.0,\n      660.0\n    ],\n    \"diameter_upper_bound_m\": 131.22100725349134,\n    \"move_distance_m\": 999.0495483208027,\n    \"move_and_detect_time_s\": 204.80990966416056\n  },\n  \"candidate_count\": 334,\n  \"output_dir\": \"D:\\\\VS code\\\\Repository\\\\26-\\\\problem2\\\\results\"\n}"
+        "output": "{\n  \"selected\": {\n    \"local_xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"diameter_upper_bound_m\": 112.3293040324109,\n    \"analytic_diameter_upper_bound_m\": 164.12365704055676,\n    \"geometric_diameter_upper_bound_m\": 112.3293040324109,\n    \"worst_cell_center_local_deg\": 317.90000000000003,\n    \"worst_cell_outer_polygon_local_xy_m\": [\n      [\n        1441.2766887911514,\n        25.157578183376152\n      ],\n      [\n        1399.4878034092008,\n        24.42815047575636\n      ],\n      [\n        1452.5944080110241,\n        -25.355129707198493\n      ],\n      [\n        1499.7715427345706,\n        -26.178609656925268\n      ],\n      [\n        1499.7715427355693,\n        -26.178609656925268\n      ],\n      [\n        1499.7783806584637,\n        -25.786865316669562\n      ]\n    ],\n    \"move_distance_m\": 1004.141279146345,\n    \"move_and_detect_time_s\": 205.828255829269,\n    \"direction_clearance_m\": 532.1138078314206\n  },\n  \"candidate_count\": 198,\n  \"output_dir\": \"D:\\\\VS code\\\\Repository\\\\26-\\\\problem2\\\\results\"\n}"
       },
-      "elapsed_seconds": 0.255
+      "elapsed_seconds": 11.039
+    },
+    {
+      "name": "problem2_strategy_comparison_from_outside_repository",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "output": "synthetic_case: selected=[842.1437368791097, 546.8945372930203], bound=112.329304\nboundary_case: selected=[220.9419376327556, 195.47291422364256], bound=15.768784\nbudget 600: 209.325746 m\nbudget 800: 152.080522 m\nbudget 1000: 113.037691 m\nbudget 1100: 112.329304 m\nfine search: 111.687447 m"
+      },
+      "elapsed_seconds": 79.846
+    },
+    {
+      "name": "independent_highs_geometry_reference",
+      "passed": true,
+      "detail": {
+        "exit_code": 0,
+        "output": "{\n  \"passed\": true,\n  \"reference\": \"scipy.optimize.linprog / HiGHS\",\n  \"scipy_version\": \"1.13.1\",\n  \"seed\": 611209,\n  \"random_halfplane_systems\": 500,\n  \"explicit_edge_cases\": 8,\n  \"classification_counts\": {\n    \"empty\": 332,\n    \"unbounded\": 131,\n    \"bounded\": 45\n  },\n  \"bounded_support_values_checked\": 360,\n  \"failures\": [],\n  \"scope\": \"Deterministic synthetic geometry; no official simulator. HiGHS has floating tolerances; extreme near-parallel cases remain in the exact solver's own regression suite.\"\n}"
+      },
+      "elapsed_seconds": 2.997
     },
     {
       "name": "result_files_readable",
@@ -56,23 +78,23 @@
       "detail": [
         {
           "path": "problem1/results/inconsistent_measurements.result.json",
-          "bytes": 641,
-          "sha256": "1fc8c9b6a06a560b7c667444ccb04aaf4288892b3a30d89c7607f7fb27f303b7"
+          "bytes": 742,
+          "sha256": "c518e1133f25d02c826f2e5aa9f7af0883133bc714574c3065e8f7d3f8651647"
         },
         {
           "path": "problem1/results/parallel_unbounded.result.json",
-          "bytes": 854,
-          "sha256": "ac71203efea31bf8f34edbd82268f8fd4f0ef5334effd8b2ddd9f9bd67810f93"
+          "bytes": 955,
+          "sha256": "e0f11a7163d2a34a4d98c243f992835b3f1d22b2a619f5ca50553d2df8ddab07"
         },
         {
           "path": "problem1/results/README.md",
-          "bytes": 743,
-          "sha256": "c3b23a16208a10de7bb6eeb2ed561f05beeac42d83efb14e8a32d5282158dc96"
+          "bytes": 1595,
+          "sha256": "a73234706f273b772dbe9ad33a01ece3735190fcf2fdb1740c54d347bbf35cb9"
         },
         {
           "path": "problem1/results/triangle_counterexample.result.json",
-          "bytes": 1658,
-          "sha256": "02f80f86e6d79a6d6e423d95a397e5c262edaa7ba3088cfa42f5f89ca1a685aa"
+          "bytes": 2073,
+          "sha256": "9cb91a5558835c39311d3310716766e811500ede32db676031502da265b6c3aa"
         },
         {
           "path": "problem1/results/triangle_counterexample.result.svg",
@@ -80,9 +102,19 @@
           "sha256": "5c9d52413b286f47e6ffd636b82cf404f6f4755998d0595138feac97ed1610ef"
         },
         {
+          "path": "problem1/results/triangle_optical_counterexample.result.json",
+          "bytes": 2183,
+          "sha256": "33d090658555ddae784dc85779b7be7cc7a1260b5654827abd2c5b9c71172c7e"
+        },
+        {
+          "path": "problem1/results/triangle_optical_counterexample.result.svg",
+          "bytes": 1687,
+          "sha256": "76edd75a0f2f62372a9f177b265d0bdd4826b0b7681047453d771179a91f4002"
+        },
+        {
           "path": "problem1/results/two_station_crossing.result.json",
-          "bytes": 1720,
-          "sha256": "d18ecd3e86deb00d134d0693dcfb8175f890ec6d99248a1f806b947c4d8fac79"
+          "bytes": 2138,
+          "sha256": "684b0cecff73c951f4f46368ee656b24fc9005cdc8174a79a30c17059c8def9e"
         },
         {
           "path": "problem1/results/two_station_crossing.result.svg",
@@ -90,35 +122,70 @@
           "sha256": "d8c231f2e2fe4896bee28aecf8ea5938820d95cf64b8ea786aa0601c0b3834f4"
         },
         {
+          "path": "problem1/results/wide_baseline_crossing.result.json",
+          "bytes": 2216,
+          "sha256": "6a08cdbcab8064956b643ada7e7ab0e6ae3a94ce797afe92817c29e012e8cbfd"
+        },
+        {
+          "path": "problem1/results/wide_baseline_crossing.result.svg",
+          "bytes": 1925,
+          "sha256": "1db88ce2b1eda2d660d5c951ca16846f6146f19b7f2b74218dbe2bbc7ea205b8"
+        },
+        {
+          "path": "problem2/results/boundary/candidate_region.svg",
+          "bytes": 881713,
+          "sha256": "43b2929fc584c3852ae7d415c2b0bfca00e95023cca3a129029b765aee8bed08"
+        },
+        {
+          "path": "problem2/results/boundary/second_point_candidates.csv",
+          "bytes": 21038,
+          "sha256": "599f723dbaca8548957bc371e857b7b233502058134546366a549145048d2d1e"
+        },
+        {
+          "path": "problem2/results/boundary/selection.json",
+          "bytes": 19334,
+          "sha256": "947a0830b5745d44b96f05e7df3b1d1b8e43f09ddf8a7e08ccfddd735e8ed3e2"
+        },
+        {
           "path": "problem2/results/candidate_region.svg",
-          "bytes": 891630,
-          "sha256": "774e15748c2bac0bb9c9a5d49193eb21f6b0324b7266f80cdd360004f3430e8c"
+          "bytes": 881915,
+          "sha256": "6e72252e33db2e5fb8e290f367b03e3c050a5f05c5d9853755a184741b1e3020"
         },
         {
           "path": "problem2/results/second_point_candidates.csv",
-          "bytes": 27028,
-          "sha256": "31c606df768f55d8d0e0ff9156f00d677635cf1683358b7c51d07f1853d2e7ae"
+          "bytes": 25365,
+          "sha256": "3ae14cf9499047a085ba98e91f9d0808c4d693b7200778b145f459164f55204b"
         },
         {
           "path": "problem2/results/selection.json",
-          "bytes": 1871,
-          "sha256": "9bfc721c996a38ed0b082949abaa2abe6dd02e6c77ae7a90cc6fd11a72293426"
+          "bytes": 44585,
+          "sha256": "5e0e73a451c13f393bec2bdaf247e520e0a9a65485ff8a23c55a51dcacd270d1"
+        },
+        {
+          "path": "problem2/results/strategy_comparison.json",
+          "bytes": 20146,
+          "sha256": "5837d2c0b268d958b86ec36bfbd5e391e57931f83bd33cbbf305e3b97d20bb5a"
+        },
+        {
+          "path": "problem2/results/strategy_comparison.md",
+          "bytes": 4146,
+          "sha256": "6ee88e3f5b7435ac751bc5c78fae248109dff5fe597ca2d1ef2f9167d9b3d816"
         },
         {
           "path": "problem2/results/validation.md",
-          "bytes": 3199,
-          "sha256": "172343efb767f561a101fa1932c0beec250ea84b962e4936bc0162383bfcf174"
+          "bytes": 4902,
+          "sha256": "505c28b410f1506a3c7627430921e7113f5f465d7d0bb46d08aad3e687e86c1e"
         }
       ],
-      "elapsed_seconds": 0.044
+      "elapsed_seconds": 0.049
     },
     {
       "name": "documentation_links",
       "passed": true,
       "detail": {
-        "local_links_checked": 10
+        "local_links_checked": 19
       },
-      "elapsed_seconds": 0.002
+      "elapsed_seconds": 0.006
     }
   ]
 }

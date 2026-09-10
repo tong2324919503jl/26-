@@ -1,0 +1,89 @@
+{
+  "status": "polygon",
+  "vertices": [
+    [
+      1.0183154155490453e-13,
+      0.0
+    ],
+    [
+      40.00000000000012,
+      0.0
+    ],
+    [
+      20.00000000000011,
+      34.64101615137757
+    ]
+  ],
+  "feasible_point": [
+    1.0183154155490453e-13,
+    0.0
+  ],
+  "diameter_m": 40.00000000000003,
+  "diameter_endpoints": [
+    [
+      1.0183154155490453e-13,
+      0.0
+    ],
+    [
+      20.00000000000011,
+      34.64101615137757
+    ]
+  ],
+  "diameter_circle": {
+    "center": [
+      10.000000000000107,
+      17.320508075688785
+    ],
+    "radius_m": 20.000000000000014,
+    "diameter_m": 40.00000000000003,
+    "support_points": [
+      [
+        1.0183154155490453e-13,
+        0.0
+      ],
+      [
+        20.00000000000011,
+        34.64101615137757
+      ]
+    ],
+    "covers_region": false
+  },
+  "diameter_circle_covers": false,
+  "minimum_enclosing_circle": {
+    "center": [
+      20.00000000000011,
+      11.547005383792525
+    ],
+    "radius_m": 23.094010767585043,
+    "diameter_m": 46.18802153517009,
+    "support_points": [
+      [
+        1.0183154155490453e-13,
+        0.0
+      ],
+      [
+        40.00000000000012,
+        0.0
+      ],
+      [
+        20.00000000000011,
+        34.64101615137757
+      ]
+    ]
+  },
+  "area_m2": 692.8203230275517,
+  "max_distance_from_diameter_center_m": 34.64101615137756,
+  "optical_localization": {
+    "radius_m": 20.0,
+    "guaranteed_from_enclosing_center": false,
+    "radius_margin_m": -3.0940107675850435,
+    "diameter_only_sufficient": false,
+    "diameter_only_necessary": false,
+    "scope": "Geometric coverage of the angular region; no travel or simulator action implied."
+  },
+  "measurement_count": 3,
+  "model": "Closed angular sectors only; no range or target-disk clipping.",
+  "angle_convention": "Degrees counterclockwise from the positive x-axis.",
+  "example_name": "队友算例合并：边长40米等边三角形不能由20米圆盘覆盖",
+  "data_origin": "Team-created example adapted from B题第一二问_GitHub项目.zip / b-question1-2/examples/q1_triangle.json; not official simulator data."
+}

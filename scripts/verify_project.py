@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import argparse
 import csv
 import json
 import os
@@ -24,6 +25,10 @@ def sha256(path: Path) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--reference", action="store_true",
+                        help="Also run the optional independent SciPy/HiGHS geometry check")
+    args = parser.parse_args()
     checks = []
 
     def record(name, action):
@@ -90,6 +95,16 @@ def main() -> int:
 
         record(f"{problem}_solve_from_outside_repository", outside_cwd)
 
+    def strategy_comparison():
+        with tempfile.TemporaryDirectory(prefix="cumcm_b_comparison_") as temporary:
+            return command([str(ROOT / "problem2/compare_strategies.py")], Path(temporary))
+
+    record("problem2_strategy_comparison_from_outside_repository", strategy_comparison)
+    if args.reference:
+        with tempfile.TemporaryDirectory(prefix="cumcm_b_reference_") as temporary:
+            record("independent_highs_geometry_reference",
+                   lambda: command([str(ROOT / "scripts/verify_reference.py")], Path(temporary)))
+
     def outputs():
         files = []
         for problem in ("problem1", "problem2"):
@@ -118,8 +133,12 @@ def main() -> int:
 
     def documentation_links():
         count = 0
-        for relative in ("README.md", "materials/problem_b/README.md", "problem1/README.md", "problem2/README.md"):
-            path = ROOT / relative
+        paths = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "materials/problem_b/README.md"]
+        paths.extend(sorted((ROOT / "problem1").rglob("*.md")))
+        paths.extend(sorted((ROOT / "problem2").rglob("*.md")))
+        paths.append(ROOT / "validation/merge_notes.md")
+        for path in paths:
+            relative = path.relative_to(ROOT).as_posix()
             content = path.read_text(encoding="utf-8")
             for target in re.findall(r"\[[^\]]*\]\(([^)]+)\)", content):
                 if "://" in target or target.startswith("#"):
@@ -132,20 +151,36 @@ def main() -> int:
 
     def write_reports() -> bool:
         passed = all(check["passed"] for check in checks)
+        test_counts = {}
+        for check in checks:
+            if check["name"] in ("problem1_tests", "problem2_tests") and isinstance(check["detail"], dict):
+                match = re.search(r"Ran (\d+) tests?", check["detail"].get("output", ""))
+                if match:
+                    test_counts[check["name"].split("_")[0]] = int(match.group(1))
         report = {"verified_at_utc": datetime.now(timezone.utc).isoformat(),
                   "python_version": sys.version.split()[0], "passed": passed,
+                  "unit_test_counts": test_counts,
                   "scope": "Local problems 1 and 2 only; synthetic examples; no official simulator run.",
                   "checks": checks}
         REPORT_DIR.mkdir(exist_ok=True)
         (REPORT_DIR / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         lines = ["# B题前两问验证报告", "", f"总结果：{'全部通过' if passed else '存在失败，请查看具体记录'}。", "",
                  f"验证时间（UTC）：{report['verified_at_utc']}；Python：{report['python_version']}。", "",
+                 f"自动测试：第一问 {test_counts.get('problem1', 0)} 项，第二问 {test_counts.get('problem2', 0)} 项。", "",
                  "| 检查项 | 结果 |", "| --- | --- |"]
-        lines.extend(f"| {check['name']} | {'通过' if check['passed'] else '失败'} |" for check in checks)
-        lines.extend(["", "验证包括三份资料及三个文本副本的一致性、两问测试、从仓库以外目录启动求解、结果文件可读取性和说明文档链接。",
+        labels = {"original_materials_and_searchable_copies": "原材料与检索副本完整性",
+                  "problem1_tests": "第一问数学与程序测试", "problem2_tests": "第二问数学与程序测试",
+                  "problem1_solve_from_outside_repository": "第一问从仓库外目录运行",
+                  "problem2_solve_from_outside_repository": "第二问从仓库外目录运行",
+                  "problem2_strategy_comparison_from_outside_repository": "同口径策略比较及跨目录复现",
+                  "independent_highs_geometry_reference": "独立 HiGHS 几何核验",
+                  "result_files_readable": "结果文件完整且可读取", "documentation_links": "说明文档本地链接"}
+        lines.extend(f"| {labels.get(check['name'], check['name'])} | {'通过' if check['passed'] else '失败'} |" for check in checks)
+        lines.extend(["", "验证包括三份资料及三个文本副本的一致性、两问测试、从仓库以外目录启动求解与策略对比、结果文件可读取性和说明文档链接。",
                       "", "算例均为自行构造，只验证本地数学算法；没有运行问题3、4的官方演练或正式测试。",
                       "", "详细测试名称、输出、耗时、结果文件摘要见 [report.json](report.json)。",
-                      "", "复现：在仓库根运行 `python scripts/verify_project.py`。"])
+                      "", "复现：在仓库根运行 `python scripts/verify_project.py`。加 `--reference` 可额外运行独立 SciPy/HiGHS 几何核验（仅这一可选项需要 SciPy）。",
+                      "", f"本次独立参考核验：{'已执行，结果见上表及 reference_geometry.json' if args.reference else '未请求；已有 reference_geometry.json 不代表本次已重跑'}。"])
         (REPORT_DIR / "report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
         return passed
 

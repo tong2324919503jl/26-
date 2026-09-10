@@ -125,6 +125,67 @@ def convex_hull(points: Iterable[Point]) -> list[Point]:
     return lower[:-1] + upper[:-1]
 
 
+def diameter_squared_bruteforce(points: Sequence[Point]) -> tuple[Fraction, tuple[Point, Point]]:
+    """Independent O(k^2) reference for checking the rotating-calipers result."""
+    if not points:
+        raise ValueError("The empty set has no chosen diameter")
+    best = Fraction(0)
+    pair = (points[0], points[0])
+    for first, second in itertools.combinations(points, 2):
+        squared = distance_squared(first, second)
+        candidate = tuple(sorted((first, second)))
+        if squared > best or (squared == best and candidate < pair):
+            best, pair = squared, candidate
+    return best, pair
+
+
+def diameter_squared_calipers(polygon: Sequence[Point]) -> tuple[Fraction, tuple[Point, Point]]:
+    """Exact O(k) diameter on a CCW convex hull without redundant collinear points.
+
+    Adapted from the teammate's antipodal-pair approach, retaining exact rational
+    comparisons. Equal support areas mean parallel supporting edges: consider
+    both endpoints, rather than dropping a possible farthest pair.
+    """
+    if len(polygon) <= 2:
+        return diameter_squared_bruteforce(polygon)
+    count = len(polygon)
+    opposite = 1
+    best = Fraction(0)
+    pair = (polygon[0], polygon[0])
+
+    def consider(first_index: int, second_index: int) -> None:
+        nonlocal best, pair
+        first, second = polygon[first_index], polygon[second_index]
+        squared = distance_squared(first, second)
+        candidate = tuple(sorted((first, second)))
+        if squared > best or (squared == best and candidate < pair):
+            best, pair = squared, candidate
+
+    for index in range(count):
+        next_index = (index + 1) % count
+
+        def area(other: int) -> Fraction:
+            return cross(polygon[index], polygon[next_index], polygon[other])
+
+        while area((opposite + 1) % count) > area(opposite):
+            opposite = (opposite + 1) % count
+        consider(index, opposite)
+        consider(next_index, opposite)
+        if area((opposite + 1) % count) == area(opposite):
+            consider(index, (opposite + 1) % count)
+            consider(next_index, (opposite + 1) % count)
+    return best, pair
+
+
+def polygon_area(polygon: Sequence[Point]) -> Fraction:
+    """Exact area; a point and a segment have zero area."""
+    if len(polygon) < 3:
+        return Fraction(0)
+    origin = polygon[0]
+    return abs(sum((cross(origin, polygon[index], polygon[index + 1])
+                    for index in range(1, len(polygon) - 1)), Fraction(0))) / 2
+
+
 def intersection_vertices(planes: Sequence[HalfPlane]) -> list[Point]:
     vertices: set[Point] = set()
     for first, second in itertools.combinations(planes, 2):
@@ -248,6 +309,8 @@ def analyze_halfplanes(halfplanes: Iterable[HalfPlane]) -> dict:
         "diameter_m": None, "diameter_endpoints": None,
         "diameter_circle": None, "diameter_circle_covers": None,
         "minimum_enclosing_circle": None,
+        "area_m2": None, "max_distance_from_diameter_center_m": None,
+        "optical_localization": None,
     }
     if witness is None:
         result["reason"] = "The closed bearing constraints have no common point."
@@ -263,12 +326,7 @@ def analyze_halfplanes(halfplanes: Iterable[HalfPlane]) -> dict:
     if not vertices:
         raise ArithmeticError("A nonempty bounded polyhedron must have a vertex")
     result["status"] = "point" if len(vertices) == 1 else "segment" if len(vertices) == 2 else "polygon"
-    first, second = vertices[0], vertices[0]
-    maximum_squared = Fraction(0)
-    for a, b in itertools.combinations(vertices, 2):
-        squared = distance_squared(a, b)
-        if squared > maximum_squared:
-            first, second, maximum_squared = a, b, squared
+    maximum_squared, (first, second) = diameter_squared_calipers(vertices)
     diameter_circle = pair_circle(first, second)
     minimum_circle = minimum_enclosing_circle(vertices)
     covers = all(diameter_circle.contains(point) for point in vertices)
@@ -279,6 +337,17 @@ def analyze_halfplanes(halfplanes: Iterable[HalfPlane]) -> dict:
         diameter_circle={**circle_record(diameter_circle), "covers_region": covers},
         diameter_circle_covers=covers,
         minimum_enclosing_circle=circle_record(minimum_circle),
+        area_m2=float(polygon_area(vertices)),
+        max_distance_from_diameter_center_m=math.sqrt(float(max(
+            distance_squared(diameter_circle.center, point) for point in vertices))),
+        optical_localization={
+            "radius_m": 20.0,
+            "guaranteed_from_enclosing_center": minimum_circle.radius_squared <= 400,
+            "radius_margin_m": 20.0 - math.sqrt(float(minimum_circle.radius_squared)),
+            "diameter_only_sufficient": maximum_squared <= 1200,
+            "diameter_only_necessary": maximum_squared <= 1600,
+            "scope": "Geometric coverage of the angular region; no travel or simulator action implied.",
+        },
     )
     return result
 

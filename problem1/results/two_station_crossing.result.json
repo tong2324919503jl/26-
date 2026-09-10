@@ -71,6 +71,16 @@
       ]
     ]
   },
+  "area_m2": 12.187172797260462,
+  "max_distance_from_diameter_center_m": 2.4692712911867125,
+  "optical_localization": {
+    "radius_m": 20.0,
+    "guaranteed_from_enclosing_center": true,
+    "radius_margin_m": 17.53072870881329,
+    "diameter_only_sufficient": true,
+    "diameter_only_necessary": true,
+    "scope": "Geometric coverage of the angular region; no travel or simulator action implied."
+  },
   "measurement_count": 2,
   "model": "Closed angular sectors only; no range or target-disk clipping.",
   "angle_convention": "Degrees counterclockwise from the positive x-axis.",

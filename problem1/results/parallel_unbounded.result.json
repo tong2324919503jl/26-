@@ -15,6 +15,9 @@
   "diameter_circle": null,
   "diameter_circle_covers": null,
   "minimum_enclosing_circle": null,
+  "area_m2": null,
+  "max_distance_from_diameter_center_m": null,
+  "optical_localization": null,
   "diameter_is_infinite": true,
   "recession_direction": [
     1.0,

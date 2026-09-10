@@ -1,0 +1,12 @@
+{
+  "name": "队友算例合并：边长40米等边三角形不能由20米圆盘覆盖",
+  "plot_title": "40 m triangle: optical coverage fails",
+  "data_origin": "Team-created example adapted from B题第一二问_GitHub项目.zip / b-question1-2/examples/q1_triangle.json; not official simulator data.",
+  "reference_source": [20.0, 11.547005383792515],
+  "compatible_reception_radius_m": 1200,
+  "measurements": [
+    {"x": -1000.0, "y": 0.0, "bearing_deg": 1.0, "error_deg": 1.0},
+    {"x": 540.0, "y": -866.0254037844386, "bearing_deg": 121.0, "error_deg": 1.0},
+    {"x": 520.0, "y": 900.6664199358162, "bearing_deg": 241.0, "error_deg": 1.0}
+  ]
+}

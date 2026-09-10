@@ -1,0 +1,554 @@
+{
+  "data_provenance": "自建离线数学实验；不是官方数据、官方模拟器成绩或真实场地效果",
+  "metric": "同一首读数外包、M=360、第二读数h=0.1度且半角增宽至1.05度的几何直径上界",
+  "comparison_note": "解析上界131.221到几何上界的下降包含评价变紧；只能用相同几何评分比较选点。均非实际点估计误差。",
+  "source_grid": {
+    "radial_count": 61,
+    "radius_min_m": 6,
+    "radius_max_m": 1500,
+    "angle_count": 21,
+    "first_angle_range_deg": [
+      -1,
+      1
+    ],
+    "second_errors_deg": [
+      -1,
+      -0.5,
+      0,
+      0.5,
+      1
+    ],
+    "target_disk_filter": true,
+    "reception_radius": "max(1000,r1)"
+  },
+  "scenarios": [
+    {
+      "name": "synthetic_case",
+      "first_station_xy_m": [
+        0.0,
+        0.0
+      ],
+      "first_bearing_deg": 0.0,
+      "error_deg": 1.0,
+      "circle_sides": 360,
+      "angle_step_deg": 0.1,
+      "move_budget_m": 1100.0,
+      "rows": [
+        {
+          "local_xy_m": [
+            750.0,
+            0.0
+          ],
+          "xy_m": [
+            750.0,
+            0.0
+          ],
+          "diameter_upper_bound_m": 750.2284225364472,
+          "analytic_diameter_upper_bound_m": null,
+          "geometric_diameter_upper_bound_m": 750.2284225364472,
+          "worst_cell_center_local_deg": 2.0,
+          "move_distance_m": 750.0,
+          "move_and_detect_time_s": 155.0,
+          "direction_clearance_m": -13.089304827962634,
+          "key": "forward",
+          "label": "沿示向前进750m",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 7,
+          "direction_error_combinations": 6370,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 750.2284225391758,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            0.0,
+            750.0
+          ],
+          "xy_m": [
+            0.0,
+            750.0
+          ],
+          "diameter_upper_bound_m": 216.8140278368682,
+          "analytic_diameter_upper_bound_m": null,
+          "geometric_diameter_upper_bound_m": 216.8140278368682,
+          "worst_cell_center_local_deg": 331.6,
+          "move_distance_m": 750.0,
+          "move_and_detect_time_s": 155.0,
+          "direction_clearance_m": 749.8857713672935,
+          "key": "transverse",
+          "label": "横向移动750m",
+          "guaranteed_reception": false,
+          "source_grid_count": 1281,
+          "source_grid_received": 563,
+          "source_grid_near": 0,
+          "direction_error_combinations": 2815,
+          "sample_reception_fraction": 0.43950039032006244,
+          "sampled_outer_posterior_max_diameter_m": 74.23544634285695,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            800.0,
+            600.0
+          ],
+          "xy_m": [
+            800.0,
+            600.0
+          ],
+          "diameter_upper_bound_m": 113.8348931509725,
+          "analytic_diameter_upper_bound_m": 145.87840775552894,
+          "geometric_diameter_upper_bound_m": 113.8348931509725,
+          "worst_cell_center_local_deg": 317.1,
+          "move_distance_m": 1000.0,
+          "move_and_detect_time_s": 205.0,
+          "direction_clearance_m": 585.946691944008,
+          "key": "simple",
+          "label": "简明安全点800,600",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 0,
+          "direction_error_combinations": 6405,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 112.13282818843008,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "xy_m": [
+            750.0,
+            660.0
+          ],
+          "diameter_upper_bound_m": 115.69303933853314,
+          "analytic_diameter_upper_bound_m": 131.22100725349134,
+          "geometric_diameter_upper_bound_m": 115.69303933853314,
+          "worst_cell_center_local_deg": 316.5,
+          "move_distance_m": 999.0495483208027,
+          "move_and_detect_time_s": 204.80990966416056,
+          "direction_clearance_m": 646.8101739752556,
+          "key": "legacy_analytic",
+          "label": "原仓解析选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 0,
+          "direction_error_combinations": 6405,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 113.99956321725118,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            848.0480961564259,
+            529.9192642332049
+          ],
+          "xy_m": [
+            848.0480961564259,
+            529.9192642332049
+          ],
+          "diameter_upper_bound_m": 113.03769081121203,
+          "analytic_diameter_upper_bound_m": 169.3149226358545,
+          "geometric_diameter_upper_bound_m": 113.03769081121203,
+          "worst_cell_center_local_deg": 318.40000000000003,
+          "move_distance_m": 999.9999999999999,
+          "move_and_detect_time_s": 204.99999999999997,
+          "direction_clearance_m": 515.0380749100541,
+          "key": "teammate_saved",
+          "label": "队友保存选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 0,
+          "direction_error_combinations": 6405,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 111.70034762858236,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            842.1437368791097,
+            546.8945372930203
+          ],
+          "xy_m": [
+            842.1437368791097,
+            546.8945372930203
+          ],
+          "diameter_upper_bound_m": 112.3293040324109,
+          "analytic_diameter_upper_bound_m": 164.12365704055676,
+          "geometric_diameter_upper_bound_m": 112.3293040324109,
+          "worst_cell_center_local_deg": 317.90000000000003,
+          "move_distance_m": 1004.141279146345,
+          "move_and_detect_time_s": 205.828255829269,
+          "direction_clearance_m": 532.1138078314206,
+          "key": "merged",
+          "label": "融合选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 0,
+          "direction_error_combinations": 6405,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 110.9696680097869,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            773.5109572139015,
+            541.618203128982
+          ],
+          "xy_m": [
+            773.5109572139015,
+            541.618203128982
+          ],
+          "diameter_upper_bound_m": 122.86527440272302,
+          "analytic_diameter_upper_bound_m": 150.96101158190794,
+          "geometric_diameter_upper_bound_m": 122.86527440272302,
+          "worst_cell_center_local_deg": 320.90000000000003,
+          "move_distance_m": 944.2825206952808,
+          "move_and_detect_time_s": 193.85650413905617,
+          "direction_clearance_m": 528.0360844442696,
+          "key": "merged_faster",
+          "label": "融合10%容差内最短已访点",
+          "guaranteed_reception": true,
+          "source_grid_count": 1281,
+          "source_grid_received": 1281,
+          "source_grid_near": 0,
+          "direction_error_combinations": 6405,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 121.10192840692984,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        }
+      ]
+    },
+    {
+      "name": "boundary_case",
+      "first_station_xy_m": [
+        1500.0,
+        0.0
+      ],
+      "first_bearing_deg": 0.0,
+      "error_deg": 1.0,
+      "circle_sides": 360,
+      "angle_step_deg": 0.1,
+      "move_budget_m": 1100.0,
+      "rows": [
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "xy_m": [
+            2250.0,
+            660.0
+          ],
+          "diameter_upper_bound_m": 54.02356987549502,
+          "analytic_diameter_upper_bound_m": 131.22100725349134,
+          "geometric_diameter_upper_bound_m": 54.02356987549502,
+          "worst_cell_center_local_deg": 222.60000000000002,
+          "move_distance_m": 999.0495483208027,
+          "move_and_detect_time_s": 204.80990966416056,
+          "direction_clearance_m": 646.8101739752556,
+          "key": "legacy_analytic",
+          "label": "原仓解析选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 252,
+          "source_grid_received": 252,
+          "source_grid_near": 0,
+          "direction_error_combinations": 1260,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 51.565675802318374,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            222.73863607376248,
+            222.73863607376248
+          ],
+          "xy_m": [
+            1722.7386360737626,
+            222.73863607376248
+          ],
+          "diameter_upper_bound_m": 15.966125355234098,
+          "analytic_diameter_upper_bound_m": 723.4984258614979,
+          "geometric_diameter_upper_bound_m": 15.966125355234098,
+          "worst_cell_center_local_deg": 287.6,
+          "move_distance_m": 315.0,
+          "move_and_detect_time_s": 68.0,
+          "direction_clearance_m": 218.81738669458414,
+          "key": "teammate_saved",
+          "label": "队友保存选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 252,
+          "source_grid_received": 252,
+          "source_grid_near": 0,
+          "direction_error_combinations": 1260,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 15.088445837394826,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            220.9419376327556,
+            195.47291422364256
+          ],
+          "xy_m": [
+            1720.9419376327555,
+            195.47291422364256
+          ],
+          "diameter_upper_bound_m": 15.768784303874716,
+          "analytic_diameter_upper_bound_m": 856.0853101947221,
+          "geometric_diameter_upper_bound_m": 15.768784303874716,
+          "worst_cell_center_local_deg": 290.40000000000003,
+          "move_distance_m": 295.0,
+          "move_and_detect_time_s": 64.0,
+          "direction_clearance_m": 191.5871742574042,
+          "key": "merged",
+          "label": "融合选点",
+          "guaranteed_reception": true,
+          "source_grid_count": 252,
+          "source_grid_received": 252,
+          "source_grid_near": 0,
+          "direction_error_combinations": 1260,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 15.020494365932125,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        },
+        {
+          "local_xy_m": [
+            199.1715552109343,
+            167.1247785185002
+          ],
+          "xy_m": [
+            1699.1715552109342,
+            167.1247785185002
+          ],
+          "diameter_upper_bound_m": 17.142573708796878,
+          "analytic_diameter_upper_bound_m": 1086.323894442709,
+          "geometric_diameter_upper_bound_m": 17.142573708796878,
+          "worst_cell_center_local_deg": 299.2,
+          "move_distance_m": 260.0,
+          "move_and_detect_time_s": 57.0,
+          "direction_clearance_m": 163.62330167295772,
+          "key": "merged_faster",
+          "label": "融合10%容差内最短已访点",
+          "guaranteed_reception": true,
+          "source_grid_count": 252,
+          "source_grid_received": 252,
+          "source_grid_near": 0,
+          "direction_error_combinations": 1260,
+          "sample_reception_fraction": 1.0,
+          "sampled_outer_posterior_max_diameter_m": 16.08183460996311,
+          "geometric_upper_violations": 0,
+          "sample_note": "网格比例不是成功概率；最大值是有限自建情景的外包直径，不是连续最坏值"
+        }
+      ]
+    }
+  ],
+  "budgets": [
+    {
+      "move_budget_m": 600.0,
+      "selected": {
+        "local_xy_m": [
+          389.66882899811014,
+          456.2435793600186
+        ],
+        "xy_m": [
+          389.66882899811014,
+          456.2435793600186
+        ],
+        "diameter_upper_bound_m": 209.32574567858236,
+        "analytic_diameter_upper_bound_m": 270.1446556154852,
+        "geometric_diameter_upper_bound_m": 209.32574567858236,
+        "worst_cell_center_local_deg": 335.40000000000003,
+        "move_distance_m": 600.0,
+        "move_and_detect_time_s": 125.0,
+        "direction_clearance_m": 449.37343247340135
+      },
+      "legacy_local_xy_m": [
+        330.0,
+        500.0
+      ],
+      "legacy_same_geometric_bound_m": 209.88205568864308
+    },
+    {
+      "move_budget_m": 800.0,
+      "selected": {
+        "local_xy_m": [
+          608.3247724800248,
+          519.558438664147
+        ],
+        "xy_m": [
+          608.3247724800248,
+          519.558438664147
+        ],
+        "diameter_upper_bound_m": 152.08052249742994,
+        "analytic_diameter_upper_bound_m": 184.07614884018668,
+        "geometric_diameter_upper_bound_m": 152.08052249742994,
+        "worst_cell_center_local_deg": 327.40000000000003,
+        "move_distance_m": 800.0000000000001,
+        "move_and_detect_time_s": 165.00000000000003,
+        "direction_clearance_m": 508.8625762222113
+      },
+      "legacy_local_xy_m": [
+        540.0,
+        590.0
+      ],
+      "legacy_same_geometric_bound_m": 152.84312049745606
+    },
+    {
+      "move_budget_m": 1000.0,
+      "selected": {
+        "local_xy_m": [
+          848.0480961564259,
+          529.9192642332049
+        ],
+        "xy_m": [
+          848.0480961564259,
+          529.9192642332049
+        ],
+        "diameter_upper_bound_m": 113.03769081121203,
+        "analytic_diameter_upper_bound_m": 169.3149226358545,
+        "geometric_diameter_upper_bound_m": 113.03769081121203,
+        "worst_cell_center_local_deg": 318.40000000000003,
+        "move_distance_m": 999.9999999999999,
+        "move_and_detect_time_s": 204.99999999999997,
+        "direction_clearance_m": 515.0380749100541
+      },
+      "legacy_local_xy_m": [
+        750.0,
+        660.0
+      ],
+      "legacy_same_geometric_bound_m": 115.69303933853314
+    },
+    {
+      "move_budget_m": 1100.0,
+      "selected": {
+        "local_xy_m": [
+          842.1437368791097,
+          546.8945372930203
+        ],
+        "xy_m": [
+          842.1437368791097,
+          546.8945372930203
+        ],
+        "diameter_upper_bound_m": 112.3293040324109,
+        "analytic_diameter_upper_bound_m": 164.12365704055676,
+        "geometric_diameter_upper_bound_m": 112.3293040324109,
+        "worst_cell_center_local_deg": 317.90000000000003,
+        "move_distance_m": 1004.141279146345,
+        "move_and_detect_time_s": 205.828255829269,
+        "direction_clearance_m": 532.1138078314206
+      },
+      "legacy_local_xy_m": [
+        750.0,
+        660.0
+      ],
+      "legacy_same_geometric_bound_m": 115.69303933853314
+    }
+  ],
+  "precision_sensitivity": [
+    {
+      "circle_sides": 180,
+      "angle_step_deg": 0.2,
+      "fixed_candidate_bounds": [
+        {
+          "key": "legacy_analytic",
+          "geometric_diameter_upper_bound_m": 117.78547309460497,
+          "worst_cell_center_local_deg": 316.40000000000003
+        },
+        {
+          "key": "teammate_saved",
+          "geometric_diameter_upper_bound_m": 114.93585637681394,
+          "worst_cell_center_local_deg": 318.40000000000003
+        },
+        {
+          "key": "merged",
+          "geometric_diameter_upper_bound_m": 114.2226135932832,
+          "worst_cell_center_local_deg": 317.8
+        }
+      ]
+    },
+    {
+      "circle_sides": 360,
+      "angle_step_deg": 0.1,
+      "fixed_candidate_bounds": [
+        {
+          "key": "legacy_analytic",
+          "geometric_diameter_upper_bound_m": 115.69303933853314,
+          "worst_cell_center_local_deg": 316.5
+        },
+        {
+          "key": "teammate_saved",
+          "geometric_diameter_upper_bound_m": 113.03769081121203,
+          "worst_cell_center_local_deg": 318.40000000000003
+        },
+        {
+          "key": "merged",
+          "geometric_diameter_upper_bound_m": 112.3293040324109,
+          "worst_cell_center_local_deg": 317.90000000000003
+        }
+      ]
+    },
+    {
+      "circle_sides": 720,
+      "angle_step_deg": 0.05,
+      "fixed_candidate_bounds": [
+        {
+          "key": "legacy_analytic",
+          "geometric_diameter_upper_bound_m": 114.93810939561726,
+          "worst_cell_center_local_deg": 316.5
+        },
+        {
+          "key": "teammate_saved",
+          "geometric_diameter_upper_bound_m": 112.53137947541047,
+          "worst_cell_center_local_deg": 318.5
+        },
+        {
+          "key": "merged",
+          "geometric_diameter_upper_bound_m": 111.79318816872892,
+          "worst_cell_center_local_deg": 317.90000000000003
+        }
+      ]
+    }
+  ],
+  "spatial_refinement": {
+    "radial_step_m": 2.5,
+    "azimuth_step_deg": 0.125,
+    "circle_sides": 720,
+    "final_angle_step_deg": 0.05,
+    "selected": {
+      "local_xy_m": [
+        851.6011165687117,
+        532.1394377955505
+      ],
+      "xy_m": [
+        851.6011165687117,
+        532.1394377955505
+      ],
+      "diameter_upper_bound_m": 111.68744731915986,
+      "analytic_diameter_upper_bound_m": 169.5674681387035,
+      "geometric_diameter_upper_bound_m": 111.68744731915986,
+      "worst_cell_center_local_deg": 318.20000000000005,
+      "move_distance_m": 1004.189644936872,
+      "move_and_detect_time_s": 205.8379289873744,
+      "direction_clearance_m": 517.1959015728975
+    },
+    "default_point_same_fine_geometric_bound_m": 111.79318816872892,
+    "visited_candidate_count": 772
+  }
+}
