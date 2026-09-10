@@ -1,0 +1,29 @@
+{
+  "status": "unbounded",
+  "vertices": [
+    [
+      286.44980815379716,
+      5.0
+    ]
+  ],
+  "feasible_point": [
+    286.44980815379716,
+    5.0
+  ],
+  "diameter_m": null,
+  "diameter_endpoints": null,
+  "diameter_circle": null,
+  "diameter_circle_covers": null,
+  "minimum_enclosing_circle": null,
+  "diameter_is_infinite": true,
+  "recession_direction": [
+    1.0,
+    -0.017455064928217585
+  ],
+  "reason": "A nonzero direction d satisfies A*d <= 0; no finite diameter exists.",
+  "measurement_count": 2,
+  "model": "Closed angular sectors only; no range or target-disk clipping.",
+  "angle_convention": "Degrees counterclockwise from the positive x-axis.",
+  "example_name": "同向示向度产生无界区域（自建数据）",
+  "data_origin": "Self-created deterministic example; not official simulator data."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "等边三角形交会区域反例（自建数据）",
+  "plot_title": "Counterexample: the diameter-D disk misses a vertex",
+  "data_origin": "Self-created deterministic example; not official simulator data.",
+  "description": "The intersection is, to trigonometric roundoff, an equilateral triangle with vertices (0,0),(20,0),(10,10*sqrt(3)). Each sector's other edge is redundant. Source is the centroid.",
+  "reference_source": [10, 5.773502691896257],
+  "measurements": [
+    {"x": -1000, "y": 0, "bearing_deg": 1},
+    {"x": 520, "y": -866.0254037844386, "bearing_deg": 121},
+    {"x": 510, "y": 883.3459118601274, "bearing_deg": 241}
+  ]
+}

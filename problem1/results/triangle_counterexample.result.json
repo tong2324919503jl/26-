@@ -1,0 +1,79 @@
+{
+  "status": "polygon",
+  "vertices": [
+    [
+      7.841495136823004e-14,
+      0.0
+    ],
+    [
+      20.00000000000012,
+      0.0
+    ],
+    [
+      10.0000000000001,
+      17.320508075688814
+    ]
+  ],
+  "feasible_point": [
+    7.841495136823004e-14,
+    0.0
+  ],
+  "diameter_m": 20.000000000000046,
+  "diameter_endpoints": [
+    [
+      7.841495136823004e-14,
+      0.0
+    ],
+    [
+      10.0000000000001,
+      17.320508075688814
+    ]
+  ],
+  "diameter_circle": {
+    "center": [
+      5.000000000000089,
+      8.660254037844407
+    ],
+    "radius_m": 10.000000000000023,
+    "diameter_m": 20.000000000000046,
+    "support_points": [
+      [
+        7.841495136823004e-14,
+        0.0
+      ],
+      [
+        10.0000000000001,
+        17.320508075688814
+      ]
+    ],
+    "covers_region": false
+  },
+  "diameter_circle_covers": false,
+  "minimum_enclosing_circle": {
+    "center": [
+      10.0000000000001,
+      5.7735026918962715
+    ],
+    "radius_m": 11.54700538379254,
+    "diameter_m": 23.09401076758508,
+    "support_points": [
+      [
+        7.841495136823004e-14,
+        0.0
+      ],
+      [
+        20.00000000000012,
+        0.0
+      ],
+      [
+        10.0000000000001,
+        17.320508075688814
+      ]
+    ]
+  },
+  "measurement_count": 3,
+  "model": "Closed angular sectors only; no range or target-disk clipping.",
+  "angle_convention": "Degrees counterclockwise from the positive x-axis.",
+  "example_name": "等边三角形交会区域反例（自建数据）",
+  "data_origin": "Self-created deterministic example; not official simulator data."
+}

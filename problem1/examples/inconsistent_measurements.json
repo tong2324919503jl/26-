@@ -1,0 +1,9 @@
+{
+  "name": "互相背离的观测导致空交集（自建数据）",
+  "plot_title": "Inconsistent measurements",
+  "data_origin": "Self-created deterministic example; not official simulator data.",
+  "measurements": [
+    {"x": 0, "y": 0, "bearing_deg": 180},
+    {"x": 10, "y": 0, "bearing_deg": 0}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "两站近正交交会（自建数据）",
+  "plot_title": "Two-station near-orthogonal intersection",
+  "data_origin": "Self-created deterministic example; not official simulator data.",
+  "description": "True source (100,100); both exact bearings are measured without added error. The uncertainty bound remains ±1 degree.",
+  "reference_source": [100, 100],
+  "measurements": [
+    {"x": 0, "y": 100, "bearing_deg": 0},
+    {"x": 100, "y": 0, "bearing_deg": 90}
+  ]
+}

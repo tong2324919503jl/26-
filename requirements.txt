@@ -1,0 +1,3 @@
+# Solve and verification use the Python standard library.
+# Only rebuilding PDF searchable text requires this dependency.
+pypdf>=5,<7

@@ -1,0 +1,3 @@
+# Preserve the byte-level checksums of searchable material copies on all systems.
+materials/problem_b/extracted/*.md text eol=lf
+materials/problem_b/manifest.json text eol=lf

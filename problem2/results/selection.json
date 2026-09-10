@@ -1,0 +1,63 @@
+{
+  "method": "four_disk_reception_guarantee_and_uniform_diameter_bound",
+  "data_provenance": "自建示例/用户输入；不是官方模拟器测试数据",
+  "first_station_xy_m": [
+    0.0,
+    0.0
+  ],
+  "first_bearing_deg": 0.0,
+  "error_deg": 1.0,
+  "grid_step_m": 10.0,
+  "move_budget_m": 1100.0,
+  "near_best_tolerance": 0.1,
+  "guaranteed_reception": true,
+  "optimization_scope": "有限网格上统一直径上界最小；未证明连续域全局最优",
+  "continuous_candidate_region": "四圆盘交集 ∩ 移动预算圆 ∩ {D_bound <= threshold}",
+  "candidate_threshold_m": 144.3431079788405,
+  "selected": {
+    "local_xy_m": [
+      750.0,
+      660.0
+    ],
+    "xy_m": [
+      750.0,
+      660.0
+    ],
+    "diameter_upper_bound_m": 131.22100725349134,
+    "move_distance_m": 999.0495483208027,
+    "move_and_detect_time_s": 204.80990966416056
+  },
+  "safe_finite_bound_grid_count": 11278,
+  "near_best_grid_count": 334,
+  "synthetic_observation": {
+    "status": "direction",
+    "source_xy_m": [
+      1200.0,
+      15.0
+    ],
+    "reception_radius_m": 1300.0,
+    "second_bearing_deg": 305.30249561592467,
+    "second_fixed_error_deg": 0.4,
+    "source_distance_from_second_m": 786.4636037350997,
+    "posterior_outer_polygon_xy_m": [
+      [
+        1219.2280657829224,
+        21.281705050546066
+      ],
+      [
+        1186.138878253441,
+        20.704131133797
+      ],
+      [
+        1214.7287754238946,
+        -21.203169645198308
+      ],
+      [
+        1250.9030272812342,
+        -21.83459356009787
+      ]
+    ],
+    "posterior_outer_polygon_diameter_m": 77.48508306685362,
+    "polygon_note": "两次扇区、目标圆和1500米接收圆相交的保守外包；圆用720个相切半平面，未扣除5米近区；另裁入解析上界证明中的有效条带"
+  }
+}

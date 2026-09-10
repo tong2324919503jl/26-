@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="660" viewBox="0 0 860 660">
+<rect width="860" height="660" fill="#f6f8fc"/>
+<g font-family="Arial, sans-serif" fill="#172b4d">
+<text x="42" y="43" font-size="23" font-weight="700">Two-station near-orthogonal intersection</text>
+<text x="42" y="72" font-size="14">Self-created example; coordinates in metres</text>
+<circle cx="430.0" cy="325" r="187.99999999999997" fill="none" stroke="#187c6c" stroke-width="2.5"/>
+<circle cx="430.0" cy="325.0" r="187.99999999999997" fill="none" stroke="#df7524" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="292.50550,196.78431 297.06393,457.93607 558.21569,462.49450 562.93607,192.06393" fill="#467fe633" stroke="#315a9c" stroke-width="2.5"/>
+<circle cx="292.50550409559594" cy="196.78430830825022" r="4" fill="#315a9c"/>
+<text x="301.50550409559594" y="186.78430830825022" font-size="14">V1</text>
+<circle cx="297.0639251369296" cy="457.9360748630704" r="4" fill="#315a9c"/>
+<text x="306.0639251369296" y="447.9360748630704" font-size="14">V2</text>
+<circle cx="558.2156916917497" cy="462.49449590440406" r="4" fill="#315a9c"/>
+<text x="567.2156916917497" y="452.49449590440406" font-size="14">V3</text>
+<circle cx="562.9360748630714" cy="192.06392513692853" r="4" fill="#315a9c"/>
+<text x="571.9360748630714" y="182.06392513692853" font-size="14">V4</text>
+<text x="42" y="555" font-size="16">Region diameter D = 4.938543 m</text>
+<text x="42" y="580" font-size="16">Minimum covering radius R = 2.469271 m</text>
+<text x="42" y="605" font-size="16">Diameter-D disk covers region: TRUE</text>
+<line x1="480" y1="557" x2="520" y2="557" stroke="#187c6c" stroke-width="3"/>
+<text x="532" y="562" font-size="14">Minimum covering circle</text>
+<line x1="480" y1="588" x2="520" y2="588" stroke="#df7524" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="532" y="593" font-size="14">Circle with diameter D</text>
+</g></svg>

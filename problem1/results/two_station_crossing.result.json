@@ -1,0 +1,79 @@
+{
+  "status": "polygon",
+  "vertices": [
+    [
+      98.22456651582974,
+      101.71451618607983
+    ],
+    [
+      98.2844387403537,
+      98.2844387403537
+    ],
+    [
+      101.71451618607983,
+      98.22456651582974
+    ],
+    [
+      101.77651568952848,
+      101.77651568952848
+    ]
+  ],
+  "feasible_point": [
+    98.22456651582974,
+    101.71451618607983
+  ],
+  "diameter_m": 4.938542582373425,
+  "diameter_endpoints": [
+    [
+      98.2844387403537,
+      98.2844387403537
+    ],
+    [
+      101.77651568952848,
+      101.77651568952848
+    ]
+  ],
+  "diameter_circle": {
+    "center": [
+      100.03047721494109,
+      100.03047721494109
+    ],
+    "radius_m": 2.4692712911867125,
+    "diameter_m": 4.938542582373425,
+    "support_points": [
+      [
+        98.2844387403537,
+        98.2844387403537
+      ],
+      [
+        101.77651568952848,
+        101.77651568952848
+      ]
+    ],
+    "covers_region": true
+  },
+  "diameter_circle_covers": true,
+  "minimum_enclosing_circle": {
+    "center": [
+      100.03047721494109,
+      100.03047721494109
+    ],
+    "radius_m": 2.4692712911867125,
+    "diameter_m": 4.938542582373425,
+    "support_points": [
+      [
+        98.2844387403537,
+        98.2844387403537
+      ],
+      [
+        101.77651568952848,
+        101.77651568952848
+      ]
+    ]
+  },
+  "measurement_count": 2,
+  "model": "Closed angular sectors only; no range or target-disk clipping.",
+  "angle_convention": "Degrees counterclockwise from the positive x-axis.",
+  "example_name": "两站近正交交会（自建数据）",
+  "data_origin": "Self-created deterministic example; not official simulator data."
+}

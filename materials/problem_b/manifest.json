@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "policy": "Original bundle retained; working copies are byte-identical.",
+  "files": [
+    {
+      "source": "CUMCM2026Problems/B题/B题.pdf",
+      "working_copy": "materials/problem_b/statement.pdf",
+      "bytes": 514825,
+      "sha256": "81c992a9bee5376308c4768b58719b177f17d6ee1f9861577a851924c5a838ca",
+      "page_count": 4,
+      "extracted_text": "materials/problem_b/extracted/statement.md",
+      "extracted_sha256": "29868bbc11709ba4eeae89b98ad9b41b9e1ffe20596dd0a48e530d1004e680a9"
+    },
+    {
+      "source": "CUMCM2026Problems/B题/附件/附件1.docx",
+      "working_copy": "materials/problem_b/attachments/attachment_1_simulator_guide.docx",
+      "bytes": 33675,
+      "sha256": "20a27603ea81efa8f11658b3fa5b859a69aa3ff88fb3664d2abb80d740b47553",
+      "table_count": 2,
+      "math_expression_count": 7,
+      "text_token_count": 649,
+      "extracted_text": "materials/problem_b/extracted/attachment_1_simulator_guide.md",
+      "extracted_sha256": "8dc64b4eb0c89b6c7b031c3d4359d1d2ba44efb8b10515376e43bed8ca3e3d49"
+    },
+    {
+      "source": "CUMCM2026Problems/B题/附件/附件2.docx",
+      "working_copy": "materials/problem_b/attachments/attachment_2_api_protocol.docx",
+      "bytes": 57179,
+      "sha256": "c882513d5b7e0ec50f3068570ea55fdc1b5c4a5fa2d6e9e54e79b33cf0858cb2",
+      "table_count": 13,
+      "math_expression_count": 21,
+      "text_token_count": 2964,
+      "extracted_text": "materials/problem_b/extracted/attachment_2_api_protocol.md",
+      "extracted_sha256": "c56c918e2020f632ff2c4918d43cc55177f1e696fd0d49bd796ff33aa6048e37"
+    }
+  ]
+}

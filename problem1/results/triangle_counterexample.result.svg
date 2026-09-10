@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="660" viewBox="0 0 860 660">
+<rect width="860" height="660" fill="#f6f8fc"/>
+<g font-family="Arial, sans-serif" fill="#172b4d">
+<text x="42" y="43" font-size="23" font-weight="700">Counterexample: the diameter-D disk misses a vertex</text>
+<text x="42" y="72" font-size="14">Self-created example; coordinates in metres</text>
+<circle cx="430.0" cy="325" r="188.0" fill="none" stroke="#187c6c" stroke-width="2.5"/>
+<circle cx="348.5936120442628" cy="278.0" r="162.8127759114745" fill="none" stroke="#df7524" stroke-width="2" stroke-dasharray="7 5"/>
+<polygon points="267.18722,419.00000 592.81278,419.00000 430.00000,137.00000" fill="#467fe633" stroke="#315a9c" stroke-width="2.5"/>
+<circle cx="267.18722408852557" cy="419.0" r="4" fill="#315a9c"/>
+<text x="276.18722408852557" y="409.0" font-size="14">V1</text>
+<circle cx="592.8127759114744" cy="419.0" r="4" fill="#315a9c"/>
+<text x="601.8127759114744" y="409.0" font-size="14">V2</text>
+<circle cx="430.0" cy="136.99999999999997" r="4" fill="#315a9c"/>
+<text x="439.0" y="126.99999999999997" font-size="14">V3</text>
+<text x="42" y="555" font-size="16">Region diameter D = 20.000000 m</text>
+<text x="42" y="580" font-size="16">Minimum covering radius R = 11.547005 m</text>
+<text x="42" y="605" font-size="16">Diameter-D disk covers region: FALSE</text>
+<line x1="480" y1="557" x2="520" y2="557" stroke="#187c6c" stroke-width="3"/>
+<text x="532" y="562" font-size="14">Minimum covering circle</text>
+<line x1="480" y1="588" x2="520" y2="588" stroke="#df7524" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="532" y="593" font-size="14">Circle with diameter D</text>
+</g></svg>
