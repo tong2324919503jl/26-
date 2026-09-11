@@ -23,9 +23,6 @@ def assemble() -> None:
     p12 = (sec / 'p12.tex').read_text(encoding='utf-8')
     p34 = (sec / 'p34.tex').read_text(encoding='utf-8')
     method, checks = p34.split('% 以下片段建议放入“模型的检验”章节。', 1)
-    p12 = p12.replace(r'\subsection{问题二：保证收信的第二检测点选择}',
-        figure('p12_geometry', '合法示向观测形成的三角形及两类覆盖圆', 'fig:triangles')
-        + r'\subsection{问题二：保证收信的第二检测点选择}')
     p12 += figure('p2_candidates', r'第二检测点安全区域与目标圆条件化选点（灰点为已访问的10\%近优代表点）', 'fig:p2')
     method = method.replace('将圆缺按$V_\\ell^+$的Voronoi区域划分。',
         '将圆缺按$V_\\ell^+$的Voronoi区域划分\\cite{deberg2008}。')

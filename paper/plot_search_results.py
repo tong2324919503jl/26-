@@ -52,40 +52,33 @@ def setup_style():
 
 
 def coverage_figure():
-    """P4 坐标直接读取当前冻结的解析覆盖证书。"""
-    certificate = read_result("problem4/results/coverage_certificate_v2.json")
-    if not certificate["certified"] or certificate["point_count"] != 23:
-        raise ValueError("第四问论文图要求通过认证的23点冻结布局")
-    a = (read_result("problem3/results/benchmark_development.json")["config"] or {}).get(
-        "ring_radius", 1150.0
-    )
-    points3 = [(0, 0)] + [
-        (a * math.cos(k * math.pi / 3), a * math.sin(k * math.pi / 3))
-        for k in range(6)
-    ]
-    points4 = certificate["points"]
-    fig, axes = plt.subplots(1, 2, figsize=(6.4, 3.6))
-    for ax in axes:
-        ax.add_patch(Circle((0, 0), 1800, fill=False, color="#222222", lw=1.1, zorder=3))
-        ax.axhline(0, color="#dddddd", lw=0.5, zorder=0)
-        ax.axvline(0, color="#dddddd", lw=0.5, zorder=0)
-        ax.set(xlim=(-2400, 2400), ylim=(-2400, 2400), xlabel="$x$ / 米", ylabel="$y$ / 米")
-        ax.set_xticks([-2000, -1000, 0, 1000, 2000])
-        ax.set_yticks([-2000, -1000, 0, 1000, 2000])
-        ax.set_aspect("equal")
-    for point in points3:
-        axes[0].add_patch(Circle(point, 1000, facecolor="#2670a6", edgecolor="#2670a6", alpha=0.10, lw=0.65))
-    axes[0].scatter(*zip(*points3), s=16, c="#125986", zorder=4)
-    axes[0].set_title("(a) 第三问：七点全向覆盖", pad=9)
-    axes[1].scatter(*zip(*points4[1:13]), marker="^", s=20, c="#b45527", zorder=4, label="外环点")
-    axes[1].scatter(*zip(*([points4[0]] + points4[13:])), s=16, c="#125986", zorder=4, label="原点及内点")
-    axes[1].set_title("(b) 第四问：23点认证布局", pad=9)
-    handles, labels = axes[1].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="center", bbox_to_anchor=(0.76, 0.10), ncol=2, frameon=False, handletextpad=0.3, columnspacing=1.1)
-    fig.text(0.285, 0.10, "浅色圆盘：保证接收半径1000米", ha="center", va="center", fontsize=7)
-    fig.text(0.5, 0.03, "黑色圆为1800米目标边界；第四问任意发射朝向的覆盖由正文有限极值证书保证。", ha="center", fontsize=7)
-    fig.subplots_adjust(left=0.10, right=0.98, bottom=0.24, top=0.91, wspace=0.32)
-    fig.savefig(DEST / "search_coverage.pdf", metadata={"Title": "第三、四问的冻结覆盖布局", "Subject": "来源：P3生产配置；P4 coverage_certificate_v2.json"})
+    """P4 uses the current production certificate; P3 shows both safe branches."""
+    certificate=read_result("problem4/results/coverage_certificate_v4.json")
+    if not certificate["certified"] or certificate["point_count"]!=22:
+        raise ValueError("第四问论文图要求当前22点完整覆盖证书")
+    layouts=[]
+    for count,radius in ((6,1150.),(9,1700.)):
+        layouts.append([(0.,0.)]+[(radius*math.cos(k*math.tau/count),radius*math.sin(k*math.tau/count)) for k in range(count)])
+    layouts.append(certificate["points"])
+    fig,axes=plt.subplots(1,3,figsize=(6.4,2.85))
+    titles=["(a) 第三问：原点收信，7点", "(b) 第三问：原点无信号，10点", "(c) 第四问：22点认证布局"]
+    for index,(ax,points,title) in enumerate(zip(axes,layouts,titles)):
+        ax.add_patch(Circle((0,0),1800,fill=False,color="#222222",lw=.9,zorder=3))
+        ax.axhline(0,color="#dddddd",lw=.4,zorder=0);ax.axvline(0,color="#dddddd",lw=.4,zorder=0)
+        ax.set(xlim=(-2300,2300),ylim=(-2300,2300),xlabel="$x$ / 米",ylabel="$y$ / 米")
+        ax.set_xticks([-2000,0,2000]);ax.set_yticks([-2000,0,2000]);ax.set_aspect("equal")
+        if index<2:
+            for point in points:ax.add_patch(Circle(point,1000,facecolor="#2670a6",edgecolor="#2670a6",alpha=.09,lw=.5))
+            ax.scatter(*zip(*points),s=10,c="#125986",zorder=4)
+        else:
+            inner=[p for p in points if math.hypot(*p)<1500.];outer=[p for p in points if math.hypot(*p)>=1500.]
+            ax.scatter(*zip(*outer),marker="^",s=13,c="#b45527",zorder=4)
+            ax.scatter(*zip(*inner),s=11,c="#125986",zorder=4)
+        ax.set_title(title,fontsize=7.2,pad=7)
+    fig.text(.5,.10,"第三问浅色圆盘半径1000米；图示相位不影响覆盖，实际相位按公共状态选择。",ha="center",fontsize=6.6)
+    fig.text(.5,.035,"第四问蓝点为原点和内点、三角为外点；任意朝向覆盖由独立有限几何证书保证。",ha="center",fontsize=6.6)
+    fig.subplots_adjust(left=.105,right=.985,bottom=.25,top=.91,wspace=.40)
+    fig.savefig(DEST/"search_coverage.pdf",metadata={"Title":"第三四问当前冻结覆盖布局","Subject":"P3条件覆盖；P4 coverage_certificate_v4.json"})
     plt.close(fig)
 
 
@@ -97,45 +90,42 @@ def label_bars(ax, bars, percentage=False):
 
 
 def comparison_figure():
-    """各条形均来自现有冻结结果，不将不同样本集合合并评分。"""
-    p3 = read_result("problem3/results/benchmark_development.json")["summary"]
-    p4 = read_result("problem4/results/speed_comparison_v2.json")["paired"]
-    fig, axes = plt.subplots(2, 2, figsize=(6.4, 4.85))
-    names3 = ["先覆盖后清除", "本文策略", "直接光学"]
-    strategy_keys = ["baseline", "adaptive", "optical"]
-    colors3 = ["#8d959e", "#2670a6", "#cc8451"]
-    for col, field in enumerate(["mean_average_clear_time_s", "threshold_pass_rate"]):
-        values = [p3[key][field] * (100 if col else 1) for key in strategy_keys]
-        bars = axes[0, col].bar(range(3), values, color=colors3, width=0.57, edgecolor="#333333", linewidth=0.4)
-        for bar, hatch in zip(bars, ["//", "", ".."]):
-            bar.set_hatch(hatch)
-        label_bars(axes[0, col], bars, percentage=bool(col))
-        axes[0, col].set_xticks(range(3), names3)
-    axes[0, 0].set(title="(a) 第三问：同一开发集96例", ylabel="平均时间 / (秒/源)", ylim=(0, 720))
-    axes[0, 1].set(title="(b) 第三问：300秒/源阈值", ylabel="全清且达到阈值 / %", ylim=(0, 100))
-    keys4 = ["development_v2", "holdout_v2", "stress_v2"]
-    labels4 = ["开发\n384例", "留出\n512例", "压力\n256例"]
-    for col, pair in enumerate(
-        [("old_seconds_per_source", "new_seconds_per_source"), ("old_threshold_pass_rate", "new_threshold_pass_rate")]
-    ):
-        for index, (field, color, offset, legend, hatch) in enumerate(
-            [(pair[0], "#a3a8ad", -0.19, "旧版25点", "//"), (pair[1], "#2670a6", 0.19, "新版23点", "")]
-        ):
-            values = [p4[key][field] * (100 if col else 1) for key in keys4]
-            bars = axes[1, col].bar([x + offset for x in range(3)], values, width=0.34, color=color, edgecolor="#333333", linewidth=0.4, label=legend, hatch=hatch)
-            label_bars(axes[1, col], bars, percentage=bool(col))
-        axes[1, col].set_xticks(range(3), labels4)
-    axes[1, 0].set(title="(c) 第四问：集合内新旧配对", ylabel="平均时间 / (秒/源)", ylim=(0, 740))
-    axes[1, 1].set(title="(d) 第四问：500秒/源阈值", ylabel="全清且达到阈值 / %", ylim=(0, 100))
-    for ax in axes.flat:
-        ax.spines[["top", "right"]].set_visible(False)
-        ax.grid(axis="y", linewidth=0.4, color="#dddddd", zorder=0)
-        ax.set_axisbelow(True)
-    handles, labels = axes[1, 0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, 0.055), ncol=2, frameon=False)
-    fig.text(0.5, 0.023, "全部为自建样本；每例先计算总虚拟时间/清除数，再取均值。阈值为本地预设标准。", ha="center", fontsize=7)
-    fig.subplots_adjust(left=0.10, right=0.98, top=0.93, bottom=0.18, hspace=0.63, wspace=0.31)
-    fig.savefig(DEST / "search_comparison.pdf", metadata={"Title": "第三、四问本地冻结算法对照", "Subject": "P3同一96例开发集；P4 v2各集合内逐例配对"})
+    """Read the same-simulator, isolated-process final reports; never run a policy."""
+    fig,axes=plt.subplots(2,2,figsize=(6.4,4.9))
+    splits=("development_v3","holdout_v3","stress_v3")
+    labels=["开发\n384例","留出\n512例","压力\n256例"]
+    legends={"original":"原默认","previous":"上一轮最好","teammate":"队友方案","selected":"本文方案"}
+    colors={"original":"#999fa5","previous":"#91b4c7","teammate":"#d09665","selected":"#17608d"}
+    handles={}
+    for row,problem in enumerate((3,4)):
+        reports=[read_result(f"validation/speed_v4/p{problem}_{split}.json")["results"][str(problem)] for split in splits]
+        keys={"original":f"problem{problem}.policy:SearchPolicy","teammate":"teammate","selected":f"problem{problem}.speed_policy:SearchPolicy"}
+        extras=[k for k in reports[0] if k not in keys.values()]
+        if extras:keys["previous"]=extras[0]
+        order=[kind for kind in ("original","previous","teammate","selected") if kind in keys]
+        width=.72/len(order)
+        for column,field in enumerate(("mean_seconds_per_source","threshold_pass_rate")):
+            ax=axes[row,column]
+            for index,kind in enumerate(order):
+                summaries=[report[keys[kind]]["summary"] for report in reports]
+                if any(s["cases"]!=n for s,n in zip(summaries,(384,512,256))):raise ValueError("Incomplete final report")
+                values=[s[field]*(100 if column else 1) for s in summaries]
+                positions=[x+(index-(len(order)-1)/2)*width for x in range(3)]
+                bars=ax.bar(positions,values,width=width*.9,color=colors[kind],edgecolor="#333333",linewidth=.35,label=legends[kind])
+                handles[kind]=bars[0]
+                if kind=="selected":label_bars(ax,bars,percentage=bool(column))
+            ax.set_xticks(range(3),labels)
+            ax.set_ylabel("全清且达到阈值 / %" if column else "平均时间 / (秒/源)")
+            threshold=220 if problem==3 else 400
+            ax.set_title(f"({chr(97+row*2+column)}) 第{['三','四'][row]}问："+(f"{threshold}秒/源阈值" if column else "同集合逐例配对"))
+            if column:ax.set_ylim(0,100)
+            else:ax.set_ylim(0,max(ax.get_ylim()[1],350 if problem==3 else 660))
+            ax.spines[["top","right"]].set_visible(False);ax.grid(axis="y",linewidth=.4,color="#dddddd");ax.set_axisbelow(True)
+    ordered=[kind for kind in ("original","previous","teammate","selected") if kind in handles]
+    fig.legend([handles[kind] for kind in ordered],[legends[kind] for kind in ordered],loc="lower center",bbox_to_anchor=(.5,.054),ncol=4,frameon=False)
+    fig.text(.5,.023,"自建样本，非官方成绩；每例先算总虚拟时间/清除数，再取均值；阈值为本地目标。",ha="center",fontsize=6.8)
+    fig.subplots_adjust(left=.10,right=.985,top=.93,bottom=.18,hspace=.65,wspace=.32)
+    fig.savefig(DEST/"search_comparison.pdf",metadata={"Title":"第三四问第四轮冻结算法比较","Subject":"validation/speed_v4；统一模拟器与独立进程"})
     plt.close(fig)
 
 

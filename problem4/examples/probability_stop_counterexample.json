@@ -1,0 +1,98 @@
+{
+  "case_id": "probability_stop_nominal99_131072_legal_counterexample",
+  "suite_version": "probability_v1",
+  "problem": 4,
+  "provenance": "Evaluator-constructed legal counterexample; NOT a random held-out or official case",
+  "seed": 111000014,
+  "split": "counterexample",
+  "family": "adversarial_added_hidden_source",
+  "noise": "extreme",
+  "sources": [
+    {
+      "channel": 18,
+      "x": -543.0986232883708,
+      "y": 556.7098910257399,
+      "radius": 1000.0,
+      "orientation_deg": 318.2014797179597
+    },
+    {
+      "channel": 5,
+      "x": 1556.9709074036223,
+      "y": 849.3056929593012,
+      "radius": 1000.0,
+      "orientation_deg": 23.87802761055815
+    },
+    {
+      "channel": 13,
+      "x": 1685.952320039527,
+      "y": -303.5490979801609,
+      "radius": 1000.0,
+      "orientation_deg": 347.55500008869404
+    },
+    {
+      "channel": 16,
+      "x": 84.22193852983084,
+      "y": -813.1736976922671,
+      "radius": 1000.0,
+      "orientation_deg": 92.39874989408833
+    },
+    {
+      "channel": 1,
+      "x": 1190.1705206512963,
+      "y": -1253.430396650855,
+      "radius": 1000.0,
+      "orientation_deg": 310.2978920457807
+    },
+    {
+      "channel": 15,
+      "x": -823.1596058118864,
+      "y": 165.56629007066343,
+      "radius": 1000.0,
+      "orientation_deg": 351.9567326261548
+    },
+    {
+      "channel": 3,
+      "x": -670.5332837162613,
+      "y": -323.1430189612917,
+      "radius": 1000.0,
+      "orientation_deg": 21.245143745441524
+    },
+    {
+      "channel": 8,
+      "x": -287.6927463919582,
+      "y": 1771.0872393073867,
+      "radius": 1000.0,
+      "orientation_deg": 99.1431949005833
+    },
+    {
+      "channel": 7,
+      "x": -276.3369608751313,
+      "y": -541.103920115714,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 12,
+      "x": 790.46410821178,
+      "y": 1578.5653750009797,
+      "radius": 1000.0,
+      "orientation_deg": 67.1126981068949
+    },
+    {
+      "channel": 2,
+      "x": -389.5913050885851,
+      "y": -1757.33281281588,
+      "radius": 1000.0,
+      "orientation_deg": 347.2072732855856
+    }
+  ],
+  "counterexample": {
+    "original_case_id": "probability_v1_p4_development_000014",
+    "original_split": "development",
+    "original_family": "nested_rings",
+    "added_source_channel": 2,
+    "particles": 131072,
+    "probability_mode": "nominal",
+    "probability_threshold": 0.99
+  }
+}

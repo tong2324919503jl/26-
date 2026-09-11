@@ -1,12 +1,12 @@
 {
-  "verified_at_utc": "2026-09-11T03:36:08.424949+00:00",
+  "verified_at_utc": "2026-09-11T14:59:33.520730+00:00",
   "python_version": "3.12.7",
   "passed": true,
   "unit_test_counts": {
     "problem1": 36,
     "problem2": 27,
-    "problem3": 41,
-    "problem4": 38
+    "problem3": 79,
+    "problem4": 49
   },
   "scope": "Local problems 1 to 4; synthetic examples and local mock HTTP; no official simulator run.",
   "checks": [
@@ -18,16 +18,16 @@
         "searchable_text_files_checked": 3,
         "method": "SHA-256 and byte counts; DOCX ZIP CRC and XML parsing; PDF signature"
       },
-      "elapsed_seconds": 0.094
+      "elapsed_seconds": 0.038
     },
     {
       "name": "problem1_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_teammate_optical_counterexample_is_physically_compatible (test_geometry.BearingModelTests.test_teammate_optical_counterexample_is_physically_compatible) ... ok\ntest_teammate_wide_baseline_source_and_coverage (test_geometry.BearingModelTests.test_teammate_wide_baseline_source_and_coverage) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_area_is_translation_invariant_and_zero_for_degenerate_sets (test_geometry.CalipersAndCoverageTests.test_area_is_translation_invariant_and_zero_for_degenerate_sets) ... ok\ntest_calipers_degenerate_cases (test_geometry.CalipersAndCoverageTests.test_calipers_degenerate_cases) ... ok\ntest_calipers_matches_independent_exact_pairs_on_random_hulls (test_geometry.CalipersAndCoverageTests.test_calipers_matches_independent_exact_pairs_on_random_hulls) ... ok\ntest_diameter_midpoint_can_be_worse_than_minimum_circle_center (test_geometry.CalipersAndCoverageTests.test_diameter_midpoint_can_be_worse_than_minimum_circle_center) ... ok\ntest_empty_and_unbounded_have_no_finite_coverage_decision (test_geometry.CalipersAndCoverageTests.test_empty_and_unbounded_have_no_finite_coverage_decision) ... ok\ntest_exact_diameter_40_is_necessary_but_not_sufficient (test_geometry.CalipersAndCoverageTests.test_exact_diameter_40_is_necessary_but_not_sufficient) ... ok\ntest_optical_decision_uses_radius_and_preserves_exact_threshold (test_geometry.CalipersAndCoverageTests.test_optical_decision_uses_radius_and_preserves_exact_threshold) ... ok\ntest_parallel_support_ties_and_large_translation (test_geometry.CalipersAndCoverageTests.test_parallel_support_ties_and_large_translation) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.417s\n\nOK"
+        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_teammate_optical_counterexample_is_physically_compatible (test_geometry.BearingModelTests.test_teammate_optical_counterexample_is_physically_compatible) ... ok\ntest_teammate_wide_baseline_source_and_coverage (test_geometry.BearingModelTests.test_teammate_wide_baseline_source_and_coverage) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_area_is_translation_invariant_and_zero_for_degenerate_sets (test_geometry.CalipersAndCoverageTests.test_area_is_translation_invariant_and_zero_for_degenerate_sets) ... ok\ntest_calipers_degenerate_cases (test_geometry.CalipersAndCoverageTests.test_calipers_degenerate_cases) ... ok\ntest_calipers_matches_independent_exact_pairs_on_random_hulls (test_geometry.CalipersAndCoverageTests.test_calipers_matches_independent_exact_pairs_on_random_hulls) ... ok\ntest_diameter_midpoint_can_be_worse_than_minimum_circle_center (test_geometry.CalipersAndCoverageTests.test_diameter_midpoint_can_be_worse_than_minimum_circle_center) ... ok\ntest_empty_and_unbounded_have_no_finite_coverage_decision (test_geometry.CalipersAndCoverageTests.test_empty_and_unbounded_have_no_finite_coverage_decision) ... ok\ntest_exact_diameter_40_is_necessary_but_not_sufficient (test_geometry.CalipersAndCoverageTests.test_exact_diameter_40_is_necessary_but_not_sufficient) ... ok\ntest_optical_decision_uses_radius_and_preserves_exact_threshold (test_geometry.CalipersAndCoverageTests.test_optical_decision_uses_radius_and_preserves_exact_threshold) ... ok\ntest_parallel_support_ties_and_large_translation (test_geometry.CalipersAndCoverageTests.test_parallel_support_ties_and_large_translation) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.392s\n\nOK"
       },
-      "elapsed_seconds": 0.546
+      "elapsed_seconds": 0.513
     },
     {
       "name": "problem1_solve_from_outside_repository",
@@ -36,16 +36,16 @@
         "exit_code": 0,
         "output": "inconsistent_measurements.json: status=empty, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\inconsistent_measurements.result.json\nparallel_unbounded.json: status=unbounded, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\parallel_unbounded.result.json\ntriangle_counterexample.json: status=polygon, diameter=20.000000000000046, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_counterexample.result.json\ntriangle_optical_counterexample.json: status=polygon, diameter=40.00000000000003, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_optical_counterexample.result.json\ntwo_station_crossing.json: status=polygon, diameter=4.938542582373425, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\two_station_crossing.result.json\nwide_baseline_crossing.json: status=polygon, diameter=31.47967474778005, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\wide_baseline_crossing.result.json"
       },
-      "elapsed_seconds": 0.138
+      "elapsed_seconds": 0.119
     },
     {
       "name": "problem2_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_actual_posterior_uses_shared_candidate_geometry (test_solve.SecondPointTests.test_actual_posterior_uses_shared_candidate_geometry) ... ok\ntest_analytic_cap_short_circuit_equals_full_capped_score (test_solve.SecondPointTests.test_analytic_cap_short_circuit_equals_full_capped_score) ... ok\ntest_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_boundary_conditioning_changes_selection_and_allows_robot_outside (test_solve.SecondPointTests.test_boundary_conditioning_changes_selection_and_allows_robot_outside) ... ok\ntest_cap_equality_boundary_stops_without_tolerance_shift (test_solve.SecondPointTests.test_cap_equality_boundary_stops_without_tolerance_shift) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_circle_outer_relaxation_and_half_cell_endpoints_are_covered (test_solve.SecondPointTests.test_circle_outer_relaxation_and_half_cell_endpoints_are_covered) ... ok\ntest_clipping_tolerance_does_not_extrapolate_vertices (test_solve.SecondPointTests.test_clipping_tolerance_does_not_extrapolate_vertices) ... ok\ntest_conditioned_outer_prior_contains_physical_sources (test_solve.SecondPointTests.test_conditioned_outer_prior_contains_physical_sources) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_early_stop_input_validation_and_example_switch (test_solve.SecondPointTests.test_early_stop_input_validation_and_example_switch) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_boundary_extends_teammate_three_disk_region (test_solve.SecondPointTests.test_four_disk_boundary_extends_teammate_three_disk_region) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_large_or_infinite_analytic_cap_does_not_stop (test_solve.SecondPointTests.test_large_or_infinite_analytic_cap_does_not_stop) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_near_projection_lower_bound_widens_with_angle (test_solve.SecondPointTests.test_near_projection_lower_bound_widens_with_angle) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_refined_input_rejects_invalid_precision_and_stages (test_solve.SecondPointTests.test_refined_input_rejects_invalid_precision_and_stages) ... ok\ntest_refined_selection_retains_baseline_and_shorter_option (test_solve.SecondPointTests.test_refined_selection_retains_baseline_and_shorter_option) ... ok\ntest_search_recommendation_and_candidate_order_match_full_scan (test_solve.SecondPointTests.test_search_recommendation_and_candidate_order_match_full_scan) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_thin_boundary_posterior_uses_same_first_distance_lower_bound (test_solve.SecondPointTests.test_thin_boundary_posterior_uses_same_first_distance_lower_bound) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\ntest_widened_cells_cover_non_grid_observations (test_solve.SecondPointTests.test_widened_cells_cover_non_grid_observations) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 8.794s\n\nOK"
+        "output": "test_actual_posterior_uses_shared_candidate_geometry (test_solve.SecondPointTests.test_actual_posterior_uses_shared_candidate_geometry) ... ok\ntest_analytic_cap_short_circuit_equals_full_capped_score (test_solve.SecondPointTests.test_analytic_cap_short_circuit_equals_full_capped_score) ... ok\ntest_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_boundary_conditioning_changes_selection_and_allows_robot_outside (test_solve.SecondPointTests.test_boundary_conditioning_changes_selection_and_allows_robot_outside) ... ok\ntest_cap_equality_boundary_stops_without_tolerance_shift (test_solve.SecondPointTests.test_cap_equality_boundary_stops_without_tolerance_shift) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_circle_outer_relaxation_and_half_cell_endpoints_are_covered (test_solve.SecondPointTests.test_circle_outer_relaxation_and_half_cell_endpoints_are_covered) ... ok\ntest_clipping_tolerance_does_not_extrapolate_vertices (test_solve.SecondPointTests.test_clipping_tolerance_does_not_extrapolate_vertices) ... ok\ntest_conditioned_outer_prior_contains_physical_sources (test_solve.SecondPointTests.test_conditioned_outer_prior_contains_physical_sources) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_early_stop_input_validation_and_example_switch (test_solve.SecondPointTests.test_early_stop_input_validation_and_example_switch) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_boundary_extends_teammate_three_disk_region (test_solve.SecondPointTests.test_four_disk_boundary_extends_teammate_three_disk_region) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_large_or_infinite_analytic_cap_does_not_stop (test_solve.SecondPointTests.test_large_or_infinite_analytic_cap_does_not_stop) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_near_projection_lower_bound_widens_with_angle (test_solve.SecondPointTests.test_near_projection_lower_bound_widens_with_angle) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_refined_input_rejects_invalid_precision_and_stages (test_solve.SecondPointTests.test_refined_input_rejects_invalid_precision_and_stages) ... ok\ntest_refined_selection_retains_baseline_and_shorter_option (test_solve.SecondPointTests.test_refined_selection_retains_baseline_and_shorter_option) ... ok\ntest_search_recommendation_and_candidate_order_match_full_scan (test_solve.SecondPointTests.test_search_recommendation_and_candidate_order_match_full_scan) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_thin_boundary_posterior_uses_same_first_distance_lower_bound (test_solve.SecondPointTests.test_thin_boundary_posterior_uses_same_first_distance_lower_bound) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\ntest_widened_cells_cover_non_grid_observations (test_solve.SecondPointTests.test_widened_cells_cover_non_grid_observations) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 8.877s\n\nOK"
       },
-      "elapsed_seconds": 8.907
+      "elapsed_seconds": 8.981
     },
     {
       "name": "problem2_solve_from_outside_repository",
@@ -54,43 +54,43 @@
         "exit_code": 0,
         "output": "{\n  \"selected\": {\n    \"local_xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"diameter_upper_bound_m\": 112.3293040324109,\n    \"analytic_diameter_upper_bound_m\": 164.12365704055676,\n    \"capped_diameter_upper_bound_m\": 112.3293040324109,\n    \"geometric_diameter_upper_bound_m\": 112.3293040324109,\n    \"geometric_max_lower_bound_m\": 112.3293040324109,\n    \"geometric_scan_status\": \"complete\",\n    \"geometric_scan_complete\": true,\n    \"stop_reason\": \"all_cells_scanned\",\n    \"analytic_cap_m\": 164.12365704055676,\n    \"scanned_cells\": 3600,\n    \"total_cells\": 3600,\n    \"early_stopped\": false,\n    \"score_exact_for_capped_objective\": true,\n    \"worst_cell_center_local_deg\": 317.90000000000003,\n    \"worst_cell_outer_polygon_local_xy_m\": [\n      [\n        1441.2766887911514,\n        25.157578183376152\n      ],\n      [\n        1399.4878034092008,\n        24.42815047575636\n      ],\n      [\n        1452.5944080110241,\n        -25.355129707198493\n      ],\n      [\n        1499.7715427345706,\n        -26.178609656925268\n      ],\n      [\n        1499.7715427355693,\n        -26.178609656925268\n      ],\n      [\n        1499.7783806584637,\n        -25.786865316669562\n      ]\n    ],\n    \"observed_max_cell_center_local_deg\": 317.90000000000003,\n    \"observed_max_cell_outer_polygon_local_xy_m\": [\n      [\n        1441.2766887911514,\n        25.157578183376152\n      ],\n      [\n        1399.4878034092008,\n        24.42815047575636\n      ],\n      [\n        1452.5944080110241,\n        -25.355129707198493\n      ],\n      [\n        1499.7715427345706,\n        -26.178609656925268\n      ],\n      [\n        1499.7715427355693,\n        -26.178609656925268\n      ],\n      [\n        1499.7783806584637,\n        -25.786865316669562\n      ]\n    ],\n    \"second_distance_upper_m\": 1000.0000000000001,\n    \"outer_distance_upper_m\": 1000.0000000013747,\n    \"move_distance_m\": 1004.141279146345,\n    \"move_and_detect_time_s\": 205.828255829269,\n    \"direction_clearance_m\": 532.1138078314206\n  },\n  \"candidate_count\": 198,\n  \"output_dir\": \"D:\\\\VS code\\\\Repository\\\\26-\\\\problem2\\\\results\"\n}"
       },
-      "elapsed_seconds": 15.926
+      "elapsed_seconds": 15.618
     },
     {
       "name": "problem3_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_accepted_but_lost_response_reuses_identical_request (test_client.ClientTests.test_accepted_but_lost_response_reuses_identical_request) ... ok\ntest_concurrent_callers_are_serialized_and_ids_are_new (test_client.ClientTests.test_concurrent_callers_are_serialized_and_ids_are_new) ... ok\ntest_enter_lost_response_does_not_extend_deadline (test_client.ClientTests.test_enter_lost_response_does_not_extend_deadline) ... ok\ntest_exhausted_retry_keeps_pending_and_blocks_new_action (test_client.ClientTests.test_exhausted_retry_keeps_pending_and_blocks_new_action) ... ok\ntest_http_error_is_not_an_accepted_action (test_client.ClientTests.test_http_error_is_not_an_accepted_action) ... ok\ntest_invalid_input_is_rejected_before_network (test_client.ClientTests.test_invalid_input_is_rejected_before_network) ... ok\ntest_no_overwrite_of_existing_log (test_client.ClientTests.test_no_overwrite_of_existing_log) ... ok\ntest_protocol_timing_example_and_clear_does_not_switch_channel (test_client.ClientTests.test_protocol_timing_example_and_clear_does_not_switch_channel) ... ok\ntest_rejection_zero_does_not_reset_accepted_state (test_client.ClientTests.test_rejection_zero_does_not_reset_accepted_state) ... ok\ntest_remaining_duration_and_exit_reserve (test_client.ClientTests.test_remaining_duration_and_exit_reserve) ... ok\ntest_truncated_response_is_retried_as_the_same_action (test_client.ClientTests.test_truncated_response_is_retried_as_the_same_action) ... ok\ntest_unknown_result_is_not_silently_no_signal (test_client.ClientTests.test_unknown_result_is_not_silently_no_signal) ... ok\ntest_zero_budget_does_not_probe_exit (test_client.ClientTests.test_zero_budget_does_not_probe_exit) ... ok\ntest_problem3_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem3_full_online_cli_on_local_synthetic_http) ... ok\ntest_problem4_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem4_full_online_cli_on_local_synthetic_http) ... ok\ntest_enclosing_circle_equilateral_not_half_diameter (test_policy.GeometryTests.test_enclosing_circle_equilateral_not_half_diameter) ... ok\ntest_quantized_adversarial_bearings_retain_truth (test_policy.GeometryTests.test_quantized_adversarial_bearings_retain_truth) ... ok\ntest_ring_coverage_certificate_and_dense_boundary (test_policy.GeometryTests.test_ring_coverage_certificate_and_dense_boundary) ... ok\ntest_rotated_optical_cover_contains_every_sample (test_policy.GeometryTests.test_rotated_optical_cover_contains_every_sample) ... ok\ntest_voronoi_cover_certificate (test_policy.GeometryTests.test_voronoi_cover_certificate) ... ok\ntest_directional_localization_remains_finite (test_policy.PolicyTests.test_directional_localization_remains_finite) ... ok\ntest_directional_negative_does_not_discard_true_region (test_policy.PolicyTests.test_directional_negative_does_not_discard_true_region) ... ok\ntest_end_to_end_adversarial_error_and_edge_positions (test_policy.PolicyTests.test_end_to_end_adversarial_error_and_edge_positions) ... ok\ntest_near_clears_without_bearing (test_policy.PolicyTests.test_near_clears_without_bearing) ... ok\ntest_rejected_action_never_becomes_a_reading (test_policy.PolicyTests.test_rejected_action_never_becomes_a_reading) ... ok\ntest_sixteen_clearances_certify_early_stop (test_policy.PolicyTests.test_sixteen_clearances_certify_early_stop) ... ok\ntest_budget_uses_exit_reserve_when_exit_is_safe (test_runner.RunnerTests.test_budget_uses_exit_reserve_when_exit_is_safe) ... ok\ntest_nonfinite_orientation_is_rejected_as_bad_case (test_runner.RunnerTests.test_nonfinite_orientation_is_rejected_as_bad_case) ... ok\ntest_rejected_enter_does_not_run_policy_or_probe_exit (test_runner.RunnerTests.test_rejected_enter_does_not_run_policy_or_probe_exit) ... ok\ntest_rejected_exit_is_not_reissued_as_a_new_request (test_runner.RunnerTests.test_rejected_exit_is_not_reissued_as_a_new_request) ... ok\ntest_relative_local_paths_are_based_on_problem_directory_from_outside (test_runner.RunnerTests.test_relative_local_paths_are_based_on_problem_directory_from_outside) ... ok\ntest_solver_wrappers_import_from_outside_repository (test_runner.RunnerTests.test_solver_wrappers_import_from_outside_repository) ... ok\ntest_success_keeps_platform_truth_and_runtime_unknown (test_runner.RunnerTests.test_success_keeps_platform_truth_and_runtime_unknown) ... ok\ntest_total_failure_is_retained_in_aggregate (test_runner.RunnerTests.test_total_failure_is_retained_in_aggregate) ... ok\ntest_unknown_outcome_does_not_exit_or_publish_final_average (test_runner.RunnerTests.test_unknown_outcome_does_not_exit_or_publish_final_average) ... ok\ntest_attachment_time_example (test_simulator.SimulatorTests.test_attachment_time_example) ... ok\ntest_directional_backside_and_optical (test_simulator.SimulatorTests.test_directional_backside_and_optical) ... ok\ntest_facade_exposes_no_case_fields (test_simulator.SimulatorTests.test_facade_exposes_no_case_fields) ... ok\ntest_fixed_local_error_rounding_and_boundary (test_simulator.SimulatorTests.test_fixed_local_error_rounding_and_boundary) ... ok\ntest_generator_reproducible_and_disjoint (test_simulator.SimulatorTests.test_generator_reproducible_and_disjoint) ... ok\ntest_invalid_action_does_not_move (test_simulator.SimulatorTests.test_invalid_action_does_not_move) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 8.770s\n\nOK"
+        "output": "test_accepted_but_lost_response_reuses_identical_request (test_client.ClientTests.test_accepted_but_lost_response_reuses_identical_request) ... ok\ntest_concurrent_callers_are_serialized_and_ids_are_new (test_client.ClientTests.test_concurrent_callers_are_serialized_and_ids_are_new) ... ok\ntest_enter_lost_response_does_not_extend_deadline (test_client.ClientTests.test_enter_lost_response_does_not_extend_deadline) ... ok\ntest_exhausted_retry_keeps_pending_and_blocks_new_action (test_client.ClientTests.test_exhausted_retry_keeps_pending_and_blocks_new_action) ... ok\ntest_http_error_is_not_an_accepted_action (test_client.ClientTests.test_http_error_is_not_an_accepted_action) ... ok\ntest_invalid_input_is_rejected_before_network (test_client.ClientTests.test_invalid_input_is_rejected_before_network) ... ok\ntest_no_overwrite_of_existing_log (test_client.ClientTests.test_no_overwrite_of_existing_log) ... ok\ntest_protocol_timing_example_and_clear_does_not_switch_channel (test_client.ClientTests.test_protocol_timing_example_and_clear_does_not_switch_channel) ... ok\ntest_rejection_zero_does_not_reset_accepted_state (test_client.ClientTests.test_rejection_zero_does_not_reset_accepted_state) ... ok\ntest_remaining_duration_and_exit_reserve (test_client.ClientTests.test_remaining_duration_and_exit_reserve) ... ok\ntest_truncated_response_is_retried_as_the_same_action (test_client.ClientTests.test_truncated_response_is_retried_as_the_same_action) ... ok\ntest_unknown_result_is_not_silently_no_signal (test_client.ClientTests.test_unknown_result_is_not_silently_no_signal) ... ok\ntest_zero_budget_does_not_probe_exit (test_client.ClientTests.test_zero_budget_does_not_probe_exit) ... ok\ntest_problem3_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem3_full_online_cli_on_local_synthetic_http) ... ok\ntest_problem4_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem4_full_online_cli_on_local_synthetic_http) ... ok\ntest_enclosing_circle_equilateral_not_half_diameter (test_policy.GeometryTests.test_enclosing_circle_equilateral_not_half_diameter) ... ok\ntest_quantized_adversarial_bearings_retain_truth (test_policy.GeometryTests.test_quantized_adversarial_bearings_retain_truth) ... ok\ntest_ring_coverage_certificate_and_dense_boundary (test_policy.GeometryTests.test_ring_coverage_certificate_and_dense_boundary) ... ok\ntest_rotated_optical_cover_contains_every_sample (test_policy.GeometryTests.test_rotated_optical_cover_contains_every_sample) ... ok\ntest_voronoi_cover_certificate (test_policy.GeometryTests.test_voronoi_cover_certificate) ... ok\ntest_directional_localization_remains_finite (test_policy.PolicyTests.test_directional_localization_remains_finite) ... ok\ntest_directional_negative_does_not_discard_true_region (test_policy.PolicyTests.test_directional_negative_does_not_discard_true_region) ... ok\ntest_end_to_end_adversarial_error_and_edge_positions (test_policy.PolicyTests.test_end_to_end_adversarial_error_and_edge_positions) ... ok\ntest_near_clears_without_bearing (test_policy.PolicyTests.test_near_clears_without_bearing) ... ok\ntest_rejected_action_never_becomes_a_reading (test_policy.PolicyTests.test_rejected_action_never_becomes_a_reading) ... ok\ntest_sixteen_clearances_certify_early_stop (test_policy.PolicyTests.test_sixteen_clearances_certify_early_stop) ... ok\ntest_all_declared_layouts_and_reordered_subsets_are_supported (test_probability_numeric.ProbabilityNumericalTests.test_all_declared_layouts_and_reordered_subsets_are_supported) ... ok\ntest_finite_union_counts_all_layout_subsets_and_five_priors (test_probability_numeric.ProbabilityNumericalTests.test_finite_union_counts_all_layout_subsets_and_five_priors) ... ok\ntest_invalid_numerical_inputs_are_rejected (test_probability_numeric.ProbabilityNumericalTests.test_invalid_numerical_inputs_are_rejected) ... ok\ntest_inverted_bound_keeps_safe_bracket_and_is_monotone (test_probability_numeric.ProbabilityNumericalTests.test_inverted_bound_keeps_safe_bracket_and_is_monotone) ... ok\ntest_matching_uses_euclidean_tolerance_and_rejects_bad_points (test_probability_numeric.ProbabilityNumericalTests.test_matching_uses_euclidean_tolerance_and_rejects_bad_points) ... ok\ntest_points_from_incompatible_layouts_cannot_be_combined (test_probability_numeric.ProbabilityNumericalTests.test_points_from_incompatible_layouts_cannot_be_combined) ... ok\ntest_tolerance_detection_sandwich_at_both_physical_boundaries (test_probability_numeric.ProbabilityNumericalTests.test_tolerance_detection_sandwich_at_both_physical_boundaries) ... ok\ntest_zero_survivors_have_strictly_positive_closed_form_upper_bound (test_probability_numeric.ProbabilityNumericalTests.test_zero_survivors_have_strictly_positive_closed_form_upper_bound) ... ok\ntest_default_sizes_without_generating_reserved_cases (test_probability_scenarios.ProbabilityScenariosTests.test_default_sizes_without_generating_reserved_cases) ... ok\ntest_development_legality_diversity_and_reproducibility (test_probability_scenarios.ProbabilityScenariosTests.test_development_legality_diversity_and_reproducibility) ... ok\ntest_fixed_bounded_errors_and_public_facade (test_probability_scenarios.ProbabilityScenariosTests.test_fixed_bounded_errors_and_public_facade) ... ok\ntest_full_seed_reservations_are_disjoint_from_each_other_and_old_suites (test_probability_scenarios.ProbabilityScenariosTests.test_full_seed_reservations_are_disjoint_from_each_other_and_old_suites) ... ok\ntest_hidden_families_have_actual_origin_blind_sources (test_probability_scenarios.ProbabilityScenariosTests.test_hidden_families_have_actual_origin_blind_sources) ... ok\ntest_prefix_empty_independence_and_invalid_inputs (test_probability_scenarios.ProbabilityScenariosTests.test_prefix_empty_independence_and_invalid_inputs) ... ok\ntest_stress_construction_with_non_reserved_unit_seeds (test_probability_scenarios.ProbabilityScenariosTests.test_stress_construction_with_non_reserved_unit_seeds) ... ok\ntest_more_scan_points_and_prior_sensitivity (test_probability_stop.ConfigurationIntegrationTests.test_more_scan_points_and_prior_sensitivity) ... ok\ntest_positive_unresolved_source_blocks_exit (test_probability_stop.ConfigurationIntegrationTests.test_positive_unresolved_source_blocks_exit) ... ok\ntest_repeated_no_signal_is_not_independent_evidence (test_probability_stop.ConfigurationIntegrationTests.test_repeated_no_signal_is_not_independent_evidence) ... ok\ntest_source_minimum_blocks_exit (test_probability_stop.ConfigurationIntegrationTests.test_source_minimum_blocks_exit) ... ok\ntest_zero_sampled_survivors_still_not_certainty (test_probability_stop.ConfigurationIntegrationTests.test_zero_sampled_survivors_still_not_certainty) ... ok\ntest_channel_assignment_likelihood_matches_formula (test_probability_stop.PosteriorTests.test_channel_assignment_likelihood_matches_formula) ... ok\ntest_invalid_inputs (test_probability_stop.PosteriorTests.test_invalid_inputs) ... ok\ntest_one_remaining_count_hypothesis (test_probability_stop.PosteriorTests.test_one_remaining_count_hypothesis) ... ok\ntest_unknown_source_minimum_and_maximum (test_probability_stop.PosteriorTests.test_unknown_source_minimum_and_maximum) ... ok\ntest_first_crossing_and_safe_fallback_match_actual_runs (test_probability_trace.ProbabilityReplayTests.test_first_crossing_and_safe_fallback_match_actual_runs) ... ok\ntest_sixteen_source_safe_return_has_no_probability_interception (test_probability_trace.ProbabilityReplayTests.test_sixteen_source_safe_return_has_no_probability_interception) ... ok\ntest_budget_failure_does_not_invent_a_safe_final_checkpoint (test_probability_trace.ProbabilityTraceTests.test_budget_failure_does_not_invent_a_safe_final_checkpoint) ... ok\ntest_identical_public_prefix_can_have_different_external_truth (test_probability_trace.ProbabilityTraceTests.test_identical_public_prefix_can_have_different_external_truth) ... ok\ntest_physical_trajectories_unchanged_in_both_production_mros (test_probability_trace.ProbabilityTraceTests.test_physical_trajectories_unchanged_in_both_production_mros) ... ok\ntest_snapshots_are_prefixes_and_final_upper_count_return_is_captured (test_probability_trace.ProbabilityTraceTests.test_snapshots_are_prefixes_and_final_upper_count_return_is_captured) ... ok\ntest_tenth_near_clear_is_not_a_mid_scan_checkpoint (test_probability_trace.ProbabilityTraceTests.test_tenth_near_clear_is_not_a_mid_scan_checkpoint) ... ok\ntest_budget_uses_exit_reserve_when_exit_is_safe (test_runner.RunnerTests.test_budget_uses_exit_reserve_when_exit_is_safe) ... ok\ntest_fingerprint_covers_production_modules_and_thresholds (test_runner.RunnerTests.test_fingerprint_covers_production_modules_and_thresholds) ... ok\ntest_nonfinite_orientation_is_rejected_as_bad_case (test_runner.RunnerTests.test_nonfinite_orientation_is_rejected_as_bad_case) ... ok\ntest_previous_alias_replays_original_policies (test_runner.RunnerTests.test_previous_alias_replays_original_policies) ... ok\ntest_rejected_enter_does_not_run_policy_or_probe_exit (test_runner.RunnerTests.test_rejected_enter_does_not_run_policy_or_probe_exit) ... ok\ntest_rejected_exit_is_not_reissued_as_a_new_request (test_runner.RunnerTests.test_rejected_exit_is_not_reissued_as_a_new_request) ... ok\ntest_relative_local_paths_are_based_on_problem_directory_from_outside (test_runner.RunnerTests.test_relative_local_paths_are_based_on_problem_directory_from_outside) ... ok\ntest_solver_wrappers_import_from_outside_repository (test_runner.RunnerTests.test_solver_wrappers_import_from_outside_repository) ... ok\ntest_success_keeps_platform_truth_and_runtime_unknown (test_runner.RunnerTests.test_success_keeps_platform_truth_and_runtime_unknown) ... ok\ntest_total_failure_is_retained_in_aggregate (test_runner.RunnerTests.test_total_failure_is_retained_in_aggregate) ... ok\ntest_unknown_outcome_does_not_exit_or_publish_final_average (test_runner.RunnerTests.test_unknown_outcome_does_not_exit_or_publish_final_average) ... ok\ntest_version_display_is_read_only_and_never_enters_arena (test_runner.RunnerTests.test_version_display_is_read_only_and_never_enters_arena) ... ok\ntest_attachment_time_example (test_simulator.SimulatorTests.test_attachment_time_example) ... ok\ntest_directional_backside_and_optical (test_simulator.SimulatorTests.test_directional_backside_and_optical) ... ok\ntest_facade_exposes_no_case_fields (test_simulator.SimulatorTests.test_facade_exposes_no_case_fields) ... ok\ntest_fixed_local_error_rounding_and_boundary (test_simulator.SimulatorTests.test_fixed_local_error_rounding_and_boundary) ... ok\ntest_generator_reproducible_and_disjoint (test_simulator.SimulatorTests.test_generator_reproducible_and_disjoint) ... ok\ntest_invalid_action_does_not_move (test_simulator.SimulatorTests.test_invalid_action_does_not_move) ... ok\ntest_both_ring_geometries_cover_continuous_target_disk (test_speed_policy.SpeedPolicyTests.test_both_ring_geometries_cover_continuous_target_disk) ... ok\ntest_negative_constraints_keep_actual_sources_in_difficult_cases (test_speed_policy.SpeedPolicyTests.test_negative_constraints_keep_actual_sources_in_difficult_cases) ... ok\ntest_omni_negative_policy_rejects_directional_problem (test_speed_policy.SpeedPolicyTests.test_omni_negative_policy_rejects_directional_problem) ... ok\ntest_production_imports_do_not_load_experiments (test_speed_policy.SpeedPolicyTests.test_production_imports_do_not_load_experiments) ... ok\n\n----------------------------------------------------------------------\nRan 79 tests in 12.502s\n\nOK"
       },
-      "elapsed_seconds": 8.971
+      "elapsed_seconds": 12.742
     },
     {
       "name": "problem3_solve_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "本地自建案例 local_p3_development_0003：清除 14/14，总虚拟耗时 4569.6 秒，平均 326.4 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem3\\results\\demo_result.json"
+        "output": "问题3 strategy=adaptive algorithm_version=problem3_v4\n本地自建案例 local_p3_development_0003：清除 14/14，总虚拟耗时 3533.0 秒，平均 252.4 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem3\\results\\demo_result.json"
       },
-      "elapsed_seconds": 0.126
+      "elapsed_seconds": 0.309
     },
     {
       "name": "problem4_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_degenerate_hull_and_invalid_margin_are_rejected (test_coverage.DirectionalCertificateTests.test_degenerate_hull_and_invalid_margin_are_rejected) ... ok\ntest_distinct_nearly_coincident_pairs_are_still_enumerated (test_coverage.DirectionalCertificateTests.test_distinct_nearly_coincident_pairs_are_still_enumerated) ... ok\ntest_frozen_23_point_layout_has_large_reception_margin (test_coverage.DirectionalCertificateTests.test_frozen_23_point_layout_has_large_reception_margin) ... ok\ntest_no_single_frozen_point_can_be_silently_deleted (test_coverage.DirectionalCertificateTests.test_no_single_frozen_point_can_be_silently_deleted) ... ok\ntest_old_25_point_proof_is_reproduced (test_coverage.DirectionalCertificateTests.test_old_25_point_proof_is_reproduced) ... ok\ntest_previously_failed_symmetric_23_points_are_rejected (test_coverage.DirectionalCertificateTests.test_previously_failed_symmetric_23_points_are_rejected) ... ok\ntest_rotation_and_order_do_not_change_the_proof (test_coverage.DirectionalCertificateTests.test_rotation_and_order_do_not_change_the_proof) ... ok\ntest_clipped_arc_endpoints_are_enumerated (test_coverage.VoronoiSegmentTests.test_clipped_arc_endpoints_are_enumerated) ... ok\ntest_narrow_circular_cap (test_coverage.VoronoiSegmentTests.test_narrow_circular_cap) ... ok\ntest_nearly_coincident_sites_do_not_lose_a_circular_cap (test_coverage.VoronoiSegmentTests.test_nearly_coincident_sites_do_not_lose_a_circular_cap) ... ok\ntest_one_site_farthest_arc_is_enumerated (test_coverage.VoronoiSegmentTests.test_one_site_farthest_arc_is_enumerated) ... ok\ntest_voronoi_bisector_and_circle_intersections (test_coverage.VoronoiSegmentTests.test_voronoi_bisector_and_circle_intersections) ... ok\ntest_collinear_negative_pair_cannot_claim_two_dimensional_cut (test_localization.HistoricalNegativeGeometryTests.test_collinear_negative_pair_cannot_claim_two_dimensional_cut) ... ok\ntest_in_range_backside_pair_removes_shadow_but_retains_source (test_localization.HistoricalNegativeGeometryTests.test_in_range_backside_pair_removes_shadow_but_retains_source) ... ok\ntest_out_of_range_negatives_must_not_remove_source_behind_pair (test_localization.HistoricalNegativeGeometryTests.test_out_of_range_negatives_must_not_remove_source_behind_pair) ... ok\ntest_positive_radius_lower_bound_cuts_beyond_1000m (test_localization.HistoricalNegativeGeometryTests.test_positive_radius_lower_bound_cuts_beyond_1000m) ... ok\ntest_random_physical_halfplanes_and_radius_causes_retain_true_source (test_localization.HistoricalNegativeGeometryTests.test_random_physical_halfplanes_and_radius_causes_retain_true_source) ... ok\ntest_rounded_fixed_error_boundary_is_retained_without_averaging (test_localization.HistoricalNegativeGeometryTests.test_rounded_fixed_error_boundary_is_retained_without_averaging) ... ok\ntest_singleton_feasible_region_survives_history_refinement (test_localization.HistoricalNegativeGeometryTests.test_singleton_feasible_region_survives_history_refinement) ... ok\ntest_two_negatives_may_require_different_positive_radius_witnesses (test_localization.HistoricalNegativeGeometryTests.test_two_negatives_may_require_different_positive_radius_witnesses) ... ok\ntest_boundary_and_interior_have_convex_hull_witnesses (test_policy.DirectionalCoverageTests.test_boundary_and_interior_have_convex_hull_witnesses) ... ok\ntest_invalid_spacing_cannot_claim_coverage (test_policy.DirectionalCoverageTests.test_invalid_spacing_cannot_claim_coverage) ... ok\ntest_outward_boundary_sources_detectable (test_policy.DirectionalCoverageTests.test_outward_boundary_sources_detectable) ... ok\ntest_polar_cover_has_25_vertices_with_robust_margins (test_policy.DirectionalCoverageTests.test_polar_cover_has_25_vertices_with_robust_margins) ... ok\ntest_triangles_have_strictly_subminimum_receive_diameter (test_policy.DirectionalCoverageTests.test_triangles_have_strictly_subminimum_receive_diameter) ... ok\ntest_mixed_clustered_and_tangent_directions (test_policy.MixedPolicyTests.test_mixed_clustered_and_tangent_directions) ... ok\ntest_outward_boundary_minimum_radius_extreme_fixed_errors (test_policy.MixedPolicyTests.test_outward_boundary_minimum_radius_extreme_fixed_errors) ... ok\ntest_paired_negative_probe_reduces_range_before_optical_clear (test_policy.MixedPolicyTests.test_paired_negative_probe_reduces_range_before_optical_clear) ... ok\ntest_wrong_problem_rejected (test_policy.MixedPolicyTests.test_wrong_problem_rejected) ... ok\ntest_oropt_escapes_a_two_opt_local_minimum (test_routing.RoutingTests.test_oropt_escapes_a_two_opt_local_minimum) ... ok\ntest_random_routes_preserve_visits_and_never_increase_length (test_routing.RoutingTests.test_random_routes_preserve_visits_and_never_increase_length) ... ok\ntest_sixteen_detected_stops_scanning_without_claiming_completion (test_routing.RoutingTests.test_sixteen_detected_stops_scanning_without_claiming_completion) ... ok\ntest_default_and_legacy_entry_points_keep_distinct_layouts (test_v2_integration.Version2IntegrationTests.test_default_and_legacy_entry_points_keep_distinct_layouts) ... ok\ntest_fast_uncertified_exit_does_not_earn_a_threshold_reward (test_v2_integration.Version2IntegrationTests.test_fast_uncertified_exit_does_not_earn_a_threshold_reward) ... ok\ntest_legacy_alias_replays_the_original_policy_actions (test_v2_integration.Version2IntegrationTests.test_legacy_alias_replays_the_original_policy_actions) ... ok\ntest_sixteen_discoveries_omit_scans_but_do_not_certify_clearance (test_v2_integration.Version2IntegrationTests.test_sixteen_discoveries_omit_scans_but_do_not_certify_clearance) ... ok\ntest_sixteen_successful_clears_certify_early_exit_without_fake_coverage (test_v2_integration.Version2IntegrationTests.test_sixteen_successful_clears_certify_early_exit_without_fake_coverage) ... ok\ntest_ten_early_clears_still_pay_for_complete_unknown_channel_search (test_v2_integration.Version2IntegrationTests.test_ten_early_clears_still_pay_for_complete_unknown_channel_search) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 1.048s\n\nOK"
+        "output": "test_degenerate_hull_and_invalid_margin_are_rejected (test_coverage.DirectionalCertificateTests.test_degenerate_hull_and_invalid_margin_are_rejected) ... ok\ntest_distinct_nearly_coincident_pairs_are_still_enumerated (test_coverage.DirectionalCertificateTests.test_distinct_nearly_coincident_pairs_are_still_enumerated) ... ok\ntest_frozen_23_point_layout_has_large_reception_margin (test_coverage.DirectionalCertificateTests.test_frozen_23_point_layout_has_large_reception_margin) ... ok\ntest_no_single_frozen_point_can_be_silently_deleted (test_coverage.DirectionalCertificateTests.test_no_single_frozen_point_can_be_silently_deleted) ... ok\ntest_old_25_point_proof_is_reproduced (test_coverage.DirectionalCertificateTests.test_old_25_point_proof_is_reproduced) ... ok\ntest_previously_failed_symmetric_23_points_are_rejected (test_coverage.DirectionalCertificateTests.test_previously_failed_symmetric_23_points_are_rejected) ... ok\ntest_rotation_and_order_do_not_change_the_proof (test_coverage.DirectionalCertificateTests.test_rotation_and_order_do_not_change_the_proof) ... ok\ntest_clipped_arc_endpoints_are_enumerated (test_coverage.VoronoiSegmentTests.test_clipped_arc_endpoints_are_enumerated) ... ok\ntest_narrow_circular_cap (test_coverage.VoronoiSegmentTests.test_narrow_circular_cap) ... ok\ntest_nearly_coincident_sites_do_not_lose_a_circular_cap (test_coverage.VoronoiSegmentTests.test_nearly_coincident_sites_do_not_lose_a_circular_cap) ... ok\ntest_one_site_farthest_arc_is_enumerated (test_coverage.VoronoiSegmentTests.test_one_site_farthest_arc_is_enumerated) ... ok\ntest_voronoi_bisector_and_circle_intersections (test_coverage.VoronoiSegmentTests.test_voronoi_bisector_and_circle_intersections) ... ok\ntest_collinear_negative_pair_cannot_claim_two_dimensional_cut (test_localization.HistoricalNegativeGeometryTests.test_collinear_negative_pair_cannot_claim_two_dimensional_cut) ... ok\ntest_in_range_backside_pair_removes_shadow_but_retains_source (test_localization.HistoricalNegativeGeometryTests.test_in_range_backside_pair_removes_shadow_but_retains_source) ... ok\ntest_out_of_range_negatives_must_not_remove_source_behind_pair (test_localization.HistoricalNegativeGeometryTests.test_out_of_range_negatives_must_not_remove_source_behind_pair) ... ok\ntest_positive_radius_lower_bound_cuts_beyond_1000m (test_localization.HistoricalNegativeGeometryTests.test_positive_radius_lower_bound_cuts_beyond_1000m) ... ok\ntest_random_physical_halfplanes_and_radius_causes_retain_true_source (test_localization.HistoricalNegativeGeometryTests.test_random_physical_halfplanes_and_radius_causes_retain_true_source) ... ok\ntest_rounded_fixed_error_boundary_is_retained_without_averaging (test_localization.HistoricalNegativeGeometryTests.test_rounded_fixed_error_boundary_is_retained_without_averaging) ... ok\ntest_singleton_feasible_region_survives_history_refinement (test_localization.HistoricalNegativeGeometryTests.test_singleton_feasible_region_survives_history_refinement) ... ok\ntest_two_negatives_may_require_different_positive_radius_witnesses (test_localization.HistoricalNegativeGeometryTests.test_two_negatives_may_require_different_positive_radius_witnesses) ... ok\ntest_failed_disk_subtraction_retains_every_outside_point (test_optical_repair.UnionGeometryTests.test_failed_disk_subtraction_retains_every_outside_point) ... ok\ntest_failed_optional_actions_are_bounded_and_never_claim_success (test_optical_repair.UnionGeometryTests.test_failed_optional_actions_are_bounded_and_never_claim_success) ... ok\ntest_fragment_cover_handles_thin_rotated_and_degenerate_shapes (test_optical_repair.UnionGeometryTests.test_fragment_cover_handles_thin_rotated_and_degenerate_shapes) ... ok\ntest_boundary_and_interior_have_convex_hull_witnesses (test_policy.DirectionalCoverageTests.test_boundary_and_interior_have_convex_hull_witnesses) ... ok\ntest_invalid_spacing_cannot_claim_coverage (test_policy.DirectionalCoverageTests.test_invalid_spacing_cannot_claim_coverage) ... ok\ntest_outward_boundary_sources_detectable (test_policy.DirectionalCoverageTests.test_outward_boundary_sources_detectable) ... ok\ntest_polar_cover_has_25_vertices_with_robust_margins (test_policy.DirectionalCoverageTests.test_polar_cover_has_25_vertices_with_robust_margins) ... ok\ntest_triangles_have_strictly_subminimum_receive_diameter (test_policy.DirectionalCoverageTests.test_triangles_have_strictly_subminimum_receive_diameter) ... ok\ntest_mixed_clustered_and_tangent_directions (test_policy.MixedPolicyTests.test_mixed_clustered_and_tangent_directions) ... ok\ntest_outward_boundary_minimum_radius_extreme_fixed_errors (test_policy.MixedPolicyTests.test_outward_boundary_minimum_radius_extreme_fixed_errors) ... ok\ntest_paired_negative_probe_reduces_range_before_optical_clear (test_policy.MixedPolicyTests.test_paired_negative_probe_reduces_range_before_optical_clear) ... ok\ntest_wrong_problem_rejected (test_policy.MixedPolicyTests.test_wrong_problem_rejected) ... ok\ntest_nominal_exit_has_indistinguishable_legal_miss_but_v4_clears_all (test_probability_counterexample.ProbabilityCounterexampleTests.test_nominal_exit_has_indistinguishable_legal_miss_but_v4_clears_all) ... ok\ntest_oropt_escapes_a_two_opt_local_minimum (test_routing.RoutingTests.test_oropt_escapes_a_two_opt_local_minimum) ... ok\ntest_random_routes_preserve_visits_and_never_increase_length (test_routing.RoutingTests.test_random_routes_preserve_visits_and_never_increase_length) ... ok\ntest_sixteen_detected_stops_scanning_without_claiming_completion (test_routing.RoutingTests.test_sixteen_detected_stops_scanning_without_claiming_completion) ... ok\ntest_frozen_coordinates_hash_and_full_continuous_certificate (test_speed_policy.SpeedCoverageTests.test_frozen_coordinates_hash_and_full_continuous_certificate) ... ok\ntest_removing_a_boundary_station_is_not_certified (test_speed_policy.SpeedCoverageTests.test_removing_a_boundary_station_is_not_certified) ... ok\ntest_rotations_reflections_and_six_decimal_rounding_keep_coverage (test_speed_policy.SpeedCoverageTests.test_rotations_reflections_and_six_decimal_rounding_keep_coverage) ... ok\ntest_eight_hard_cases_retain_every_source_after_every_measure (test_speed_policy.SpeedPublicObservationTests.test_eight_hard_cases_retain_every_source_after_every_measure) ... ok\ntest_sixteen_discoveries_do_not_claim_sixteen_successes (test_speed_policy.SpeedPublicObservationTests.test_sixteen_discoveries_do_not_claim_sixteen_successes) ... ok\ntest_sixteen_successes_allow_early_stop_but_ten_require_all_stations (test_speed_policy.SpeedPublicObservationTests.test_sixteen_successes_allow_early_stop_but_ten_require_all_stations) ... ok\ntest_default_entry_selects_the_speed_version (test_v2_integration.Version2IntegrationTests.test_default_entry_selects_the_speed_version) ... ok\ntest_fast_uncertified_exit_does_not_earn_a_threshold_reward (test_v2_integration.Version2IntegrationTests.test_fast_uncertified_exit_does_not_earn_a_threshold_reward) ... ok\ntest_legacy_alias_replays_the_original_policy_actions (test_v2_integration.Version2IntegrationTests.test_legacy_alias_replays_the_original_policy_actions) ... ok\ntest_previous_and_legacy_entry_points_keep_distinct_layouts (test_v2_integration.Version2IntegrationTests.test_previous_and_legacy_entry_points_keep_distinct_layouts) ... ok\ntest_sixteen_discoveries_omit_scans_but_do_not_certify_clearance (test_v2_integration.Version2IntegrationTests.test_sixteen_discoveries_omit_scans_but_do_not_certify_clearance) ... ok\ntest_sixteen_successful_clears_certify_early_exit_without_fake_coverage (test_v2_integration.Version2IntegrationTests.test_sixteen_successful_clears_certify_early_exit_without_fake_coverage) ... ok\ntest_ten_early_clears_still_pay_for_complete_unknown_channel_search (test_v2_integration.Version2IntegrationTests.test_ten_early_clears_still_pay_for_complete_unknown_channel_search) ... ok\n\n----------------------------------------------------------------------\nRan 49 tests in 4.137s\n\nOK"
       },
-      "elapsed_seconds": 1.243
+      "elapsed_seconds": 4.342
     },
     {
       "name": "problem4_solve_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "本地自建案例 local_p4_development_0003：清除 11/11，总虚拟耗时 6754.2 秒，平均 614.0 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem4\\results\\demo_result.json"
+        "output": "问题4 strategy=adaptive algorithm_version=problem4_v4\n本地自建案例 local_p4_development_0003：清除 11/11，总虚拟耗时 5805.8 秒，平均 527.8 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem4\\results\\demo_result.json"
       },
-      "elapsed_seconds": 0.28
+      "elapsed_seconds": 0.244
     },
     {
       "name": "problem2_strategy_comparison_from_outside_repository",
@@ -99,7 +99,7 @@
         "exit_code": 0,
         "output": "synthetic_case: selected=[842.1437368791097, 546.8945372930203], bound=112.329304\nboundary_case: selected=[220.9419376327556, 195.47291422364256], bound=15.768784\nbudget 600: 209.325746 m\nbudget 800: 152.080522 m\nbudget 1000: 113.037691 m\nbudget 1100: 112.329304 m\nfine search: 111.687447 m"
       },
-      "elapsed_seconds": 103.66
+      "elapsed_seconds": 104.449
     },
     {
       "name": "problem2_early_stop_equivalence_from_outside_repository",
@@ -108,25 +108,25 @@
         "exit_code": 0,
         "output": "origin_coarse: scores identical, cells 5040 -> 4921\norigin_fine: scores identical, cells 50400 -> 50400\nboundary_fine: scores identical, cells 50400 -> 50400\nrounded_bearing_error: scores identical, cells 5040 -> 4999"
       },
-      "elapsed_seconds": 31.322
+      "elapsed_seconds": 35.107
     },
     {
       "name": "problem3_search_smoke_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "p3 adaptive stress 8/8 cleared=10/10 T=3218.0s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0.25,\n    \"mean_virtual_time_s\": 3864.9065303268053,\n    \"p95_virtual_time_s\": 6025.266446691114,\n    \"worst_virtual_time_s\": 6025.266446691114,\n    \"mean_average_clear_time_s\": 386.49065303268054,\n    \"mean_actions\": 170.75,\n    \"mean_failed_clear\": 31.5,\n    \"mean_movement_m\": 14767.65765163404,\n    \"mean_reward\": 221.16978232243983,\n    \"total_program_runtime_s\": 0.04318979999516159,\n    \"max_program_runtime_s\": 0.01546129999042023,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0.25,\n      \"400\": 0.625,\n      \"500\": 0.875,\n      \"700\": 1,\n      \"1000\": 1\n    }\n  }\n}"
+        "output": "p3 strategy=adaptive algorithm_version=problem3_v4\np3 adaptive stress 8/8 cleared=10/10 T=3088.9s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0,\n    \"mean_virtual_time_s\": 2996.12080913672,\n    \"p95_virtual_time_s\": 3576.3002188422033,\n    \"worst_virtual_time_s\": 3576.3002188422033,\n    \"mean_average_clear_time_s\": 299.612080913672,\n    \"mean_actions\": 148,\n    \"mean_failed_clear\": 11.5,\n    \"mean_movement_m\": 10791.8540456836,\n    \"mean_reward\": -36.18730950621455,\n    \"total_program_runtime_s\": 0.6813134999829344,\n    \"max_program_runtime_s\": 0.13389529997948557,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"220\": 0,\n      \"250\": 0.25,\n      \"300\": 0.375,\n      \"400\": 1,\n      \"500\": 1,\n      \"700\": 1,\n      \"1000\": 1\n    }\n  }\n}"
       },
-      "elapsed_seconds": 0.149
+      "elapsed_seconds": 0.821
     },
     {
       "name": "problem4_search_smoke_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "p4 adaptive stress 8/8 cleared=10/10 T=6718.1s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0,\n    \"mean_virtual_time_s\": 6856.2035375647465,\n    \"p95_virtual_time_s\": 7390.613441896426,\n    \"worst_virtual_time_s\": 7390.613441896426,\n    \"mean_average_clear_time_s\": 685.6203537564746,\n    \"mean_actions\": 365,\n    \"mean_failed_clear\": 2.75,\n    \"mean_movement_m\": 23557.89268782373,\n    \"mean_reward\": -37.12407075129493,\n    \"total_program_runtime_s\": 0.7927550000167685,\n    \"max_program_runtime_s\": 0.1304320000053849,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0,\n      \"400\": 0,\n      \"500\": 0,\n      \"700\": 0.625,\n      \"1000\": 1\n    }\n  }\n}"
+        "output": "p4 strategy=adaptive algorithm_version=problem4_v4\np4 adaptive stress 8/8 cleared=10/10 T=6733.0s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0,\n    \"mean_virtual_time_s\": 6344.818060723621,\n    \"p95_virtual_time_s\": 6733.048184868497,\n    \"worst_virtual_time_s\": 6733.048184868497,\n    \"mean_average_clear_time_s\": 634.4818060723621,\n    \"mean_actions\": 340,\n    \"mean_failed_clear\": 2.375,\n    \"mean_movement_m\": 21709.71530361811,\n    \"mean_reward\": -58.620451518090526,\n    \"total_program_runtime_s\": 0.9151573000417557,\n    \"max_program_runtime_s\": 0.15011049999156967,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"220\": 0,\n      \"250\": 0,\n      \"300\": 0,\n      \"400\": 0,\n      \"500\": 0,\n      \"700\": 1,\n      \"1000\": 1\n    }\n  }\n}"
       },
-      "elapsed_seconds": 0.898
+      "elapsed_seconds": 1.042
     },
     {
       "name": "result_files_readable",
@@ -219,13 +219,13 @@
         },
         {
           "path": "problem2/results/scoring_benchmark.json",
-          "bytes": 28838,
-          "sha256": "db62be365104f442d675c26e55ae3e09806d0f753b162e689cf535281552268b"
+          "bytes": 28837,
+          "sha256": "53de3d5dad5f6ddb191e577857c335b2c1fc55667c104f3bc6ee4138d2b67536"
         },
         {
           "path": "problem2/results/scoring_benchmark.md",
           "bytes": 2043,
-          "sha256": "8dd8244e888ba47bb610bf1db2511e31c9c6f035e913d66aca04465dfa13bc68"
+          "sha256": "5509fc13cb4b88a2c26da21759c74a85e51a3510b0a556e73bbf7c4d49908c30"
         },
         {
           "path": "problem2/results/second_point_candidates.csv",
@@ -284,28 +284,483 @@
         },
         {
           "path": "problem3/results/benchmark_stress_verification.json",
-          "bytes": 29276,
-          "sha256": "1a0431e9867d21c63a24d043ba4e74aed9d48286d1d6412de71e814a91353212"
+          "bytes": 34566,
+          "sha256": "037094369539ce1dd04beec3f73df3fe987284b25de48163e8a5a08de5e38d7c"
         },
         {
           "path": "problem3/results/benchmark_stress_verification.md",
-          "bytes": 1363,
-          "sha256": "872a1fb2452331fb8f81edb965abc12332559ccfc62ac8fe38e5c7cf2957dcf8"
+          "bytes": 1407,
+          "sha256": "87223e1d983a473d0511c0772316c9937c8187dca73b36ae1fa9ad6b8d542842"
         },
         {
           "path": "problem3/results/demo_result.json",
-          "bytes": 2230,
-          "sha256": "180565c8ec935bbe4ed6cf248ab3f94e584b37cf4df5138e946ca4d851bc9049"
+          "bytes": 2658,
+          "sha256": "8cce175e1d64420eb8cf9f78ed88741a59da6c579d824001987e016b985df49c"
         },
         {
           "path": "problem3/results/demo_route.svg",
-          "bytes": 3147,
-          "sha256": "b3c8ee94547049e5fc3e48067469b0efa4cb0bed4c8f7e161cb23aa14fe05276"
+          "bytes": 3483,
+          "sha256": "ad8dd47cd748e8c2db1b6c17c2432c449cfd6ad4a17a55141c7e4eac88efbac4"
         },
         {
           "path": "problem3/results/demo_trace.jsonl",
-          "bytes": 28877,
-          "sha256": "bdc81ad7c052c2c64c3ceb2478fff3d3def7dcdc0560dd89b5abadc57f04d82f"
+          "bytes": 40382,
+          "sha256": "99d3851dc03a3011f1f3f562656d78438d07368c5eb742553f069b5abe40f2cd"
+        },
+        {
+          "path": "problem3/results/iterations_v3/annular_sweep_48.json",
+          "bytes": 600137,
+          "sha256": "c4172395d72a28c3482747a7f1991cfb9c5db275ee896430503b4a67fa2f5636"
+        },
+        {
+          "path": "problem3/results/iterations_v3/annular_sweep_96_AggressiveBandPolicy_AggressiveLocalAnnularSweepPolicy.json",
+          "bytes": 600226,
+          "sha256": "241d6b6f3ff6e99714f794727a2b6d7367fab87378f21c6f5b08f0b878bf3bb7"
+        },
+        {
+          "path": "problem3/results/iterations_v3/annular_sweep_96_OpticalBandPolicy_FrontierAnnularSweepPolicy_LocalAnnularSweepPolicy.json",
+          "bytes": 896046,
+          "sha256": "3e337454dff45374a2eff078bbab8c8388d79d9a61642e9eb1025b8432008015"
+        },
+        {
+          "path": "problem3/results/iterations_v3/annular_sweep_evaluation.md",
+          "bytes": 1403,
+          "sha256": "0e86e6c494e04f01e151bff11d48b46c6d46d14401c1857693e157c7eae8b7fc"
+        },
+        {
+          "path": "problem3/results/iterations_v3/branch_oracle_audit.json",
+          "bytes": 330991,
+          "sha256": "6c50626d4e3c26311c86b2a93eb7d9fb2becc989910c12845962b14881cf05cd"
+        },
+        {
+          "path": "problem3/results/iterations_v3/branch_oracle_audit.md",
+          "bytes": 4647,
+          "sha256": "d3d25b52fceeda9cbb32a2609e9ca044ac61e35842095afc4e8472499fcc8809"
+        },
+        {
+          "path": "problem3/results/iterations_v3/cellincrementalpolicy_development_v2_64.json",
+          "bytes": 160068,
+          "sha256": "68970fe844e4d579d728d576d94538355f43a861809ec08c05b4e5f99aff666f"
+        },
+        {
+          "path": "problem3/results/iterations_v3/cellpolicy_development_v2_64.json",
+          "bytes": 160062,
+          "sha256": "0e1640a8b2ddec764ddf6199f61694f3125848bc131e3dcda0048992983980ca"
+        },
+        {
+          "path": "problem3/results/iterations_v3/contingent_localization_1_FullControllerRolloutPolicy.json",
+          "bytes": 3222,
+          "sha256": "d5e3886c28ab1048b9db8f852243dbe43cc7c62562e1aacdfb49e58058d3b6e9"
+        },
+        {
+          "path": "problem3/results/iterations_v3/contingent_localization_48.json",
+          "bytes": 418846,
+          "sha256": "d1eca8bd2baa47b3a22125e6adfb35fdf7f4380eeb435e0e14d982b3ae29a7c7"
+        },
+        {
+          "path": "problem3/results/iterations_v3/contingent_localization_48_FullControllerControlPolicy.json",
+          "bytes": 138941,
+          "sha256": "2dad41c5a4626a2701bee96915bc02cc08569fd0ca51b7fb61b6f6300a75bec0"
+        },
+        {
+          "path": "problem3/results/iterations_v3/contingent_localization_48_FullControllerControlPolicy_FullControllerRolloutPolicy.json",
+          "bytes": 282468,
+          "sha256": "8d2229ccbc5b3099de89fe8d3c7795a98daef111a45a1b48143fddf3db42c863"
+        },
+        {
+          "path": "problem3/results/iterations_v3/contingent_localization_48_InterleavedContingentPolicy_InterleavedTerminalOnlyPolicy.json",
+          "bytes": 282491,
+          "sha256": "b949b84b52b4074a9730262161553326ee37170696667175432e3e91a5911ea5"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_384_nselected.json",
+          "bytes": 3637450,
+          "sha256": "6541eb5fb64db8ff708e911f03d8125d3e7fa87c7eae156203dc629a73237f7e"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_96_n6.json",
+          "bytes": 1533040,
+          "sha256": "87efa11a5a6a1d3acfea28b3347ed81f5b573a3577f153b3296838c3cbbfcd86"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_96_n6_superseded_radius_overwrite.json",
+          "bytes": 1526135,
+          "sha256": "eda244e8a77980b42c41330d402ee08da202b645f139c3c16def180c08214c3c"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_96_n7.json",
+          "bytes": 1835820,
+          "sha256": "ceb0f88322b4764f31b9a9b4d5fb5595541f4ad36ff0e73e5e3b8cd0a163cfd6"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_96_n8_9.json",
+          "bytes": 3072346,
+          "sha256": "8406466a26dc3e37e02f5508034eb9b9e41eda4f2f6c953040e755f233f84ddf"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v2_96_nselected.json",
+          "bytes": 1533710,
+          "sha256": "69470d25285e369034c2bd8a9023cd7a14db751caf130b46f4eaddbe60d11dfb"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_development_v3_384_nselected.json",
+          "bytes": 3641784,
+          "sha256": "d4897162c59585377e16bd3670fc16e91261dd22f488c518c39e0e0b769bd27d"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_integrity_96.json",
+          "bytes": 6604,
+          "sha256": "242824451bdce122fe9b68e498ef27a65447e1c6f29a3d71331bc2da1142cf80"
+        },
+        {
+          "path": "problem3/results/iterations_v3/coverage_family_scope_validation.json",
+          "bytes": 5533,
+          "sha256": "d57ec293b6cb59dee00374766a7535313bc36906c1d18262118af2e99c89a456"
+        },
+        {
+          "path": "problem3/results/iterations_v3/disconnected_geometry_48.json",
+          "bytes": 433325,
+          "sha256": "27d104b02dccd056128e6250bdf6f8e67c654a7b114b3eefbed61af5527d0650"
+        },
+        {
+          "path": "problem3/results/iterations_v3/exact_tour_development_v2_8.json",
+          "bytes": 319001,
+          "sha256": "3082cc2e47e5eb92860c48a504f44436110037c9b8f510bc54016723af4e31b1"
+        },
+        {
+          "path": "problem3/results/iterations_v3/exact_tour_development_v2_96.json",
+          "bytes": 3724911,
+          "sha256": "a9feb049e4cb689754287d0f857e92dc8cceed058111673ac26e8a96c910cdab"
+        },
+        {
+          "path": "problem3/results/iterations_v3/exact_tour_report.md",
+          "bytes": 2321,
+          "sha256": "84f2cdd16984c73bb73d48a002885e3cd4dee161080f61359bf1f374425cc0a1"
+        },
+        {
+          "path": "problem3/results/iterations_v3/geometry_checks.json",
+          "bytes": 318,
+          "sha256": "2be53852f497e1101aa547d6d893f0879ba506dadb3add9b4db92d08663d4e58"
+        },
+        {
+          "path": "problem3/results/iterations_v3/jointcellpolicy_development_v2_64.json",
+          "bytes": 160073,
+          "sha256": "0ea69dac76b0bfe183bdd1087e30e7b86578b294f5359b959db2bbe7a9b42f4b"
+        },
+        {
+          "path": "problem3/results/iterations_v3/optical_band_geometry.json",
+          "bytes": 196,
+          "sha256": "36b11624019088c653eec9bd8b1b7ac063d5171de467f593fdf1c23f90f7a111"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_adaptive_setcover_adaptivesetcoverpolicy_development_v2_48.json",
+          "bytes": 129959,
+          "sha256": "a84b8dbbeb2da73a92beef337c811f7108d647a791a3bbd51c6ae6d51e6035f9"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_annularcellinitializedpolicy_development_v2_96.json",
+          "bytes": 239989,
+          "sha256": "2c7f070905566db3a4aead01624ff71b50ce8f27158c0b997ffd4042561bed50"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_annularcellpolicy_development_v2_96.json",
+          "bytes": 239966,
+          "sha256": "e3d443c40cf56175649e9a1c7fd4d1ad0971bf7ac46353d1b67f13af2ed51d66"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_annularclearlookaheadpolicy_development_v2_96.json",
+          "bytes": 236002,
+          "sha256": "167c92531ae1fbd26112e15b8231360618d1f6d6dcfa880432f61c3e82088a6e"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_annularclearpolicy_development_v2_96.json",
+          "bytes": 236020,
+          "sha256": "37adbf92984c4dadebd17988896bfaa8b9577fd03e87d5cc763de044a761bb39"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_annularpoolpolicy_development_v2_96.json",
+          "bytes": 233000,
+          "sha256": "2403f7c75b13f87c17e7ef0209b185865c1a50b479105b15b0db8323432e665e"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_compose_cellafteroriginpolicy_development_v2_96.json",
+          "bytes": 240783,
+          "sha256": "b115434d902930b207b8a7bdf67474b96bdd03aacbdd1aac1a56a1c5db65062d"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_shared_annularhundredpolicy_development_v2_96.json",
+          "bytes": 258056,
+          "sha256": "a5cb666e31d6d3e919f3c3f19df8f41c3f520dc97c7e91a7778af3b057fc6602"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_annular_shared_annularsharedpolicy_development_v2_96.json",
+          "bytes": 258094,
+          "sha256": "5fa91879ae44362e0f705fa8b747e3eabe710556a82e8159b2d3de9b7a9447cb"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_anticipatory_cover_anticipatorycoverpolicy_development_v2_48.json",
+          "bytes": 129974,
+          "sha256": "d6ca33a583d51b12c1a08f286271dbd8e19719fad721e0c773232c8ffe282e9c"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_candidate_searchpolicy_development_v2_96.json",
+          "bytes": 231824,
+          "sha256": "4c04e45905c143da996a5579da3a62aa32ccf24761a1638629ad0ba3e2f6edd0"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_candidate_searchpolicy_development_v3_384.json",
+          "bytes": 926847,
+          "sha256": "2e08707d45415fbd5139ab82a72df9a3158e565cdc8e826599325a843df7ccfd"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_cell_planner_candidatecellpolicy_development_v2_96.json",
+          "bytes": 239995,
+          "sha256": "58f3b93765bed5f93016bf01eb685c7818b7f76afa1ce9739b2f4c964c5b6ed2"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_cell_planner_candidatejointpolicy_development_v2_96.json",
+          "bytes": 240010,
+          "sha256": "084cdcf739b18da7581bc1f0d6027b2ed7acbd0ca09540e933a276538158abe6"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_coverage_pool_cheappoolpolicy_development_v2_384.json",
+          "bytes": 927378,
+          "sha256": "e714f6dc4d393bff6ef4d80ed7ef74e912392f878044d9fd363242fe10121872"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_coverage_pool_cheappoolpolicy_development_v2_48.json",
+          "bytes": 116545,
+          "sha256": "7c7b94c93af358be6fb03f2c77213b1cee5a46f5e96002b5c8899b078f3d741f"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_coverage_pool_poolpolicy_development_v2_384.json",
+          "bytes": 926722,
+          "sha256": "746bcdcd2f288cbf63ec765debf5d765d262f4af4fcf4ab97ccd76dcb40df3ef"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_coverage_pool_poolpolicy_development_v2_48.json",
+          "bytes": 116354,
+          "sha256": "3ca6b406a9bd9448c52e2c328d581915af2ae191175a669c47ff9c2a1cd420bb"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_coverage_pool_widepoolpolicy_development_v2_48.json",
+          "bytes": 116528,
+          "sha256": "c929a702a058015958595363ffc75cca78b9064b858e03e0b90443fe7973df43"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_expected_tour_expectedtourpolicy_development_v2_96.json",
+          "bytes": 256738,
+          "sha256": "399eba9b234de508082c5defc68f385bf21b9f3e184cd11ef73dc5f95453de77"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_expected_tour_halfexpectedtourpolicy_development_v2_96.json",
+          "bytes": 256525,
+          "sha256": "103316b908b6a658552f08ffca95bdf85a2e373702d4cb3bb7b1fbcf425c2842"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_negative_disks_annularnegativepolicy_development_v2_96.json",
+          "bytes": 232694,
+          "sha256": "81ea37c869d90d00cad88c785ef59599fe46008042b073f467d270ff98ae82ff"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_negative_disks_annularnegativepolicy_development_v3_384.json",
+          "bytes": 930224,
+          "sha256": "6eac665b5992931272c3aa072a30c937d704bd8619c7f014dff9467be2c129f8"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_negative_disks_negativediskpolicy_development_v2_96.json",
+          "bytes": 231832,
+          "sha256": "cc930c06c7e77df003504585ccabf1a29ac8616bdff8716a2660062bcb8ffdbf"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_aggressivebandpolicy_development_v2_384.json",
+          "bytes": 1046557,
+          "sha256": "86bf1fb9f19d3eb979074a57e9b8417bb9c3bc434888e8f0b4706318a1488af4"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_aggressivebandpolicy_development_v2_96.json",
+          "bytes": 262217,
+          "sha256": "a6960c2550d9147aa1cd0fb3c6abc820ac2fcd9a3be5d2eaa63a987306499599"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_aggressivebandpolicy_development_v3_384.json",
+          "bytes": 1047877,
+          "sha256": "c84ae7214d98636cd24c06e88dec1772df2fae40d0b347ed11dae380e3a07a41"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_basepolicy_development_v2_48.json",
+          "bytes": 128508,
+          "sha256": "e2f8bbe7e8c7ca562704694f6b444eb770a61c9a24ae9ebdd0bad3410d2defac"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_basepolicy_development_v2_96.json",
+          "bytes": 256432,
+          "sha256": "e12cc23a62a9d5ccaa011d57ef702cd9b9784ce1e8ad62ebd801e59ca6a3eeef"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_conservativebandpolicy_development_v2_96.json",
+          "bytes": 258249,
+          "sha256": "9c2f570aed9f5de4c1fd1b1dc41b85d3d30c11d0ae9403182e02ae629e4ac287"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_optical_band_opticalbandpolicy_development_v2_96.json",
+          "bytes": 260661,
+          "sha256": "ea00023e6801c616492302d64b105dcdfe4fab1d13fd921b480f3b3343a10a21"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_annularpolicy_development_v2_96.json",
+          "bytes": 232647,
+          "sha256": "3bbb7712d48825106574c0e95b9355a5081a4be56e60d8b3f7e9e045d6f6acf8"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_conditionalbatchpolicy_development_v2_96.json",
+          "bytes": 232705,
+          "sha256": "7ac6a0aed08e3cff73eb5c6e1af6000653f26f0505fe79234bba323b17ffc2dc"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_conditionalclearpolicy_development_v2_96.json",
+          "bytes": 236011,
+          "sha256": "7e864231980021fdb4ba958b792835dd42fdeaa25bb9ad2cae3b9dcb4f770bc3"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_conditionalfreshpolicy_development_v2_96.json",
+          "bytes": 232708,
+          "sha256": "299b0ee617f78f02c45a80d0770f9bbec743dfae0c3601f76524b45f5727fcf6"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_conditionalhundredpolicy_development_v2_96.json",
+          "bytes": 232708,
+          "sha256": "cc886e48f7b782ec91cc734a4e5e4cdeb2a7c3b2d85de119199bc33e4f0643cd"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_eightannularpolicy_development_v2_96.json",
+          "bytes": 232657,
+          "sha256": "0dd5edc7e097ff993681d9b8797ec9613b67cbe4f9cf7e5de2235712d37af360"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_emptyradialpolicy_development_v2_96.json",
+          "bytes": 233566,
+          "sha256": "6f95fc6ba852b0deac74122eba0e4ba3b20932271d1c802499d45db29641464e"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_innerannularpolicy_development_v2_384.json",
+          "bytes": 929397,
+          "sha256": "3823de493f0e7404893d12db3129bfadd5976ea31a4e060279b98895a06b9e0f"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_innerannularpolicy_development_v2_96.json",
+          "bytes": 232718,
+          "sha256": "50fffbedd0f90a2e92786ef5ab45b33205b808dc47d80862898f52674a2584f8"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_nearradialpolicy_development_v2_96.json",
+          "bytes": 233074,
+          "sha256": "7eb3baaf9dc7d124f0bd7cdac7c27e07b2a62a16ed4b26597c8a54f9490e1ec2"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_outerradialpolicy_development_v2_96.json",
+          "bytes": 233078,
+          "sha256": "59d9973d747e605253505c290657bbf2fafa1d0982e321983e7292dbb55af089"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_radialpolicy_development_v2_96.json",
+          "bytes": 233692,
+          "sha256": "aed96f75bb8fef58b157334c7132f6769866c168800dbc12ed46d29950f98303"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radial_adaptive_threeradialpolicy_development_v2_96.json",
+          "bytes": 234112,
+          "sha256": "8643773da54b034f9a160227f65e087dbc75ec00db1225b3b56b48fae177b5bb"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radius_prior_minradiusmixturepolicy_development_v2_96.json",
+          "bytes": 239110,
+          "sha256": "c9ba0afb93361b10a9e951e8c480a6392713a7a1af164948cbb587cd8b13ae0a"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radius_prior_radiusvolumepolicy_development_v2_96.json",
+          "bytes": 239066,
+          "sha256": "28e379b3dfcb33a800d1e372543f788b1cc82c7dc2e7911541b5194d7e565fd9"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_radius_prior_sparseradiusvolumepolicy_development_v2_96.json",
+          "bytes": 239120,
+          "sha256": "89cf41430417ec736e2e3757dcfd10b64dfc9dab8205eaf17d6893ee49529a82"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_ring_library_adaptiveringpolicy_development_v2_48.json",
+          "bytes": 128927,
+          "sha256": "5c37b9cec4fef2af2b95b037d8e483f0336c59a88eeeb8a08e4fec0646105625"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_ring_library_ringlowpricepolicy_development_v2_48.json",
+          "bytes": 128909,
+          "sha256": "8dd7e0301d5db109a4efa511488ba7f29cfdde19322b3a2562cdb1421a301883"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_ring_library_ringtravelpolicy_development_v2_48.json",
+          "bytes": 128906,
+          "sha256": "7818b1725a1bc8bf750f4b42ffb1d83e779a1ee027d470c9d4dd5ccfb289d6ef"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_service_tour_doubleservicepolicy_development_v2_96.json",
+          "bytes": 231808,
+          "sha256": "8a03c3c295e7c851ad8ab08e8e69b8976c45b4d8df5eff372b172e922e9f9333"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_service_tour_halfservicepolicy_development_v2_96.json",
+          "bytes": 231818,
+          "sha256": "dd0d29037b91dc3b86294764cb8e9ddae17e56b135fed2d6e4c32b29fd81fafe"
+        },
+        {
+          "path": "problem3/results/iterations_v3/problem3_experiments_v3_service_tour_servicepolicy_development_v2_96.json",
+          "bytes": 231809,
+          "sha256": "a52f4b8a99947df0f6c4d6117a9fcfbe509e2d16e7fe886f1bb25598eae47dbe"
+        },
+        {
+          "path": "problem3/results/iterations_v3/residualcellpolicy_development_v2_64.json",
+          "bytes": 160017,
+          "sha256": "eff5de1e0706ada23ffd7ea03c584735c25e7081fc16f7c11d8dc2474d704227"
+        },
+        {
+          "path": "problem3/results/iterations_v3/residualincrementalpolicy_development_v2_64.json",
+          "bytes": 160058,
+          "sha256": "b131ffda5c269b15389af9d4abcdaf923f425965d7acb4ddf439f3c2b43e8bc8"
+        },
+        {
+          "path": "problem3/results/iterations_v3/threshold_lower_bound.md",
+          "bytes": 2326,
+          "sha256": "329a8b5dc5dd4684d9bf6b790ee0eaecec5b8b8ff576bb589842b07102ef1b55"
+        },
+        {
+          "path": "problem3/results/iterations_v3/threshold_lower_bound_dp.json",
+          "bytes": 4681,
+          "sha256": "1762e52d0bb902385b7a116e14b1880bb8e9f58f2f51d6171b8e9611bd5f0d66"
+        },
+        {
+          "path": "problem3/results/iterations_v4/bystander_development_v3_48.json",
+          "bytes": 424042,
+          "sha256": "1af03d5bb4b16e2870ce4d29aa7a4de9bbcbb70ee501ccdef607c784ee331a0e"
+        },
+        {
+          "path": "problem3/results/iterations_v4/intercept_development_v3_48_baseline_intercept450_intercept650.json",
+          "bytes": 518471,
+          "sha256": "c93300492b4ae32b77394fe55c0ee852c5ffe590fa374cb3cbb46d91dba8a4a7"
+        },
+        {
+          "path": "problem3/results/iterations_v4/intercept_report.md",
+          "bytes": 1845,
+          "sha256": "23ac484e2ec9b688b71207e5c6289e1643b26faa422804a5b24bf00d8dc4e1db"
+        },
+        {
+          "path": "problem3/results/iterations_v4/unionmass_48_all.json",
+          "bytes": 902580,
+          "sha256": "36cf5859458756a1865c3e0ebf9423a4b7e72fdd56d20527f4a7de9e65e18a8f"
+        },
+        {
+          "path": "problem3/results/iterations_v4/unionmass_48_P3DeferredUnionmassPolicy_P3BandDeferredUnionmassPolicy.json",
+          "bytes": 301701,
+          "sha256": "6fb3bbda954492d968bc79fb04479e1ffb315bbe30d4d3f5a2828eb79e623468"
         },
         {
           "path": "problem3/results/online/20260911_112556_299ba06d_client_trace.jsonl",
@@ -366,6 +821,196 @@
           "path": "problem3/results/online/20260911_113008_e851e2cc_summary.json",
           "bytes": 2266,
           "sha256": "3fd3a703a9f73d27d3cdceb6e5f0b427067746c2b3b7217eaa00bb4815435c54"
+        },
+        {
+          "path": "problem3/results/online/20260911_141555_e8ac76cd_client_trace.jsonl",
+          "bytes": 74445,
+          "sha256": "99a6a00a62e32493b099d65eee5e1e744f68c116f92fca17d97f5fad4668aca6"
+        },
+        {
+          "path": "problem3/results/online/20260911_141555_e8ac76cd_summary.json",
+          "bytes": 2304,
+          "sha256": "73d1ef7f271196d4d38cebe05890f242338ed083533a3f8329cd6b9c700880e6"
+        },
+        {
+          "path": "problem3/results/online/20260911_141647_691e594e_client_trace.jsonl",
+          "bytes": 70797,
+          "sha256": "78f2c1ac949dc12979d744ddc71f9a28150d9389d62cb4543eb88d62b1961cc4"
+        },
+        {
+          "path": "problem3/results/online/20260911_141647_691e594e_summary.json",
+          "bytes": 2283,
+          "sha256": "8effcc4ff06d4b64ff0c9c90276d7b57894b053d41981d43f6483df24704ae09"
+        },
+        {
+          "path": "problem3/results/p3_all_baseline_v3_screen96.json",
+          "bytes": 1480156,
+          "sha256": "8045db78c78723633bc8db61ac3b4f15f3c6e06a6058f996ec2780cf645bb6cb"
+        },
+        {
+          "path": "problem3/results/p3_angular_v3_screen.json",
+          "bytes": 822305,
+          "sha256": "404bcce414561d3ea6c9abec394008beaf23b0fc9091e2703ee4e9ce587eca3a"
+        },
+        {
+          "path": "problem3/results/p3_architecture_v3_development.json",
+          "bytes": 4929790,
+          "sha256": "3b3c477b120b9924f80e42852844f0b439104bbae4c5e78e3bd44b68e8bc32f4"
+        },
+        {
+          "path": "problem3/results/p3_batch_repeat_v3_screen.json",
+          "bytes": 986777,
+          "sha256": "38ae4ac59a179f13d7b3e8b84128b690dfb264a85e77083ee2d12d80a379a746"
+        },
+        {
+          "path": "problem3/results/p3_batch_v3_development.json",
+          "bytes": 3943668,
+          "sha256": "758cf294bab8ca87a8fc688aa367278435060fbd98de18be441495676aae0667"
+        },
+        {
+          "path": "problem3/results/p3_batch_v3_screen.json",
+          "bytes": 1315448,
+          "sha256": "35974bbbc6a9713f60785c5e2135ac6723e1322d7275ac114cbc700dcb672408"
+        },
+        {
+          "path": "problem3/results/p3_candidate_v3_development.json",
+          "bytes": 1150344,
+          "sha256": "dffd10267e1ed4ddca4752c4b7f78cf7e12781aff459e6adbe67f8e764c4bb3d"
+        },
+        {
+          "path": "problem3/results/p3_development_v3_screen.json",
+          "bytes": 1315449,
+          "sha256": "caae408f4c732337f053836f108e44a4c7cb30a27d02d4c16aaa1c3dfd575d0b"
+        },
+        {
+          "path": "problem3/results/p3_enroute_geometry_v3_screen96.json",
+          "bytes": 1016589,
+          "sha256": "dca66f7332a41afac9823b9e1e3f0f535b82e95ac4870c615bbfac7fb7d20e47"
+        },
+        {
+          "path": "problem3/results/p3_fresh_v3_screen96.json",
+          "bytes": 1973337,
+          "sha256": "4e639ae04a0a1ab0234148a598f5f0cd6602e50ac04481e3273ddbac091abc97"
+        },
+        {
+          "path": "problem3/results/p3_global_lookahead_v3_development96.json",
+          "bytes": 1037864,
+          "sha256": "97ac5be3c5df6f2ce0179c1a57826f94ee6499bfe1402438460fc2270a06be9d"
+        },
+        {
+          "path": "problem3/results/p3_global_lookahead_v3_development96_GlobalSameTargetPolicy.json",
+          "bytes": 258396,
+          "sha256": "8feab519c044381afc0853234c1b0921e68f914f94275c91eb3c68bdee3e8f6f"
+        },
+        {
+          "path": "problem3/results/p3_incremental_v3_screen.json",
+          "bytes": 986487,
+          "sha256": "9b529a998b1785c15b604b17d446d17536417ffb4793b19d94e274e6a5f3721a"
+        },
+        {
+          "path": "problem3/results/p3_information_v3_screen.json",
+          "bytes": 986234,
+          "sha256": "2ddeac03fc0830b1c57b3b0f21c510205e59f3c425e911f1374fae5e73563e9e"
+        },
+        {
+          "path": "problem3/results/p3_journey_v3_development384.json",
+          "bytes": 5075950,
+          "sha256": "25cb33f33b01474c764f0963b1abe29976208803b6a69838920a42626c116b9a"
+        },
+        {
+          "path": "problem3/results/p3_journey_v3_screen96.json",
+          "bytes": 2241688,
+          "sha256": "24ac7f79a4df449c7c1b27f2ca908d3195139a59b1b08de0355a667767a68ac5"
+        },
+        {
+          "path": "problem3/results/p3_lookahead_transverse_v3_screen384.json",
+          "bytes": 2047749,
+          "sha256": "638ee44092ce5e6956c94e45ab96819184a06f604f47014821f0d0229974409a"
+        },
+        {
+          "path": "problem3/results/p3_lookahead_transverse_v3_screen96.json",
+          "bytes": 254368,
+          "sha256": "34d090b53fa1d6fedb89f81a81f3fde584274f36efb660b7b500609b856ccdf5"
+        },
+        {
+          "path": "problem3/results/p3_lookahead_v3_screen384.json",
+          "bytes": 2020386,
+          "sha256": "7e5bbbfa7b464b33a4704f253341aeade5978a6bdd46da97addd9177e6c836a9"
+        },
+        {
+          "path": "problem3/results/p3_lookahead_v3_screen96.json",
+          "bytes": 505492,
+          "sha256": "30af8633e7f228a1cf30f5ed41189a336f27e0e6637e47c1fe5dcef32bc2600b"
+        },
+        {
+          "path": "problem3/results/p3_lookahead_variants_v3_development96.json",
+          "bytes": 1278956,
+          "sha256": "c6c9fdf45ddce162385701690a21165a8b4650fc265b7ee528d6b2c49596063d"
+        },
+        {
+          "path": "problem3/results/p3_nearby_v3_screen.json",
+          "bytes": 1316054,
+          "sha256": "986931dd23b73964cb39fe1185b3766df3c8ecb54f3048b91fe0ac644bf66ece"
+        },
+        {
+          "path": "problem3/results/p3_omni_discovery_v3_development384_OmniZeroPolicy_OmniDiscoveryPolicy.json",
+          "bytes": 2033755,
+          "sha256": "e9c7b4ba1bb982741d281902e840f750a294225bd30b90c9391950e841ca6345"
+        },
+        {
+          "path": "problem3/results/p3_omni_discovery_v3_development96.json",
+          "bytes": 1284216,
+          "sha256": "1390f8c41f01f11b7f650a75f02fd4e8c9c91fa8a6f4b217d45953dbc9bfad13"
+        },
+        {
+          "path": "problem3/results/p3_omni_discovery_v3_development96_OmniInsertionPolicy_OmniInsertionOnlyPolicy_OmniLatencyOnlyPolicy.json",
+          "bytes": 783600,
+          "sha256": "e73825f3331f1e20a6719bc1c2520353071ac054bc5e5b89ea92bdb43cb7e6aa"
+        },
+        {
+          "path": "problem3/results/p3_opportunistic_v3_screen.json",
+          "bytes": 1973468,
+          "sha256": "d83bd4cb7d02eb40f91e3fdc23fe99f51e08bbda7f70a9abb8331181e6371624"
+        },
+        {
+          "path": "problem3/results/p3_optical_fast_v3_screen96.json",
+          "bytes": 2548143,
+          "sha256": "15c8862503821bc85dc76223390b3309ae34d09f536ddb64c03e0eb25939672f"
+        },
+        {
+          "path": "problem3/results/p3_posterior_v3_screen.json",
+          "bytes": 986740,
+          "sha256": "ff5f774459106371932ba40e22c2edeb7bdd4beeb61822f8fa36dff652c875b4"
+        },
+        {
+          "path": "problem3/results/p3_probe_route_v3_screen.json",
+          "bytes": 1973416,
+          "sha256": "83c04208ebc7846ac10d5341464b6e32365e197d5e976a1be9e96bc2059dc114"
+        },
+        {
+          "path": "problem3/results/p3_radius_v3_screen.json",
+          "bytes": 2628973,
+          "sha256": "091235e0bafbccc8553e525918d5e73138b1881b676d349c6846a85d4048269b"
+        },
+        {
+          "path": "problem3/results/p3_ring_v3_screen.json",
+          "bytes": 1083081,
+          "sha256": "fc1dc17b46d8b04638d06599c431296e56c51566b4d575c69371901bf0ec5bda"
+        },
+        {
+          "path": "problem3/results/p3_rotation_v3_screen.json",
+          "bytes": 657222,
+          "sha256": "48902026a677a78f36703961f88ac58907587e010e33746e0a72ca641463e62c"
+        },
+        {
+          "path": "problem3/results/p3_shape_counterexamples_v3.json",
+          "bytes": 1262397,
+          "sha256": "241be3f21fb2db8802101c32bc6873c4535cedf44ff950428e54b578a4012ed8"
+        },
+        {
+          "path": "problem3/results/p3_shape_v3_screen96.json",
+          "bytes": 1737206,
+          "sha256": "0d47cea7fc31c55f4968169251d8fa68f76dd81b20a4db0cfecfc39a1fdb6c83"
         },
         {
           "path": "problem3/results/README.md",
@@ -444,13 +1089,13 @@
         },
         {
           "path": "problem4/results/benchmark_stress_verification.json",
-          "bytes": 33790,
-          "sha256": "a4b736d8f8ed4880312155217a2fa9da89580ce1756e91e258f0e802058c1f1f"
+          "bytes": 38574,
+          "sha256": "4af79ce39dd4f596aa321155dc28e65a15e4d7ad652ad9ade11859d1669f6557"
         },
         {
           "path": "problem4/results/benchmark_stress_verification.md",
-          "bytes": 1359,
-          "sha256": "d3c727a209395c9acfe526e4e1d09c67582a75c1f350b5d0d161022326451fb4"
+          "bytes": 1401,
+          "sha256": "3799444a1dfba1f22bce6e6a92b429d6073c985028f72bb916d63deadcc4062c"
         },
         {
           "path": "problem4/results/coverage_certificate_v2.json",
@@ -458,19 +1103,24 @@
           "sha256": "ff4127ff5c692f8f76082e763e819fca68af7c55c92766521b03ae75359e3b5f"
         },
         {
+          "path": "problem4/results/coverage_certificate_v4.json",
+          "bytes": 1166012,
+          "sha256": "61341f889713d3e8245310d35fbf93b17d041cdcd45d8f9ebb4f97fb0a91f8b4"
+        },
+        {
           "path": "problem4/results/demo_result.json",
-          "bytes": 2679,
-          "sha256": "88edcd93a8e5be86e56ae5c4cb8aae63dbf26cd5e47548abc1cffd6580535848"
+          "bytes": 2914,
+          "sha256": "9fecd8cbaff563c4446bdc60af334626e2c1dba8f67b0a05dee5dd6f5677a6f1"
         },
         {
           "path": "problem4/results/demo_route.svg",
           "bytes": 3386,
-          "sha256": "37f89d04e273cd82e08a7c4419e950e03ab55f6eac5d032f2066dd96ed7eb286"
+          "sha256": "ae6890eec771dd880b87234f62e206acee81a81ec220a8e29726b855fe646252"
         },
         {
           "path": "problem4/results/demo_trace.jsonl",
-          "bytes": 73038,
-          "sha256": "225f44abba84018c89803ee256f6ac4750e858118efaa7c3b4c8ba05fea1fa85"
+          "bytes": 77889,
+          "sha256": "55b811a379ef704403555c48ad7736fbf73564665ee578aceb259c5d4724e50a"
         },
         {
           "path": "problem4/results/iterations_v2/adaptive_coverage_development_v2_48.json",
@@ -618,6 +1268,806 @@
           "sha256": "2b1f21efdc901c82da14514a428fa400adefdef18e3ad3e9973844f402e3625e"
         },
         {
+          "path": "problem4/results/iterations_v3/branch_oracle_audit.json",
+          "bytes": 329430,
+          "sha256": "dce24643d7136b9f7a2ed8f70a63d771c2f5bc7a1536747c8d90fcd0ee83d1a3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/branch_oracle_audit.md",
+          "bytes": 3941,
+          "sha256": "95eb509c10c8c52a54480906a7f1384c63724e255b0cbdd8b10409666fc4a43e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/channel_action_audit_development_v2_96.json",
+          "bytes": 54785,
+          "sha256": "bafa50ec8cf08b8058cbc4b3ea9b9e683fe9e39619ef6c7ef582c0d1986299f4"
+        },
+        {
+          "path": "problem4/results/iterations_v3/convexhistorypolicy_development_v2_96.json",
+          "bytes": 285079,
+          "sha256": "3ff98813f3bc46dd864d4941995f9d841980ffff87aedf56a256809c9636c41a"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage20_optical_patch_lower_bound.json",
+          "bytes": 10535,
+          "sha256": "b2a0309d63752b8d94db8a9edaba40292953dd63202b156608c0d6bddb17b707"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage20_optimization_seed0.json",
+          "bytes": 5697,
+          "sha256": "dd4d451629c769a9cceb74c3ba9929656e9634e767967c277b8f7fa236a8458e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage20_optimization_seed1.json",
+          "bytes": 7244,
+          "sha256": "735756753abb58172f3aec14ff3a85016cad7fa46ea6d4bb376c4c25f136c358"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage20_optimization_seed2.json",
+          "bytes": 8894,
+          "sha256": "9404bf65a71454480649c0f1641b6f9ba0d3765499e0091388660ea5223b1d4c"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage20_optimization_seed2_optical.json",
+          "bytes": 6556,
+          "sha256": "453174d213aa0385846fdd10939cf948db249d5f9324933cb83e4d311fbb0f49"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage21_independent_certificate.json",
+          "bytes": 89070,
+          "sha256": "c0cc7470bcde47fe6480bd009effe1ffac1137ebf77e3804848614939fbaf22f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_future_development_v2_12.json",
+          "bytes": 122188,
+          "sha256": "4332067f64ff7f51c3f0f684b32ca9a97dcdbebe6d2864b9da628ae2847b71d5"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_future_development_v2_48.json",
+          "bytes": 479037,
+          "sha256": "ca790dd61b9c484a2132027e442a77b683060845442c1064043823e5e76624b0"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_invest_development_v2_48.json",
+          "bytes": 461830,
+          "sha256": "cf356deccfcdeedd2077c0a5b8e38140e956254a1d3726613504ebcd0eec56f2"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_library_development_v2_48.json",
+          "bytes": 314834,
+          "sha256": "45af0ffa0390a70ff8fb22c0b1d14a7604ec667f504523744d037ed21c0dfcab"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_17rf_outer10_origin0_seed0.json",
+          "bytes": 68721,
+          "sha256": "ad6d55bf9b1068626e5ba1a1e7acea34b82f03011d84d48e4019810ecd57437a"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_17rf_outer10_origin0_seed1.json",
+          "bytes": 64867,
+          "sha256": "e868ee27e6b609c77de20375c3293075f4555880b9e894a657ce7f9c4e16244e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_17rf_outer11_origin0_seed0.json",
+          "bytes": 65048,
+          "sha256": "4d0ace2426920c464ee8614d5803f0b8ad8dedccde2ab3c0d47b59dc44565306"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_17rf_outer11_origin0_seed1.json",
+          "bytes": 68339,
+          "sha256": "b6408754a13066d913819bc481f7a7785cedb9b1cc993c6495cc88882be86525"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_18rf_outer11_origin0_seed0.json",
+          "bytes": 72168,
+          "sha256": "3d96855c7ff6dd0ebe89f8eb796deb4293546a1c4404aece463ff468f8608149"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_18rf_outer11_origin0_seed1.json",
+          "bytes": 74634,
+          "sha256": "429c3b9c63f51817f57ea5899a0de8585847c646a196c72079ff91d5586e89a1"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_18rf_outer11_origin1_seed0.json",
+          "bytes": 79382,
+          "sha256": "5337159e45c345d68fdd649f000bd1349bd4ca332c4c8f390c28da3549f9ed0a"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_18rf_outer11_origin1_seed1.json",
+          "bytes": 73215,
+          "sha256": "11acff93b770a8a519fdc2380d89fc025b62f9f760dcc4af5d3550316ac057ca"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_19rf_outer11_origin1_seed0.json",
+          "bytes": 81248,
+          "sha256": "77a4d5c2690ab67f4023ca5cf5d5e6b2173c916a290491f33d9d5f3d593aa2ed"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_19rf_outer11_origin1_seed1.json",
+          "bytes": 80635,
+          "sha256": "eaeb51f8832503c5185ede24a5d9e2257c3edb67948efa4c83de229d6c1a6a1f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_19rf_outer12_origin1_seed0.json",
+          "bytes": 83285,
+          "sha256": "1760863f91156c540f9817cd67bf2a5dab97be1458ab07b32496a1b451485a54"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_19rf_outer12_origin1_seed1.json",
+          "bytes": 82606,
+          "sha256": "1dc65b2b6a6fef65b8ab9e694c9bca27180b1bc6f7a1f22ce0fe6d8feff896cf"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_acceleration_check.json",
+          "bytes": 1088,
+          "sha256": "2a60442ff034d0f0a5cc1ebd296ce170c3f044348a794d72ce6baf097d5778e0"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_optical_cost_bounds.json",
+          "bytes": 552922,
+          "sha256": "18581c01036934f4f0cfd6805ec2ca3f7e80f356f6214005cfe0b63a50bccacd"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_mixed_ring_screen.json",
+          "bytes": 91818,
+          "sha256": "f8b77a66892926901cbf9a93934937f316005f7085cd3403c8363e20737f7f93"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_more_outer_rings.json",
+          "bytes": 235845,
+          "sha256": "1063ac7600b8e3bf67e1e1267ee4d4ccec131d45a47b505ab568f35e2c988fd1"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_independent_certificate.json",
+          "bytes": 80861,
+          "sha256": "bab722135f296f1230a507fd1b91af712141144b62edf414743fe29eef033d0d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_refine_11_9_seed0.json",
+          "bytes": 962757,
+          "sha256": "86bf445a1c0b5d059ebfb8ef7e8bc49ca51b1218f8711e4c2f99327e77490836"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_refine_12_1_7_seed0.json",
+          "bytes": 958032,
+          "sha256": "022f0f7910f1b4f1495c5d8106be0c8de679239e823640cc92dcb057f141f6c8"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_refine_12_1_7_seed1.json",
+          "bytes": 962445,
+          "sha256": "9a0d2f650807431ace26c9a6c992c58d28b84f16cbfe043ab128580e3d0824ed"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_refine_12_8_seed0.json",
+          "bytes": 963416,
+          "sha256": "ea57f5cdbac323360072bb95d3fe42663d06cbc833a43aa94b6a249d8477573d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_noorigin20_screen_seed0.json",
+          "bytes": 8935931,
+          "sha256": "3b6de907ab9be647ddb8118cd39d16c65afd4831fc7e46d494ce527f6f83086e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_optical_hole_rings.json",
+          "bytes": 480007,
+          "sha256": "f2f637f28612a0230637b4fa3df47b457d80010ba448de8da4255ddad8768452"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_outer_ring_screen.json",
+          "bytes": 6968,
+          "sha256": "104750dec8de3aa16c4ac9043b2ac105d5da6d7c5dc0cdb577b233675a62e815"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_replan_outer10_static.json",
+          "bytes": 3599,
+          "sha256": "5770cd1fcc0fe5312ab9456464a62030b713143a8149937b8677c738e7310598"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_replan_outer8_static.json",
+          "bytes": 4699,
+          "sha256": "e2ff92cf8fdccb22562dbe5a5a62754698affca886ca7195b2b32bd955fed3c9"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_replan_outer9_static.json",
+          "bytes": 4750,
+          "sha256": "27f65ccca89d6e1391db2227f96a7725b7107249c1f3dac5a2416a03a8a0bf3d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_replan_static.json",
+          "bytes": 11750,
+          "sha256": "7cb597b1f775671057acaddcf20b515ec7b60cda42c8d0373e118afe0f39c146"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_ring12_development_v2_48.json",
+          "bytes": 141406,
+          "sha256": "de1f63d23e9ff04dfffa34e4966310c72f6c24a7993e094fffe63f515a173471"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_ring_development_v2_384.json",
+          "bytes": 4807440,
+          "sha256": "510ab381adbd17c05f191962f6691c430ec2a38096ba40c634dd6364389526ef"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_ring_development_v2_48.json",
+          "bytes": 452927,
+          "sha256": "5a5a6c45ae7996dbac3a4bd4a84547707ccb8b420800777ed445b0d004aaad35"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_rotate_development_v2_48.json",
+          "bytes": 458827,
+          "sha256": "dee1c3b41d57a00cad57b32a439411158bdf272f2ed1b7d44de9da9ed5d274f8"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_21.json",
+          "bytes": 1106738,
+          "sha256": "375f7e726123374fe6b0d42ba2133b3d00a8321f284bb8b02672a8162d130a37"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_21_inner_slack.json",
+          "bytes": 1097631,
+          "sha256": "bf4b634cb8f118b4ed64cb5337f6932bc0388a44ea63b32b2ff619a897b5d5a3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_22.json",
+          "bytes": 1271715,
+          "sha256": "5c397bb042c14d63965e902144895a1dc7469782197134013fd02db07743427d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_22_inner_slack.json",
+          "bytes": 1259359,
+          "sha256": "d7256f525938a7dc7fd924bc3d76bffe968e0858695a8ed860804f48611c7e7e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_23.json",
+          "bytes": 1451202,
+          "sha256": "c6ed38b9ea3b8d9494671dc93dcf2cbba51021d9401b3a1b2bdc8b6584e7c1fb"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_route_optimized_23_inner_slack.json",
+          "bytes": 1438201,
+          "sha256": "b4cc384206874c65d3c1dd3551ccea44f48631986cc098d2f5a46f1a40b7ab42"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_shared_all_one21_development_v2_384.json",
+          "bytes": 1149289,
+          "sha256": "ad72290367f126b251128c8ae0e058ee44f8a706dac4642b0bc0373a336fa53a"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_shared_development_v2_96.json",
+          "bytes": 614356,
+          "sha256": "334fe7786734a37aab49d6394ebb5acb10a3903407fa45bc460c84fe7b1e365d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_shared_one21_development_v2_384.json",
+          "bytes": 1149255,
+          "sha256": "60c882eb201386df41542ac13fb2c13c839ffaefe7b1022c91fed5c5400a1fd4"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_acceleration_check.json",
+          "bytes": 2187,
+          "sha256": "af336a23ddf19567cda72c503c7a19bac03221b149820fe94ea95d8eb6409e4d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_blind_witness.json",
+          "bytes": 376,
+          "sha256": "d3c0acbc1369822a2796b1e860e85bbd9d455383242a158533527856b6925d04"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_independent_certificate.json",
+          "bytes": 80389,
+          "sha256": "fb516b32f1178b22d72e0f03361436eedbf7dfc800e8a72f3e64e86aeb1d34f3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart0.json",
+          "bytes": 620,
+          "sha256": "b1b5b65ef0c0f2d3647e0f80db12c51e45634eb37d51e75abb2aa664810c60bd"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart0_epigraph.json",
+          "bytes": 963319,
+          "sha256": "f7045b870f4464f928c3712ba1110e6deb4b2cdecfbd3ebe7605de591fa63abe"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart1.json",
+          "bytes": 627,
+          "sha256": "ad4cb66c303387a8f5e13939a6df43f4822597d38103a08031c48ded181062c5"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart1_epigraph.json",
+          "bytes": 963882,
+          "sha256": "90df5ee0ba53a09544102a3cd205e555d871dd704ec792639dc56f994c9d40a3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart2.json",
+          "bytes": 617,
+          "sha256": "b9269ccae9889dd6c99a4c6bc7ea150958f4f504d32bf88724896f2bd1bcf72a"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart2_epigraph.json",
+          "bytes": 961243,
+          "sha256": "b974d0c22c82690955ede5f5129f18cb1451f3e7f6bcf91e75dae6af01f3d8f8"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart3.json",
+          "bytes": 621,
+          "sha256": "646321f95527c28f57fed370163a07ceb57762fdb96a82c607d4bfadf21eeef8"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart3_epigraph.json",
+          "bytes": 960753,
+          "sha256": "8dcc0d9265cba8ab85dedfde3ba8f580d86babd2602aa4d04b8240cae3750972"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart4.json",
+          "bytes": 601,
+          "sha256": "5a4ad6c632e4b494f78c333e6b5b3f521b5adda303f774791e9587c808e65b6c"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart4_epigraph.json",
+          "bytes": 969800,
+          "sha256": "cf0cd394eeb53126cc3864e70ce4b67bd8ee6edf5d22c1fabd12854d3818533c"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart5.json",
+          "bytes": 602,
+          "sha256": "6230b823ccf0e3a72aaffd595628428ae328037c1c740a39de048ab114013fa1"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart5_epigraph.json",
+          "bytes": 971806,
+          "sha256": "e4565f4655e834d7ef79be855e94207de9b5add6caabf8205cbc9216894776fa"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart6.json",
+          "bytes": 622,
+          "sha256": "64451b1f814c106e50e49b024a5441f361a5923fd58772a1476e2d9275d6eef5"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart6_epigraph.json",
+          "bytes": 968899,
+          "sha256": "3382f4ca7d859cdfb98f0a30bbd906188866b2037254e7580a41cb833755cd83"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart7.json",
+          "bytes": 617,
+          "sha256": "5c03f994661e179a271f70d62f164ad31be0b7d43737fa7ed2c7ebf6b6644d27"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_restart7_epigraph.json",
+          "bytes": 967013,
+          "sha256": "99de502de2c815822b789700412afebb8faaa76791be531c3780147d26772087"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed0_de0.json",
+          "bytes": 957580,
+          "sha256": "edff0934792707e38ebd60ee5378ccb5a5539f958023d4aac46ad0497e2f28bb"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed0_de120.json",
+          "bytes": 961191,
+          "sha256": "affe7910c3358921bf89dd2568d5ecdb461b793af0f33d7f558fc5e2abe733bb"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed0_de120_epigraph.json",
+          "bytes": 969820,
+          "sha256": "b3e6cc78c0ea2055e19c6788dcee5397b578c843484cf80c9b9a7514fb6becdc"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed1_de0.json",
+          "bytes": 960437,
+          "sha256": "ab3fba6827bf8cce84f550a1526d996ad4cfa056eb783d155d7ae6f59b7639b2"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed1_de120.json",
+          "bytes": 971122,
+          "sha256": "b3334055f9deb5e9c289f90968210a2728e582eebacab17dfcf723cbcea30f42"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed1_de120_epigraph.json",
+          "bytes": 965691,
+          "sha256": "c26a9a3ed898ba30ca056b658777100bb60728af98df6cb7d46d225799fa311f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed2_de0.json",
+          "bytes": 962967,
+          "sha256": "36bb0134cfaf3ccd040fcd9841514c1ab1a2b852904e67a813943048a73573c0"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed2_de120.json",
+          "bytes": 972504,
+          "sha256": "e3fbf014c68552e9a6a1a06fba69f68d7fd1ada3a46f682696cf49599d08ad21"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed2_de120_epigraph.json",
+          "bytes": 965168,
+          "sha256": "427f342b6796e5fa824b0a96ddda609f0b460809935a01aaa42c7f925242be7e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed3_de0.json",
+          "bytes": 962432,
+          "sha256": "c055fc7cc5b85da292adf3a5d86e5875b3baa2b52d1f178b248385840e9324d5"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed3_de120.json",
+          "bytes": 965383,
+          "sha256": "e1851d0b7d39e268500af56cd89e637971d56ae9fc68f6462a22c34418205f11"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed3_de120_epigraph.json",
+          "bytes": 964239,
+          "sha256": "5513a607b8ffe6ca0318c88afd25e1f90055e17dfc0e1498dae2bd3196c90643"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed4_de0.json",
+          "bytes": 959644,
+          "sha256": "7a97e68db70c7535c48c1b72da13d10ffe3f09f15402ea66187f5c90cf98d91c"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed4_de120.json",
+          "bytes": 960905,
+          "sha256": "206479944325085f7a7b03b945d3dc308427e89731d503f189c5d9921dbd4507"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed4_de120_epigraph.json",
+          "bytes": 967415,
+          "sha256": "508901865b6621c5f4991eef53559c53b6810dcb96a552a9bbf0be292c44c58f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed5_de0.json",
+          "bytes": 966569,
+          "sha256": "7f9da1397298d02db81a32dee40993dbcc5d962d908235d00c2a3ea03fd3ee85"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed5_de120.json",
+          "bytes": 963261,
+          "sha256": "4a461f4c2b7b93ede87d68c837b8cd8dd5016e0ce7318427fd05ff94882097ee"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed5_de120_epigraph.json",
+          "bytes": 971038,
+          "sha256": "9e371c4aa883275726b139e4379df218be1564f62d6a21964847fb3b1598f1ed"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed6_de0.json",
+          "bytes": 960573,
+          "sha256": "93d190bf299c9c70104ad8f3ccb02ce8024a06903afa99c32512efe6265823f7"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_tangent20_seed7_de0.json",
+          "bytes": 962153,
+          "sha256": "f1d1924388d3c7be6ef03a3fc6d65ee1d081925f750b44158006db6019bb5bc6"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_three_rings_10_4_7.json",
+          "bytes": 287319,
+          "sha256": "51f7837a59e5f89e142e1fe61a76bc6a330d348551d97ddc0331aeb48ea0bd7b"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_three_rings_12_3_5.json",
+          "bytes": 289633,
+          "sha256": "88bbc9a2a0d52334794adf37315100872dcf90d504b07c2337a929e4356f3645"
+        },
+        {
+          "path": "problem4/results/iterations_v3/coverage_three_rings_13_3_5.json",
+          "bytes": 296605,
+          "sha256": "9a472a9894e0ee95b9f67137a531673a1c4ad7c64bb517d17216e05a15aea46f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/discovery_insertion_report.md",
+          "bytes": 2499,
+          "sha256": "765dc9793925089b29f6bccba7e1f29acfe4cc816c6910a100065735d6d156bd"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_belief_sampling_conditionalrolloutpolicy_development_v2_12.json",
+          "bytes": 37447,
+          "sha256": "0744fed78e2068753e2c00faefca1c57731c1b7ae1c78345827c7dfc6b48f0c7"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_belief_sampling_spreadconditionalpolicy_development_v2_12.json",
+          "bytes": 37471,
+          "sha256": "74f6c3bc46e958a0bf93ff076d5b71c4163b7e6ea8d805aace2088604346e2e9"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_importance_rollout_importancespreadpolicy_development_v2_12.json",
+          "bytes": 37520,
+          "sha256": "7d23142706c29c6caf6eed56df033d02fa26911057f2c5fb601268d7af229213"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_posteriorlocalpolicy_development_v2_48.json",
+          "bytes": 146744,
+          "sha256": "325980bd00222c9d4271ef4faff155989c705375b886e58da80601abc1be2cf7"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_posteriorpolicy_development_v2_48.json",
+          "bytes": 146254,
+          "sha256": "be8957dd7630d2f4b3c3486154d57bc46f79143204deeedc7202c8f134ce503e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_posteriorprobepolicy_development_v2_48.json",
+          "bytes": 146811,
+          "sha256": "db9568aec6eb116e661e129908833422064f8e8548a5486239701c16eb493c9c"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_shared21policy_development_v2_12.json",
+          "bytes": 36945,
+          "sha256": "da24672e761c69f1890a711ca04fd73955ddf22aee13497cc5f2ec0973d1e917"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_shared21policy_development_v2_48.json",
+          "bytes": 146189,
+          "sha256": "82ea9f34a0013cd82607fbaedad17f99fb07450b16248ea46aaf056d84a1d37f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_posterior_shared21policy_development_v3_384.json",
+          "bytes": 1168755,
+          "sha256": "97d9bd2fa94ebe9de726768b25eee5eea24cbd329ce6dfe5bc9ea99d7a44f0c0"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_rollout_diverserolloutpolicy_development_v2_12.json",
+          "bytes": 37461,
+          "sha256": "1560f31af3506575dbb2ebc0c05db0b667cd14e72559c8e0787519d290eb587d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_rollout_paired_pairedrolloutpolicy_development_v2_12.json",
+          "bytes": 37429,
+          "sha256": "811d71fbe564d78ee3d01ca43d0106c1a49289f338d0a1b8c18b41370bc4095d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/problem4_experiments_v3_rollout_rolloutpolicy_development_v2_12.json",
+          "bytes": 37479,
+          "sha256": "2fcd1a2296e8aeb1fd737068186f4b4979d53868612cddcaf6d53e0e01ca4c0f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/Ring12CoverPolicy_certificate.json",
+          "bytes": 998370,
+          "sha256": "da5e3708df9516795abe6082b618fbca473cd9188bf623cb94ff0521d1c30f91"
+        },
+        {
+          "path": "problem4/results/iterations_v3/Ring13CoverPolicy_certificate.json",
+          "bytes": 1160626,
+          "sha256": "ab38a846716a2cbefad1e3989392567baba315ca27c60f7b6ec0cca6ff73eedc"
+        },
+        {
+          "path": "problem4/results/iterations_v3/Ring14CoverPolicy_certificate.json",
+          "bytes": 1148928,
+          "sha256": "a3162bd92bc013b3e36b9c817ab656caf2d76649c3c6c46bb0e53e31dc8262cd"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_audit_report.md",
+          "bytes": 3079,
+          "sha256": "56df029f8d2abd21922155cef77f2489932fefa916090877944f02fd03d1f5b7"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_channel_report.md",
+          "bytes": 3228,
+          "sha256": "ba3f3660d1e34c92c5b750bf987756db35993af3367898ba980b699f419240ff"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_departure_report.md",
+          "bytes": 3556,
+          "sha256": "60f061dd8158337a61a2f67acce9e60d542ed628f34b2945d5ba0dd9843ba1da"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_384_shared_one_small_all.json",
+          "bytes": 1282760,
+          "sha256": "e0d08f006125f0ce44a34b12a7ae1c1ec146d6f1a2efeeafe744741148cc8424"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_384_shared_two_small_shared_two_small_enroute.json",
+          "bytes": 2583624,
+          "sha256": "c08a1ea2b14d7b4f4b479925047fe68238415cd67af95136b52aba5496d5f8de"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_channel_reads_base_channel_reads_cache_channel_reads_stop_channel_reads_channel_reads_cool25_channel_reads_cool75_channel_reads_cool150.json",
+          "bytes": 1135199,
+          "sha256": "4733a6b30d146033bd1cfc8a0aa0e8bdf3c1271ddf02a987f60de2e5b14af341"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_channel_split_base_channel_split_channel_split_loose_channel_split_focus15_channel_split_any.json",
+          "bytes": 892465,
+          "sha256": "8c2184de0e4cd20e406885ac1b87c988b29c6c07a7bcf6c909faae3f85c21dca"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_departure_base_departure_departure_small_departure_conservative_departure_sample_departure_low.json",
+          "bytes": 987740,
+          "sha256": "8d8fe3369af086fb13ce7b6e3ef2432ef7eea09aa8a3145e45797c4dccecfe0f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_discovery_base_discovery_discovery_soft_discovery_strong_discovery_legacy_discovery_nolatency_discovery_noinsert.json",
+          "bytes": 1160192,
+          "sha256": "65c4bc37f1aa3a5997da60bffee7d69ae35cf792b07d05bf5d618bf38efe95b3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_incremental_incremental_q10_incremental_q30_incremental_q50_incremental_dynamic_incremental_route_incremental_clear80.json",
+          "bytes": 1147817,
+          "sha256": "254240b5f4245927d40b0238ef1ddb24f85846be465a9a1adb4f7a5428b9e965"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_reuse_reuse_strict_reuse_narrow_reuse_enroute.json",
+          "bytes": 637012,
+          "sha256": "ffaa04f12a6052a2405c8ae609c5d044887c46a7e0ef460124506cde68b0982e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_shared_initial_pure_shared_shared_two_shared_two_small_shared_two_large_shared_all_shared_two_adaptive_shared_two_enroute.json",
+          "bytes": 1286450,
+          "sha256": "fed55842845e9550281c7739dd7de9a1537e7733531dc98e00160e2b37e64bd0"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_shared_one_small_shared_one_small_outer_shared_two_small_path_shared_two_small_staged_shared_two_small_staged_path.json",
+          "bytes": 803522,
+          "sha256": "ecdd95600d7a544e855662395d488797732de083056773ef3bef049bfa547892"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_skeleton_skeleton_wide_skeleton_strict_skeleton_greedy_skeleton_outer_skeleton_enroute_skeleton_narrow.json",
+          "bytes": 1135639,
+          "sha256": "db5817ba03dbb7f3e6353a3e84c1e949531451872bc91a5773b331b37f59d470"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_skeleton_unbounded_skeleton_inner_unbounded_skeleton_replan_unbounded_skeleton_outer_unbounded_incremental_q30_incremental_dynamic.json",
+          "bytes": 977186,
+          "sha256": "ec9926f78a24bef7bbe5cf12a7095829ffa42159a00a67aae29e45857df9f744"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_tspn_tspn_low_tspn_high_tspn_wide_tspn_fixedorder_tspn_enroute.json",
+          "bytes": 949515,
+          "sha256": "e1a4ac984616e65c6da200a0aa746312a6535ac9ac02b41927ebb21931ee18f8"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_48_v2_enroute_enroute_selective_enroute_low_enroute_high_defer_defer_hard_defer_wide_defer_enroute_service_service_wide_service_enroute.json",
+          "bytes": 1898377,
+          "sha256": "6342f40fa3cfa5f3b622f5676eb320318cdb0ff3344c9213c84e65f89caa94ca"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_channel_reads_shadow_channel_reads_cool75_channel_reads_cool150.json",
+          "bytes": 973195,
+          "sha256": "e56782263752f313fd9360fc8167121813b3107bb86632e291f4f39deec93e65"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_clear_region.json",
+          "bytes": 326491,
+          "sha256": "cada1e590fd6914dbfff992e7872553445965a82191b8196cd22438a649b7e3d"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_incremental_q30_incremental_dynamic.json",
+          "bytes": 654049,
+          "sha256": "c564183554a82b2dd170868d28f24e9bd9ce88dad0b9a5546082b3c00daacdfe"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_shared_one_small_all_shared_one_all_shared_one_large_all_shared_one_tiny_all_shared_one_adaptive_all.json",
+          "bytes": 1609786,
+          "sha256": "ef8c8aad08a6f1bf219e9cbe078cbfd4f4689cb5f09c8b6fbf12a7000d23d194"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_shared_one_small_shared_one_shared_one_large_shared_one_tiny_shared_one_adaptive_shared_one_small_path.json",
+          "bytes": 1928003,
+          "sha256": "ee71eb8a20182f5d5e2aee478bfb57ca3f46f6fff65d7a5e098d7d98a483df37"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_shared_two_small_shared_all_shared_two_small_enroute_shared_two_small_all_shared_two_small_neighbor.json",
+          "bytes": 1610506,
+          "sha256": "59bd2f316d61538771169ce6edc8b4d78ca61e73c752fa8c16dd145955ce84bc"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_development_v2_96_v2_enroute_selective_enroute_high_defer_enroute.json",
+          "bytes": 1267396,
+          "sha256": "43d05e5dd0438e7a91b4048552e9eb5ef7dd5ce81e753ec7998ac84cbece236f"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_fixed_architecture_audit_21_96.json",
+          "bytes": 359608,
+          "sha256": "7ace9553c5dfbadb287b892616e92f1be1a71d75764c17272c7fb9a4090433a6"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_fixed_architecture_audit_96.json",
+          "bytes": 341405,
+          "sha256": "4e7faaa654bcb4c1e4e561160d042351c0f236d55594698b6283dbfbce76c74e"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_phase_audit96.json",
+          "bytes": 592402,
+          "sha256": "5d1abcb3aeed46fc8efd3207ed4a4eb2464a6e6ea5f2147ffc4be4747573f862"
+        },
+        {
+          "path": "problem4/results/iterations_v3/routing_rollout_review.md",
+          "bytes": 4533,
+          "sha256": "66ebcb3126b54f2cab0e1b8f00753f08fcf8ab23612153309f0bc1c2c48e69a3"
+        },
+        {
+          "path": "problem4/results/iterations_v3/SearchPolicy_certificate.json",
+          "bytes": 1318671,
+          "sha256": "da271b780af72e1623d424a22e8f263f96e33745ad7e2d2599118567075e50e4"
+        },
+        {
+          "path": "problem4/results/iterations_v3/searchpolicy_development_v2_96.json",
+          "bytes": 285058,
+          "sha256": "f15b51b62cb50bdd3f23136c0e403bb8fc33619425a156e426d9c5788b5c40c1"
+        },
+        {
+          "path": "problem4/results/iterations_v4/bystander_development_v3_384.json",
+          "bytes": 2497897,
+          "sha256": "895d0adf3b07b74f6cbc0ec2cc311c27b30877dca29aca4dd2842dcabac5a1b6"
+        },
+        {
+          "path": "problem4/results/iterations_v4/bystander_development_v3_48.json",
+          "bytes": 467026,
+          "sha256": "aac85665926d69d28ca523c77cf3b318fe35e4667c4aa4700c30b94fd562535a"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_combo_comparison.json",
+          "bytes": 594,
+          "sha256": "0ed8dc743c11730f275fc7920587c0684fce49923625e80fabae2e2d898fe223"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_combo_development_v3_384.json",
+          "bytes": 1315070,
+          "sha256": "6d28438f0fe51d9c8fd4026e8b92a20abf0a81fdcc4f0df460b44d07d48e8cee"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_development_v3_384.json",
+          "bytes": 2585662,
+          "sha256": "dd113298a18dd0455eb651f7634028be967215b16410b84479e5696c1bc02752"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_development_v3_48.json",
+          "bytes": 324510,
+          "sha256": "749c22b445b3104b3ce16447c2848c687182152ccd5139ee707aee5f7a53ba06"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_development_v3_96.json",
+          "bytes": 647957,
+          "sha256": "966fa6c7f882aa60fd7ed45bd7cbb19aa77524c561a9db8d02f3af87216436d7"
+        },
+        {
+          "path": "problem4/results/iterations_v4/teammate_cover_report.md",
+          "bytes": 2197,
+          "sha256": "3aeaee87d360f4eeac0e083b40cc72755bb57557d8721eba4c2440a461af3fcc"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_48_all.json",
+          "bytes": 674422,
+          "sha256": "dac4719b29506d2cb3f5a13fe3c8868965b536240063aaf018ed6fd28c6a2766"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_48_P4ConvexPolicy_P4ConvexUnionmassPolicy.json",
+          "bytes": 335919,
+          "sha256": "8fe43cb7e0119a5af7b305b071d08938fef771eb066a5db8e93ce1e65dc8c672"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_96_Shared21Policy_P4UnionmassPolicy_P4NearestPolicy.json",
+          "bytes": 1009651,
+          "sha256": "d01fce7a498aa02d26b3a3bfc9fd11a02ff7d03033473e5af636069004fcc3eb"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_development_v3_384_P4PredictedUnionmassPolicy.json",
+          "bytes": 1355177,
+          "sha256": "578f4ff69735d5ecd60705db7e580ce70f5203e4cff73cc550a802fbd0f16523"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_development_v3_384_Shared21Policy_P4UnionmassPolicy.json",
+          "bytes": 2689494,
+          "sha256": "f72d7d279758952628937db6c068e5b465b0e23db5296ee92ab32bbbe293bd73"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_development_v3_48_P4ConvexPolicy_P4ConvexUnionmassPolicy.json",
+          "bytes": 334393,
+          "sha256": "2b8cce13179dd343033a47789303292776c500b478e3a6c9f83e1c908719930b"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_development_v3_96_Predicted4Policy_P4PredictedUnionmassPolicy_P4PredictedNearestPolicy.json",
+          "bytes": 1008787,
+          "sha256": "a5c37e0f28bba9fe5289cdc7ac50a7f5cb5312a7c1c90a370f8b61f63a1f3ed5"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_development_v3_96_Shared21Policy_P4UnionmassPolicy_P4NearestPolicy.json",
+          "bytes": 1008734,
+          "sha256": "617fe906fa552ab9bb2116095794e07e02ed2defc6b290fa9e2e787a42e61f32"
+        },
+        {
+          "path": "problem4/results/iterations_v4/unionmass_review.md",
+          "bytes": 4677,
+          "sha256": "ea6f48b8f24b27f33601cc08552f15edf68c877bce73c968cc126ac0f3c43685"
+        },
+        {
           "path": "problem4/results/localization_development_sweep.json",
           "bytes": 4185656,
           "sha256": "82a21acda6981278d76b7c97732f96e9c2dfd3c0469914d6c86f95e5a84296d9"
@@ -648,6 +2098,76 @@
           "sha256": "8049ddf84e41041f0a1a762d80b7cf6f9a44749dd48cbc02673bbc2aac8b8616"
         },
         {
+          "path": "problem4/results/online/20260911_141730_481e9685_client_trace.jsonl",
+          "bytes": 153954,
+          "sha256": "655f9ed15bf40d9d0ebddf94233da3f590e1f37f4259466ac7de7f4dcb4777df"
+        },
+        {
+          "path": "problem4/results/online/20260911_141730_481e9685_summary.json",
+          "bytes": 2798,
+          "sha256": "b8c76f10b10ed3a54bf03cb29fd344e55595d243654615c4610ff28576272d48"
+        },
+        {
+          "path": "problem4/results/online/20260911_141812_9aaa70ab_client_trace.jsonl",
+          "bytes": 155738,
+          "sha256": "f25526be0d14ae6e61f4abfcd68c6a62488a5dccba5107ee55a588136663da56"
+        },
+        {
+          "path": "problem4/results/online/20260911_141812_9aaa70ab_summary.json",
+          "bytes": 2801,
+          "sha256": "4a8d0560872df738334eb54504192be9f0b246325a60f8de44cf04c3d0679c12"
+        },
+        {
+          "path": "problem4/results/online/20260911_141834_8ba566ae_client_trace.jsonl",
+          "bytes": 169014,
+          "sha256": "17cdd1c0bd522eccf6511ae677a30d23bb5c4ac136e65f2b9fa32f3468de9ac8"
+        },
+        {
+          "path": "problem4/results/online/20260911_141834_8ba566ae_summary.json",
+          "bytes": 2783,
+          "sha256": "3b5668cd6a99fffc5e7c587309d5d926ade9371d78e8c109de2bcd41d63f85c8"
+        },
+        {
+          "path": "problem4/results/online/20260911_141902_30f4957f_client_trace.jsonl",
+          "bytes": 156226,
+          "sha256": "c8e6c719638c648608d17b5b370d98b271d9d9c092dc31a238468bea62d65f16"
+        },
+        {
+          "path": "problem4/results/online/20260911_141902_30f4957f_summary.json",
+          "bytes": 2792,
+          "sha256": "5456f7e0aaadcf712e8eec2b8180f9b4eadd0a7de3e662838e2effbeb36223ba"
+        },
+        {
+          "path": "problem4/results/online/20260911_141941_82a9181d_client_trace.jsonl",
+          "bytes": 166116,
+          "sha256": "4cb775c4b09f4b117f79493e217a4040cf96a248f1d08dc38e2ef803a023d24b"
+        },
+        {
+          "path": "problem4/results/online/20260911_141941_82a9181d_summary.json",
+          "bytes": 2765,
+          "sha256": "b7495c6307337666571441bc5751a11d892869aec9446be697ba2538768bf6b5"
+        },
+        {
+          "path": "problem4/results/online/20260911_142001_bed35650_client_trace.jsonl",
+          "bytes": 173933,
+          "sha256": "cc44e83f8fcbcc426d490ceb3fbce5a0d7cfaa9f3d51944e35e49b2c0985f32b"
+        },
+        {
+          "path": "problem4/results/online/20260911_142001_bed35650_summary.json",
+          "bytes": 2775,
+          "sha256": "ec9e5f0a334c5738ebaf8d5ff7c7d82826da1375126104696ca6b587a79e1fa3"
+        },
+        {
+          "path": "problem4/results/online/20260911_142022_07f5b28f_client_trace.jsonl",
+          "bytes": 183951,
+          "sha256": "11dcac7c37e268561d7ef13f16369390e4cddd4b5fa4483535b6199591094319"
+        },
+        {
+          "path": "problem4/results/online/20260911_142022_07f5b28f_summary.json",
+          "bytes": 2689,
+          "sha256": "ae10f68facdbe2fd58a8d04d8f4d1cd8c2a45cdac5148ef241d671fdd683ca5c"
+        },
+        {
           "path": "problem4/results/README.md",
           "bytes": 851,
           "sha256": "15b3da8b0af74481f13a07eb3b064c6db1bd92177b3679ca6099f90d81077d25"
@@ -663,15 +2183,15 @@
           "sha256": "6f59f19a26a7ad1f1daf7d081f78d894d12515116d08eded262d84575bb45122"
         }
       ],
-      "elapsed_seconds": 0.436
+      "elapsed_seconds": 2.125
     },
     {
       "name": "documentation_links",
       "passed": true,
       "detail": {
-        "local_links_checked": 103
+        "local_links_checked": 119
       },
-      "elapsed_seconds": 0.015
+      "elapsed_seconds": 0.026
     }
   ]
 }

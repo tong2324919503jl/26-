@@ -10,8 +10,10 @@
 - `problem2/`：第二问说明、求解实现、`examples/`、`results/`、`tests/`。
 - `problem3/`：全向搜索策略，共用几何、HTTP客户端、本地仿真器、样本生成器和运行入口。
 - `problem4/`：混合定向策略、覆盖证明及样本、结果和测试；复用第三问共用组件。
-- 第四问第二轮将上一版完整保存在 `legacy_policy.py`；新版几何、历史观测裁剪、路径排序分别在 `coverage.py`、`localization.py`、`routing.py`。`experiments/` 保留开发分支，默认运行不能依赖实验脚本或 `tmp/`。
-- 当前第三轮速度实验在两问的 `experiments_v3/` 与 `results/iterations_v3/`，独立入口 `scripts/experiment_search.py` 按第三问220、第四问400秒/源比较。尚未达标，不应将实验分支描述为正式交付；生产默认和历史300/500阈值报告暂时不改。
+- 第四轮默认入口为两问的 `speed_policy.py`，版本 `problem3_v4`、`problem4_v4`；`previous` 回放本轮之前的 `problem3/policy.py` 和 `problem4/policy.py`，第四问 `legacy` 仍回放更早的 `legacy_policy.py`。旧类不覆盖，以便历史结果可复现。
+- 第三问生产前瞻与调度在 `lookahead.py`、`planning.py`；第四问融合模块在 `search_layout.py`、`shared_baseline.py`、`bystander.py`、`optical_repair.py`，历史几何与路径模块继续复用。默认运行不能依赖实验脚本、ZIP解压目录或 `tmp/`。
+- 第三轮实验保留在 `experiments_v3/`；第四轮融合消融在 `experiments_v4/` 与 `results/iterations_v4/`。220/400秒均值目标仍未达到，不能声称已经达标；历史300/500阈值报告保持原口径，新比较使用220/400。
+- `validation/speed_v4_summary.md`：队友融合、同批速度与波动；`speed_v4_freeze.json` 保存留出前冻结指纹，`speed_v4/` 保存每问384/512/256例的配对原始记录。原队友ZIP `B题第三四问_第三轮演练包.zip` 保留；生产不依赖它，原包对照由脚本安全临时提取并隔离运行。
 - `simulation_guide.md`：依据两份附件整理的平台演练、正式测试和日志导出步骤。
 - `validation/search_experiments.md`：第三四问开发、留出和压力测试口径及调优记录。
 - `scripts/`：跨问题的资料整理、验证入口。
@@ -30,12 +32,15 @@
 - `materials/problem_b/extracted/` 与 `manifest.json` 固定使用 LF 换行（见 `.gitattributes`），避免跨系统检出导致文本哈希失配。
 - `python scripts/prepare_materials.py` 重建检索文本，需要 `pypdf`。脚本对已改动的资料副本拒绝覆盖。
 - `python scripts/verify_project.py` 运行四问测试、外部目录启动检查、第三四问各8例压力回归、资料完整性检查并更新验证报告。
-- `python problem3/solve.py`、`python problem4/solve.py` 默认仅跑本地案例；显式 `--online --robot-id 队号` 才连接平台。相对自选输入/输出路径按对应问题目录解析。
+- `python problem3/solve.py`、`python problem4/solve.py` 默认仅跑本地案例；显式 `--online --robot-id 队号` 才连接平台。`--version` 只显示版本，不产生动作；启动及结果文件均须保留 `algorithm_version`。相对自选输入/输出路径按对应问题目录解析。
 - `python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical` 批量比较；第四问改为4，留出/压力集改为holdout/stress。生成数据写examples，结果写results。
 - 第四问第二轮使用 `--split development_v2/holdout_v2/stress_v2 --strategies legacy adaptive --save-cases`（三个集合分别运行），数量384/512/256。`python scripts/report_problem4_speed.py` 汇总配对速度与阈值变化；旧报告保留为历史结果，不与新代码混写。新参数只用开发集合选择，留出前冻结代码。
-- 第三轮新增 `development_v3/holdout_v3/stress_v3` 独立种子。当前已用 development_v3 做第三、四问开发复核，holdout_v3/stress_v3 尚未打开；须冻结候选后再评价。策略决策代码不得读取场景类别、场景种子或源真值；生成器、外部统计和事后审计除外。
-- 第三轮当前较好候选为 P3 `coverage_family_tuning.get_policy(9,1700)`（两套384例均值227.95/225.86；叠加`optical_band.AggressiveBandPolicy`为227.67/225.37）与 P4 `posterior.Shared21Policy`（446.11/444.38），仅为开发结果。P3合法单例220秒不可能保证的反例，以及P4固定架构下界，不可扩张成批量均值目标不可能的结论；详见 `validation/threshold_220_400_v3.md`。
+- 第三轮新增的 `development_v3` 用于本轮融合选择；`holdout_v3/stress_v3` 在第四轮代码冻结后用于独立验证，不得再用于调参。后续若重新选择算法，须换新留出种子并披露。策略决策代码不得读取场景类别、场景种子或源真值；生成器、外部统计和事后审计除外。
+- 第三轮较好候选 P3 `optical_band.AggressiveBandPolicy`、P4 `posterior.Shared21Policy` 保留为历史实验。第四轮第三问等价迁入生产，队友截获等无益分支不采用；第四问在384例开发上由444.38降至440.16，采用22点、共享基线、补测收益筛选及有限光学修复。P3合法单例反例及P4固定架构下界不可扩张成批量均值目标不可能的结论，详见第三轮历史记录。
+- `python scripts/compare_teammate_p34.py` 将各分支置于隔离进程，在同一模拟器按实际exit总时间配对；逐未知频道独立检查实际观测点的覆盖，外部真值仅用于核验全清。`python scripts/report_search_v4.py` 检查冻结指纹并重建本轮汇总，结果文件不得覆盖已有冻结快照。
 - `python scripts/plot_search.py` 重建实验对照图；仅此可选绘图脚本需要matplotlib。核心算法、HTTP客户端、本地测试与统一验证仅需标准库。
+- 概率提前停止只在 `problem3/probability_stop.py` 实验分支，两问安全默认不变；可选实验需要 NumPy，`python scripts/run_probability_stop.py --problem 4 --mode guarded --threshold 0.99` 仅本地运行，不支持联网。无 NumPy 时跳过相应可选实验测试。
+- 概率实验新生成器为 `problem3/probability_scenarios.py`，每问开发256、校准512、留出2048、压力512例。全部预设阈值报告，冻结记录、轨迹、结果放 `validation/probability_stop/`。这些保留集一经验证不得再调参；批测入口 `scripts/benchmark_probability_stop.py`，汇总入口 `scripts/report_probability_stop.py`。
 - `python problem2/compare_strategies.py` 重建同口径策略比较；统一验证也会运行此入口，计算输出放在 `problem2/results/`。
 - `python problem2/benchmark_scoring.py` 对照同一统一模型的完整扫描和提前停止，检查评分、排序、完整选点路径一致，并记录扫描量及本地耗时；统一验证也会运行。
 - `python scripts/verify_project.py --reference` 额外用 SciPy/HiGHS 独立核验第一问，输出 `validation/reference_geometry.json`；SciPy 仅是此可选检查的依赖。
@@ -56,7 +61,9 @@
 - 第三四问不能把自建环境、mock HTTP或本地奖励写成官方模拟器或官方成绩。第一轮每问开发96、留出192、压力96例；第四问第二轮另用384/512/256个不重叠种子，策略不访问真值。留出后再调优须更换留出集合并披露。
 - 接口读数两位小数，几何误差至少按±1.005°处理；阴性不自动删除定向候选区域，收紧前须验证相应距离/半平面前提。
 - 第四问允许检测点在目标圆外；全清终止须完成有证明的覆盖并清除已发现源，或成功清除上限16个，达到10个不能认定完成。
-- 第四问默认23点布局由有限Voronoi圆缺极值证书认证；不能仅用采样网格接受更少点。发现16个频道只允许停止发现阶段，实际清除16个才能结束，并保持 `coverage_complete` 与 `completion_certified` 的区别。历史阴性裁剪须先证明其在未知接收半径内，不能直接减圆盘。
+- 概率实验可在所有已发现源清完且至少清10个后，首次跨阈值时退出，但必须标记 `completion_certified=false`。全清后验依赖源数与独立位置/方向先验；guarded 的数值误差联合界不保证真实平台全清，零粒子幸存不等于不存在遗漏。评估按整局第一次跨阈值计时，外部真值仅作事后标签，漏源与节时必须分别报告。
+- 第四问默认22点布局已由队友有理数证书及我方有限Voronoi圆缺极值证书独立认证，坐标固定，见 `coverage_certificate_v4.json`；不能仅用采样网格接受新布局。发现16个频道只允许停止发现阶段，实际清除16个才能结束，并保持 `coverage_complete` 与 `completion_certified` 的区别。历史阴性裁剪须先证明其在未知接收半径内，不能直接减圆盘。
+- 第四问光学修复只从辅助候选碎片并集中扣除已接受失败clear对应的内接20米盘多边形，不放宽原有方位外包区域。面积/动作代价仅用于排序，每源最多额外16次，不能把启发式候选点集当作独立全清证书。补测收益预测也只排序，真实观测负责更新几何。
 - 官方正式测试每问仅3次，成功启动和手工中止均占次。须先读两份附件，原名保存平台加密日志，本地JSONL不能替代。
 - 平台请求串行，同动作重试复用同ID同内容，未知结果不发新动作。clear不切频道，accepted=false不更新状态；读取enter实际剩余时间，结束后不能用exit查询原因。
 

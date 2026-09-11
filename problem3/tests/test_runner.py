@@ -64,6 +64,8 @@ class RunnerTests(unittest.TestCase):
         self.assertIsNone(result['cleared_fraction'])
         self.assertIsNone(result['platform_program_runtime_s'])
         self.assertIsNone(result['platform_case_code'])
+        self.assertEqual(result['algorithm_version'], 'problem3_v4')
+        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v4')
         client.exit.assert_called_once()
 
     def test_unknown_outcome_does_not_exit_or_publish_final_average(self):
@@ -75,6 +77,8 @@ class RunnerTests(unittest.TestCase):
         self.assertIsNone(result['average_clear_time_s'])
         self.assertEqual(result['observed_average_clear_time_s'], 46.25)
         self.assertEqual(result['pending_request_id'], 'measure-uncertain')
+        self.assertEqual(result['algorithm_version'], 'problem3_v4')
+        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v4')
 
     def test_budget_uses_exit_reserve_when_exit_is_safe(self):
         code, result, client, _ = self.online(failure=BudgetExceeded('reserve reached'))
@@ -124,9 +128,63 @@ class RunnerTests(unittest.TestCase):
             os.chdir(original)
         self.assertEqual(local_run.call_args.args[0]['case_id'], case['case_id'])
         self.assertTrue((problem/'results/check/demo_result.json').exists())
+        saved = json.loads((problem/'results/check/demo_result.json').read_text(encoding='utf-8'))
+        self.assertEqual(saved['algorithm_version'], 'problem3_v4')
+        self.assertEqual(saved['policy']['algorithm_version'], 'problem3_v4')
         self.assertTrue((problem/'results/check/demo_route.svg').exists())
         self.assertFalse((self.destination/'results').exists())
         self.assertIn('无定义', output.getvalue())
+        self.assertIn('algorithm_version=problem3_v4', output.getvalue())
+
+    def test_version_display_is_read_only_and_never_enters_arena(self):
+        for problem, strategy, version in ((3, 'adaptive', 'problem3_v4'),
+                                           (3, 'previous', 'problem3_v1'),
+                                           (4, 'adaptive', 'problem4_v4'),
+                                           (4, 'previous', 'problem4_v2'),
+                                           (4, 'legacy', 'problem4_v1')):
+            destination = self.destination/f'p{problem}_{strategy}'
+            output = io.StringIO()
+            with self.subTest(problem=problem, strategy=strategy), \
+                    patch.object(sys, 'argv', ['solve.py', '--version', '--online',
+                                              '--strategy', strategy, '--output-dir', str(destination)]), \
+                    patch('problem3.client.HttpClient', side_effect=AssertionError('Version display contacted network')), \
+                    patch.object(benchmark_search, 'run_case', side_effect=AssertionError('Version display ran a case')), \
+                    contextlib.redirect_stdout(output):
+                self.assertEqual(run.main(problem), 0)
+            self.assertIn('algorithm_version='+version, output.getvalue())
+            self.assertFalse(destination.exists())
+
+    def test_previous_alias_replays_original_policies(self):
+        from problem3.policy import SearchPolicy as Previous3
+        from problem3.simulator import ObservationClient
+        from problem4.policy import SearchPolicy as Previous4
+        for problem, policy_class, version in ((3, Previous3, 'problem3_v1'),
+                                               (4, Previous4, 'problem4_v2')):
+            case = generate_case(problem, 2, 'development_v3')
+            row, events = benchmark_search.run_case(case, 'previous', record=True)
+            sim = LocalSimulator(case, record=True)
+            sim.enter()
+            policy_class(problem=problem, strategy='adaptive').run(ObservationClient(sim))
+            sim.exit()
+
+            def physical_trace(trace):
+                return [(event['action'], event['position'], event['channel'],
+                         {k: v for k, v in event['response'].items() if k != 'real_timestamp_ms'})
+                        for event in trace]
+
+            with self.subTest(problem=problem):
+                self.assertIsNone(row['error'])
+                self.assertEqual(row['algorithm_version'], version)
+                self.assertEqual(row['policy']['algorithm_version'], version)
+                self.assertEqual(physical_trace(events), physical_trace(sim.events))
+
+    def test_fingerprint_covers_production_modules_and_thresholds(self):
+        fingerprints = benchmark_search.source_fingerprint()
+        for problem in (3, 4):
+            for path in (benchmark_search.ROOT/f'problem{problem}').glob('*.py'):
+                self.assertIn(path.relative_to(benchmark_search.ROOT).as_posix(), fingerprints)
+        self.assertFalse(any('/experiments' in name for name in fingerprints))
+        self.assertEqual(benchmark_search.THRESHOLDS, {3: 220.0, 4: 400.0})
 
     def test_solver_wrappers_import_from_outside_repository(self):
         for problem in (3, 4):

@@ -8,7 +8,14 @@
 - 用报名信息注册并登录，全程保持联网；电脑时间与服务器相差不能超过 60 秒。同一账号不能同时在两台设备使用。
 - 先在本地运行 `python problem3/solve.py` 和 `python problem4/solve.py`，确认程序能完成自建案例。默认不连接官方平台。
 
-第四问默认已是新版提速算法，平台运行命令不变。与上一版比较可在本地加 `--strategy legacy`；新版结果见 [速度比较](problem4/results/speed_comparison_v2.md)。
+先确认版本，下面两条只显示版本、不连接平台：
+
+```powershell
+python problem3/solve.py --version
+python problem4/solve.py --version
+```
+
+应分别显示 **`problem3_v4`、`problem4_v4`**。默认已接入本轮选择的算法；加 `--strategy previous` 才会运行本轮之前的默认版本。新版本地结果见 [本轮比较](validation/speed_v4_summary.md)。
 
 ## 2. 先做演练
 
@@ -22,7 +29,7 @@
 
    每局只运行其中一条。默认地址是 `http://127.0.0.1:2026`；修改过端口时，在命令末尾加 `--base-url http://127.0.0.1:新端口`。模拟器和程序必须在同一台电脑。
 
-3. 等程序退出，保存程序生成的过程记录，并在模拟器查看案例编码、结束原因和程序运行时间。演练结束后界面才显示源总数等真值，**需要手工记录，接口不能获取**。
+3. 启动时检查打印的版本。等程序退出，保存 `problem3/results/online/` 或 `problem4/results/online/` 的记录，并在模拟器查看案例编码、结束原因和程序运行时间。演练结束后界面才显示源总数等真值，**需要手工记录，接口不能获取**。结果文件的 `algorithm_version` 用于区分版本。
 4. 多做不同案例，先确认清除完整，再比较速度。计算：清除比例 = 清除数 / 界面显示的源总数；平均定位清除时间 = 最终虚拟时间 / 清除数。清除数为 0 时平均值记“无定义”。虚拟时间包括移动、切频道、检测、定位和清除，不能用电脑实际运行秒数替代。
 
 演练不限次数。接口在倒计时、非测试期间和结束后都关闭，连接失败此时属正常现象。短暂断网时保留模拟器并等待重连；程序只对同一请求复用原 ID 重试。若程序报告结果未确认，先查看日志及模拟器状态，不要向同一局盲目重发新动作，也不要用 `/exit` 探测结束原因。
@@ -47,3 +54,27 @@
 - 按题包，**北京时间 2026 年 9 月 13 日 17:30 后不能启动新测试**，建议 **15:30 前完成全部正式测试**。此前启动的测试可以完成，已排队日志仍会继续上传。
 
 原始说明：[附件 1](materials/problem_b/attachments/attachment_1_simulator_guide.docx)、[附件 2](materials/problem_b/attachments/attachment_2_api_protocol.docx)。
+
+## 5. 概率提前停止实验（仅本地）
+
+安全默认仍用上面的 `solve.py`。概率分支额外需要 NumPy：
+
+```powershell
+python -m pip install numpy
+python scripts/run_probability_stop.py --problem 4 --mode nominal --threshold 0.99 --index 14
+python scripts/run_probability_stop.py --problem 4 --mode guarded --threshold 0.99 --index 14
+```
+
+第三问将 `--problem 4` 改为 `3`。`nominal` 按均匀先验估计；`guarded` 加入较难发现的源分布和数值误差保护。结果保存在对应问题的 `results/probability_stop_demo.json`，每次覆盖；要保留多次结果，加 `--output results/自选名字.json`。
+
+重点看 `all_cleared`（本地真值全清）与 `completion_certified`（完整性证明）。概率提前退出时后者始终为 `false`，即使本局碰巧全清。
+
+复现一个“概率超过99%仍漏1源”的合法反例：
+
+```powershell
+python scripts/run_probability_stop.py --problem 4 --mode nominal --threshold 0.99 --case examples/probability_stop_counterexample.json
+```
+
+预期只清除 10/11 个，程序返回非零状态报告漏清。
+
+本实验入口不支持联网。批量结果与取舍见[风险实验报告](validation/probability_stop/report.md)。

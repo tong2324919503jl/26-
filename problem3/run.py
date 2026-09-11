@@ -47,13 +47,19 @@ def main(problem):
     parser.add_argument('--online',action='store_true')
     parser.add_argument('--robot-id')
     parser.add_argument('--base-url',default='http://127.0.0.1:2026')
-    strategies = ('adaptive','legacy','baseline','optical') if problem == 4 else ('adaptive','baseline','optical')
+    strategies = ('adaptive','previous','legacy','baseline','optical') if problem == 4 else ('adaptive','previous','baseline','optical')
     parser.add_argument('--strategy',choices=strategies,default='adaptive')
+    parser.add_argument('--version',action='store_true',help='Print the selected algorithm version and exit')
     parser.add_argument('--case',type=Path,help='Local case JSON; relative to this problem directory')
     parser.add_argument('--index',type=int,default=3,help='Built-in development case index')
     parser.add_argument('--config',type=Path,help='Fixed policy config JSON; relative to this problem directory')
     parser.add_argument('--output-dir',type=Path,help='Output directory; relative to this problem directory')
     args=parser.parse_args()
+    from scripts.benchmark_search import get_algorithm_version
+    version=get_algorithm_version(problem,args.strategy)
+    print(f'问题{problem} strategy={args.strategy} algorithm_version={version}',flush=True)
+    if args.version:
+        return 0
     here=ROOT/f'problem{problem}'
     def resolve(p):
         return p if p.is_absolute() else here/p
@@ -72,6 +78,8 @@ def main(problem):
             examples=here/'examples'; examples.mkdir(parents=True,exist_ok=True)
             (examples/'demo_case.json').write_text(json.dumps(case,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         row,events=run_case(case,args.strategy,config,record=True)
+        row['algorithm_version']=version
+        row.setdefault('policy',{})['algorithm_version']=version
         (output/'demo_result.json').write_text(json.dumps(row,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
         (output/'demo_trace.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events),encoding='utf-8')
         draw_route(case,events,output/'demo_route.svg')
@@ -126,7 +134,9 @@ def main(problem):
     # automatic timeout may make the platform's final totals differ from these.
     statistics_final = exited and pending is None
     observed_average = client.virtual_time_s/count if count else None
+    result['algorithm_version']=version
     summary=dict(problem=problem,strategy=args.strategy,provenance='official_platform_client_observations',
+                 algorithm_version=version,
                  platform_case_code=None,test_module='fill_from_platform_ui',source_count=None,
                  cleared_count=count,cleared_fraction=None,virtual_time_s=client.virtual_time_s,
                  average_clear_time_s=observed_average if statistics_final else None,

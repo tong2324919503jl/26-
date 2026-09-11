@@ -1,0 +1,74 @@
+{
+  "source_truth_available_to_policy": false,
+  "selection_set": "development_v3",
+  "unopened_evaluation_sets": [
+    "holdout_v3",
+    "stress_v3"
+  ],
+  "problem3": {
+    "frozen_at_utc": "2026-09-11T13:36:34.738974+00:00",
+    "target": "problem3.speed_policy:SearchPolicy",
+    "source_sha256": {
+      "problem3/speed_policy.py": "616ff58f0d7040902d5fbc275d4750efb5c079bb7fe2db5eb0ebce47ecefbdd8",
+      "problem3/lookahead.py": "657d5f5f6a1b8c51af43f6a506e358b864d639e1b7042d38781bd32bcd8d3b92",
+      "problem3/planning.py": "0f4e6b1681ccc781c386079c9fcad07b069c7edf09fb8470384bb04159d2f62d",
+      "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "problem4/routing.py": "70d96a68250ad1dcd1d466cc75bc1c5f0f601b61832144338695ca223b732057",
+      "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f"
+    },
+    "selection": "Exact promotion of previous best AggressiveBandPolicy; teammate intercept and neighbor-gate variants did not improve development means.",
+    "source_lf_sha256": {
+      "problem3/speed_policy.py": "6f744b18eb06c863165cb10894f0f3a361de9b533da2e9109fc46c1db41a6a4b",
+      "problem3/lookahead.py": "3028190aaac132182cf79e7fd2dd0e4a0c1fd4b4a0132a176bcae268e5d39fb3",
+      "problem3/planning.py": "4b3d5ab6f26103e0e67c982f2cf001bd7fb0b095b8114b7566e38f7aeee90140",
+      "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+      "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f"
+    },
+    "verification_note": "Original frozen byte hashes verified unchanged after evaluation. LF-normalized hashes added only to tolerate Git checkout newline conversion; no algorithm edits."
+  },
+  "problem4": {
+    "frozen_at_utc": "2026-09-11T13:38:59.064270+00:00",
+    "target": "problem4.speed_policy:SearchPolicy",
+    "source_sha256": {
+      "problem4/speed_policy.py": "a1a5d824de959d76d1b4f9721a31b4a5ab907f47274c3f0654da9475aa12838e",
+      "problem4/search_layout.py": "82f3b1b169a962d5625042b8cbd2f123fbc76ba7840cd25abe201221f1716a8a",
+      "problem4/bystander.py": "ab58b029e5a1d8b9f982a24a8f52e8e78eeb3294498c8101ed1b5b27ebc772c8",
+      "problem4/optical_repair.py": "69ac91d90111455263951869d4901bfd477ce16a7d8cf49475a26c85d1a44c88",
+      "problem4/shared_baseline.py": "a5d65cccce8c8ac1c35984e3f623963737a3c8f0c6116af79e8f8d65a329ae69",
+      "problem4/policy.py": "4238826909d6ac0cec9a1f1f4355e8abe56142ec17d89ad4474f00a2e847c810",
+      "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+      "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+      "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "problem4/routing.py": "70d96a68250ad1dcd1d466cc75bc1c5f0f601b61832144338695ca223b732057",
+      "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f"
+    },
+    "selection": "Nonuniform 22 stations plus shared 50 m baseline, predicted-gain bystander reads and unionmass optical repair. Selected exclusively on development_v3; mean 440.159 versus 21-station fusion 440.756, threshold passes 133 versus 127 of 384.",
+    "source_lf_sha256": {
+      "problem4/speed_policy.py": "b6c0dd44af247ed131b9ea94e8d85b7dfa706f0d83b8b8e181e6fa8c8351e7f0",
+      "problem4/search_layout.py": "a53fde6a38b60b5b0fe96ff8539d382596ee19ffc3eb3e2188f3f1a5e6846171",
+      "problem4/bystander.py": "0414031c564d771274b12bf2016d1a70cd33bd7a2bb2501165d1d34fd313fe40",
+      "problem4/optical_repair.py": "567620b452caf5bac83b7e7d399f39cb1ce4735a3694d416565bac2f255e0235",
+      "problem4/shared_baseline.py": "5cc51a5e02308668b6326e231f7de7c24f4dd6cee4d6637bd120be1062a891cf",
+      "problem4/policy.py": "4b0d3339b1cc2ae0c3744c8a92703e11219d78c3b4f0af4ae96ef71d7181611f",
+      "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+      "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+      "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+      "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f"
+    },
+    "verification_note": "Original frozen byte hashes verified unchanged after evaluation. LF-normalized hashes added only to tolerate Git checkout newline conversion; no algorithm edits."
+  }
+}

@@ -1,0 +1,1445 @@
+{
+  "split": "development_v3",
+  "cases_per_problem": 1,
+  "zip": "B题第三四问_第三轮演练包.zip",
+  "zip_sha256": "bce6c749b633275e01c20913d1b9980b4f810cf6fad57f9de58732edbe5b4332",
+  "results": {
+    "3": {
+      "ours": {
+        "worker_metadata": {
+          "type": "ready",
+          "implementation": "ours",
+          "problem": 3,
+          "config": {
+            "branch": "problem3.experiments_v3.optical_band:OpticalBandPolicy"
+          },
+          "imports": {
+            "problem3": "D:\\VS code\\Repository\\26-\\problem3\\__init__.py",
+            "problem3.geometry": "D:\\VS code\\Repository\\26-\\problem3\\geometry.py",
+            "problem3.policy": "D:\\VS code\\Repository\\26-\\problem3\\policy.py",
+            "problem4": "D:\\VS code\\Repository\\26-\\problem4\\__init__.py",
+            "problem4.routing": "D:\\VS code\\Repository\\26-\\problem4\\routing.py",
+            "problem3.experiments_v3.policy": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\policy.py",
+            "problem3.experiments_v3.candidate": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\candidate.py",
+            "problem3.experiments_v3.journey": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\journey.py",
+            "problem4.localization": "D:\\VS code\\Repository\\26-\\problem4\\localization.py",
+            "problem3.experiments_v3.radial_adaptive": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\radial_adaptive.py",
+            "problem3.experiments_v3.negative_disks": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\negative_disks.py",
+            "problem3.experiments_v3.lookahead": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\lookahead.py",
+            "problem3.scenarios": "D:\\VS code\\Repository\\26-\\problem3\\scenarios.py",
+            "problem3.simulator": "D:\\VS code\\Repository\\26-\\problem3\\simulator.py",
+            "problem3.experiments_v3.benchmark": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\benchmark.py",
+            "problem3.experiments_v3.coverage_family_tuning": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\coverage_family_tuning.py",
+            "problem3.experiments_v3.optical_band": "D:\\VS code\\Repository\\26-\\problem3\\experiments_v3\\optical_band.py"
+          }
+        },
+        "summary": {
+          "cases": 1,
+          "all_cleared": 1,
+          "certified_complete": 1,
+          "complete_fraction": 1.0,
+          "mean_seconds_per_source": 246.9374281642287,
+          "completed_case_mean_seconds_per_source": 246.9374281642287,
+          "p90_seconds_per_source": 246.9374281642287,
+          "weighted_seconds_per_source": 246.9374281642287,
+          "threshold_s": 220,
+          "threshold_passes": 0,
+          "threshold_pass_rate": 0.0,
+          "cpu_total_s": 0.1875,
+          "cpu_mean_s": 0.1875,
+          "cpu_p90_s": 0.1875,
+          "cpu_max_s": 0.1875,
+          "wall_total_s": 0.1929021000105422,
+          "failure_case_ids": []
+        },
+        "episodes": [
+          {
+            "case_id": "local_p3_development_v3_0000",
+            "case_sha256": "814337b532d1713f8f2c1645ccb6e412663737c49f208d71432039bac4d6a916",
+            "source_count": 12,
+            "cleared_count": 12,
+            "cleared_fraction": 1.0,
+            "virtual_time_s": 2963.2491379707444,
+            "average_clear_time_s": 246.9374281642287,
+            "last_clear_time_s": 2557.734294939622,
+            "time_to_90_percent_s": 2481.286137856473,
+            "movement_m": 11156.245689853718,
+            "actions": 126,
+            "measure": 112,
+            "clear": 14,
+            "failed_clear": 2,
+            "switch": 106,
+            "no_signal": 74,
+            "source_truth_all_cleared": true,
+            "policy_claimed_complete": true,
+            "independent_public_completion": {
+              "certified": true,
+              "reason": "independent_public_per_channel_coverage",
+              "unknown_channels": [
+                1,
+                2,
+                5,
+                11,
+                13,
+                14,
+                17,
+                18
+              ],
+              "checks": [
+                {
+                  "channel": 1,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 2,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 5,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 11,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 13,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 14,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 17,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                },
+                {
+                  "channel": 18,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 988.5114204418303
+                  }
+                }
+              ]
+            },
+            "certified_full_clear": true,
+            "actual_exit_time_s": 2963.2491379707444,
+            "normal_exit": true,
+            "error": null,
+            "policy_cpu_s": 0.1875,
+            "policy_wall_s": 0.1929021000105422,
+            "endpoint_counts": {
+              "/enter": 1,
+              "/measure": 112,
+              "/clear": 14,
+              "/exit": 1
+            },
+            "policy": {
+              "problem": 3,
+              "strategy": "adaptive",
+              "cleared_channels": [
+                3,
+                4,
+                6,
+                7,
+                8,
+                9,
+                10,
+                12,
+                15,
+                16,
+                19,
+                20
+              ],
+              "coverage_complete": true,
+              "completion_certified": true,
+              "termination_reason": "certified_coverage_and_all_detected_cleared",
+              "coverage_points_visited": 7,
+              "detected_channels": [
+                3,
+                4,
+                6,
+                7,
+                8,
+                9,
+                10,
+                12,
+                15,
+                16,
+                19,
+                20
+              ],
+              "config": {
+                "ring_radius": 1150.0,
+                "bearing_error_deg": 1.005,
+                "max_probe_count": 5,
+                "lateral_fraction": 0.12,
+                "lateral_min_m": 45.0,
+                "lateral_max_m": 140.0,
+                "opportunistic_radius_m": 0.0,
+                "optical_spacing_m": 26.0,
+                "clear_guarantee_radius_m": 19.99,
+                "exploratory_clear_radius_m": 55.0,
+                "neighbor_updates": true,
+                "neighbor_max_distance_m": 1450.0,
+                "neighbor_min_parallax_deg": 12.0,
+                "adaptive_discovery": false,
+                "discovery_min_spacing_m": 700.0,
+                "discovery_replacement_only": true,
+                "target_uncertainty_weight": 0.5
+              },
+              "measure_actions": 112,
+              "clear_actions": 14,
+              "failed_clears": 2,
+              "optical_fallbacks": 0,
+              "negative_localization_reads": 0,
+              "safe_clear_offsets": 10,
+              "lookahead_choices": 20,
+              "zero_origin_geometry": {
+                "count": 9,
+                "radius_m": 1700.0,
+                "triggered": false,
+                "phase_candidates": 16
+              }
+            }
+          }
+        ],
+        "stderr": []
+      },
+      "teammate": {
+        "worker_metadata": {
+          "type": "ready",
+          "implementation": "teammate",
+          "problem": 3,
+          "config": {
+            "problem": 3,
+            "branch": "phase3_intercept",
+            "threshold_s": 200,
+            "parameters": {
+              "advance": 450,
+              "offset": 90,
+              "clear_radius": 55,
+              "coverage_radius": 1124,
+              "scan_gain": 0.3,
+              "route_starts": 4
+            },
+            "selection": "Frozen phase-3 candidate; 1120 new local cases; goals not met.",
+            "safety_note": "clear_radius is a speculative attempt threshold, not the physical clearance radius.",
+            "candidate_options": {
+              "step": 450,
+              "radius": 1600
+            }
+          },
+          "imports": {
+            "problem3": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\__init__.py",
+            "problem3.protocol": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\protocol.py",
+            "problem3.geometry": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\geometry.py",
+            "problem3.coverage": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\coverage.py",
+            "problem3.policy": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\policy.py",
+            "problem3.simulation": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\simulation.py",
+            "problem3.cases": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\cases.py",
+            "problem3.phase3_localization": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_localization.py",
+            "problem3.routing": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\routing.py",
+            "problem3.phase3_route": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_route.py",
+            "problem3.phase3_adaptive": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_adaptive.py",
+            "problem3.phase3_intercept": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_intercept.py"
+          }
+        },
+        "summary": {
+          "cases": 1,
+          "all_cleared": 1,
+          "certified_complete": 1,
+          "complete_fraction": 1.0,
+          "mean_seconds_per_source": 267.871569704203,
+          "completed_case_mean_seconds_per_source": 267.871569704203,
+          "p90_seconds_per_source": 267.871569704203,
+          "weighted_seconds_per_source": 267.871569704203,
+          "threshold_s": 220,
+          "threshold_passes": 0,
+          "threshold_pass_rate": 0.0,
+          "cpu_total_s": 0.0,
+          "cpu_mean_s": 0.0,
+          "cpu_p90_s": 0.0,
+          "cpu_max_s": 0.0,
+          "wall_total_s": 0.020433099998626858,
+          "failure_case_ids": []
+        },
+        "episodes": [
+          {
+            "case_id": "local_p3_development_v3_0000",
+            "case_sha256": "814337b532d1713f8f2c1645ccb6e412663737c49f208d71432039bac4d6a916",
+            "source_count": 12,
+            "cleared_count": 12,
+            "cleared_fraction": 1.0,
+            "virtual_time_s": 3214.458836450436,
+            "average_clear_time_s": 267.871569704203,
+            "last_clear_time_s": 2930.980162714661,
+            "time_to_90_percent_s": 2442.6257664606123,
+            "movement_m": 12672.294182252183,
+            "actions": 117,
+            "measure": 103,
+            "clear": 14,
+            "failed_clear": 2,
+            "switch": 99,
+            "no_signal": 74,
+            "source_truth_all_cleared": true,
+            "policy_claimed_complete": true,
+            "independent_public_completion": {
+              "certified": true,
+              "reason": "independent_public_per_channel_coverage",
+              "unknown_channels": [
+                1,
+                2,
+                5,
+                11,
+                13,
+                14,
+                17,
+                18
+              ],
+              "checks": [
+                {
+                  "channel": 1,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 2,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 5,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 11,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 13,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 14,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 17,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                },
+                {
+                  "channel": 18,
+                  "observed_station_count": 7,
+                  "certificate": {
+                    "certified": true,
+                    "max_radius_bound_m": 999.5452996927596
+                  }
+                }
+              ]
+            },
+            "certified_full_clear": true,
+            "actual_exit_time_s": 3214.458836450436,
+            "normal_exit": true,
+            "error": null,
+            "policy_cpu_s": 0.0,
+            "policy_wall_s": 0.020433099998626858,
+            "endpoint_counts": {
+              "/enter": 1,
+              "/measure": 103,
+              "/clear": 14,
+              "/exit": 1
+            },
+            "policy": {
+              "problem": 3,
+              "branch": "phase3_route_milestone",
+              "complete_certificate": true,
+              "stop_reason": "all_guaranteed_cover_stations_scanned",
+              "virtual_time_s": 3214.458836,
+              "actions": {
+                "measure": 103,
+                "clear": 14,
+                "clear_success": 12,
+                "no_signal": 74
+              },
+              "coverage_scan_stops": 7,
+              "optical_fallbacks": 0,
+              "geometry_resets": 0,
+              "paired_radial_cuts": 0,
+              "opportunity_measures": 8,
+              "policy_runtime_s": 0.019732200002181344
+            }
+          }
+        ],
+        "stderr": []
+      }
+    },
+    "4": {
+      "ours": {
+        "worker_metadata": {
+          "type": "ready",
+          "implementation": "ours",
+          "problem": 4,
+          "config": {
+            "branch": "problem4.experiments_v3.posterior:Shared21Policy"
+          },
+          "imports": {
+            "problem4": "D:\\VS code\\Repository\\26-\\problem4\\__init__.py",
+            "problem4.experiments_v3": "D:\\VS code\\Repository\\26-\\problem4\\experiments_v3\\__init__.py",
+            "problem3": "D:\\VS code\\Repository\\26-\\problem3\\__init__.py",
+            "problem3.geometry": "D:\\VS code\\Repository\\26-\\problem3\\geometry.py",
+            "problem4.routing": "D:\\VS code\\Repository\\26-\\problem4\\routing.py",
+            "problem4.coverage": "D:\\VS code\\Repository\\26-\\problem4\\coverage.py",
+            "problem4.localization": "D:\\VS code\\Repository\\26-\\problem4\\localization.py",
+            "problem3.policy": "D:\\VS code\\Repository\\26-\\problem3\\policy.py",
+            "problem4.legacy_policy": "D:\\VS code\\Repository\\26-\\problem4\\legacy_policy.py",
+            "problem4.policy": "D:\\VS code\\Repository\\26-\\problem4\\policy.py",
+            "problem4.experiments_v3.routing": "D:\\VS code\\Repository\\26-\\problem4\\experiments_v3\\routing.py",
+            "problem4.experiments_v3.routing_shared": "D:\\VS code\\Repository\\26-\\problem4\\experiments_v3\\routing_shared.py",
+            "problem4.experiments_v3.coverage_ring_policy": "D:\\VS code\\Repository\\26-\\problem4\\experiments_v3\\coverage_ring_policy.py",
+            "problem4.experiments_v3.posterior": "D:\\VS code\\Repository\\26-\\problem4\\experiments_v3\\posterior.py"
+          }
+        },
+        "summary": {
+          "cases": 1,
+          "all_cleared": 1,
+          "certified_complete": 1,
+          "complete_fraction": 1.0,
+          "mean_seconds_per_source": 554.4936736245636,
+          "completed_case_mean_seconds_per_source": 554.4936736245636,
+          "p90_seconds_per_source": 554.4936736245636,
+          "weighted_seconds_per_source": 554.4936736245636,
+          "threshold_s": 400,
+          "threshold_passes": 0,
+          "threshold_pass_rate": 0.0,
+          "cpu_total_s": 0.125,
+          "cpu_mean_s": 0.125,
+          "cpu_p90_s": 0.125,
+          "cpu_max_s": 0.125,
+          "wall_total_s": 0.11894100000790786,
+          "failure_case_ids": []
+        },
+        "episodes": [
+          {
+            "case_id": "local_p4_development_v3_0000",
+            "case_sha256": "c633aee1b033eb0755e5d46d37b61d602db03b73119041379871071122f8fec6",
+            "source_count": 10,
+            "cleared_count": 10,
+            "cleared_fraction": 1.0,
+            "virtual_time_s": 5544.936736245636,
+            "average_clear_time_s": 554.4936736245636,
+            "last_clear_time_s": 4867.445629263967,
+            "time_to_90_percent_s": 3671.0732267679746,
+            "movement_m": 19509.683681228176,
+            "actions": 279,
+            "measure": 268,
+            "clear": 11,
+            "failed_clear": 1,
+            "switch": 250,
+            "no_signal": 233,
+            "source_truth_all_cleared": true,
+            "policy_claimed_complete": true,
+            "independent_public_completion": {
+              "certified": true,
+              "reason": "independent_public_per_channel_coverage",
+              "unknown_channels": [
+                1,
+                3,
+                4,
+                5,
+                10,
+                11,
+                14,
+                16,
+                17,
+                20
+              ],
+              "checks": [
+                {
+                  "channel": 1,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 3,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 4,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 5,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 10,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 11,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 14,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 16,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 17,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                },
+                {
+                  "channel": 20,
+                  "observed_station_count": 21,
+                  "certificate": {
+                    "point_count": 21,
+                    "points_sha256": "6318f09bb39e323ea42084543dfc945922bad2c4828ff60e4307c361ec268076",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1801.9999999999998,
+                    "max_directional_radius_bound_m": 997.3210580284382,
+                    "witness": [
+                      897.68731061408,
+                      -240.53458994506218
+                    ],
+                    "pair": [
+                      17,
+                      13
+                    ],
+                    "pair_checks": 408
+                  }
+                }
+              ]
+            },
+            "certified_full_clear": true,
+            "actual_exit_time_s": 5544.936736245636,
+            "normal_exit": true,
+            "error": null,
+            "policy_cpu_s": 0.125,
+            "policy_wall_s": 0.11894100000790786,
+            "endpoint_counts": {
+              "/enter": 1,
+              "/measure": 268,
+              "/clear": 11,
+              "/exit": 1
+            },
+            "policy": {
+              "problem": 4,
+              "strategy": "adaptive",
+              "cleared_channels": [
+                2,
+                6,
+                7,
+                8,
+                9,
+                12,
+                13,
+                15,
+                18,
+                19
+              ],
+              "coverage_complete": true,
+              "completion_certified": true,
+              "termination_reason": "certified_coverage_and_all_detected_cleared",
+              "coverage_points_visited": 21,
+              "detected_channels": [
+                2,
+                6,
+                7,
+                8,
+                9,
+                12,
+                13,
+                15,
+                18,
+                19
+              ],
+              "config": {
+                "ring_radius": 1150.0,
+                "bearing_error_deg": 1.005,
+                "max_probe_count": 5,
+                "lateral_fraction": 0.12,
+                "lateral_min_m": 45.0,
+                "lateral_max_m": 140.0,
+                "opportunistic_radius_m": 0.0,
+                "optical_spacing_m": 26.0,
+                "clear_guarantee_radius_m": 19.99,
+                "exploratory_clear_radius_m": 55.0,
+                "neighbor_updates": true,
+                "neighbor_max_distance_m": 1450.0,
+                "neighbor_min_parallax_deg": 12.0,
+                "adaptive_discovery": false,
+                "discovery_min_spacing_m": 700.0,
+                "discovery_replacement_only": true,
+                "target_uncertainty_weight": 0.5
+              },
+              "measure_actions": 268,
+              "clear_actions": 11,
+              "failed_clears": 1,
+              "optical_fallbacks": 0,
+              "negative_localization_reads": 1,
+              "shared_baselines": 5,
+              "shared_baseline_reads": 10,
+              "paired_probe_actions": 6,
+              "history_clips": 13,
+              "algorithm_version": "problem4_experiment_v3_ring21",
+              "effective_settings": {
+                "coverage_points": 21,
+                "history_slices": 12,
+                "probe_quantile": 0.2,
+                "probe_width_fraction": 0.04,
+                "probe_min_width_m": 15.0,
+                "probe_rounds": 5,
+                "route_initial_constructions": 4,
+                "reuse_previous_route": true,
+                "max_relocated_chain": 3,
+                "expected_scan_cost_weight": 1.0
+              }
+            }
+          }
+        ],
+        "stderr": []
+      },
+      "teammate": {
+        "worker_metadata": {
+          "type": "ready",
+          "implementation": "teammate",
+          "problem": 4,
+          "config": {
+            "problem": 4,
+            "branch": "phase3_optical_nonuniform",
+            "threshold_s": 400,
+            "parameters": {
+              "advance": 450,
+              "offset": 90,
+              "clear_radius": 200,
+              "coverage_radius": 1124,
+              "scan_gain": 0.15,
+              "route_starts": 4
+            },
+            "selection": "Frozen phase-3 candidate; 1120 new local cases; goals not met.",
+            "safety_note": "The 22 station cover is verified continuously. clear_radius is a speculative threshold; only accepted success confirms clearance.",
+            "candidate_options": {
+              "max_length": 200,
+              "max_width": 32,
+              "optical_mode": "unionmass",
+              "layout": "nonuniform_v1"
+            }
+          },
+          "imports": {
+            "problem3": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\__init__.py",
+            "problem3.protocol": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\protocol.py",
+            "problem4": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem4\\__init__.py",
+            "problem3.coverage_certificate": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\coverage_certificate.py",
+            "problem3.geometry": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\geometry.py",
+            "problem3.coverage": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\coverage.py",
+            "problem3.policy": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\policy.py",
+            "problem3.routing": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\routing.py",
+            "problem3.phase3_route": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_route.py",
+            "problem3.simulation": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\simulation.py",
+            "problem3.cases": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\cases.py",
+            "problem3.phase3_localization": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_localization.py",
+            "problem3.phase3_optical": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem3\\phase3_optical.py",
+            "problem4.phase3_candidate": "C:\\Users\\16977\\AppData\\Local\\Temp\\compare-teammate-p34-lg8dpxn0\\problem4\\phase3_candidate.py"
+          }
+        },
+        "summary": {
+          "cases": 1,
+          "all_cleared": 1,
+          "certified_complete": 1,
+          "complete_fraction": 1.0,
+          "mean_seconds_per_source": 574.8124338620746,
+          "completed_case_mean_seconds_per_source": 574.8124338620746,
+          "p90_seconds_per_source": 574.8124338620746,
+          "weighted_seconds_per_source": 574.8124338620746,
+          "threshold_s": 400,
+          "threshold_passes": 0,
+          "threshold_pass_rate": 0.0,
+          "cpu_total_s": 1.640625,
+          "cpu_mean_s": 1.640625,
+          "cpu_p90_s": 1.640625,
+          "cpu_max_s": 1.640625,
+          "wall_total_s": 1.777772899993579,
+          "failure_case_ids": []
+        },
+        "episodes": [
+          {
+            "case_id": "local_p4_development_v3_0000",
+            "case_sha256": "c633aee1b033eb0755e5d46d37b61d602db03b73119041379871071122f8fec6",
+            "source_count": 10,
+            "cleared_count": 10,
+            "cleared_fraction": 1.0,
+            "virtual_time_s": 5748.124338620746,
+            "average_clear_time_s": 574.8124338620746,
+            "last_clear_time_s": 5422.535767741186,
+            "time_to_90_percent_s": 5328.25316959696,
+            "movement_m": 20055.62169310373,
+            "actions": 296,
+            "measure": 283,
+            "clear": 13,
+            "failed_clear": 3,
+            "switch": 263,
+            "no_signal": 256,
+            "source_truth_all_cleared": true,
+            "policy_claimed_complete": true,
+            "independent_public_completion": {
+              "certified": true,
+              "reason": "independent_public_per_channel_coverage",
+              "unknown_channels": [
+                1,
+                3,
+                4,
+                5,
+                10,
+                11,
+                14,
+                16,
+                17,
+                20
+              ],
+              "checks": [
+                {
+                  "channel": 1,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 3,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 4,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 5,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 10,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 11,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 14,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 16,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 17,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                },
+                {
+                  "channel": 20,
+                  "observed_station_count": 22,
+                  "certificate": {
+                    "point_count": 22,
+                    "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+                    "target_radius_m": 1800.0,
+                    "receive_radius_m": 1000.0,
+                    "numerical_margin_m": 0.001,
+                    "certified": true,
+                    "hull_inradius_m": 1800.2810700912394,
+                    "max_directional_radius_bound_m": 999.6245505618116,
+                    "witness": [
+                      869.4848057075142,
+                      -196.4941622254268
+                    ],
+                    "pair": [
+                      16,
+                      14
+                    ],
+                    "pair_checks": 448
+                  }
+                }
+              ]
+            },
+            "certified_full_clear": true,
+            "actual_exit_time_s": 5748.124338620746,
+            "normal_exit": true,
+            "error": null,
+            "policy_cpu_s": 1.640625,
+            "policy_wall_s": 1.777772899993579,
+            "endpoint_counts": {
+              "/enter": 1,
+              "/measure": 283,
+              "/clear": 13,
+              "/exit": 1
+            },
+            "policy": {
+              "problem": 4,
+              "branch": "phase3_route_milestone",
+              "complete_certificate": true,
+              "stop_reason": "all_guaranteed_cover_stations_scanned",
+              "virtual_time_s": 5748.124339,
+              "actions": {
+                "measure": 283,
+                "clear": 13,
+                "clear_success": 10,
+                "no_signal": 256
+              },
+              "coverage_scan_stops": 22,
+              "optical_fallbacks": 0,
+              "geometry_resets": 0,
+              "paired_radial_cuts": 2,
+              "opportunity_measures": 10,
+              "policy_runtime_s": 0.1297640999982832,
+              "optical_decision_actions": 3,
+              "optical_fragment_peak": 5,
+              "optical_length": 200,
+              "optical_width": 32,
+              "optical_mode": "unionmass"
+            }
+          }
+        ],
+        "stderr": []
+      }
+    }
+  },
+  "scope": "Same evaluator-owned LocalSimulator and ObservationClient. No source truth, seed, family or case_id is sent to either worker. Primary metric is per-case mean of actual exit virtual time / cleared count.",
+  "cpu_scope": "Worker process CPU, including policy construction and first-case cache initialization; wall time additionally includes pipe waits. No platform calls.",
+  "archive_review": {
+    "zip_sha256": "bce6c749b633275e01c20913d1b9980b4f810cf6fad57f9de58732edbe5b4332",
+    "uncompressed_bytes": 1785778,
+    "python_modules": [
+      {
+        "path": "problem3/__init__.py",
+        "sha256": "1cdc0e8691588168c923fb9fdb50fbfd95901952bf639deeb95fd4b473931a54",
+        "imports": []
+      },
+      {
+        "path": "problem3/cases.py",
+        "sha256": "a7cf1aa58061417f12f6f143a282f2bf58f4e1b75bd81fc76cd3c6b35a3448fe",
+        "imports": [
+          "from __future__ import annotations",
+          "import math",
+          "import random"
+        ]
+      },
+      {
+        "path": "problem3/coverage.py",
+        "sha256": "56eaa60983347976e4c87bc0cad362650adc4325b2731237a5381c71e97ea5e0",
+        "imports": [
+          "from .coverage_certificate import verify_certificate",
+          "from .geometry import cross, dist, distance_segment, hull, inside_convex",
+          "from __future__ import annotations",
+          "from functools import lru_cache",
+          "from math import cos, hypot, pi, sin, sqrt",
+          "from pathlib import Path",
+          "import json"
+        ]
+      },
+      {
+        "path": "problem3/coverage_certificate.py",
+        "sha256": "e78b711f5830019a2950e206c7fef01c61b77f83f3295e9628f4a83f666a060d",
+        "imports": [
+          "from .protocol import output_path",
+          "from __future__ import annotations",
+          "from fractions import Fraction as F",
+          "from functools import lru_cache",
+          "from math import cos, pi, sin",
+          "import hashlib",
+          "import json"
+        ]
+      },
+      {
+        "path": "problem3/dynamic_cover.py",
+        "sha256": "e08d9868f517b702ac5b589d4c1be63b99315f1c02872c162f8d9bb715bdd86b",
+        "imports": [
+          "from .coverage import shortest_open_route",
+          "from .geometry import hull, dist",
+          "from math import cos, sin, pi, hypot"
+        ]
+      },
+      {
+        "path": "problem3/geometry.py",
+        "sha256": "a80f1755a93103892c64e18b21373a00d1cf7fd57fb673f52d6a81dc76768947",
+        "imports": [
+          "from __future__ import annotations",
+          "from itertools import combinations",
+          "from math import ceil, cos, hypot, pi, radians, sin"
+        ]
+      },
+      {
+        "path": "problem3/phase3_adaptive.py",
+        "sha256": "abdadb555206728d8e3114589b21025f1c2b8838f5940862345b139b1ac60fb4",
+        "imports": [
+          "from .phase3_localization import LocalizationPolicy",
+          "from .phase3_route import RoutePolicy",
+          "from math import cos, sin, pi"
+        ]
+      },
+      {
+        "path": "problem3/phase3_intercept.py",
+        "sha256": "af508160c7b1ca027ac503d6654cac4afc0db80d0c0066c31d4705ffdf2ddd23",
+        "imports": [
+          "from .geometry import dist",
+          "from .phase3_adaptive import AdaptivePolicy",
+          "from math import hypot, isfinite"
+        ]
+      },
+      {
+        "path": "problem3/phase3_localization.py",
+        "sha256": "c5df1b3768065c37cce996bf87ef26e20c6f5bcbd5906b2ebace379e078bdd92",
+        "imports": [
+          "from .cases import make_case",
+          "from .geometry import dist, inside_convex, clip, clip_bearing, covering_circle, ERROR_DEG, diameter_pair, hull",
+          "from .policy import Policy",
+          "from .protocol import Client, output_path",
+          "from .simulation import LocalWorld",
+          "from __future__ import annotations",
+          "from pathlib import Path",
+          "import argparse",
+          "import json",
+          "import math",
+          "import statistics",
+          "import time"
+        ]
+      },
+      {
+        "path": "problem3/phase3_optical.py",
+        "sha256": "1af9e3612f70d47f785b64d6abb712624748dce745845eb43be5597d8b46e6e8",
+        "imports": [
+          "from .cases import make_case",
+          "from .geometry import clip, covering_circle, diameter_pair, dist",
+          "from .phase3_localization import LocalizationPolicy",
+          "from .phase3_route import RoutePolicy",
+          "from .protocol import Client, output_path",
+          "from .simulation import LocalWorld",
+          "from __future__ import annotations",
+          "from pathlib import Path",
+          "import argparse",
+          "import json",
+          "import math",
+          "import statistics",
+          "import time"
+        ]
+      },
+      {
+        "path": "problem3/phase3_route.py",
+        "sha256": "1571827c7cdf8858eec18a7ab8fb40b2eb66aa97de4cc555f30cdd32abab52c1",
+        "imports": [
+          "from .geometry import clip_bearing, covering_circle, dist",
+          "from .phase3_localization import LocalizationPolicy",
+          "from .policy import Policy",
+          "from .protocol import BudgetExceeded",
+          "from .routing import portfolio_route",
+          "from __future__ import annotations",
+          "from math import atan2, degrees",
+          "import time"
+        ]
+      },
+      {
+        "path": "problem3/policy.py",
+        "sha256": "2170552e3dd6d201e6bfdfee744966a7b5f54aba186999b98e11bc5ab44799ca",
+        "imports": [
+          "from .coverage import Coverage, shortest_open_route",
+          "from .dynamic_cover import covers",
+          "from .dynamic_cover import prune_anchors",
+          "from .dynamic_cover import scan_plan",
+          "from .geometry import ERROR_DEG, clip, clip_bearing, clip_disk, covering_circle, disk_outer, dist, optical_cover, exclude_disk",
+          "from .protocol import BudgetExceeded",
+          "from .routing import portfolio_route",
+          "from __future__ import annotations",
+          "from dataclasses import dataclass, field",
+          "from math import cos, hypot, isfinite, radians, sin, tan",
+          "import time"
+        ]
+      },
+      {
+        "path": "problem3/protocol.py",
+        "sha256": "a19c9ab3d4085f0bb999083520062912eef2cd3ff20fb13d1898ee3666781300",
+        "imports": [
+          "from __future__ import annotations",
+          "from pathlib import Path",
+          "from urllib.error import HTTPError, URLError",
+          "from urllib.request import ProxyHandler, Request, build_opener",
+          "import json",
+          "import math",
+          "import time",
+          "import unicodedata",
+          "import uuid"
+        ]
+      },
+      {
+        "path": "problem3/routing.py",
+        "sha256": "b896215685694ca2a679f6fb43916935d310e3b7564c0a8a0fec4004c198ad43",
+        "imports": [
+          "from .geometry import dist"
+        ]
+      },
+      {
+        "path": "problem3/run.py",
+        "sha256": "eab1d8345a441f3a034377a750112ba314a2e0f09f6b34bb3517447802f74a1d",
+        "imports": [
+          "from __future__ import annotations",
+          "from datetime import datetime",
+          "from pathlib import Path",
+          "from problem3.phase3_intercept import factory",
+          "from problem3.protocol import Client, HttpExchange, confirm_rehearsal, output_path, validate_id",
+          "from problem3.simulation import LocalWorld",
+          "from problem4.phase3_candidate import factory",
+          "import argparse",
+          "import json",
+          "import sys",
+          "import time",
+          "import uuid"
+        ]
+      },
+      {
+        "path": "problem3/simulation.py",
+        "sha256": "1b94f6b5fc836553b5504c39e37e6fb2aaace091f78772d2c585f648f8198503",
+        "imports": [
+          "from __future__ import annotations",
+          "import hashlib",
+          "import json",
+          "import math"
+        ]
+      },
+      {
+        "path": "problem4/__init__.py",
+        "sha256": "a428c205e42cb135bd24cf4159b4b42b66656e0c74bb5cc2ff2eede7d8da3979",
+        "imports": []
+      },
+      {
+        "path": "problem4/phase3_candidate.py",
+        "sha256": "d3e545e4421f5fdfcf9eb50eb9d04dd9b39fdcd400673c2aca36b6f51e85404c",
+        "imports": [
+          "from functools import lru_cache",
+          "from problem3.coverage_certificate import verify_certificate",
+          "from problem3.phase3_optical import factory as optical_factory",
+          "from problem3.protocol import output_path",
+          "import json"
+        ]
+      },
+      {
+        "path": "problem4/run.py",
+        "sha256": "b525820076e01b33dcb8faf820e41f89231eda3be37f23c5858742a16a9cad15",
+        "imports": [
+          "from pathlib import Path",
+          "from problem3.run import main",
+          "import sys"
+        ]
+      },
+      {
+        "path": "start.py",
+        "sha256": "66c68104b279ac4fe158cde1f0b56a37bff0490f8c734ff5719020dee083969e",
+        "imports": [
+          "from pathlib import Path",
+          "import os",
+          "import subprocess",
+          "import sys"
+        ]
+      }
+    ],
+    "execution_review": "Reviewed imports, protocol, simulation, run entries and factory chain. No launcher/main/evaluate or teammate LocalWorld is executed. HTTP/process/write attempts are blocked in the worker."
+  }
+}

@@ -17,6 +17,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties, findfont
 from matplotlib.lines import Line2D
 from matplotlib.patches import Circle, Patch, Polygon
 import numpy as np
@@ -70,8 +71,11 @@ def triangle_figure(preview_dir: Path | None) -> None:
     endpoints = np.array(data["diameter_endpoints"])
     disk_d = data["diameter_circle"]
     disk_e = data["minimum_enclosing_circle"]
-    fig = plt.figure(figsize=(6.4, 3.15))
-    ax = fig.add_axes((0.075, 0.18, 0.53, 0.76))
+    chinese_font = FontProperties(fname=findfont(FontProperties(
+        family=["SimSun", "Noto Serif CJK SC", "Microsoft YaHei"]),
+        fallback_to_default=False))
+    fig = plt.figure(figsize=(6.4, 4.4))
+    ax = fig.add_axes((0.10, 0.13, 0.88, 0.84))
     ax.add_patch(Polygon(vertices, closed=True, facecolor="#e8e8e8", edgecolor=INK, linewidth=1.2))
     ax.add_patch(Circle(disk_d["center"], disk_d["radius_m"], fill=False,
                         edgecolor=BLUE, linewidth=1.4, linestyle=(0, (4, 2))))
@@ -85,23 +89,24 @@ def triangle_figure(preview_dir: Path | None) -> None:
                              ("B", vertices[1], (5, -4)),
                              ("C", vertices[2], (4, 6))):
         ax.annotate(text, xy=xy, xytext=offset, textcoords="offset points", fontsize=9)
-    ax.set(xlim=(-13, 49), ylim=(-14, 42), xlabel="$x$ (m)", ylabel="$y$ (m)")
+    # Reserve empty space on the right for a legend inside the axes.
+    ax.set(xlim=(-13, 70), ylim=(-14, 42))
+    ax.set_xlabel("$x$（米）", fontproperties=chinese_font)
+    ax.set_ylabel("$y$（米）", fontproperties=chinese_font)
     ax.set_aspect("equal", adjustable="box")
-    ax.set_xticks([0, 20, 40])
+    ax.set_xticks([0, 20, 40, 60])
     ax.set_yticks([0, 20, 40])
     ax.grid(color="#dedede", linewidth=0.45)
     ax.set_axisbelow(True)
 
     legend_handles = [
-        Patch(facecolor="#e8e8e8", edgecolor=INK, label="Bearing-feasible region"),
-        Line2D([0], [0], color=BLUE, lw=1.4, ls=(0, (4, 2)), label="Diameter circle"),
-        Line2D([0], [0], color=INK, lw=1.3, label="Minimum enclosing circle"),
+        Patch(facecolor="#e8e8e8", edgecolor=INK, label="示向可行域"),
+        Line2D([0], [0], color=BLUE, lw=1.4, ls=(0, (4, 2)), label="直径圆"),
+        Line2D([0], [0], color=INK, lw=1.3, label="最小覆盖圆"),
     ]
-    fig.legend(handles=legend_handles, loc="upper left", bbox_to_anchor=(0.62, 0.93),
-               frameon=False, handlelength=2.4, labelspacing=1.2)
-    fig.text(0.65, 0.52, "$D=40$ m\n$D/2=20$ m\n$R_*=23.0940$ m", va="top", linespacing=1.65, fontsize=10)
-    fig.text(0.65, 0.24, "$B$ lies outside the\ndiameter circle.", fontsize=9, linespacing=1.4)
-    fig.text(0.08, 0.02, r"Constructed from three legal $\pm1^\circ$ bearing observations.", fontsize=8.5)
+    ax.legend(handles=legend_handles, loc="upper right", borderaxespad=1.0,
+              frameon=False, handlelength=2.4, labelspacing=0.9,
+              prop=chinese_font)
     finish(fig, "p12_geometry", preview_dir)
 
 

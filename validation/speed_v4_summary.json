@@ -1,0 +1,610 @@
+{
+  "scope": "Local synthetic paired evaluation; no official simulator runs.",
+  "frozen_selection": "Development only; holdout and stress are never used to retune.",
+  "statistics": "Per-case exit virtual time / cleared count, then unweighted case mean. Population standard deviation; nearest-rank p90. Approximate paired-mean interval is descriptive, not a guarantee.",
+  "results": {
+    "p3_development_v3": {
+      "source": "validation/speed_v4/p3_development_v3.json",
+      "source_sha256": "91373d22b44e21dcc1125ca9f6579b4e19de64522e5eb4dfde6533868802cf71",
+      "branches": {
+        "problem3.policy:SearchPolicy": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 270.91549765330683,
+            "std": 65.36600718289826,
+            "p90": 354.90460006788413,
+            "maximum": 524.1472645025274,
+            "threshold_passes": 93,
+            "mean_movement_m": 13759.4586218651,
+            "mean_actions": 127.5546875
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -45.54844956336302,
+            "decrease_fraction": 0.16812788473862728,
+            "faster": 369,
+            "slower": 15,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -48.64274775570911,
+              -42.454151371016934
+            ],
+            "worst_regression_s": 14.879514020801366,
+            "largest_improvement_s": 248.156290715281
+          }
+        },
+        "problem3.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 225.36704808994378,
+            "std": 50.76195759196536,
+            "p90": 293.25330625930667,
+            "maximum": 363.1370919905552,
+            "threshold_passes": 184,
+            "mean_movement_m": 10458.257127843704,
+            "mean_actions": 140.81770833333334
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 384,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 235.94388305653948,
+            "std": 50.08081175859352,
+            "p90": 301.07154903505983,
+            "maximum": 373.41775831156355,
+            "threshold_passes": 145,
+            "mean_movement_m": 11321.180151046525,
+            "mean_actions": 131.07291666666666
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -10.57683496659569,
+            "decrease_fraction": 0.04482775662406621,
+            "faster": 282,
+            "slower": 102,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -12.076481833703959,
+              -9.077188099487422
+            ],
+            "worst_regression_s": 42.44656151388887,
+            "largest_improvement_s": 63.82608193122496
+          }
+        }
+      }
+    },
+    "p3_holdout_v3": {
+      "source": "validation/speed_v4/p3_holdout_v3.json",
+      "source_sha256": "a7fd9dc977c7762c6bd80dba5b5e1a4cd7be4d446347d768bd79a66a3884e948",
+      "branches": {
+        "problem3.policy:SearchPolicy": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 272.5485277955859,
+            "std": 63.91327759379725,
+            "p90": 360.29599339778855,
+            "maximum": 433.4263587608425,
+            "threshold_passes": 111,
+            "mean_movement_m": 13740.093650329258,
+            "mean_actions": 128.34375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -45.769193137167264,
+            "decrease_fraction": 0.16793043612216688,
+            "faster": 493,
+            "slower": 19,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -48.186452623834654,
+              -43.35193365049987
+            ],
+            "worst_regression_s": 25.47314198474686,
+            "largest_improvement_s": 143.0650728365147
+          }
+        },
+        "problem3.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 226.7793346584187,
+            "std": 51.82719270643207,
+            "p90": 295.84111422372195,
+            "maximum": 365.6260235713736,
+            "threshold_passes": 250,
+            "mean_movement_m": 10460.528881188706,
+            "mean_actions": 141.265625
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 512,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 237.131254697335,
+            "std": 52.57629295783711,
+            "p90": 310.4407265686967,
+            "maximum": 372.61154174335354,
+            "threshold_passes": 198,
+            "mean_movement_m": 11299.319168172704,
+            "mean_actions": 131.412109375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -10.351920038916338,
+            "decrease_fraction": 0.04365481071708207,
+            "faster": 389,
+            "slower": 123,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -11.549130799296943,
+              -9.154709278535734
+            ],
+            "worst_regression_s": 30.754598134962606,
+            "largest_improvement_s": 56.82231446121011
+          }
+        }
+      }
+    },
+    "p3_stress_v3": {
+      "source": "validation/speed_v4/p3_stress_v3.json",
+      "source_sha256": "68d8098b5a1eee4e2dae770b494672abc8810552f01a2d0dba77211ddd7c1e68",
+      "branches": {
+        "problem3.policy:SearchPolicy": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 314.15574696133086,
+            "std": 105.74751006302586,
+            "p90": 440.6534270257104,
+            "maximum": 846.4302822258427,
+            "threshold_passes": 47,
+            "mean_movement_m": 15476.321498397077,
+            "mean_actions": 158.7265625
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -74.48669064775994,
+            "decrease_fraction": 0.2371011556154293,
+            "faster": 245,
+            "slower": 11,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -84.8544061981487,
+              -64.11897509737119
+            ],
+            "worst_regression_s": 80.57497813380854,
+            "largest_improvement_s": 664.8828784552393
+          }
+        },
+        "problem3.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 239.66905631357093,
+            "std": 70.347424033733,
+            "p90": 356.7559582113578,
+            "maximum": 369.3367635879996,
+            "threshold_passes": 88,
+            "mean_movement_m": 10642.603733838083,
+            "mean_actions": 148.78515625
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 256,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 250.15765496368545,
+            "std": 68.7637691140204,
+            "p90": 356.8327057004166,
+            "maximum": 376.9237474757119,
+            "threshold_passes": 78,
+            "mean_movement_m": 11420.006617512,
+            "mean_actions": 140.76171875
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -10.48859865011449,
+            "decrease_fraction": 0.041927954000196735,
+            "faster": 188,
+            "slower": 68,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -12.60434591246404,
+              -8.372851387764939
+            ],
+            "worst_regression_s": 40.19438404510362,
+            "largest_improvement_s": 81.76783443045332
+          }
+        }
+      }
+    },
+    "p4_development_v3": {
+      "source": "validation/speed_v4/p4_development_v3.json",
+      "source_sha256": "9ede2e35576d83dc77f7bfc59983c139a7731c59ca434227a807e5c134167e63",
+      "branches": {
+        "problem4.policy:SearchPolicy": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 482.46063137988415,
+            "std": 101.04156961623018,
+            "p90": 613.9021509958828,
+            "maximum": 762.028999742661,
+            "threshold_passes": 76,
+            "mean_movement_m": 21884.549226663967,
+            "mean_actions": 294.140625
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -42.30158419582733,
+            "decrease_fraction": 0.08767883106822769,
+            "faster": 346,
+            "slower": 38,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -46.15308513726174,
+              -38.45008325439292
+            ],
+            "worst_regression_s": 145.43321895063696,
+            "largest_improvement_s": 171.4431177779401
+          }
+        },
+        "problem4.experiments_v3.posterior:Shared21Policy": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 444.38429693718086,
+            "std": 87.91272020843643,
+            "p90": 558.8632708286776,
+            "maximum": 635.2567371184116,
+            "threshold_passes": 118,
+            "mean_movement_m": 20065.570068090685,
+            "mean_actions": 273.5598958333333
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -4.225249753124012,
+            "decrease_fraction": 0.009508098693508295,
+            "faster": 242,
+            "slower": 142,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -6.607425077509021,
+              -1.8430744287390026
+            ],
+            "worst_regression_s": 139.64540624496837,
+            "largest_improvement_s": 134.55717536442845
+          }
+        },
+        "problem4.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 440.1590471840568,
+            "std": 87.97645886751343,
+            "p90": 557.1292921335997,
+            "maximum": 658.112069707374,
+            "threshold_passes": 133,
+            "mean_movement_m": 19870.539369516773,
+            "mean_actions": 271.0833333333333
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 384,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 384,
+            "complete": 384,
+            "mean": 449.274915598614,
+            "std": 88.31122954040066,
+            "p90": 564.835862388004,
+            "maximum": 698.2392106961488,
+            "threshold_passes": 110,
+            "mean_movement_m": 20293.4283497478,
+            "mean_actions": 277.9583333333333
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -9.115868414557141,
+            "decrease_fraction": 0.02029017890395941,
+            "faster": 267,
+            "slower": 117,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -11.43643458488108,
+              -6.795302244233201
+            ],
+            "worst_regression_s": 137.03236785815278,
+            "largest_improvement_s": 128.17702685919213
+          }
+        }
+      }
+    },
+    "p4_holdout_v3": {
+      "source": "validation/speed_v4/p4_holdout_v3.json",
+      "source_sha256": "e14da97d5b90a99df479dc433da40d396225f3fda0a3e9e3eeb3bcf8850f87d0",
+      "branches": {
+        "problem4.policy:SearchPolicy": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 485.6592654788766,
+            "std": 108.52009196845724,
+            "p90": 618.9948787791762,
+            "maximum": 791.2612946921752,
+            "threshold_passes": 105,
+            "mean_movement_m": 21820.710944825925,
+            "mean_actions": 293.083984375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -43.94308632199637,
+            "decrease_fraction": 0.09048130952194845,
+            "faster": 459,
+            "slower": 53,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -47.42332042864826,
+              -40.462852215344476
+            ],
+            "worst_regression_s": 93.01530013475215,
+            "largest_improvement_s": 195.89950334162677
+          }
+        },
+        "problem4.experiments_v3.posterior:Shared21Policy": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 447.7591493592937,
+            "std": 95.50970782987054,
+            "p90": 572.5579444526306,
+            "maximum": 654.1087019494358,
+            "threshold_passes": 166,
+            "mean_movement_m": 19970.774532530202,
+            "mean_actions": 273.974609375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -6.042970202413461,
+            "decrease_fraction": 0.013496028414071385,
+            "faster": 323,
+            "slower": 189,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -7.899278893370278,
+              -4.186661511456643
+            ],
+            "worst_regression_s": 88.96045063764066,
+            "largest_improvement_s": 150.42292847411954
+          }
+        },
+        "problem4.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 441.71617915688023,
+            "std": 97.08598070576993,
+            "p90": 569.8917488196565,
+            "maximum": 612.2140745514571,
+            "threshold_passes": 180,
+            "mean_movement_m": 19699.981819868106,
+            "mean_actions": 269.646484375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 512,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 512,
+            "complete": 512,
+            "mean": 451.86129196617003,
+            "std": 94.8215184269461,
+            "p90": 576.4514356984637,
+            "maximum": 653.1717727095952,
+            "threshold_passes": 162,
+            "mean_movement_m": 20155.11196208609,
+            "mean_actions": 278.158203125
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -10.145112809289762,
+            "decrease_fraction": 0.02245182977534023,
+            "faster": 376,
+            "slower": 136,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -12.12124406489233,
+              -8.168981553687193
+            ],
+            "worst_regression_s": 69.4713445909967,
+            "largest_improvement_s": 137.44517742854737
+          }
+        }
+      }
+    },
+    "p4_stress_v3": {
+      "source": "validation/speed_v4/p4_stress_v3.json",
+      "source_sha256": "f8a8f3370c12231ab21c97a905fa1317bc362872419cb3cbe6db6050450748ac",
+      "branches": {
+        "problem4.policy:SearchPolicy": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 541.3114549313927,
+            "std": 151.16271561905918,
+            "p90": 721.571003596435,
+            "maximum": 783.8124230181963,
+            "threshold_passes": 59,
+            "mean_movement_m": 23493.24915298864,
+            "mean_actions": 329.88671875
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -58.380975536209434,
+            "decrease_fraction": 0.10785098856555474,
+            "faster": 232,
+            "slower": 24,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -64.15107828991378,
+              -52.61087278250508
+            ],
+            "worst_regression_s": 130.7757014784633,
+            "largest_improvement_s": 175.70342047058318
+          }
+        },
+        "problem4.experiments_v3.posterior:Shared21Policy": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 489.0648967972856,
+            "std": 141.67289653794376,
+            "p90": 649.6037688117019,
+            "maximum": 692.7802397215125,
+            "threshold_passes": 90,
+            "mean_movement_m": 20864.5813131621,
+            "mean_actions": 304.83984375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -6.13441740210227,
+            "decrease_fraction": 0.012543156219705026,
+            "faster": 150,
+            "slower": 106,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -10.666926332610128,
+              -1.6019084715944105
+            ],
+            "worst_regression_s": 177.03450918103138,
+            "largest_improvement_s": 104.13018797664625
+          }
+        },
+        "problem4.speed_policy:SearchPolicy": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 482.93047939518334,
+            "std": 138.43841742932383,
+            "p90": 638.4733569735613,
+            "maximum": 697.8190794785866,
+            "threshold_passes": 95,
+            "mean_movement_m": 20510.3493398977,
+            "mean_actions": 304.78125
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": 0.0,
+            "decrease_fraction": -0.0,
+            "faster": 0,
+            "slower": 0,
+            "equal": 256,
+            "approximate_95_percent_interval": [
+              0.0,
+              0.0
+            ],
+            "worst_regression_s": 0.0,
+            "largest_improvement_s": -0.0
+          }
+        },
+        "teammate": {
+          "summary": {
+            "cases": 256,
+            "complete": 256,
+            "mean": 496.44097627431523,
+            "std": 136.4267832993185,
+            "p90": 644.85588738716,
+            "maximum": 755.7495145950478,
+            "threshold_passes": 86,
+            "mean_movement_m": 21120.36386564955,
+            "mean_actions": 317.5234375
+          },
+          "selected_vs_this_branch": {
+            "all_pairs_complete": true,
+            "mean_change_s": -13.510496879131903,
+            "decrease_fraction": 0.027214709350798016,
+            "faster": 190,
+            "slower": 66,
+            "equal": 0,
+            "approximate_95_percent_interval": [
+              -17.872455247691065,
+              -9.148538510572742
+            ],
+            "worst_regression_s": 110.55320526742682,
+            "largest_improvement_s": 153.84140831372935
+          }
+        }
+      }
+    }
+  }
+}

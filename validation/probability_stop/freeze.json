@@ -1,0 +1,54 @@
+{
+  "frozen_utc": "2026-09-11T14:49:59.136648+00:00",
+  "stage": "after development, before calibration/holdout/stress",
+  "main_comparisons": [
+    "nominal_0.99",
+    "guarded_0.99"
+  ],
+  "particles": 131072,
+  "modes": [
+    "nominal",
+    "robust",
+    "guarded"
+  ],
+  "thresholds": [
+    0.8,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995,
+    0.999,
+    0.9999
+  ],
+  "source_lf_sha256": {
+    "scripts/benchmark_probability_stop.py": "08d812f43a8e3722f2d0f57503f4e28c8e460de4b96ab82a4938d7020f11d541",
+    "problem3/__init__.py": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+    "problem3/client.py": "b31bfd764cc0bf1fb5c8e8c4a4884ddbdab89ba6ba21d8c4494740ed4eb870c4",
+    "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+    "problem3/lookahead.py": "3028190aaac132182cf79e7fd2dd0e4a0c1fd4b4a0132a176bcae268e5d39fb3",
+    "problem3/planning.py": "4b3d5ab6f26103e0e67c982f2cf001bd7fb0b095b8114b7566e38f7aeee90140",
+    "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+    "problem3/probability_numeric.py": "b046c66fd39caf9414d82e3a5f2bb97a0a60772a8bfb5142345578005a91a20e",
+    "problem3/probability_scenarios.py": "069a4abc37f0fd009a59aa9045d1c3bd7ebece6d628f9efd6593a628a801338c",
+    "problem3/probability_stop.py": "f6c43ff6756852444c6b5f43d0b036d0dafded9e86ec08409726d0b5676812a6",
+    "problem3/probability_trace.py": "0cf9e97645daaa0e571a7c8edb099ed60946c6c2ede14551723c74eefc583025",
+    "problem3/run.py": "6c8fc1794f81f8aae04c6cdeba10abe5c19827a0f227ab4d7870d9d30e3faa7f",
+    "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+    "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+    "problem3/solve.py": "b7ffbf97838a3a56b26ce4c8c62b1561e8ac0dd426b71365e8aaebff1e96e9c7",
+    "problem3/speed_policy.py": "6f744b18eb06c863165cb10894f0f3a361de9b533da2e9109fc46c1db41a6a4b",
+    "problem4/__init__.py": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+    "problem4/bystander.py": "0414031c564d771274b12bf2016d1a70cd33bd7a2bb2501165d1d34fd313fe40",
+    "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+    "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "problem4/optical_repair.py": "567620b452caf5bac83b7e7d399f39cb1ce4735a3694d416565bac2f255e0235",
+    "problem4/policy.py": "4b0d3339b1cc2ae0c3744c8a92703e11219d78c3b4f0af4ae96ef71d7181611f",
+    "problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+    "problem4/search_layout.py": "a53fde6a38b60b5b0fe96ff8539d382596ee19ffc3eb3e2188f3f1a5e6846171",
+    "problem4/shared_baseline.py": "5cc51a5e02308668b6326e231f7de7c24f4dd6cee4d6637bd120be1062a891cf",
+    "problem4/solve.py": "486a63f5a5338ad15cb83c01862cd71341712f6b7544ea4d56447f83d0feaa8c",
+    "problem4/speed_policy.py": "b6c0dd44af247ed131b9ea94e8d85b7dfa706f0d83b8b8e181e6fa8c8351e7f0"
+  }
+}

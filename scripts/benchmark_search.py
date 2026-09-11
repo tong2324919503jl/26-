@@ -19,23 +19,48 @@ sys.path.insert(0, str(ROOT))
 from problem3.scenarios import SPLITS, FAMILIES, generate_suite
 from problem3.simulator import LocalSimulator, ObservationClient
 
-THRESHOLDS = {3: 300.0, 4: 500.0}
+THRESHOLDS = {3: 220.0, 4: 400.0}
+
+
+def _policy_entry(problem, strategy):
+    if problem not in (3, 4):
+        raise ValueError('problem must be 3 or 4')
+    if strategy == 'legacy':
+        if problem != 4:
+            raise ValueError('legacy is the original problem4 v1 adaptive policy')
+        from problem4.legacy_policy import SearchPolicy
+        return SearchPolicy, 'adaptive', 'problem4_v1'
+    if strategy == 'adaptive':
+        if problem == 3:
+            from problem3.speed_policy import SearchPolicy
+        else:
+            from problem4.speed_policy import SearchPolicy
+        return SearchPolicy, strategy, SearchPolicy.algorithm_version
+    if strategy not in ('previous', 'baseline', 'optical'):
+        raise ValueError(f'Unknown strategy: {strategy}')
+    if problem == 3:
+        from problem3.policy import SearchPolicy
+        version = 'problem3_v1'
+    else:
+        from problem4.policy import SearchPolicy
+        version = 'problem4_v2'
+    return SearchPolicy, 'adaptive' if strategy == 'previous' else strategy, version
+
+
+def get_algorithm_version(problem, strategy='adaptive'):
+    """Resolve version without entering an arena or executing a policy."""
+    return _policy_entry(problem, strategy)[2]
 
 
 def get_policy(problem, strategy, config=None):
-    if strategy == 'legacy':
-        if problem != 4:
-            raise ValueError('legacy is the previous problem4 adaptive policy')
-        from problem4.legacy_policy import SearchPolicy
-        return SearchPolicy(problem=4, strategy='adaptive', config=config)
-    if problem == 3:
-        from problem3.policy import SearchPolicy
-    else:
-        from problem4.policy import SearchPolicy
-    return SearchPolicy(problem=problem, strategy=strategy, config=config)
+    policy_class, selected_strategy, version = _policy_entry(problem, strategy)
+    policy = policy_class(problem=problem, strategy=selected_strategy, config=config)
+    policy.algorithm_version = version
+    return policy
 
 
 def run_case(case, strategy='adaptive', config=None, record=False):
+    version = get_algorithm_version(case['problem'], strategy)
     sim = LocalSimulator(case, record=record)
     sim.enter()
     start = time.perf_counter()
@@ -44,6 +69,7 @@ def run_case(case, strategy='adaptive', config=None, record=False):
         result = get_policy(case['problem'], strategy, config).run(ObservationClient(sim))
     except Exception as exc:
         error = f'{type(exc).__name__}: {exc}'
+    result['algorithm_version'] = version
     elapsed = time.perf_counter()-start
     if sim.active:
         sim.exit()
@@ -59,6 +85,7 @@ def run_case(case, strategy='adaptive', config=None, record=False):
               1000*int(passed) + max(-1000, 100*(1-stats['virtual_time_s']/threshold)))
     row = dict(case_id=case['case_id'], seed=case['seed'], split=case['split'],
                family=case['family'], noise=case['noise'], strategy=strategy,
+               algorithm_version=version,
                **stats, coverage_complete=bool(result.get('coverage_complete')),
                completion_certified=complete, certified_full_clear=certified,
                threshold_total_s=threshold, threshold_passed=passed, reward=reward,
@@ -89,13 +116,14 @@ def aggregate(rows):
                 failures=[r['case_id'] for r in rows if not r['certified_full_clear']],
                 threshold_curve={str(t): statistics.mean(r['certified_full_clear'] and
                                     r['average_clear_time_s'] <= t for r in rows)
-                                 for t in (100,150,200,250,300,400,500,700,1000)})
+                                 for t in (100,150,200,220,250,300,400,500,700,1000)})
 
 
 def source_fingerprint():
-    paths = [ROOT/'problem3'/f for f in ('policy.py','geometry.py','simulator.py','scenarios.py')]
-    paths += [ROOT/'problem4'/f for f in
-              ('policy.py','legacy_policy.py','localization.py','coverage.py','routing.py','adaptive_coverage.py')]
+    # Production dependencies live directly in these packages. Include every
+    # module so a newly added mixin cannot silently escape the freeze check.
+    paths = [path for problem in (3, 4)
+             for path in sorted((ROOT/f'problem{problem}').glob('*.py'))]
     paths += [Path(__file__).resolve()]
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in paths if p.exists()}
@@ -119,7 +147,10 @@ def main():
     config = json.loads(args.config.read_text(encoding='utf-8')) if args.config else None
     rows = []
     fingerprints = source_fingerprint()
+    versions = {strategy: get_algorithm_version(args.problem, strategy)
+                for strategy in args.strategies}
     for strategy in args.strategies:
+        print(f"p{args.problem} strategy={strategy} algorithm_version={versions[strategy]}", flush=True)
         for i, case in enumerate(cases):
             row, _ = run_case(case, strategy, config)
             rows.append(row)
@@ -138,13 +169,15 @@ def main():
                                                      ensure_ascii=False).encode('utf-8')).hexdigest(),
                 threshold_seconds_per_source=THRESHOLDS[args.problem],
                 threshold_definition='Full clearance AND completion certificate; total virtual time <= threshold * N',
-                config=config, source_sha256=fingerprints, summary=summary, by_family=by_family, episodes=rows)
+                algorithm_versions=versions, config=config, source_sha256=fingerprints,
+                summary=summary, by_family=by_family, episodes=rows)
     folder = ROOT/f'problem{args.problem}/results'
     folder.mkdir(parents=True,exist_ok=True)
     stem = f"benchmark_{args.split}" + ('_'+args.tag if args.tag else '')
     (folder/f'{stem}.json').write_text(json.dumps(body,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     lines = [f'# 问题{args.problem}自建样本比较：{args.split}', '',
              f'每分支 {len(cases)} 例；所有分支逐例使用相同样本和固定地点误差。不是官方演练或正式成绩。', '',
+             '算法版本：'+'；'.join(f'{name}={version}' for name,version in versions.items())+'。', '',
              f'自定阈值：确保全清后，总虚拟时间 ≤ {THRESHOLDS[args.problem]:g} × 实际源数（秒）。源数只供事后评分，算法不可读取。', '',
              '| 分支 | 全清且完成确认 | 阈值通过率 | 平均总耗时/秒 | P95/秒 | 最差/秒 | 平均每源/秒 | 平均动作数 |',
              '| --- | --- | --- | --- | --- | --- | --- | --- |']
