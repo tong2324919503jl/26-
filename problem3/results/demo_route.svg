@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="840" viewBox="0 0 820 840">
+<rect width="820" height="840" fill="#fafafa"/>
+<text x="28" y="32" font-family="sans-serif" font-size="20">local_p3_development_0003</text>
+<text x="28" y="58" font-family="sans-serif" font-size="13">Synthetic local case; blue: path, red: sources, arrows: emission orientation</text>
+<circle cx="410.00" cy="400.00" r="273.91" fill="none" stroke="#aaa" stroke-dasharray="5 4"/>
+<polyline points="410.00,400.00 410.00,400.00 585.00,400.00 647.81,373.51 674.80,374.42 677.83,374.35 662.02,496.70 497.50,551.55 574.59,567.42 601.84,586.57 475.80,652.50 322.50,551.55 288.14,608.88 272.27,616.13 362.59,658.86 173.04,528.54 235.00,400.00 170.87,419.76 141.08,417.33 143.50,417.56 166.23,292.51 322.50,248.45 323.58,172.15 335.32,154.21 228.67,214.74 497.50,248.45 529.83,190.09 553.25,169.43 629.41,255.72 439.37,143.11" fill="none" stroke="#3977bc" stroke-width="1.3" opacity=".65"/>
+<circle cx="336.04" cy="153.67" r="4.00" fill="#c64343" />
+<text x="342.04" y="147.67" font-family="sans-serif" font-size="11">15</text>
+<circle cx="228.34" cy="215.03" r="4.00" fill="#c64343" />
+<text x="234.34" y="209.03" font-family="sans-serif" font-size="11">11</text>
+<circle cx="167.83" cy="291.98" r="4.00" fill="#c64343" />
+<text x="173.83" y="285.98" font-family="sans-serif" font-size="11">8</text>
+<circle cx="145.11" cy="417.71" r="4.00" fill="#c64343" />
+<text x="151.11" y="411.71" font-family="sans-serif" font-size="11">7</text>
+<circle cx="172.22" cy="529.80" r="4.00" fill="#c64343" />
+<text x="178.22" y="523.80" font-family="sans-serif" font-size="11">20</text>
+<circle cx="269.84" cy="617.33" r="4.00" fill="#c64343" />
+<text x="275.84" y="611.33" font-family="sans-serif" font-size="11">9</text>
+<circle cx="361.60" cy="657.33" r="4.00" fill="#c64343" />
+<text x="367.60" y="651.33" font-family="sans-serif" font-size="11">19</text>
+<circle cx="477.77" cy="651.52" r="4.00" fill="#c64343" />
+<text x="483.77" y="645.52" font-family="sans-serif" font-size="11">2</text>
+<circle cx="601.09" cy="586.17" r="4.00" fill="#c64343" />
+<text x="607.09" y="580.17" font-family="sans-serif" font-size="11">4</text>
+<circle cx="660.93" cy="495.44" r="4.00" fill="#c64343" />
+<text x="666.93" y="489.44" font-family="sans-serif" font-size="11">13</text>
+<circle cx="678.80" cy="374.37" r="4.00" fill="#c64343" />
+<text x="684.80" y="368.37" font-family="sans-serif" font-size="11">18</text>
+<circle cx="629.82" cy="255.84" r="4.00" fill="#c64343" />
+<text x="635.82" y="249.84" font-family="sans-serif" font-size="11">12</text>
+<circle cx="554.05" cy="168.73" r="4.00" fill="#c64343" />
+<text x="560.05" y="162.73" font-family="sans-serif" font-size="11">1</text>
+<circle cx="438.78" cy="143.35" r="4.00" fill="#c64343" />
+<text x="444.78" y="137.35" font-family="sans-serif" font-size="11">10</text>
+<circle cx="410.00" cy="400.00" r="5.00" fill="#111" />
+<text x="28" y="815" font-family="sans-serif" font-size="13">Black: start (0,0). Dashed circle: 1800 m target boundary. Truth is shown only after simulation.</text>
+</svg>

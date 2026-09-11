@@ -1,4 +1,5 @@
 # Core solve and default verification use the Python standard library.
 # The optional verify_project.py --reference check additionally needs SciPy.
 # Only rebuilding PDF searchable text requires this dependency.
+# Optional scripts/plot_search.py additionally needs matplotlib (not core).
 pypdf>=5,<7

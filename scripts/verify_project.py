@@ -1,4 +1,4 @@
-"""Verify preserved inputs, run both solutions and their regression suites."""
+"""Verify preserved inputs, four solutions, and their regression suites."""
 from __future__ import annotations
 
 import hashlib
@@ -77,7 +77,7 @@ def main() -> int:
         return {"exit_code": 0, "output": output}
 
     record("original_materials_and_searchable_copies", materials)
-    for problem in ("problem1", "problem2"):
+    for problem in ("problem1", "problem2", "problem3", "problem4"):
         def suite(problem=problem):
             tests = ROOT / problem / "tests"
             if not list(tests.glob("test_*.py")):
@@ -100,6 +100,14 @@ def main() -> int:
             return command([str(ROOT / "problem2/compare_strategies.py")], Path(temporary))
 
     record("problem2_strategy_comparison_from_outside_repository", strategy_comparison)
+
+    for problem_number in (3, 4):
+        def search_smoke(problem_number=problem_number):
+            with tempfile.TemporaryDirectory(prefix="cumcm_b_search_") as temporary:
+                return command([str(ROOT / "scripts/benchmark_search.py"), "--problem", str(problem_number),
+                                "--split", "stress", "--count", "8", "--strategies", "adaptive",
+                                "--tag", "verification"], Path(temporary))
+        record(f"problem{problem_number}_search_smoke_from_outside_repository", search_smoke)
     if args.reference:
         with tempfile.TemporaryDirectory(prefix="cumcm_b_reference_") as temporary:
             record("independent_highs_geometry_reference",
@@ -107,7 +115,7 @@ def main() -> int:
 
     def outputs():
         files = []
-        for problem in ("problem1", "problem2"):
+        for problem in ("problem1", "problem2", "problem3", "problem4"):
             results = ROOT / problem / "results"
             if not results.is_dir() or not any(results.iterdir()):
                 raise AssertionError(f"Missing results: {problem}")
@@ -118,6 +126,9 @@ def main() -> int:
                     raise AssertionError(f"Empty result: {path}")
                 if path.suffix == ".json":
                     json.loads(path.read_text(encoding="utf-8"))
+                elif path.suffix == ".jsonl":
+                    for line in path.read_text(encoding="utf-8").splitlines():
+                        json.loads(line)
                 elif path.suffix == ".csv":
                     with path.open(encoding="utf-8-sig", newline="") as stream:
                         rows = list(csv.reader(stream))
@@ -133,9 +144,10 @@ def main() -> int:
 
     def documentation_links():
         count = 0
-        paths = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "materials/problem_b/README.md"]
-        paths.extend(sorted((ROOT / "problem1").rglob("*.md")))
-        paths.extend(sorted((ROOT / "problem2").rglob("*.md")))
+        paths = [ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "materials/problem_b/README.md",
+                 ROOT / "simulation_guide.md", ROOT / "validation/search_experiments.md"]
+        for problem in ("problem1", "problem2", "problem3", "problem4"):
+            paths.extend(sorted((ROOT / problem).rglob("*.md")))
         paths.append(ROOT / "validation/merge_notes.md")
         for path in paths:
             relative = path.relative_to(ROOT).as_posix()
@@ -153,20 +165,20 @@ def main() -> int:
         passed = all(check["passed"] for check in checks)
         test_counts = {}
         for check in checks:
-            if check["name"] in ("problem1_tests", "problem2_tests") and isinstance(check["detail"], dict):
+            if check["name"] in tuple(f"problem{n}_tests" for n in range(1,5)) and isinstance(check["detail"], dict):
                 match = re.search(r"Ran (\d+) tests?", check["detail"].get("output", ""))
                 if match:
                     test_counts[check["name"].split("_")[0]] = int(match.group(1))
         report = {"verified_at_utc": datetime.now(timezone.utc).isoformat(),
                   "python_version": sys.version.split()[0], "passed": passed,
                   "unit_test_counts": test_counts,
-                  "scope": "Local problems 1 and 2 only; synthetic examples; no official simulator run.",
+                  "scope": "Local problems 1 to 4; synthetic examples and local mock HTTP; no official simulator run.",
                   "checks": checks}
         REPORT_DIR.mkdir(exist_ok=True)
         (REPORT_DIR / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        lines = ["# B题前两问验证报告", "", f"总结果：{'全部通过' if passed else '存在失败，请查看具体记录'}。", "",
+        lines = ["# B题四问验证报告", "", f"总结果：{'全部通过' if passed else '存在失败，请查看具体记录'}。", "",
                  f"验证时间（UTC）：{report['verified_at_utc']}；Python：{report['python_version']}。", "",
-                 f"自动测试：第一问 {test_counts.get('problem1', 0)} 项，第二问 {test_counts.get('problem2', 0)} 项。", "",
+                 "自动测试：" + "，".join(f"问题{n} {test_counts.get(f'problem{n}',0)} 项" for n in range(1,5)) + "。", "",
                  "| 检查项 | 结果 |", "| --- | --- |"]
         labels = {"original_materials_and_searchable_copies": "原材料与检索副本完整性",
                   "problem1_tests": "第一问数学与程序测试", "problem2_tests": "第二问数学与程序测试",
@@ -176,7 +188,7 @@ def main() -> int:
                   "independent_highs_geometry_reference": "独立 HiGHS 几何核验",
                   "result_files_readable": "结果文件完整且可读取", "documentation_links": "说明文档本地链接"}
         lines.extend(f"| {labels.get(check['name'], check['name'])} | {'通过' if check['passed'] else '失败'} |" for check in checks)
-        lines.extend(["", "验证包括三份资料及三个文本副本的一致性、两问测试、从仓库以外目录启动求解与策略对比、结果文件可读取性和说明文档链接。",
+        lines.extend(["", "验证包括三份资料及三个文本副本的一致性、四问测试、从仓库以外目录启动求解与策略对比、问题三四各8例困难样本回归、结果文件可读取性和说明文档链接。",
                       "", "算例均为自行构造，只验证本地数学算法；没有运行问题3、4的官方演练或正式测试。",
                       "", "详细测试名称、输出、耗时、结果文件摘要见 [report.json](report.json)。",
                       "", "复现：在仓库根运行 `python scripts/verify_project.py`。加 `--reference` 可额外运行独立 SciPy/HiGHS 几何核验（仅这一可选项需要 SciPy）。",

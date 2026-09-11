@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="840" viewBox="0 0 820 840">
+<rect width="820" height="840" fill="#fafafa"/>
+<text x="28" y="32" font-family="sans-serif" font-size="20">local_p4_development_0003</text>
+<text x="28" y="58" font-family="sans-serif" font-size="13">Synthetic local case; blue: path, red: sources, arrows: emission orientation</text>
+<circle cx="410.00" cy="400.00" r="273.91" fill="none" stroke="#aaa" stroke-dasharray="5 4"/>
+<polyline points="410.00,400.00 410.00,400.00 270.36,437.42 307.78,502.22 372.58,539.64 447.42,539.64 512.22,502.22 549.64,437.42 549.64,362.58 512.22,297.78 447.42,260.36 372.58,260.36 307.78,297.78 270.36,362.58 146.98,380.94 149.72,359.93 125.43,400.00 169.24,502.32 163.56,542.28 265.41,621.56 267.72,646.44 398.94,658.12 410.00,684.57 552.28,646.44 656.44,542.28 694.57,400.00 680.94,417.11 638.35,416.02 644.95,467.55 671.73,468.23 657.73,493.60 509.50,532.86 472.88,554.64 508.95,596.51 529.08,584.53 538.78,610.42 527.07,617.39 535.30,628.32 544.46,622.87 542.91,630.68 614.77,300.89 651.97,280.11 663.07,343.56 656.44,257.72 590.40,178.22 602.93,212.67 552.28,153.56 410.00,115.43 482.57,153.21 335.65,153.22 267.72,153.56 215.75,216.61 163.56,257.72" fill="none" stroke="#3977bc" stroke-width="1.3" opacity=".65"/>
+<circle cx="543.66" cy="631.39" r="4.00" fill="#c64343" />
+<text x="549.66" y="625.39" font-family="sans-serif" font-size="11">8</text>
+<path d="M543.66,631.39 l9.77,17.45" stroke="#c64343" stroke-width="2"/>
+<circle cx="657.08" cy="495.41" r="4.00" fill="#c64343" />
+<text x="663.08" y="489.41" font-family="sans-serif" font-size="11">5</text>
+<path d="M657.08,495.41 l18.13,8.43" stroke="#c64343" stroke-width="2"/>
+<circle cx="663.63" cy="346.28" r="4.00" fill="#c64343" />
+<text x="669.63" y="340.28" font-family="sans-serif" font-size="11">10</text>
+<path d="M663.63,346.28 l19.66,-3.69" stroke="#c64343" stroke-width="2"/>
+<circle cx="602.67" cy="213.39" r="4.00" fill="#c64343" />
+<text x="608.67" y="207.39" font-family="sans-serif" font-size="11">13</text>
+<path d="M602.67,213.39 l14.31,-13.97" stroke="#c64343" stroke-width="2"/>
+<circle cx="483.14" cy="152.67" r="4.00" fill="#c64343" />
+<text x="489.14" y="146.67" font-family="sans-serif" font-size="11">9</text>
+<path d="M483.14,152.67 l6.88,-18.78" stroke="#c64343" stroke-width="2"/>
+<circle cx="335.30" cy="152.95" r="4.00" fill="#c64343" />
+<text x="341.30" y="146.95" font-family="sans-serif" font-size="11">15</text>
+<circle cx="216.13" cy="219.58" r="4.00" fill="#c64343" />
+<text x="222.13" y="213.58" font-family="sans-serif" font-size="11">14</text>
+<circle cx="150.15" cy="360.36" r="4.00" fill="#c64343" />
+<text x="156.15" y="354.36" font-family="sans-serif" font-size="11">20</text>
+<circle cx="167.92" cy="501.00" r="4.00" fill="#c64343" />
+<text x="173.92" y="495.00" font-family="sans-serif" font-size="11">3</text>
+<circle cx="265.53" cy="621.63" r="4.00" fill="#c64343" />
+<text x="271.53" y="615.63" font-family="sans-serif" font-size="11">12</text>
+<circle cx="400.05" cy="660.00" r="4.00" fill="#c64343" />
+<text x="406.05" y="654.00" font-family="sans-serif" font-size="11">16</text>
+<circle cx="410.00" cy="400.00" r="5.00" fill="#111" />
+<text x="28" y="815" font-family="sans-serif" font-size="13">Black: start (0,0). Dashed circle: 1800 m target boundary. Truth is shown only after simulation.</text>
+</svg>
