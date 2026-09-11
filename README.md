@@ -12,7 +12,9 @@
 | 第四问新版与上一版的速度比较 | [第二轮提速结果](problem4/results/speed_comparison_v2.md) |
 | 去官方平台演练、正式测试 | [模拟测试简明说明](simulation_guide.md) |
 | 看本地比较与调优依据 | [实验说明](validation/search_experiments.md) |
+| 当前220/400秒目标的开发记录 | [第三轮实验](validation/threshold_220_400_v3.md)（进行中） |
 | 看程序检查是否通过 | [验证报告](validation/report.md) |
+| 论文正文与图表 | [论文工作稿](paper/README.md)（暂不含附录，正式成绩待核对补齐） |
 
 ## 先在本地跑
 

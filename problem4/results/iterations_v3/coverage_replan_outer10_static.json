@@ -1,0 +1,166 @@
+{
+  "accepted": false,
+  "reason": "optimizer_no_feasible_solution",
+  "history": [
+    {
+      "round": 0,
+      "points": 12,
+      "constraints": 3224,
+      "objective": 12.00000000000006,
+      "certified": false,
+      "witness_bound_m": 1142.4080678037578
+    },
+    {
+      "round": 1,
+      "points": 15,
+      "constraints": 3216,
+      "objective": 15.000000000000002,
+      "certified": false,
+      "witness_bound_m": 1103.9353526330458
+    },
+    {
+      "round": 2,
+      "points": 16,
+      "constraints": 3243,
+      "objective": 16.000000000000195,
+      "certified": false,
+      "witness_bound_m": 1087.593981095436
+    },
+    {
+      "round": 3,
+      "points": 16,
+      "constraints": 3266,
+      "objective": 15.999999999999327,
+      "certified": false,
+      "witness_bound_m": 1066.5618655089422
+    },
+    {
+      "round": 4,
+      "points": 16,
+      "constraints": 3291,
+      "objective": 15.999999999999693,
+      "certified": false,
+      "witness_bound_m": 1104.7162069429737
+    },
+    {
+      "round": 5,
+      "points": 16,
+      "constraints": 3322,
+      "objective": 15.99999999999992,
+      "certified": false,
+      "witness_bound_m": 1073.8430834391618
+    },
+    {
+      "round": 6,
+      "points": 17,
+      "constraints": 3351,
+      "objective": 16.999999999999652,
+      "certified": false,
+      "witness_bound_m": 1083.641249314246
+    },
+    {
+      "round": 7,
+      "points": 17,
+      "constraints": 3375,
+      "objective": 17.0,
+      "certified": false,
+      "witness_bound_m": 1072.92522582103
+    },
+    {
+      "round": 8,
+      "points": 17,
+      "constraints": 3426,
+      "objective": 17.000000000005244,
+      "certified": false,
+      "witness_bound_m": 1054.083995663332
+    },
+    {
+      "round": 9,
+      "points": 17,
+      "constraints": 3444,
+      "objective": 17.0,
+      "certified": false,
+      "witness_bound_m": 1087.2464622313348
+    },
+    {
+      "round": 10,
+      "points": 17,
+      "constraints": 3460,
+      "objective": 17.000000000000025,
+      "certified": false,
+      "witness_bound_m": 1042.8810037754567
+    },
+    {
+      "round": 11,
+      "points": 17,
+      "constraints": 3476,
+      "objective": 17.0,
+      "certified": false,
+      "witness_bound_m": 1054.588882185907
+    },
+    {
+      "round": 12,
+      "points": 17,
+      "constraints": 3496,
+      "objective": 17.0,
+      "certified": false,
+      "witness_bound_m": 1068.7710082967546
+    }
+  ],
+  "optimizer_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is At lower/fixed bound)",
+  "fixed_points": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1900.0,
+      0.0
+    ],
+    [
+      1537.1322893124002,
+      1116.791979355699
+    ],
+    [
+      587.1322893124002,
+      1807.0073809607918
+    ],
+    [
+      -587.1322893124,
+      1807.007380960792
+    ],
+    [
+      -1537.1322893124,
+      1116.7919793556991
+    ],
+    [
+      -1900.0,
+      2.326828918379971e-13
+    ],
+    [
+      -1537.1322893124002,
+      -1116.7919793556987
+    ],
+    [
+      -587.1322893124004,
+      -1807.0073809607918
+    ],
+    [
+      587.1322893123997,
+      -1807.007380960792
+    ],
+    [
+      1537.1322893124,
+      -1116.7919793556994
+    ]
+  ],
+  "settings": {
+    "free_point": null,
+    "rounds": 20,
+    "spacing": 200,
+    "outer_count": 10,
+    "outer_radius": 1900.0,
+    "max_selected": 22,
+    "time_limit": 4.0
+  }
+}

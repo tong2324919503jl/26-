@@ -11,11 +11,13 @@
 - `problem3/`：全向搜索策略，共用几何、HTTP客户端、本地仿真器、样本生成器和运行入口。
 - `problem4/`：混合定向策略、覆盖证明及样本、结果和测试；复用第三问共用组件。
 - 第四问第二轮将上一版完整保存在 `legacy_policy.py`；新版几何、历史观测裁剪、路径排序分别在 `coverage.py`、`localization.py`、`routing.py`。`experiments/` 保留开发分支，默认运行不能依赖实验脚本或 `tmp/`。
+- 当前第三轮速度实验在两问的 `experiments_v3/` 与 `results/iterations_v3/`，独立入口 `scripts/experiment_search.py` 按第三问220、第四问400秒/源比较。尚未达标，不应将实验分支描述为正式交付；生产默认和历史300/500阈值报告暂时不改。
 - `simulation_guide.md`：依据两份附件整理的平台演练、正式测试和日志导出步骤。
 - `validation/search_experiments.md`：第三四问开发、留出和压力测试口径及调优记录。
 - `scripts/`：跨问题的资料整理、验证入口。
 - `validation/`：最近一次本地验证报告。
 - `validation/merge_notes.md`：当前版与队友 ZIP 的合并取舍、来源指纹和比较口径。
+- `paper/`：论文正文与图表。按用户最新要求，当前主文件只含摘要、正文、AI声明和参考文献，暂不制作或并入附录。正文采用生产方案和冻结的本地结果；六次第三问演练可从Git历史日志封装头核对，正式测试各三次成绩仍未齐备。修改模型或表中结果后应同步论文与PDF，参见 `paper/README.md`。
 - `tmp/`：被 Git 忽略的临时渲染与检查文件。
 
 原根目录的选题分析、文献清单、北京赛区注意事项以及原题包均是既有资料。修改前核对其用途；本轮未改写它们。
@@ -31,6 +33,8 @@
 - `python problem3/solve.py`、`python problem4/solve.py` 默认仅跑本地案例；显式 `--online --robot-id 队号` 才连接平台。相对自选输入/输出路径按对应问题目录解析。
 - `python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical` 批量比较；第四问改为4，留出/压力集改为holdout/stress。生成数据写examples，结果写results。
 - 第四问第二轮使用 `--split development_v2/holdout_v2/stress_v2 --strategies legacy adaptive --save-cases`（三个集合分别运行），数量384/512/256。`python scripts/report_problem4_speed.py` 汇总配对速度与阈值变化；旧报告保留为历史结果，不与新代码混写。新参数只用开发集合选择，留出前冻结代码。
+- 第三轮新增 `development_v3/holdout_v3/stress_v3` 独立种子。当前已用 development_v3 做第三、四问开发复核，holdout_v3/stress_v3 尚未打开；须冻结候选后再评价。策略决策代码不得读取场景类别、场景种子或源真值；生成器、外部统计和事后审计除外。
+- 第三轮当前较好候选为 P3 `coverage_family_tuning.get_policy(9,1700)`（两套384例均值227.95/225.86；叠加`optical_band.AggressiveBandPolicy`为227.67/225.37）与 P4 `posterior.Shared21Policy`（446.11/444.38），仅为开发结果。P3合法单例220秒不可能保证的反例，以及P4固定架构下界，不可扩张成批量均值目标不可能的结论；详见 `validation/threshold_220_400_v3.md`。
 - `python scripts/plot_search.py` 重建实验对照图；仅此可选绘图脚本需要matplotlib。核心算法、HTTP客户端、本地测试与统一验证仅需标准库。
 - `python problem2/compare_strategies.py` 重建同口径策略比较；统一验证也会运行此入口，计算输出放在 `problem2/results/`。
 - `python problem2/benchmark_scoring.py` 对照同一统一模型的完整扫描和提前停止，检查评分、排序、完整选点路径一致，并记录扫描量及本地耗时；统一验证也会运行。

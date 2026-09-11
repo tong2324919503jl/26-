@@ -1,0 +1,209 @@
+{
+  "evidence_type": "independent_physical_lower_bound_not_policy_or_platform_score",
+  "claim_scope": "Refutes every legal P3 case having total_time/source_count <= 220; does not refute a batch mean <=220",
+  "case_path": "problem3/examples/threshold_lower_bound_case.json",
+  "case_sha256": "181c3f3fd2e9ef24100fd97cff0a25dec0d77a564d95addfea0caf3f10c3a8e6",
+  "source_count": 10,
+  "legal_case_checks": {
+    "channels_1_through_10": true,
+    "all_omnidirectional": true,
+    "all_receive_radii_1000m": true,
+    "all_exact_serialized_points_inside_1800m": true
+  },
+  "relaxations": [
+    "All source positions known before starting",
+    "No detection or switching time",
+    "No failed clears, no search or completion certification cost",
+    "No return to origin required"
+  ],
+  "units": {
+    "integer_distance": "micrometer",
+    "virtual_time": "second"
+  },
+  "recurrence": "D[{j},j]=start[j]; D[S,j]=min_i(D[S\\{j},i]+edge[i,j]); optimum=min_j D[all,j]",
+  "weight_formula": "start=floor_um(norm(g))-20m; edge=max(0,floor_um(norm(g_i-g_j))-40m)",
+  "graph_start_costs_um": [
+    1780000000,
+    1779999999,
+    1779999999,
+    1779999999,
+    1779999999,
+    1780000000,
+    1779999999,
+    1779999999,
+    1779999999,
+    1779999999
+  ],
+  "graph_edge_costs_um": [
+    [
+      0,
+      1072461179,
+      2076026908,
+      2872461178,
+      3383803457,
+      3560000000,
+      3383803457,
+      2872461178,
+      2076026908,
+      1072461179
+    ],
+    [
+      1072461179,
+      0,
+      1072461179,
+      2076026906,
+      2872461178,
+      3383803457,
+      3559999998,
+      3383803457,
+      2872461179,
+      2076026908
+    ],
+    [
+      2076026908,
+      1072461179,
+      0,
+      1072461178,
+      2076026906,
+      2872461178,
+      3383803457,
+      3559999998,
+      3383803458,
+      2872461179
+    ],
+    [
+      2872461178,
+      2076026906,
+      1072461178,
+      0,
+      1072461179,
+      2076026908,
+      2872461179,
+      3383803458,
+      3559999998,
+      3383803457
+    ],
+    [
+      3383803457,
+      2872461178,
+      2076026906,
+      1072461179,
+      0,
+      1072461179,
+      2076026908,
+      2872461179,
+      3383803457,
+      3559999998
+    ],
+    [
+      3560000000,
+      3383803457,
+      2872461178,
+      2076026908,
+      1072461179,
+      0,
+      1072461179,
+      2076026908,
+      2872461178,
+      3383803457
+    ],
+    [
+      3383803457,
+      3559999998,
+      3383803457,
+      2872461179,
+      2076026908,
+      1072461179,
+      0,
+      1072461179,
+      2076026906,
+      2872461178
+    ],
+    [
+      2872461178,
+      3383803457,
+      3559999998,
+      3383803458,
+      2872461179,
+      2076026908,
+      1072461179,
+      0,
+      1072461178,
+      2076026906
+    ],
+    [
+      2076026908,
+      2872461179,
+      3383803458,
+      3559999998,
+      3383803457,
+      2872461178,
+      2076026906,
+      1072461178,
+      0,
+      1072461179
+    ],
+    [
+      1072461179,
+      2076026908,
+      2872461179,
+      3383803457,
+      3559999998,
+      3383803457,
+      2872461178,
+      2076026906,
+      1072461179,
+      0
+    ]
+  ],
+  "dp_state_count": 5120,
+  "dp_transition_count": 23040,
+  "dp_full_mask_end_costs_um": [
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608,
+    11432150608
+  ],
+  "independent_dp_check": {
+    "method": "all 7! open paths on the first 7 serialized source points",
+    "enumerated_paths": 5040,
+    "exact_match": true
+  },
+  "exact_relaxed_open_tsp_um": 11432150608,
+  "minimizing_channel_order": [
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1
+  ],
+  "minimum_pairwise_proof_lower_bound_um": 11432150601,
+  "movement_lower_bound_m": "11432.150608",
+  "total_time_lower_bound_s": "2336.4301216",
+  "per_source_lower_bound_s": "233.64301216",
+  "threshold_s": 220,
+  "strict_margin_above_threshold_s": "13.64301216",
+  "exact_per_source_fraction": {
+    "numerator": 730134413,
+    "denominator": 3125000
+  },
+  "ideal_regular_decagon": {
+    "chord_formula_m": "900*(sqrt(5)-1)",
+    "movement_lower_bound_formula_m": "8100*sqrt(5)-6680",
+    "per_source_lower_bound_formula_s": "162*sqrt(5)-128.6",
+    "movement_lower_bound_m": 11432.150617748295,
+    "per_source_lower_bound_s": 233.6430123549659
+  },
+  "important_limit": "This DP is exact for a LOWER-BOUND graph, not the optimum continuous route through clearance disks."
+}

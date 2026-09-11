@@ -1,0 +1,98 @@
+[
+  {
+    "seed": 0,
+    "accelerated_m": 1024.6613646242872,
+    "original_m": 1024.6613646242872,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 1,
+    "accelerated_m": 1087.0342670758498,
+    "original_m": 1087.0342670758498,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 2,
+    "accelerated_m": 1108.070218859501,
+    "original_m": 1108.070218859501,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 3,
+    "accelerated_m": 1105.8080701744361,
+    "original_m": 1105.8080701744361,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 4,
+    "accelerated_m": 1062.848299774637,
+    "original_m": 1062.848299774637,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 5,
+    "accelerated_m": 1117.2512356731363,
+    "original_m": 1117.2512356731363,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 6,
+    "accelerated_m": 1097.6508536362935,
+    "original_m": 1097.6508536362935,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 7,
+    "accelerated_m": 1105.482571989151,
+    "original_m": 1105.482571989151,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 8,
+    "accelerated_m": 1049.426583228991,
+    "original_m": 1049.426583228991,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 9,
+    "accelerated_m": 1082.8728605623214,
+    "original_m": 1082.8728605623216,
+    "difference_m": 2.2737367544323206e-13
+  },
+  {
+    "seed": 10,
+    "accelerated_m": 1124.2867238637016,
+    "original_m": 1124.2867238637011,
+    "difference_m": 4.547473508864641e-13
+  },
+  {
+    "seed": 11,
+    "accelerated_m": 1127.2227759326397,
+    "original_m": 1127.2227759326397,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 12,
+    "accelerated_m": 1117.3371737016714,
+    "original_m": 1117.3371737016714,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 13,
+    "accelerated_m": 1160.2280201859576,
+    "original_m": 1160.2280201859576,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 14,
+    "accelerated_m": 1058.3943449603717,
+    "original_m": 1058.3943449603717,
+    "difference_m": 0.0
+  },
+  {
+    "seed": 15,
+    "accelerated_m": 1099.3990158139025,
+    "original_m": 1099.3990158139027,
+    "difference_m": 2.2737367544323206e-13
+  }
+]

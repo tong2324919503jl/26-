@@ -1,0 +1,77 @@
+{
+  "file_checks": [
+    {
+      "file": "two_station_crossing.png",
+      "verified": true
+    },
+    {
+      "file": "two_station_crossing.svg",
+      "verified": true
+    },
+    {
+      "file": "triangle_counterexample.png",
+      "verified": true
+    },
+    {
+      "file": "triangle_counterexample.svg",
+      "verified": true
+    }
+  ],
+  "embedded_photos": {
+    "two_station_crossing.svg": [
+      {
+        "alpha_extrema": [
+          0,
+          109
+        ],
+        "opacity": null
+      },
+      {
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "opacity": null
+      }
+    ],
+    "triangle_counterexample.svg": [
+      {
+        "alpha_extrema": [
+          0,
+          109
+        ],
+        "opacity": null
+      },
+      {
+        "alpha_extrema": [
+          0,
+          109
+        ],
+        "opacity": null
+      },
+      {
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "opacity": null
+      }
+    ]
+  },
+  "source_photo_unchanged": true,
+  "original_geometry_unchanged": true,
+  "geometry_checks": {
+    "two_station_crossing": {
+      "diameter_m": 4.938542582373426,
+      "minimum_radius_m": 2.4692712911867125,
+      "diameter_circle_covers": true,
+      "error_half_angle_deg": 1
+    },
+    "triangle_counterexample": {
+      "diameter_m": 20.000000000000046,
+      "minimum_radius_m": 11.54700538379254,
+      "diameter_circle_covers": false,
+      "error_half_angle_deg": 1
+    }
+  }
+}

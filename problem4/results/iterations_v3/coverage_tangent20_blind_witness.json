@@ -1,0 +1,15 @@
+{
+  "points_sha256": "d2b38501f48f4e6648e1e26f8007b71e361f982ab868071dcd9043fd62ba0337",
+  "source": [
+    -58.07569355864622,
+    -68.60024628787609
+  ],
+  "beam_axis_degrees": 319.68562281228697,
+  "nearest_in_closed_beam_m": 1004.5841290792154,
+  "source_radius_m": 89.88203365008515,
+  "derived_pair": [
+    0,
+    17
+  ],
+  "shift_inside_segment_m": 0.1
+}

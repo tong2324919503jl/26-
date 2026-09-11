@@ -1,0 +1,101 @@
+\documentclass[a4paper,10pt,UTF8,fontset=none]{ctexart}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\setCJKmainfont[Path=fonts/,FontIndex=0,AutoFakeBold=true]{simsun.ttc}
+\setCJKsansfont{FandolHei-Regular.otf}
+\setCJKmonofont[Path=fonts/,FontIndex=0,AutoFakeBold=true]{simsun.ttc}
+\xeCJKDeclareCharClass{CJK}{"2190 -> "22FF}
+\usepackage{fontspec}
+\setmonofont{Latin Modern Mono}
+\usepackage{fvextra}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={完整程序附录},pdfauthor={}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\subsection*{程序 1：\texttt{\detokenize{problem1/__init__.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem1/__init__.py}
+\subsection*{程序 2：\texttt{\detokenize{problem1/solve.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem1/solve.py}
+\subsection*{程序 3：\texttt{\detokenize{problem1/tests/__init__.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem1/tests/__init__.py}
+\subsection*{程序 4：\texttt{\detokenize{problem1/tests/test_geometry.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem1/tests/test_geometry.py}
+\subsection*{程序 5：\texttt{\detokenize{problem2/benchmark_scoring.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem2/benchmark_scoring.py}
+\subsection*{程序 6：\texttt{\detokenize{problem2/compare_strategies.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem2/compare_strategies.py}
+\subsection*{程序 7：\texttt{\detokenize{problem2/solve.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem2/solve.py}
+\subsection*{程序 8：\texttt{\detokenize{problem2/tests/test_solve.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem2/tests/test_solve.py}
+\subsection*{程序 9：\texttt{\detokenize{problem3/__init__.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/__init__.py}
+\subsection*{程序 10：\texttt{\detokenize{problem3/client.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/client.py}
+\subsection*{程序 11：\texttt{\detokenize{problem3/geometry.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/geometry.py}
+\subsection*{程序 12：\texttt{\detokenize{problem3/policy.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/policy.py}
+\subsection*{程序 13：\texttt{\detokenize{problem3/run.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/run.py}
+\subsection*{程序 14：\texttt{\detokenize{problem3/scenarios.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/scenarios.py}
+\subsection*{程序 15：\texttt{\detokenize{problem3/simulator.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/simulator.py}
+\subsection*{程序 16：\texttt{\detokenize{problem3/solve.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/solve.py}
+\subsection*{程序 17：\texttt{\detokenize{problem3/tests/test_client.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/tests/test_client.py}
+\subsection*{程序 18：\texttt{\detokenize{problem3/tests/test_http_integration.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/tests/test_http_integration.py}
+\subsection*{程序 19：\texttt{\detokenize{problem3/tests/test_policy.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/tests/test_policy.py}
+\subsection*{程序 20：\texttt{\detokenize{problem3/tests/test_runner.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/tests/test_runner.py}
+\subsection*{程序 21：\texttt{\detokenize{problem3/tests/test_simulator.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem3/tests/test_simulator.py}
+\subsection*{程序 22：\texttt{\detokenize{problem4/__init__.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/__init__.py}
+\subsection*{程序 23：\texttt{\detokenize{problem4/coverage.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/coverage.py}
+\subsection*{程序 24：\texttt{\detokenize{problem4/legacy_policy.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/legacy_policy.py}
+\subsection*{程序 25：\texttt{\detokenize{problem4/localization.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/localization.py}
+\subsection*{程序 26：\texttt{\detokenize{problem4/policy.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/policy.py}
+\subsection*{程序 27：\texttt{\detokenize{problem4/routing.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/routing.py}
+\subsection*{程序 28：\texttt{\detokenize{problem4/solve.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/solve.py}
+\subsection*{程序 29：\texttt{\detokenize{problem4/tests/test_coverage.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/tests/test_coverage.py}
+\subsection*{程序 30：\texttt{\detokenize{problem4/tests/test_localization.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/tests/test_localization.py}
+\subsection*{程序 31：\texttt{\detokenize{problem4/tests/test_policy.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/tests/test_policy.py}
+\subsection*{程序 32：\texttt{\detokenize{problem4/tests/test_routing.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/tests/test_routing.py}
+\subsection*{程序 33：\texttt{\detokenize{problem4/tests/test_v2_integration.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/problem4/tests/test_v2_integration.py}
+\subsection*{程序 34：\texttt{\detokenize{scripts/benchmark_search.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/benchmark_search.py}
+\subsection*{程序 35：\texttt{\detokenize{scripts/plot_search.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/plot_search.py}
+\subsection*{程序 36：\texttt{\detokenize{scripts/prepare_materials.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/prepare_materials.py}
+\subsection*{程序 37：\texttt{\detokenize{scripts/report_problem4_speed.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/report_problem4_speed.py}
+\subsection*{程序 38：\texttt{\detokenize{scripts/verify_project.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/verify_project.py}
+\subsection*{程序 39：\texttt{\detokenize{scripts/verify_reference.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/scripts/verify_reference.py}
+\subsection*{程序 40：\texttt{\detokenize{paper/plot_geometry.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/paper/plot_geometry.py}
+\subsection*{程序 41：\texttt{\detokenize{paper/plot_search_results.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/paper/plot_search_results.py}
+\subsection*{程序 42：\texttt{\detokenize{paper/build_paper.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/paper/build_paper.py}
+\subsection*{程序 43：\texttt{\detokenize{paper/package_support.py}}}
+\VerbatimInput[breaklines=true,breakanywhere=true,fontsize=\fontsize{8}{10}\selectfont,numbers=left,numbersep=5pt]{code/paper/package_support.py}
+\end{document}

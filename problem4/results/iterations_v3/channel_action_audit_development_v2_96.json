@@ -1,0 +1,1628 @@
+{
+  "scope": "Post-hoc synthetic development_v2 only. Oracle removed-read budget holds the original movement trajectory fixed; not a universal algorithm lower bound.",
+  "station_necessity_witnesses": [
+    {
+      "station_index": 0,
+      "station": [
+        0.0,
+        0.0
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 100.0,
+        "y": 0.0,
+        "radius": 1000.0,
+        "orientation_deg": 180.0
+      },
+      "receiving_stations": [
+        0
+      ]
+    },
+    {
+      "station_index": 1,
+      "station": [
+        1865.5676770989696,
+        0.0
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 1800.0,
+        "y": 0.0,
+        "radius": 1000.0,
+        "orientation_deg": 0.0
+      },
+      "receiving_stations": [
+        1
+      ]
+    },
+    {
+      "station_index": 2,
+      "station": [
+        1615.6290008468325,
+        932.7838385494847
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 1558.8457268119896,
+        "y": 899.9999999999999,
+        "radius": 1000.0,
+        "orientation_deg": 29.999999999999996
+      },
+      "receiving_stations": [
+        2
+      ]
+    },
+    {
+      "station_index": 3,
+      "station": [
+        932.783838549485,
+        1615.6290008468322
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 900.0000000000002,
+        "y": 1558.8457268119894,
+        "radius": 1000.0,
+        "orientation_deg": 59.99999999999999
+      },
+      "receiving_stations": [
+        3
+      ]
+    },
+    {
+      "station_index": 4,
+      "station": [
+        1.142330742176008e-13,
+        1865.5676770989696
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 1.1021821192326178e-13,
+        "y": 1800.0,
+        "radius": 1000.0,
+        "orientation_deg": 90.0
+      },
+      "receiving_stations": [
+        4
+      ]
+    },
+    {
+      "station_index": 5,
+      "station": [
+        -932.7838385494844,
+        1615.6290008468325
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -899.9999999999995,
+        "y": 1558.8457268119896,
+        "radius": 1000.0,
+        "orientation_deg": 119.99999999999999
+      },
+      "receiving_stations": [
+        5
+      ]
+    },
+    {
+      "station_index": 6,
+      "station": [
+        -1615.6290008468325,
+        932.7838385494847
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -1558.8457268119896,
+        "y": 899.9999999999999,
+        "radius": 1000.0,
+        "orientation_deg": 150.0
+      },
+      "receiving_stations": [
+        6
+      ]
+    },
+    {
+      "station_index": 7,
+      "station": [
+        -1865.5676770989696,
+        2.284661484352016e-13
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -1800.0,
+        "y": 2.2043642384652357e-13,
+        "radius": 1000.0,
+        "orientation_deg": 180.0
+      },
+      "receiving_stations": [
+        7
+      ]
+    },
+    {
+      "station_index": 8,
+      "station": [
+        -1615.6290008468327,
+        -932.7838385494842
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -1558.84572681199,
+        "y": -899.9999999999992,
+        "radius": 1000.0,
+        "orientation_deg": -150.00000000000003
+      },
+      "receiving_stations": [
+        8
+      ]
+    },
+    {
+      "station_index": 9,
+      "station": [
+        -932.7838385494856,
+        -1615.629000846832
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -900.000000000001,
+        "y": -1558.845726811989,
+        "radius": 1000.0,
+        "orientation_deg": -120.00000000000004
+      },
+      "receiving_stations": [
+        9
+      ]
+    },
+    {
+      "station_index": 10,
+      "station": [
+        -3.426992226528024e-13,
+        -1865.5676770989696
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -2.8946207694179457e-13,
+        "y": -1800.0,
+        "radius": 1000.0,
+        "orientation_deg": -90.00000000000001
+      },
+      "receiving_stations": [
+        10
+      ]
+    },
+    {
+      "station_index": 11,
+      "station": [
+        932.783838549485,
+        -1615.6290008468322
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 900.0000000000002,
+        "y": -1558.8457268119894,
+        "radius": 1000.0,
+        "orientation_deg": -59.99999999999999
+      },
+      "receiving_stations": [
+        11
+      ]
+    },
+    {
+      "station_index": 12,
+      "station": [
+        1615.629000846832,
+        -932.7838385494856
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 1558.8457268119892,
+        "y": -900.0000000000008,
+        "radius": 1000.0,
+        "orientation_deg": -30.00000000000003
+      },
+      "receiving_stations": [
+        12
+      ]
+    },
+    {
+      "station_index": 13,
+      "station": [
+        997.32,
+        0.0
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 800.0,
+        "y": 0.0,
+        "radius": 1000.0,
+        "orientation_deg": 0.0
+      },
+      "receiving_stations": [
+        13
+      ]
+    },
+    {
+      "station_index": 14,
+      "station": [
+        705.2117350129677,
+        705.2117350129677
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 565.685424949238,
+        "y": 565.685424949238,
+        "radius": 1000.0,
+        "orientation_deg": 45.0
+      },
+      "receiving_stations": [
+        14
+      ]
+    },
+    {
+      "station_index": 15,
+      "station": [
+        6.106823728628192e-14,
+        997.32
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 4.898587196589413e-14,
+        "y": 800.0,
+        "radius": 1000.0,
+        "orientation_deg": 90.0
+      },
+      "receiving_stations": [
+        15
+      ]
+    },
+    {
+      "station_index": 16,
+      "station": [
+        -705.2117350129676,
+        705.2117350129677
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -565.6854249492379,
+        "y": 565.685424949238,
+        "radius": 1000.0,
+        "orientation_deg": 135.0
+      },
+      "receiving_stations": [
+        16
+      ]
+    },
+    {
+      "station_index": 17,
+      "station": [
+        -997.32,
+        1.2213647457256384e-13
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -800.0,
+        "y": 9.797174393178826e-14,
+        "radius": 1000.0,
+        "orientation_deg": 180.0
+      },
+      "receiving_stations": [
+        17
+      ]
+    },
+    {
+      "station_index": 18,
+      "station": [
+        -705.2117350129678,
+        -705.2117350129676
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -565.6854249492383,
+        "y": -565.6854249492378,
+        "radius": 1000.0,
+        "orientation_deg": -135.00000000000003
+      },
+      "receiving_stations": [
+        18
+      ]
+    },
+    {
+      "station_index": 19,
+      "station": [
+        -1.8320471185884575e-13,
+        -997.32
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": -1.2864981197413094e-13,
+        "y": -800.0,
+        "radius": 1000.0,
+        "orientation_deg": -90.00000000000001
+      },
+      "receiving_stations": [
+        19
+      ]
+    },
+    {
+      "station_index": 20,
+      "station": [
+        705.2117350129674,
+        -705.2117350129678
+      ],
+      "source_witness": {
+        "channel": 1,
+        "x": 565.6854249492379,
+        "y": -565.6854249492382,
+        "radius": 1000.0,
+        "orientation_deg": -45.000000000000014
+      },
+      "receiving_stations": [
+        20
+      ]
+    }
+  ],
+  "summary": {
+    "all": {
+      "cases": 96,
+      "empty_reads": 145.66666666666666,
+      "source_discovery_reads": 73.51041666666667,
+      "source_negative_reads": 60.59375,
+      "source_negative_time_per_source": 28.044598630536132,
+      "empty_time_per_source": 71.84534671058108,
+      "oracle_saved_read_seconds_per_source": 30.486655922202797,
+      "baseline_seconds_per_source": 444.3592122005914
+    },
+    "n_below16": {
+      "cases": 85,
+      "empty_reads": 157.12941176470588,
+      "source_discovery_reads": 69.16470588235295,
+      "source_negative_reads": 56.64705882352941,
+      "source_negative_time_per_source": 27.276840806252572,
+      "empty_time_per_source": 78.38489157900922,
+      "oracle_saved_read_seconds_per_source": 27.276840806252572,
+      "baseline_seconds_per_source": 464.28948796984236
+    },
+    "n16": {
+      "cases": 11,
+      "empty_reads": 57.09090909090909,
+      "source_discovery_reads": 107.0909090909091,
+      "source_negative_reads": 91.0909090909091,
+      "source_negative_time_per_source": 33.97727272727273,
+      "empty_time_per_source": 21.3125,
+      "oracle_saved_read_seconds_per_source": 55.28977272727273,
+      "baseline_seconds_per_source": 290.352535801834
+    },
+    "boundary": {
+      "cases": 12,
+      "empty_reads": 147,
+      "source_discovery_reads": 147.75,
+      "source_negative_reads": 134.75,
+      "source_negative_time_per_source": 61.75969516594517,
+      "empty_time_per_source": 71.77031302031303,
+      "oracle_saved_read_seconds_per_source": 69.5930284992785,
+      "baseline_seconds_per_source": 466.7949995063068
+    },
+    "close_pairs": {
+      "cases": 12,
+      "empty_reads": 145.33333333333334,
+      "source_discovery_reads": 56.916666666666664,
+      "source_negative_reads": 44.25,
+      "source_negative_time_per_source": 20.508118964368965,
+      "empty_time_per_source": 75.45905067155067,
+      "oracle_saved_read_seconds_per_source": 25.133118964368965,
+      "baseline_seconds_per_source": 436.9153141145366
+    },
+    "clusters": {
+      "cases": 12,
+      "empty_reads": 137.08333333333334,
+      "source_discovery_reads": 44.666666666666664,
+      "source_negative_reads": 31.416666666666668,
+      "source_negative_time_per_source": 14.387215562215562,
+      "empty_time_per_source": 66.3722582972583,
+      "oracle_saved_read_seconds_per_source": 15.262215562215562,
+      "baseline_seconds_per_source": 414.8222701144949
+    },
+    "corridor": {
+      "cases": 12,
+      "empty_reads": 136.41666666666666,
+      "source_discovery_reads": 35.5,
+      "source_negative_reads": 22.25,
+      "source_negative_time_per_source": 10.045202713952714,
+      "empty_time_per_source": 64.26697052947053,
+      "oracle_saved_read_seconds_per_source": 10.670202713952714,
+      "baseline_seconds_per_source": 405.9739629400659
+    },
+    "grazing": {
+      "cases": 12,
+      "empty_reads": 153.75,
+      "source_discovery_reads": 40.75,
+      "source_negative_reads": 28.166666666666668,
+      "source_negative_time_per_source": 13.36308275058275,
+      "empty_time_per_source": 78.623445998446,
+      "oracle_saved_read_seconds_per_source": 15.196416083916084,
+      "baseline_seconds_per_source": 450.67099653265376
+    },
+    "outward": {
+      "cases": 12,
+      "empty_reads": 149.16666666666666,
+      "source_discovery_reads": 134.16666666666666,
+      "source_negative_reads": 121.33333333333333,
+      "source_negative_time_per_source": 56.87165404040404,
+      "empty_time_per_source": 74.13204191641691,
+      "oracle_saved_read_seconds_per_source": 58.99144570707071,
+      "baseline_seconds_per_source": 464.71152493258637
+    },
+    "short_radius": {
+      "cases": 12,
+      "empty_reads": 154,
+      "source_discovery_reads": 69.25,
+      "source_negative_reads": 56.583333333333336,
+      "source_negative_time_per_source": 26.456041181041183,
+      "empty_time_per_source": 74.72422022422022,
+      "oracle_saved_read_seconds_per_source": 26.456041181041183,
+      "baseline_seconds_per_source": 466.5496346071566
+    },
+    "uniform": {
+      "cases": 12,
+      "empty_reads": 142.58333333333334,
+      "source_discovery_reads": 59.083333333333336,
+      "source_negative_reads": 46,
+      "source_negative_time_per_source": 20.965778665778664,
+      "empty_time_per_source": 69.41447302697303,
+      "oracle_saved_read_seconds_per_source": 22.590778665778664,
+      "baseline_seconds_per_source": 448.4349948569301
+    }
+  },
+  "episodes": [
+    {
+      "case_id": "local_p4_development_v2_0000",
+      "family": "uniform",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 50,
+      "source_negative_reads": 39,
+      "source_negative_time_per_source": 21.0,
+      "empty_time_per_source": 102.36363636363636,
+      "oracle_saved_read_seconds_per_source": 21.0,
+      "baseline_seconds_per_source": 551.7838702239816
+    },
+    {
+      "case_id": "local_p4_development_v2_0001",
+      "family": "clusters",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 57,
+      "source_negative_reads": 46,
+      "source_negative_time_per_source": 25.09090909090909,
+      "empty_time_per_source": 102.0909090909091,
+      "oracle_saved_read_seconds_per_source": 25.09090909090909,
+      "baseline_seconds_per_source": 529.1637705291289
+    },
+    {
+      "case_id": "local_p4_development_v2_0002",
+      "family": "boundary",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 82,
+      "source_negative_reads": 69,
+      "source_negative_time_per_source": 31.76923076923077,
+      "empty_time_per_source": 67.38461538461539,
+      "oracle_saved_read_seconds_per_source": 31.76923076923077,
+      "baseline_seconds_per_source": 415.95171509360847
+    },
+    {
+      "case_id": "local_p4_development_v2_0003",
+      "family": "outward",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 178,
+      "source_negative_reads": 165,
+      "source_negative_time_per_source": 76.0,
+      "empty_time_per_source": 67.23076923076923,
+      "oracle_saved_read_seconds_per_source": 76.0,
+      "baseline_seconds_per_source": 475.3407988194027
+    },
+    {
+      "case_id": "local_p4_development_v2_0004",
+      "family": "corridor",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 60,
+      "source_negative_reads": 45,
+      "source_negative_time_per_source": 17.933333333333334,
+      "empty_time_per_source": 41.4,
+      "oracle_saved_read_seconds_per_source": 17.933333333333334,
+      "baseline_seconds_per_source": 352.72130060149436
+    },
+    {
+      "case_id": "local_p4_development_v2_0005",
+      "family": "close_pairs",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 39,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 15.181818181818182,
+      "empty_time_per_source": 102.18181818181819,
+      "oracle_saved_read_seconds_per_source": 15.181818181818182,
+      "baseline_seconds_per_source": 509.92021801690566
+    },
+    {
+      "case_id": "local_p4_development_v2_0006",
+      "family": "grazing",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 29,
+      "source_negative_reads": 18,
+      "source_negative_time_per_source": 9.818181818181818,
+      "empty_time_per_source": 102.18181818181819,
+      "oracle_saved_read_seconds_per_source": 9.818181818181818,
+      "baseline_seconds_per_source": 524.8914399952613
+    },
+    {
+      "case_id": "local_p4_development_v2_0007",
+      "family": "short_radius",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 67,
+      "source_negative_reads": 56,
+      "source_negative_time_per_source": 30.454545454545453,
+      "empty_time_per_source": 102.72727272727273,
+      "oracle_saved_read_seconds_per_source": 30.454545454545453,
+      "baseline_seconds_per_source": 528.1144693445674
+    },
+    {
+      "case_id": "local_p4_development_v2_0008",
+      "family": "uniform",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 65,
+      "source_negative_reads": 50,
+      "source_negative_time_per_source": 20.0,
+      "empty_time_per_source": 41.46666666666667,
+      "oracle_saved_read_seconds_per_source": 20.0,
+      "baseline_seconds_per_source": 373.5273447434053
+    },
+    {
+      "case_id": "local_p4_development_v2_0009",
+      "family": "clusters",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 60,
+      "source_negative_reads": 45,
+      "source_negative_time_per_source": 18.0,
+      "empty_time_per_source": 41.4,
+      "oracle_saved_read_seconds_per_source": 18.0,
+      "baseline_seconds_per_source": 370.71300336854387
+    },
+    {
+      "case_id": "local_p4_development_v2_0010",
+      "family": "boundary",
+      "source_count": 16,
+      "empty_reads": 84,
+      "source_discovery_reads": 190,
+      "source_negative_reads": 174,
+      "source_negative_time_per_source": 64.8125,
+      "empty_time_per_source": 31.5,
+      "oracle_saved_read_seconds_per_source": 96.3125,
+      "baseline_seconds_per_source": 375.5491089414315
+    },
+    {
+      "case_id": "local_p4_development_v2_0011",
+      "family": "outward",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 203,
+      "source_negative_reads": 189,
+      "source_negative_time_per_source": 80.64285714285714,
+      "empty_time_per_source": 53.642857142857146,
+      "oracle_saved_read_seconds_per_source": 80.64285714285714,
+      "baseline_seconds_per_source": 446.91655138139123
+    },
+    {
+      "case_id": "local_p4_development_v2_0012",
+      "family": "corridor",
+      "source_count": 16,
+      "empty_reads": 20,
+      "source_discovery_reads": 29,
+      "source_negative_reads": 13,
+      "source_negative_time_per_source": 4.875,
+      "empty_time_per_source": 7.5,
+      "oracle_saved_read_seconds_per_source": 12.375,
+      "baseline_seconds_per_source": 155.02873788734257
+    },
+    {
+      "case_id": "local_p4_development_v2_0013",
+      "family": "close_pairs",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 66,
+      "source_negative_reads": 56,
+      "source_negative_time_per_source": 33.5,
+      "empty_time_per_source": 125.2,
+      "oracle_saved_read_seconds_per_source": 33.5,
+      "baseline_seconds_per_source": 574.3318768075261
+    },
+    {
+      "case_id": "local_p4_development_v2_0014",
+      "family": "grazing",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 36,
+      "source_negative_reads": 26,
+      "source_negative_time_per_source": 15.6,
+      "empty_time_per_source": 125.1,
+      "oracle_saved_read_seconds_per_source": 15.6,
+      "baseline_seconds_per_source": 595.5902089658083
+    },
+    {
+      "case_id": "local_p4_development_v2_0015",
+      "family": "short_radius",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 71,
+      "source_negative_reads": 58,
+      "source_negative_time_per_source": 26.692307692307693,
+      "empty_time_per_source": 67.23076923076923,
+      "oracle_saved_read_seconds_per_source": 26.692307692307693,
+      "baseline_seconds_per_source": 462.75814652916074
+    },
+    {
+      "case_id": "local_p4_development_v2_0016",
+      "family": "uniform",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 53,
+      "source_negative_reads": 42,
+      "source_negative_time_per_source": 22.90909090909091,
+      "empty_time_per_source": 102.0,
+      "oracle_saved_read_seconds_per_source": 22.90909090909091,
+      "baseline_seconds_per_source": 566.2841363650383
+    },
+    {
+      "case_id": "local_p4_development_v2_0017",
+      "family": "clusters",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 40,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 13.916666666666666,
+      "empty_time_per_source": 83.16666666666667,
+      "oracle_saved_read_seconds_per_source": 13.916666666666666,
+      "baseline_seconds_per_source": 466.6950027980697
+    },
+    {
+      "case_id": "local_p4_development_v2_0018",
+      "family": "boundary",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 141,
+      "source_negative_reads": 127,
+      "source_negative_time_per_source": 54.142857142857146,
+      "empty_time_per_source": 53.785714285714285,
+      "oracle_saved_read_seconds_per_source": 54.142857142857146,
+      "baseline_seconds_per_source": 421.0589421645603
+    },
+    {
+      "case_id": "local_p4_development_v2_0019",
+      "family": "outward",
+      "source_count": 16,
+      "empty_reads": 68,
+      "source_discovery_reads": 149,
+      "source_negative_reads": 133,
+      "source_negative_time_per_source": 49.625,
+      "empty_time_per_source": 25.4375,
+      "oracle_saved_read_seconds_per_source": 75.0625,
+      "baseline_seconds_per_source": 351.208783121329
+    },
+    {
+      "case_id": "local_p4_development_v2_0020",
+      "family": "corridor",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 48,
+      "source_negative_reads": 37,
+      "source_negative_time_per_source": 20.181818181818183,
+      "empty_time_per_source": 102.0909090909091,
+      "oracle_saved_read_seconds_per_source": 20.181818181818183,
+      "baseline_seconds_per_source": 555.7793713750073
+    },
+    {
+      "case_id": "local_p4_development_v2_0021",
+      "family": "close_pairs",
+      "source_count": 16,
+      "empty_reads": 40,
+      "source_discovery_reads": 75,
+      "source_negative_reads": 59,
+      "source_negative_time_per_source": 22.0,
+      "empty_time_per_source": 15.0,
+      "oracle_saved_read_seconds_per_source": 37.0,
+      "baseline_seconds_per_source": 225.34612892306617
+    },
+    {
+      "case_id": "local_p4_development_v2_0022",
+      "family": "grazing",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 47,
+      "source_negative_reads": 34,
+      "source_negative_time_per_source": 15.615384615384615,
+      "empty_time_per_source": 67.15384615384616,
+      "oracle_saved_read_seconds_per_source": 15.615384615384615,
+      "baseline_seconds_per_source": 431.8433039013944
+    },
+    {
+      "case_id": "local_p4_development_v2_0023",
+      "family": "short_radius",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 45,
+      "source_negative_reads": 32,
+      "source_negative_time_per_source": 14.692307692307692,
+      "empty_time_per_source": 67.46153846153847,
+      "oracle_saved_read_seconds_per_source": 14.692307692307692,
+      "baseline_seconds_per_source": 441.42110227460796
+    },
+    {
+      "case_id": "local_p4_development_v2_0024",
+      "family": "uniform",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 53,
+      "source_negative_reads": 39,
+      "source_negative_time_per_source": 16.642857142857142,
+      "empty_time_per_source": 53.357142857142854,
+      "oracle_saved_read_seconds_per_source": 16.642857142857142,
+      "baseline_seconds_per_source": 418.5519614350789
+    },
+    {
+      "case_id": "local_p4_development_v2_0025",
+      "family": "clusters",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 41,
+      "source_negative_reads": 27,
+      "source_negative_time_per_source": 11.571428571428571,
+      "empty_time_per_source": 53.0,
+      "oracle_saved_read_seconds_per_source": 11.571428571428571,
+      "baseline_seconds_per_source": 365.66688512957916
+    },
+    {
+      "case_id": "local_p4_development_v2_0026",
+      "family": "boundary",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 139,
+      "source_negative_reads": 128,
+      "source_negative_time_per_source": 69.18181818181819,
+      "empty_time_per_source": 103.0,
+      "oracle_saved_read_seconds_per_source": 69.18181818181819,
+      "baseline_seconds_per_source": 549.9620183720253
+    },
+    {
+      "case_id": "local_p4_development_v2_0027",
+      "family": "outward",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 63,
+      "source_negative_reads": 53,
+      "source_negative_time_per_source": 31.7,
+      "empty_time_per_source": 125.8,
+      "oracle_saved_read_seconds_per_source": 31.7,
+      "baseline_seconds_per_source": 566.7360748476679
+    },
+    {
+      "case_id": "local_p4_development_v2_0028",
+      "family": "corridor",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 19,
+      "source_negative_reads": 6,
+      "source_negative_time_per_source": 2.769230769230769,
+      "empty_time_per_source": 66.84615384615384,
+      "oracle_saved_read_seconds_per_source": 2.769230769230769,
+      "baseline_seconds_per_source": 394.97571765115947
+    },
+    {
+      "case_id": "local_p4_development_v2_0029",
+      "family": "close_pairs",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 37,
+      "source_negative_reads": 26,
+      "source_negative_time_per_source": 14.181818181818182,
+      "empty_time_per_source": 101.81818181818181,
+      "oracle_saved_read_seconds_per_source": 14.181818181818182,
+      "baseline_seconds_per_source": 484.36911829118947
+    },
+    {
+      "case_id": "local_p4_development_v2_0030",
+      "family": "grazing",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 36,
+      "source_negative_reads": 21,
+      "source_negative_time_per_source": 8.333333333333334,
+      "empty_time_per_source": 41.53333333333333,
+      "oracle_saved_read_seconds_per_source": 8.333333333333334,
+      "baseline_seconds_per_source": 356.8074995567517
+    },
+    {
+      "case_id": "local_p4_development_v2_0031",
+      "family": "short_radius",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 78,
+      "source_negative_reads": 64,
+      "source_negative_time_per_source": 27.214285714285715,
+      "empty_time_per_source": 53.785714285714285,
+      "oracle_saved_read_seconds_per_source": 27.214285714285715,
+      "baseline_seconds_per_source": 396.99288961721976
+    },
+    {
+      "case_id": "local_p4_development_v2_0032",
+      "family": "uniform",
+      "source_count": 16,
+      "empty_reads": 52,
+      "source_discovery_reads": 74,
+      "source_negative_reads": 58,
+      "source_negative_time_per_source": 21.75,
+      "empty_time_per_source": 19.5,
+      "oracle_saved_read_seconds_per_source": 41.25,
+      "baseline_seconds_per_source": 318.27256065834575
+    },
+    {
+      "case_id": "local_p4_development_v2_0033",
+      "family": "clusters",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 33,
+      "source_negative_reads": 23,
+      "source_negative_time_per_source": 13.4,
+      "empty_time_per_source": 125.4,
+      "oracle_saved_read_seconds_per_source": 13.4,
+      "baseline_seconds_per_source": 567.3305363482726
+    },
+    {
+      "case_id": "local_p4_development_v2_0034",
+      "family": "boundary",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 111,
+      "source_negative_reads": 100,
+      "source_negative_time_per_source": 54.36363636363637,
+      "empty_time_per_source": 102.72727272727273,
+      "oracle_saved_read_seconds_per_source": 54.36363636363637,
+      "baseline_seconds_per_source": 534.5519974564231
+    },
+    {
+      "case_id": "local_p4_development_v2_0035",
+      "family": "outward",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 167,
+      "source_negative_reads": 153,
+      "source_negative_time_per_source": 65.35714285714286,
+      "empty_time_per_source": 53.714285714285715,
+      "oracle_saved_read_seconds_per_source": 65.35714285714286,
+      "baseline_seconds_per_source": 420.6147820418237
+    },
+    {
+      "case_id": "local_p4_development_v2_0036",
+      "family": "corridor",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 26,
+      "source_negative_reads": 14,
+      "source_negative_time_per_source": 6.916666666666667,
+      "empty_time_per_source": 82.83333333333333,
+      "oracle_saved_read_seconds_per_source": 6.916666666666667,
+      "baseline_seconds_per_source": 443.0076991012223
+    },
+    {
+      "case_id": "local_p4_development_v2_0037",
+      "family": "close_pairs",
+      "source_count": 16,
+      "empty_reads": 32,
+      "source_discovery_reads": 79,
+      "source_negative_reads": 63,
+      "source_negative_time_per_source": 23.5,
+      "empty_time_per_source": 12.0,
+      "oracle_saved_read_seconds_per_source": 35.5,
+      "baseline_seconds_per_source": 206.50091639136235
+    },
+    {
+      "case_id": "local_p4_development_v2_0038",
+      "family": "grazing",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 79,
+      "source_negative_reads": 64,
+      "source_negative_time_per_source": 25.2,
+      "empty_time_per_source": 41.8,
+      "oracle_saved_read_seconds_per_source": 25.2,
+      "baseline_seconds_per_source": 373.39302075289146
+    },
+    {
+      "case_id": "local_p4_development_v2_0039",
+      "family": "short_radius",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 46,
+      "source_negative_reads": 36,
+      "source_negative_time_per_source": 21.5,
+      "empty_time_per_source": 125.2,
+      "oracle_saved_read_seconds_per_source": 21.5,
+      "baseline_seconds_per_source": 586.1762692319481
+    },
+    {
+      "case_id": "local_p4_development_v2_0040",
+      "family": "uniform",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 43,
+      "source_negative_reads": 31,
+      "source_negative_time_per_source": 15.416666666666666,
+      "empty_time_per_source": 83.25,
+      "oracle_saved_read_seconds_per_source": 15.416666666666666,
+      "baseline_seconds_per_source": 458.93210837382776
+    },
+    {
+      "case_id": "local_p4_development_v2_0041",
+      "family": "clusters",
+      "source_count": 16,
+      "empty_reads": 28,
+      "source_discovery_reads": 42,
+      "source_negative_reads": 26,
+      "source_negative_time_per_source": 9.75,
+      "empty_time_per_source": 10.5,
+      "oracle_saved_read_seconds_per_source": 20.25,
+      "baseline_seconds_per_source": 171.67434884960974
+    },
+    {
+      "case_id": "local_p4_development_v2_0042",
+      "family": "boundary",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 162,
+      "source_negative_reads": 150,
+      "source_negative_time_per_source": 74.75,
+      "empty_time_per_source": 83.5,
+      "oracle_saved_read_seconds_per_source": 74.75,
+      "baseline_seconds_per_source": 515.5590891442838
+    },
+    {
+      "case_id": "local_p4_development_v2_0043",
+      "family": "outward",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 185,
+      "source_negative_reads": 173,
+      "source_negative_time_per_source": 85.75,
+      "empty_time_per_source": 84.0,
+      "oracle_saved_read_seconds_per_source": 85.75,
+      "baseline_seconds_per_source": 503.48427743627917
+    },
+    {
+      "case_id": "local_p4_development_v2_0044",
+      "family": "corridor",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 33,
+      "source_negative_reads": 18,
+      "source_negative_time_per_source": 7.2,
+      "empty_time_per_source": 41.2,
+      "oracle_saved_read_seconds_per_source": 7.2,
+      "baseline_seconds_per_source": 351.68921824151073
+    },
+    {
+      "case_id": "local_p4_development_v2_0045",
+      "family": "close_pairs",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 69,
+      "source_negative_reads": 56,
+      "source_negative_time_per_source": 25.846153846153847,
+      "empty_time_per_source": 67.23076923076923,
+      "oracle_saved_read_seconds_per_source": 25.846153846153847,
+      "baseline_seconds_per_source": 510.0296981983833
+    },
+    {
+      "case_id": "local_p4_development_v2_0046",
+      "family": "grazing",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 17,
+      "source_negative_reads": 4,
+      "source_negative_time_per_source": 1.8461538461538463,
+      "empty_time_per_source": 66.61538461538461,
+      "oracle_saved_read_seconds_per_source": 1.8461538461538463,
+      "baseline_seconds_per_source": 387.5241626326385
+    },
+    {
+      "case_id": "local_p4_development_v2_0047",
+      "family": "short_radius",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 50,
+      "source_negative_reads": 38,
+      "source_negative_time_per_source": 19.0,
+      "empty_time_per_source": 83.25,
+      "oracle_saved_read_seconds_per_source": 19.0,
+      "baseline_seconds_per_source": 460.7445815311091
+    },
+    {
+      "case_id": "local_p4_development_v2_0048",
+      "family": "uniform",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 46,
+      "source_negative_reads": 33,
+      "source_negative_time_per_source": 15.153846153846153,
+      "empty_time_per_source": 67.07692307692308,
+      "oracle_saved_read_seconds_per_source": 15.153846153846153,
+      "baseline_seconds_per_source": 414.5524897321966
+    },
+    {
+      "case_id": "local_p4_development_v2_0049",
+      "family": "clusters",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 46,
+      "source_negative_reads": 31,
+      "source_negative_time_per_source": 12.4,
+      "empty_time_per_source": 41.4,
+      "oracle_saved_read_seconds_per_source": 12.4,
+      "baseline_seconds_per_source": 366.8156446856647
+    },
+    {
+      "case_id": "local_p4_development_v2_0050",
+      "family": "boundary",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 114,
+      "source_negative_reads": 103,
+      "source_negative_time_per_source": 56.18181818181818,
+      "empty_time_per_source": 102.36363636363636,
+      "oracle_saved_read_seconds_per_source": 56.18181818181818,
+      "baseline_seconds_per_source": 535.7386186015777
+    },
+    {
+      "case_id": "local_p4_development_v2_0051",
+      "family": "outward",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 151,
+      "source_negative_reads": 140,
+      "source_negative_time_per_source": 75.81818181818181,
+      "empty_time_per_source": 102.9090909090909,
+      "oracle_saved_read_seconds_per_source": 75.81818181818181,
+      "baseline_seconds_per_source": 568.084807629481
+    },
+    {
+      "case_id": "local_p4_development_v2_0052",
+      "family": "corridor",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 43,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 11.133333333333333,
+      "empty_time_per_source": 41.333333333333336,
+      "oracle_saved_read_seconds_per_source": 11.133333333333333,
+      "baseline_seconds_per_source": 357.25614602938793
+    },
+    {
+      "case_id": "local_p4_development_v2_0053",
+      "family": "close_pairs",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 45,
+      "source_negative_reads": 35,
+      "source_negative_time_per_source": 20.7,
+      "empty_time_per_source": 125.4,
+      "oracle_saved_read_seconds_per_source": 20.7,
+      "baseline_seconds_per_source": 596.428009241338
+    },
+    {
+      "case_id": "local_p4_development_v2_0054",
+      "family": "grazing",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 29,
+      "source_negative_reads": 19,
+      "source_negative_time_per_source": 11.4,
+      "empty_time_per_source": 124.7,
+      "oracle_saved_read_seconds_per_source": 11.4,
+      "baseline_seconds_per_source": 554.0768061048099
+    },
+    {
+      "case_id": "local_p4_development_v2_0055",
+      "family": "short_radius",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 141,
+      "source_negative_reads": 127,
+      "source_negative_time_per_source": 54.285714285714285,
+      "empty_time_per_source": 53.857142857142854,
+      "oracle_saved_read_seconds_per_source": 54.285714285714285,
+      "baseline_seconds_per_source": 461.2535147713337
+    },
+    {
+      "case_id": "local_p4_development_v2_0056",
+      "family": "uniform",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 112,
+      "source_negative_reads": 97,
+      "source_negative_time_per_source": 38.8,
+      "empty_time_per_source": 41.666666666666664,
+      "oracle_saved_read_seconds_per_source": 38.8,
+      "baseline_seconds_per_source": 411.19861224747086
+    },
+    {
+      "case_id": "local_p4_development_v2_0057",
+      "family": "clusters",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 43,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 11.2,
+      "empty_time_per_source": 41.266666666666666,
+      "oracle_saved_read_seconds_per_source": 11.2,
+      "baseline_seconds_per_source": 355.8366989120976
+    },
+    {
+      "case_id": "local_p4_development_v2_0058",
+      "family": "boundary",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 138,
+      "source_negative_reads": 125,
+      "source_negative_time_per_source": 57.23076923076923,
+      "empty_time_per_source": 67.84615384615384,
+      "oracle_saved_read_seconds_per_source": 57.23076923076923,
+      "baseline_seconds_per_source": 441.9535762640096
+    },
+    {
+      "case_id": "local_p4_development_v2_0059",
+      "family": "outward",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 94,
+      "source_negative_reads": 82,
+      "source_negative_time_per_source": 41.0,
+      "empty_time_per_source": 83.58333333333333,
+      "oracle_saved_read_seconds_per_source": 41.0,
+      "baseline_seconds_per_source": 462.544333740834
+    },
+    {
+      "case_id": "local_p4_development_v2_0060",
+      "family": "corridor",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 19,
+      "source_negative_reads": 8,
+      "source_negative_time_per_source": 4.363636363636363,
+      "empty_time_per_source": 101.63636363636364,
+      "oracle_saved_read_seconds_per_source": 4.363636363636363,
+      "baseline_seconds_per_source": 477.8672532515502
+    },
+    {
+      "case_id": "local_p4_development_v2_0061",
+      "family": "close_pairs",
+      "source_count": 16,
+      "empty_reads": 76,
+      "source_discovery_reads": 90,
+      "source_negative_reads": 74,
+      "source_negative_time_per_source": 27.125,
+      "empty_time_per_source": 28.5,
+      "oracle_saved_read_seconds_per_source": 55.625,
+      "baseline_seconds_per_source": 352.2242211898003
+    },
+    {
+      "case_id": "local_p4_development_v2_0062",
+      "family": "grazing",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 33,
+      "source_negative_reads": 23,
+      "source_negative_time_per_source": 13.8,
+      "empty_time_per_source": 125.3,
+      "oracle_saved_read_seconds_per_source": 13.8,
+      "baseline_seconds_per_source": 561.4509668494372
+    },
+    {
+      "case_id": "local_p4_development_v2_0063",
+      "family": "short_radius",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 61,
+      "source_negative_reads": 49,
+      "source_negative_time_per_source": 24.416666666666668,
+      "empty_time_per_source": 83.33333333333333,
+      "oracle_saved_read_seconds_per_source": 24.416666666666668,
+      "baseline_seconds_per_source": 497.2823399271497
+    },
+    {
+      "case_id": "local_p4_development_v2_0064",
+      "family": "uniform",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 47,
+      "source_negative_reads": 37,
+      "source_negative_time_per_source": 22.2,
+      "empty_time_per_source": 125.0,
+      "oracle_saved_read_seconds_per_source": 22.2,
+      "baseline_seconds_per_source": 569.2277043894513
+    },
+    {
+      "case_id": "local_p4_development_v2_0065",
+      "family": "clusters",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 51,
+      "source_negative_reads": 37,
+      "source_negative_time_per_source": 15.785714285714286,
+      "empty_time_per_source": 53.214285714285715,
+      "oracle_saved_read_seconds_per_source": 15.785714285714286,
+      "baseline_seconds_per_source": 429.79258182921564
+    },
+    {
+      "case_id": "local_p4_development_v2_0066",
+      "family": "boundary",
+      "source_count": 16,
+      "empty_reads": 84,
+      "source_discovery_reads": 221,
+      "source_negative_reads": 205,
+      "source_negative_time_per_source": 76.6875,
+      "empty_time_per_source": 31.25,
+      "oracle_saved_read_seconds_per_source": 107.9375,
+      "baseline_seconds_per_source": 388.6959630149265
+    },
+    {
+      "case_id": "local_p4_development_v2_0067",
+      "family": "outward",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 87,
+      "source_negative_reads": 77,
+      "source_negative_time_per_source": 46.2,
+      "empty_time_per_source": 125.4,
+      "oracle_saved_read_seconds_per_source": 46.2,
+      "baseline_seconds_per_source": 575.5053101500453
+    },
+    {
+      "case_id": "local_p4_development_v2_0068",
+      "family": "corridor",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 50,
+      "source_negative_reads": 36,
+      "source_negative_time_per_source": 15.214285714285714,
+      "empty_time_per_source": 53.357142857142854,
+      "oracle_saved_read_seconds_per_source": 15.214285714285714,
+      "baseline_seconds_per_source": 378.75202109074326
+    },
+    {
+      "case_id": "local_p4_development_v2_0069",
+      "family": "close_pairs",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 62,
+      "source_negative_reads": 48,
+      "source_negative_time_per_source": 20.285714285714285,
+      "empty_time_per_source": 53.57142857142857,
+      "oracle_saved_read_seconds_per_source": 20.285714285714285,
+      "baseline_seconds_per_source": 379.77003882204355
+    },
+    {
+      "case_id": "local_p4_development_v2_0070",
+      "family": "grazing",
+      "source_count": 16,
+      "empty_reads": 60,
+      "source_discovery_reads": 48,
+      "source_negative_reads": 32,
+      "source_negative_time_per_source": 12.0,
+      "empty_time_per_source": 22.0,
+      "oracle_saved_read_seconds_per_source": 34.0,
+      "baseline_seconds_per_source": 270.3115851029195
+    },
+    {
+      "case_id": "local_p4_development_v2_0071",
+      "family": "short_radius",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 62,
+      "source_negative_reads": 49,
+      "source_negative_time_per_source": 22.53846153846154,
+      "empty_time_per_source": 67.23076923076923,
+      "oracle_saved_read_seconds_per_source": 22.53846153846154,
+      "baseline_seconds_per_source": 439.57316544586763
+    },
+    {
+      "case_id": "local_p4_development_v2_0072",
+      "family": "uniform",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 24,
+      "source_negative_reads": 9,
+      "source_negative_time_per_source": 3.6,
+      "empty_time_per_source": 41.266666666666666,
+      "oracle_saved_read_seconds_per_source": 3.6,
+      "baseline_seconds_per_source": 339.51520780255777
+    },
+    {
+      "case_id": "local_p4_development_v2_0073",
+      "family": "clusters",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 41,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 12.846153846153847,
+      "empty_time_per_source": 67.0,
+      "oracle_saved_read_seconds_per_source": 12.846153846153847,
+      "baseline_seconds_per_source": 421.97989316836237
+    },
+    {
+      "case_id": "local_p4_development_v2_0074",
+      "family": "boundary",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 157,
+      "source_negative_reads": 145,
+      "source_negative_time_per_source": 71.91666666666667,
+      "empty_time_per_source": 84.0,
+      "oracle_saved_read_seconds_per_source": 71.91666666666667,
+      "baseline_seconds_per_source": 489.23687773156513
+    },
+    {
+      "case_id": "local_p4_development_v2_0075",
+      "family": "outward",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 161,
+      "source_negative_reads": 149,
+      "source_negative_time_per_source": 73.83333333333333,
+      "empty_time_per_source": 84.0,
+      "oracle_saved_read_seconds_per_source": 73.83333333333333,
+      "baseline_seconds_per_source": 496.7192474953245
+    },
+    {
+      "case_id": "local_p4_development_v2_0076",
+      "family": "corridor",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 34,
+      "source_negative_reads": 21,
+      "source_negative_time_per_source": 9.538461538461538,
+      "empty_time_per_source": 66.92307692307692,
+      "oracle_saved_read_seconds_per_source": 9.538461538461538,
+      "baseline_seconds_per_source": 423.3561017331657
+    },
+    {
+      "case_id": "local_p4_development_v2_0077",
+      "family": "close_pairs",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 37,
+      "source_negative_reads": 24,
+      "source_negative_time_per_source": 11.076923076923077,
+      "empty_time_per_source": 66.92307692307692,
+      "oracle_saved_read_seconds_per_source": 11.076923076923077,
+      "baseline_seconds_per_source": 404.5624768574453
+    },
+    {
+      "case_id": "local_p4_development_v2_0078",
+      "family": "grazing",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 44,
+      "source_negative_reads": 29,
+      "source_negative_time_per_source": 11.6,
+      "empty_time_per_source": 41.4,
+      "oracle_saved_read_seconds_per_source": 11.6,
+      "baseline_seconds_per_source": 385.3299380717283
+    },
+    {
+      "case_id": "local_p4_development_v2_0079",
+      "family": "short_radius",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 71,
+      "source_negative_reads": 59,
+      "source_negative_time_per_source": 29.416666666666668,
+      "empty_time_per_source": 83.58333333333333,
+      "oracle_saved_read_seconds_per_source": 29.416666666666668,
+      "baseline_seconds_per_source": 490.27940232873647
+    },
+    {
+      "case_id": "local_p4_development_v2_0080",
+      "family": "uniform",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 95,
+      "source_negative_reads": 81,
+      "source_negative_time_per_source": 34.57142857142857,
+      "empty_time_per_source": 53.57142857142857,
+      "oracle_saved_read_seconds_per_source": 34.57142857142857,
+      "baseline_seconds_per_source": 459.08169329333896
+    },
+    {
+      "case_id": "local_p4_development_v2_0081",
+      "family": "clusters",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 34,
+      "source_negative_reads": 24,
+      "source_negative_time_per_source": 14.4,
+      "empty_time_per_source": 124.6,
+      "oracle_saved_read_seconds_per_source": 14.4,
+      "baseline_seconds_per_source": 572.2102825804102
+    },
+    {
+      "case_id": "local_p4_development_v2_0082",
+      "family": "boundary",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 137,
+      "source_negative_reads": 126,
+      "source_negative_time_per_source": 68.45454545454545,
+      "empty_time_per_source": 102.63636363636364,
+      "oracle_saved_read_seconds_per_source": 68.45454545454545,
+      "baseline_seconds_per_source": 554.2165475512293
+    },
+    {
+      "case_id": "local_p4_development_v2_0083",
+      "family": "outward",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 87,
+      "source_negative_reads": 72,
+      "source_negative_time_per_source": 28.666666666666668,
+      "empty_time_per_source": 41.86666666666667,
+      "oracle_saved_read_seconds_per_source": 28.666666666666668,
+      "baseline_seconds_per_source": 355.6902989694516
+    },
+    {
+      "case_id": "local_p4_development_v2_0084",
+      "family": "corridor",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 25,
+      "source_negative_reads": 13,
+      "source_negative_time_per_source": 6.5,
+      "empty_time_per_source": 82.83333333333333,
+      "oracle_saved_read_seconds_per_source": 6.5,
+      "baseline_seconds_per_source": 483.675197241899
+    },
+    {
+      "case_id": "local_p4_development_v2_0085",
+      "family": "close_pairs",
+      "source_count": 10,
+      "empty_reads": 210,
+      "source_discovery_reads": 27,
+      "source_negative_reads": 17,
+      "source_negative_time_per_source": 10.2,
+      "empty_time_per_source": 124.6,
+      "oracle_saved_read_seconds_per_source": 10.2,
+      "baseline_seconds_per_source": 551.1188146829805
+    },
+    {
+      "case_id": "local_p4_development_v2_0086",
+      "family": "grazing",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 51,
+      "source_negative_reads": 39,
+      "source_negative_time_per_source": 19.416666666666668,
+      "empty_time_per_source": 83.33333333333333,
+      "oracle_saved_read_seconds_per_source": 19.416666666666668,
+      "baseline_seconds_per_source": 454.82483536444926
+    },
+    {
+      "case_id": "local_p4_development_v2_0087",
+      "family": "short_radius",
+      "source_count": 13,
+      "empty_reads": 147,
+      "source_discovery_reads": 64,
+      "source_negative_reads": 51,
+      "source_negative_time_per_source": 23.46153846153846,
+      "empty_time_per_source": 67.23076923076923,
+      "oracle_saved_read_seconds_per_source": 23.46153846153846,
+      "baseline_seconds_per_source": 474.9738122670545
+    },
+    {
+      "case_id": "local_p4_development_v2_0088",
+      "family": "uniform",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 47,
+      "source_negative_reads": 36,
+      "source_negative_time_per_source": 19.545454545454547,
+      "empty_time_per_source": 102.45454545454545,
+      "oracle_saved_read_seconds_per_source": 19.545454545454547,
+      "baseline_seconds_per_source": 500.29224901846806
+    },
+    {
+      "case_id": "local_p4_development_v2_0089",
+      "family": "clusters",
+      "source_count": 14,
+      "empty_reads": 126,
+      "source_discovery_reads": 48,
+      "source_negative_reads": 34,
+      "source_negative_time_per_source": 14.285714285714286,
+      "empty_time_per_source": 53.42857142857143,
+      "oracle_saved_read_seconds_per_source": 14.285714285714286,
+      "baseline_seconds_per_source": 359.9885931749847
+    },
+    {
+      "case_id": "local_p4_development_v2_0090",
+      "family": "boundary",
+      "source_count": 16,
+      "empty_reads": 84,
+      "source_discovery_reads": 181,
+      "source_negative_reads": 165,
+      "source_negative_time_per_source": 61.625,
+      "empty_time_per_source": 31.25,
+      "oracle_saved_read_seconds_per_source": 92.875,
+      "baseline_seconds_per_source": 379.0655397400408
+    },
+    {
+      "case_id": "local_p4_development_v2_0091",
+      "family": "outward",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 85,
+      "source_negative_reads": 70,
+      "source_negative_time_per_source": 27.866666666666667,
+      "empty_time_per_source": 42.0,
+      "oracle_saved_read_seconds_per_source": 27.866666666666667,
+      "baseline_seconds_per_source": 353.6930335580063
+    },
+    {
+      "case_id": "local_p4_development_v2_0092",
+      "family": "corridor",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 40,
+      "source_negative_reads": 28,
+      "source_negative_time_per_source": 13.916666666666666,
+      "empty_time_per_source": 83.25,
+      "oracle_saved_read_seconds_per_source": 13.916666666666666,
+      "baseline_seconds_per_source": 497.5787910763084
+    },
+    {
+      "case_id": "local_p4_development_v2_0093",
+      "family": "close_pairs",
+      "source_count": 12,
+      "empty_reads": 168,
+      "source_discovery_reads": 57,
+      "source_negative_reads": 45,
+      "source_negative_time_per_source": 22.5,
+      "empty_time_per_source": 83.08333333333333,
+      "oracle_saved_read_seconds_per_source": 22.5,
+      "baseline_seconds_per_source": 448.3822519523986
+    },
+    {
+      "case_id": "local_p4_development_v2_0094",
+      "family": "grazing",
+      "source_count": 11,
+      "empty_reads": 189,
+      "source_discovery_reads": 40,
+      "source_negative_reads": 29,
+      "source_negative_time_per_source": 15.727272727272727,
+      "empty_time_per_source": 102.36363636363636,
+      "oracle_saved_read_seconds_per_source": 15.727272727272727,
+      "baseline_seconds_per_source": 512.0081910937553
+    },
+    {
+      "case_id": "local_p4_development_v2_0095",
+      "family": "short_radius",
+      "source_count": 15,
+      "empty_reads": 105,
+      "source_discovery_reads": 75,
+      "source_negative_reads": 60,
+      "source_negative_time_per_source": 23.8,
+      "empty_time_per_source": 41.8,
+      "oracle_saved_read_seconds_per_source": 23.8,
+      "baseline_seconds_per_source": 359.02592201712395
+    }
+  ]
+}

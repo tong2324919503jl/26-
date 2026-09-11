@@ -33,7 +33,9 @@ $\mathcal F$ 是下面的安全候选域，默认还排除可能产生 near 的�
 
 **直接文献依据。** Tokekar 与 Isler（ICRA 2013）§III-B 式 (1) 使用合法目标位置和读数下的最坏扇区交集直径评价布置。本题固定已经获得的首次观测，再加入未知接收半径的收信约束，是对该准则的条件化改编；并不继承其静态多传感器布置近似保证。[作者原文，第 3 页](https://tokekar.com/pubs/tokekar2013asensor.pdf#page=3)
 
-直径与第一问一致，还能避免“面积很小但区域很细长”的歧义。若改为最小化最坏点估计半径，则应另定义最小覆盖圆准则。四篇一手文献的公式位置、适用范围、完整书目及指标区别详见 [references.md](references.md)。
+直径与第一问一致，还能避免“面积很小但区域很细长”的歧义。若改为最小化最坏点估计半径，则应另定义最小覆盖圆准则。七篇文献的公式位置、适用范围、完整书目及指标区别详见 [references.md](references.md)。
+
+补充依据形成以下论证链：Jaulin–Walter（1993）说明从误差界构造相容集合及以外包界定单调集合特征；Bertsimas等（2011）解释对全部相容情形保证可行；Tokekar–Isler（2013）直接支持最坏直径指标；Mavrotas（2009）支持精度优先的字典序及近优阈值内选短路程的约束法。每篇对应的原文位置和本题推导边界见 [评分到筛选的解释](references.md#4-从文献到当前筛选策略每一步解决什么问题)。
 
 ## 2. 保证收信的连续候选区域
 
@@ -190,6 +192,8 @@ return min(A, partial_max)
 
 可选 fastest_near_best 是已访问集合中满足 $C(q)\le(1+\eta)C(q_*)$ 的最短移动点。默认 $\eta=10\%$ 是可调整的方案容差，不是题目要求或文献常数。pareto_frontier 给出同一有限集合中的时间/直径非劣选项，它们不替换默认精度优先推荐。
 
+默认优先顺序对应字典序，可选备选对应$\epsilon$-约束思想；方法依据见[7]。这里的$\epsilon$表示目标阈值，不能与测向误差$\varepsilon$混同。实现以数值舍入判平局，只在有限访问集合和给定精度下筛选；较小的C表示保证更紧，不必推出真实J或实际误差也更小。
+
 连续近优候选域为
 $\mathcal C_{\rm good}=\{q\in\mathcal F:C(q)\le(1+\eta)C(q_*)\}$；
 CSV、SVG只展示已访问代表点，不是连续域的精确边界。
@@ -217,7 +221,7 @@ python scripts/verify_project.py
 | [solve.py](solve.py) | 统一几何、四圆盘、评分、提前停止与实际后验 |
 | [compare_strategies.py](compare_strategies.py) | 同模型同精度重评基线，需要完整 B 时关闭提前停止 |
 | [benchmark_scoring.py](benchmark_scoring.py) | 仅切换提前停止，对照评分、排序、选点、扫描量和耗时 |
-| [references.md](references.md) | 四篇一手文献核查与可用于正文的说明 |
+| [references.md](references.md) | 七篇文献核查、筛选逻辑对应及可用于正文的说明 |
 | [默认结果](results/selection.json) / [边界结果](results/boundary/selection.json) | 推荐点、统计与自建第二读数后的区域 |
 | [候选表](results/second_point_candidates.csv) / [示意图](results/candidate_region.svg) | 近优已访问点 |
 | [验证记录](results/validation.md) | 当前结果和证据边界 |

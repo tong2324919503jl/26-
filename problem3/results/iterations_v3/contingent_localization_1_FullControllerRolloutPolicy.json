@@ -1,0 +1,113 @@
+{
+  "FullControllerRolloutPolicy": {
+    "mean": 196.84654325706904,
+    "passed": 1,
+    "full": 1,
+    "movement": 10169.258027994834,
+    "actions": 124,
+    "runtime": 4.157713000007789,
+    "rows": [
+      {
+        "id": "local_p3_development_v2_0000",
+        "seed": 3610000,
+        "family": "uniform",
+        "time": 2755.8516055989667,
+        "average": 196.84654325706904,
+        "pass220": true,
+        "full": true,
+        "error": null,
+        "policy": {
+          "problem": 3,
+          "strategy": "adaptive",
+          "cleared_channels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16,
+            19
+          ],
+          "coverage_complete": true,
+          "completion_certified": true,
+          "termination_reason": "certified_coverage_and_all_detected_cleared",
+          "coverage_points_visited": 7,
+          "detected_channels": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            14,
+            16,
+            19
+          ],
+          "config": {
+            "ring_radius": 1150.0,
+            "bearing_error_deg": 1.005,
+            "max_probe_count": 5,
+            "lateral_fraction": 0.12,
+            "lateral_min_m": 45.0,
+            "lateral_max_m": 140.0,
+            "opportunistic_radius_m": 0.0,
+            "optical_spacing_m": 26.0,
+            "clear_guarantee_radius_m": 19.99,
+            "exploratory_clear_radius_m": 55.0,
+            "neighbor_updates": true,
+            "neighbor_max_distance_m": 1450.0,
+            "neighbor_min_parallax_deg": 12.0,
+            "adaptive_discovery": false,
+            "discovery_min_spacing_m": 700.0,
+            "discovery_replacement_only": true,
+            "target_uncertainty_weight": 0.5
+          },
+          "measure_actions": 109,
+          "clear_actions": 15,
+          "failed_clears": 1,
+          "optical_fallbacks": 0,
+          "negative_localization_reads": 0,
+          "safe_clear_offsets": 7,
+          "lookahead_choices": 9,
+          "contingent_prediction_actions": 1308,
+          "contingent_prediction_failures": 0,
+          "interleaved_contingent_sources": 6,
+          "zero_origin_geometry": {
+            "count": 9,
+            "radius_m": 1700.0,
+            "triggered": false,
+            "phase_candidates": 16
+          }
+        },
+        "sim": {
+          "source_count": 14,
+          "cleared_count": 14,
+          "cleared_fraction": 1.0,
+          "virtual_time_s": 2755.8516055989667,
+          "average_clear_time_s": 196.84654325706904,
+          "last_clear_time_s": 2755.8516055989667,
+          "time_to_90_percent_s": 2680.5366692486373,
+          "movement_m": 10169.258027994834,
+          "actions": 124,
+          "measure": 109,
+          "clear": 15,
+          "failed_clear": 1,
+          "switch": 104,
+          "no_signal": 67
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "accepted": false,
+  "reason": "certificate_round_limit",
+  "history": [
+    {
+      "round": 0,
+      "points": 15,
+      "constraints": 3313,
+      "objective": 14.999999999965436,
+      "certified": false,
+      "witness_bound_m": 1180.06275546435
+    },
+    {
+      "round": 1,
+      "points": 16,
+      "constraints": 3319,
+      "objective": 15.999999999998195,
+      "certified": false,
+      "witness_bound_m": 1088.5610522746406
+    },
+    {
+      "round": 2,
+      "points": 16,
+      "constraints": 3317,
+      "objective": 16.00000000000168,
+      "certified": false,
+      "witness_bound_m": 1122.3453821750002
+    },
+    {
+      "round": 3,
+      "points": 16,
+      "constraints": 3329,
+      "objective": 16.00000000000297,
+      "certified": false,
+      "witness_bound_m": 1130.12830040987
+    },
+    {
+      "round": 4,
+      "points": 16,
+      "constraints": 3337,
+      "objective": 15.99999999999955,
+      "certified": false,
+      "witness_bound_m": 1103.6808728855967
+    },
+    {
+      "round": 5,
+      "points": 16,
+      "constraints": 3359,
+      "objective": 16.000000000000206,
+      "certified": false,
+      "witness_bound_m": 1091.7770619957096
+    },
+    {
+      "round": 6,
+      "points": 16,
+      "constraints": 3371,
+      "objective": 15.999999999999984,
+      "certified": false,
+      "witness_bound_m": 1052.4316922537541
+    },
+    {
+      "round": 7,
+      "points": 16,
+      "constraints": 3354,
+      "objective": 16.000000000000167,
+      "certified": false,
+      "witness_bound_m": 1077.0009560248402
+    },
+    {
+      "round": 8,
+      "points": 16,
+      "constraints": 3355,
+      "objective": 15.99999999999999,
+      "certified": false,
+      "witness_bound_m": 1033.3298117219433
+    },
+    {
+      "round": 9,
+      "points": 16,
+      "constraints": 3369,
+      "objective": 15.99999999999999,
+      "certified": false,
+      "witness_bound_m": 1050.894074981558
+    },
+    {
+      "round": 10,
+      "points": 17,
+      "constraints": 3388,
+      "objective": 17.00000000000027,
+      "certified": false,
+      "witness_bound_m": 1049.4567111119352
+    },
+    {
+      "round": 11,
+      "points": 17,
+      "constraints": 3388,
+      "objective": 16.99999999999715,
+      "certified": false,
+      "witness_bound_m": 1085.02055902473
+    },
+    {
+      "round": 12,
+      "points": 23,
+      "constraints": 3406,
+      "objective": 23.0,
+      "certified": false,
+      "witness_bound_m": 1189.409045528547
+    },
+    {
+      "round": 13,
+      "points": 22,
+      "constraints": 3454,
+      "objective": 22.0,
+      "certified": false,
+      "witness_bound_m": 1123.5734884331023
+    },
+    {
+      "round": 14,
+      "points": 23,
+      "constraints": 3485,
+      "objective": 23.0,
+      "certified": false,
+      "witness_bound_m": 1130.3460288151784
+    },
+    {
+      "round": 15,
+      "points": 21,
+      "constraints": 3512,
+      "objective": 21.0,
+      "certified": false,
+      "witness_bound_m": 1085.80170950699
+    },
+    {
+      "round": 16,
+      "points": 18,
+      "constraints": 3532,
+      "objective": 17.99999999999723,
+      "certified": false,
+      "witness_bound_m": 1095.2329028119673
+    },
+    {
+      "round": 17,
+      "points": 17,
+      "constraints": 3551,
+      "objective": 16.999999999999822,
+      "certified": false,
+      "witness_bound_m": 1073.1482257964205
+    },
+    {
+      "round": 18,
+      "points": 17,
+      "constraints": 3559,
+      "objective": 17.0,
+      "certified": false,
+      "witness_bound_m": 1071.2191280675274
+    },
+    {
+      "round": 19,
+      "points": 16,
+      "constraints": 3569,
+      "objective": 15.999999999999986,
+      "certified": false,
+      "witness_bound_m": 1042.3077156397076
+    }
+  ],
+  "fixed_points": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1930.0,
+      0.0
+    ],
+    [
+      1478.4657752196276,
+      1240.5800866950208
+    ],
+    [
+      335.1409828971757,
+      1900.6789633135616
+    ],
+    [
+      -964.9999999999995,
+      1671.4290293039667
+    ],
+    [
+      -1813.6067581168031,
+      660.0988766185409
+    ],
+    [
+      -1813.6067581168033,
+      -660.0988766185405
+    ],
+    [
+      -965.0000000000009,
+      -1671.4290293039662
+    ],
+    [
+      335.14098289717487,
+      -1900.6789633135618
+    ],
+    [
+      1478.4657752196272,
+      -1240.5800866950215
+    ]
+  ],
+  "settings": {
+    "free_point": null,
+    "rounds": 20,
+    "spacing": 200,
+    "outer_count": 9,
+    "outer_radius": 1930.0,
+    "max_selected": 23,
+    "time_limit": 4.0
+  }
+}

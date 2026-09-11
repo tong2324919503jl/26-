@@ -1,0 +1,184 @@
+[
+  {
+    "file": "coverage_family_development_v2_384_nselected.json",
+    "branch": "ring8_r1700",
+    "unchanged_non_trigger_cases": 288,
+    "triggered_cases": 96,
+    "first_scan_radius_checked_cases": 96
+  },
+  {
+    "file": "coverage_family_development_v2_384_nselected.json",
+    "branch": "ring9_r1700",
+    "unchanged_non_trigger_cases": 288,
+    "triggered_cases": 96,
+    "first_scan_radius_checked_cases": 96
+  },
+  {
+    "file": "coverage_family_development_v2_96_n6.json",
+    "branch": "ring6_r1250",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_n6.json",
+    "branch": "ring6_r1400",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_n6.json",
+    "branch": "ring6_r1550",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_n6.json",
+    "branch": "ring6_r1700",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_n7.json",
+    "branch": "ring7_r1350",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n7.json",
+    "branch": "ring7_r1450",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n7.json",
+    "branch": "ring7_r1550",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n7.json",
+    "branch": "ring7_r1650",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n7.json",
+    "branch": "ring7_r1750",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring8_r1250",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring8_r1350",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring8_r1450",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring8_r1550",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring8_r1700",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring9_r1250",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring9_r1400",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring9_r1550",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_n8_9.json",
+    "branch": "ring9_r1700",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 0
+  },
+  {
+    "file": "coverage_family_development_v2_96_nselected.json",
+    "branch": "ring6_r1725",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_nselected.json",
+    "branch": "ring7_r1800",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_nselected.json",
+    "branch": "ring8_r1800",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v2_96_nselected.json",
+    "branch": "ring9_r1800",
+    "unchanged_non_trigger_cases": 72,
+    "triggered_cases": 24,
+    "first_scan_radius_checked_cases": 24
+  },
+  {
+    "file": "coverage_family_development_v3_384_nselected.json",
+    "branch": "ring8_r1700",
+    "unchanged_non_trigger_cases": 288,
+    "triggered_cases": 96,
+    "first_scan_radius_checked_cases": 96
+  },
+  {
+    "file": "coverage_family_development_v3_384_nselected.json",
+    "branch": "ring9_r1700",
+    "unchanged_non_trigger_cases": 288,
+    "triggered_cases": 96,
+    "first_scan_radius_checked_cases": 96
+  }
+]

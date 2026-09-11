@@ -1,0 +1,50 @@
+[
+  {
+    "count": 19,
+    "outer": 12,
+    "rf_origin": false,
+    "fast_m": 1289.5300803480234,
+    "reference_m": 1289.5300803480231,
+    "difference_m": 2.2737367544323206e-13
+  },
+  {
+    "count": 19,
+    "outer": 12,
+    "rf_origin": true,
+    "fast_m": 1076.9822849237491,
+    "reference_m": 1076.982284923749,
+    "difference_m": 2.2737367544323206e-13
+  },
+  {
+    "count": 18,
+    "outer": 10,
+    "rf_origin": true,
+    "fast_m": 1169.8140712475372,
+    "reference_m": 1169.8140712475372,
+    "difference_m": 0.0
+  },
+  {
+    "count": 17,
+    "outer": 10,
+    "rf_origin": false,
+    "fast_m": 1228.2982544693107,
+    "reference_m": 1228.2982544693107,
+    "difference_m": 0.0
+  },
+  {
+    "count": 16,
+    "outer": 9,
+    "rf_origin": true,
+    "fast_m": 1281.4614980430285,
+    "reference_m": 1281.4614980430288,
+    "difference_m": 2.2737367544323206e-13
+  },
+  {
+    "count": 15,
+    "outer": 8,
+    "rf_origin": false,
+    "fast_m": 1424.1628702086834,
+    "reference_m": 1424.1628702086834,
+    "difference_m": 0.0
+  }
+]

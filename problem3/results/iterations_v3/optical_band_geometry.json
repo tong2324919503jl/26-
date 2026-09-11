@@ -1,0 +1,8 @@
+{
+  "polygons": 1200,
+  "covered_polygons": 605,
+  "independent_voronoi_vertex_checks": 15643,
+  "maximum_distance_m": 19.976544965642066,
+  "clear_radius_m": 20.0,
+  "all_passed": true
+}

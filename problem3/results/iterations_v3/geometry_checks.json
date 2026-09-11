@@ -1,0 +1,9 @@
+{
+  "scope": "external synthetic development audit only; no truth exposed to policy",
+  "annular_rotation_certificates": 97,
+  "worst_covering_radius_m": 915.680920117759,
+  "negative_disk_boundary_retention_checks": 6425,
+  "end_to_end_episodes": 384,
+  "source_retention_checks": 14646,
+  "violations": 0
+}

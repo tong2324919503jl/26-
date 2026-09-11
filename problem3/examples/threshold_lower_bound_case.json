@@ -1,0 +1,98 @@
+{
+  "case_id": "p3_threshold_lower_bound_regular_decagon",
+  "problem": 3,
+  "provenance": "self_constructed_physical_lower_bound_not_official",
+  "seed": 2026091103,
+  "split": "independent_physical_lower_bound",
+  "family": "regular_decagon_outer_boundary",
+  "noise": "hash_uniform",
+  "construction": {
+    "ideal_radius_m": 1800,
+    "ideal_angles_deg": [
+      0,
+      36,
+      72,
+      108,
+      144,
+      180,
+      216,
+      252,
+      288,
+      324
+    ],
+    "coordinate_rule": "truncate each coordinate toward zero to 6 decimal places",
+    "purpose": "physical lower bound only; excluded from tuning and benchmark suites"
+  },
+  "sources": [
+    {
+      "channel": 1,
+      "x": 1800.0,
+      "y": 0.0,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 2,
+      "x": 1456.230589,
+      "y": 1058.013454,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 3,
+      "x": 556.230589,
+      "y": 1711.901729,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 4,
+      "x": -556.230589,
+      "y": 1711.901729,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 5,
+      "x": -1456.230589,
+      "y": 1058.013454,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 6,
+      "x": -1800.0,
+      "y": 0.0,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 7,
+      "x": -1456.230589,
+      "y": -1058.013454,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 8,
+      "x": -556.230589,
+      "y": -1711.901729,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 9,
+      "x": 556.230589,
+      "y": -1711.901729,
+      "radius": 1000.0,
+      "orientation_deg": null
+    },
+    {
+      "channel": 10,
+      "x": 1456.230589,
+      "y": -1058.013454,
+      "radius": 1000.0,
+      "orientation_deg": null
+    }
+  ]
+}
