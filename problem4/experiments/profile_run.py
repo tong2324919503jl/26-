@@ -33,4 +33,4 @@ for case in generate_suite(4,'development_v2',384):
  rows.append({'id':case['case_id'],'n':len(case['sources']),'cost':client.cost,'hindsight_route_length':route_length,'fixed_cover_mst_lower_bound':mst,**sim.statistics()})
 summary={phase:{k:statistics.mean(r['cost'].get(phase,{}).get(k,0) for r in rows) for k in ('time','move','actions')} for phase in ('discovery','localize','neighbor')}
 summary['full']={'mean_seconds_per_source':statistics.mean(r['average_clear_time_s'] for r in rows),'hindsight_route_length':statistics.mean(r['hindsight_route_length'] for r in rows),'fixed_cover_mst_lower_bound':statistics.mean(r['fixed_cover_mst_lower_bound'] for r in rows)}
-print(json.dumps(summary,indent=2));Path(__file__).with_name('profile_development_v2_384.json').write_text(json.dumps({'summary':summary,'episodes':rows},indent=2)+'\n',encoding='utf-8')
+print(json.dumps(summary,indent=2));(Path(__file__).resolve().parents[1]/'results'/'iterations_v2').joinpath('profile_development_v2_384.json').write_text(json.dumps({'summary':summary,'episodes':rows},indent=2)+'\n',encoding='utf-8')

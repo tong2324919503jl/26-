@@ -1,0 +1,39 @@
+{
+  "frozen_at_utc": "2026-09-11T03:29:46.931751+00:00",
+  "selected_policy": "problem4_v2: 23-point certified coverage + RadiusBound localization + warmhybrid_info route",
+  "selection_order": [
+    "certified full clearance",
+    "500-second threshold pass rate",
+    "mean virtual time"
+  ],
+  "source_sha256": {
+    "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+    "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+    "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+    "problem3/scenarios.py": "ad51d5a2c3be8d518b4fbeb0c2dd82d26dd9e0e8950d8dabc067ee88edc4d6e3",
+    "problem4/policy.py": "4238826909d6ac0cec9a1f1f4355e8abe56142ec17d89ad4474f00a2e847c810",
+    "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+    "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "problem4/routing.py": "70d96a68250ad1dcd1d466cc75bc1c5f0f601b61832144338695ca223b732057",
+    "scripts/benchmark_search.py": "e1cc6110c9ffddaf4bbd4c8d184145bdc224194c9fbb79f9dba57a708363547a"
+  },
+  "development_selection_report": "problem4/results/iterations_v2/route_escape_rounded_384_info_warm_warmhybrid_info.json",
+  "development_selection_report_sha256": "e7a4f0759c7fbb94a07fdad9f8ab73594974d4470d7f2059f4388368d7add39b",
+  "evaluation_splits": {
+    "development_v2": [
+      610000,
+      384
+    ],
+    "holdout_v2": [
+      790000,
+      512
+    ],
+    "stress_v2": [
+      930000,
+      256
+    ]
+  },
+  "heldout_status_at_freeze": "holdout_v2 and stress_v2 have not been evaluated or used to choose parameters",
+  "note": "All evaluations synthetic; no official simulator connection. Subsequent algorithm changes require new unseen holdout seeds."
+}

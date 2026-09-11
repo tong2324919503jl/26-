@@ -3,6 +3,7 @@
   "problem": 3,
   "split": "stress",
   "case_count": 8,
+  "cases_sha256": "cb0575e215206455f1f87f5f68b2b33d439ffcab6f2f1066e835ce4c6a991d3e",
   "threshold_seconds_per_source": 300.0,
   "threshold_definition": "Full clearance AND completion certificate; total virtual time <= threshold * N",
   "config": null,
@@ -11,8 +12,12 @@
     "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
     "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
     "problem3/scenarios.py": "ad51d5a2c3be8d518b4fbeb0c2dd82d26dd9e0e8950d8dabc067ee88edc4d6e3",
-    "problem4/policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
-    "scripts/benchmark_search.py": "2957c6b1d2c024a701612b20889a61ae7378c954af121dd58782f36f723a4628"
+    "problem4/policy.py": "4238826909d6ac0cec9a1f1f4355e8abe56142ec17d89ad4474f00a2e847c810",
+    "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+    "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "problem4/routing.py": "70d96a68250ad1dcd1d466cc75bc1c5f0f601b61832144338695ca223b732057",
+    "scripts/benchmark_search.py": "e1cc6110c9ffddaf4bbd4c8d184145bdc224194c9fbb79f9dba57a708363547a"
   },
   "summary": {
     "adaptive": {
@@ -28,8 +33,8 @@
       "mean_failed_clear": 31.5,
       "mean_movement_m": 14767.65765163404,
       "mean_reward": 221.16978232243983,
-      "total_program_runtime_s": 0.04453449998982251,
-      "max_program_runtime_s": 0.015616000004229136,
+      "total_program_runtime_s": 0.04318979999516159,
+      "max_program_runtime_s": 0.01546129999042023,
       "failures": [],
       "threshold_curve": {
         "100": 0,
@@ -59,8 +64,8 @@
         "mean_failed_clear": 7,
         "mean_movement_m": 13698.907735690425,
         "mean_reward": -18.859384904602837,
-        "total_program_runtime_s": 0.015616000004229136,
-        "max_program_runtime_s": 0.015616000004229136,
+        "total_program_runtime_s": 0.01546129999042023,
+        "max_program_runtime_s": 0.01546129999042023,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -87,8 +92,8 @@
         "mean_failed_clear": 8,
         "mean_movement_m": 11133.62330281349,
         "mean_reward": 1000.9758446479101,
-        "total_program_runtime_s": 0.004090100002940744,
-        "max_program_runtime_s": 0.004090100002940744,
+        "total_program_runtime_s": 0.004082600004039705,
+        "max_program_runtime_s": 0.004082600004039705,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -115,8 +120,8 @@
         "mean_failed_clear": 4,
         "mean_movement_m": 17921.642679288143,
         "mean_reward": -48.710951195254324,
-        "total_program_runtime_s": 0.0028375999972922727,
-        "max_program_runtime_s": 0.0028375999972922727,
+        "total_program_runtime_s": 0.002827799995429814,
+        "max_program_runtime_s": 0.002827799995429814,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -143,8 +148,8 @@
         "mean_failed_clear": 3,
         "mean_movement_m": 18187.266763833435,
         "mean_reward": -49.88177842555621,
-        "total_program_runtime_s": 0.0026296999858459458,
-        "max_program_runtime_s": 0.0026296999858459458,
+        "total_program_runtime_s": 0.002611500007333234,
+        "max_program_runtime_s": 0.002611500007333234,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -171,8 +176,8 @@
         "mean_failed_clear": 2,
         "mean_movement_m": 12126.129536671202,
         "mean_reward": -9.274196911141352,
-        "total_program_runtime_s": 0.0033956000115722418,
-        "max_program_runtime_s": 0.0033956000115722418,
+        "total_program_runtime_s": 0.003461299987975508,
+        "max_program_runtime_s": 0.003461299987975508,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -199,8 +204,8 @@
         "mean_failed_clear": 6,
         "mean_movement_m": 10357.23830292669,
         "mean_reward": 1003.218411313822,
-        "total_program_runtime_s": 0.003861499993945472,
-        "max_program_runtime_s": 0.003861499993945472,
+        "total_program_runtime_s": 0.003885800004354678,
+        "max_program_runtime_s": 0.003885800004354678,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -227,8 +232,8 @@
         "mean_failed_clear": 216,
         "mean_movement_m": 22666.332233455672,
         "mean_reward": -100.84221488970377,
-        "total_program_runtime_s": 0.00915559999702964,
-        "max_program_runtime_s": 0.00915559999702964,
+        "total_program_runtime_s": 0.007830999995348975,
+        "max_program_runtime_s": 0.007830999995348975,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -255,8 +260,8 @@
         "mean_failed_clear": 6,
         "mean_movement_m": 12050.12065839326,
         "mean_reward": -7.267471055955044,
-        "total_program_runtime_s": 0.002948399996967055,
-        "max_program_runtime_s": 0.002948399996967055,
+        "total_program_runtime_s": 0.0030285000102594495,
+        "max_program_runtime_s": 0.0030285000102594495,
         "failures": [],
         "threshold_curve": {
           "100": 0,
@@ -300,7 +305,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -18.859384904602837,
-      "program_runtime_s": 0.015616000004229136,
+      "program_runtime_s": 0.01546129999042023,
       "error": null,
       "policy": {
         "problem": 3,
@@ -386,7 +391,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": true,
       "reward": 1000.9758446479101,
-      "program_runtime_s": 0.004090100002940744,
+      "program_runtime_s": 0.004082600004039705,
       "error": null,
       "policy": {
         "problem": 3,
@@ -472,7 +477,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -48.710951195254324,
-      "program_runtime_s": 0.0028375999972922727,
+      "program_runtime_s": 0.002827799995429814,
       "error": null,
       "policy": {
         "problem": 3,
@@ -558,7 +563,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -49.88177842555621,
-      "program_runtime_s": 0.0026296999858459458,
+      "program_runtime_s": 0.002611500007333234,
       "error": null,
       "policy": {
         "problem": 3,
@@ -644,7 +649,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -9.274196911141352,
-      "program_runtime_s": 0.0033956000115722418,
+      "program_runtime_s": 0.003461299987975508,
       "error": null,
       "policy": {
         "problem": 3,
@@ -730,7 +735,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": true,
       "reward": 1003.218411313822,
-      "program_runtime_s": 0.003861499993945472,
+      "program_runtime_s": 0.003885800004354678,
       "error": null,
       "policy": {
         "problem": 3,
@@ -816,7 +821,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -100.84221488970377,
-      "program_runtime_s": 0.00915559999702964,
+      "program_runtime_s": 0.007830999995348975,
       "error": null,
       "policy": {
         "problem": 3,
@@ -902,7 +907,7 @@
       "threshold_total_s": 3000.0,
       "threshold_passed": false,
       "reward": -7.267471055955044,
-      "program_runtime_s": 0.002948399996967055,
+      "program_runtime_s": 0.0030285000102594495,
       "error": null,
       "policy": {
         "problem": 3,

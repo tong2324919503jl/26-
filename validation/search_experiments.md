@@ -1,5 +1,7 @@
 # 问题三、四：本地实验与证据边界
 
+**第四问已完成第二轮速度改进，最新结果见 [新版与上一版配对比较](../problem4/results/speed_comparison_v2.md)。** 第二轮使用额外384/512/256例，并在新留出测试前冻结代码。下面保留第一轮历史记录；其中第四问的 `adaptive` 现以 `legacy` 名称保留，不代表当前默认版本。
+
 本实验使用自行构造的物理环境和案例，没有读取官方模拟器数据，也没有消耗正式测试机会。算法通过只暴露检测与清除响应的客户端运行，不能读取实际源数、坐标、半径或朝向；评分器只在运行结束后读取真值。
 
 ## 最终结果
@@ -64,12 +66,12 @@
 ## 复现
 
 ```powershell
-python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical --save-cases
-python scripts/benchmark_search.py --problem 4 --split development --strategies baseline adaptive optical --save-cases
-python scripts/benchmark_search.py --problem 3 --split holdout --strategies adaptive --save-cases
-python scripts/benchmark_search.py --problem 4 --split holdout --strategies adaptive --save-cases
-python scripts/benchmark_search.py --problem 3 --split stress --strategies adaptive --save-cases
-python scripts/benchmark_search.py --problem 4 --split stress --strategies adaptive --save-cases
+python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical --tag v1_reproduction --save-cases
+python scripts/benchmark_search.py --problem 4 --split development --strategies baseline legacy optical --tag v1_reproduction --save-cases
+python scripts/benchmark_search.py --problem 3 --split holdout --strategies adaptive --tag v1_reproduction --save-cases
+python scripts/benchmark_search.py --problem 4 --split holdout --strategies legacy --tag v1_reproduction --save-cases
+python scripts/benchmark_search.py --problem 3 --split stress --strategies adaptive --tag v1_reproduction --save-cases
+python scripts/benchmark_search.py --problem 4 --split stress --strategies legacy --tag v1_reproduction --save-cases
 ```
 
 报告保存全部种子、逐例结果、失败记录、参数和代码SHA-256。运行期间代码改变则拒绝生成混合版本报告。后续若根据留出结果调整算法，须另建新留出种子，不能继续称原集合为未见数据。

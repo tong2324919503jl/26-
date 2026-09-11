@@ -153,7 +153,11 @@ def segment_cover_radius(sites, normal, offset, radius=1800.0, full_report=False
             if other == site:
                 continue
             nx2, ny2 = other[0] - site[0], other[1] - site[1]
-            bound = (other[0] ** 2 + other[1] ** 2 - site[0] ** 2 - site[1] ** 2) / 2
+            # Difference of squared norms as a dot product avoids cancellation
+            # for nearly coincident sites and keeps reversed constraints
+            # exactly antisymmetric before normalization. Otherwise two cells
+            # can develop a numerical gap and omit part of the target disk.
+            bound = (nx2 * (other[0] + site[0]) + ny2 * (other[1] + site[1])) / 2
             cell = _clip(cell, nx2, ny2, bound)
             if not cell:
                 break
@@ -191,7 +195,7 @@ def directional_cover_certificate(points, target_radius=1800.0, receive_radius=1
         a, b = points[i], points[j]
         dx, dy = b[0] - a[0], b[1] - a[1]
         length = math.hypot(dx, dy)
-        if length < 1e-6:
+        if length == 0:
             continue
         normal = (-dy / length, dx / length)
         offset = normal[0] * a[0] + normal[1] * a[1]

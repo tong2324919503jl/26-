@@ -24,6 +24,21 @@ class VoronoiSegmentTests(unittest.TestCase):
         result = segment_cover_radius([(1900.0, 0.0)], (1.0, 0.0), 1799)
         self.assertAlmostEqual(result["radius_bound_m"], math.sqrt(101 ** 2 + 1800 ** 2 - 1799 ** 2), places=5)
 
+    def test_nearly_coincident_sites_do_not_lose_a_circular_cap(self):
+        # Subtracting the four squared coordinates used to leave a 1.159 m
+        # numerical gap between these two Voronoi cells and return zero here.
+        a = (878.5434900187672, -767.9402882393684)
+        b = (878.543490018679, -767.9402882393205)
+        delta = (b[0] - a[0], b[1] - a[1])
+        norm = math.hypot(*delta)
+        normal = (-delta[0] / norm, -delta[1] / norm)
+        one = segment_cover_radius([a], normal, 1138.1, 1138.4)
+        two = segment_cover_radius([a, b], normal, 1138.1, 1138.4)
+        self.assertGreater(two["radius_bound_m"], 281)
+        # Adding a site only 1e-10 m away changes nearest-site distances by
+        # at most that separation (plus the outward computational margins).
+        self.assertAlmostEqual(one["radius_bound_m"], two["radius_bound_m"], places=5)
+
 
 class DirectionalCertificateTests(unittest.TestCase):
     def test_frozen_23_point_layout_has_large_reception_margin(self):
@@ -66,6 +81,14 @@ class DirectionalCertificateTests(unittest.TestCase):
         self.assertFalse(directional_cover_certificate([(-2000, 0), (0, 0), (2000, 0)])["certified"])
         with self.assertRaises(ValueError):
             directional_cover_certificate(static_coverage_points(), margin_m=1e-8)
+
+    def test_distinct_nearly_coincident_pairs_are_still_enumerated(self):
+        points = static_coverage_points() + [(878.5434900187672, -767.9402882393684), (878.543490018679, -767.9402882393205)]
+        result = directional_cover_certificate(points, full_report=True, early_exit=False)
+        pairs = {tuple(row["pair"]) for row in result["pair_details"]}
+        self.assertIn((23, 24), pairs)
+        self.assertIn((24, 23), pairs)
+        self.assertTrue(result["certified"])
 
 
 if __name__ == "__main__":

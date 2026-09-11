@@ -25,7 +25,7 @@
   "threshold_total_s": 4200.0,
   "threshold_passed": false,
   "reward": -8.800004884574285,
-  "program_runtime_s": 0.013910599998780526,
+  "program_runtime_s": 0.01762060000328347,
   "error": null,
   "policy": {
     "problem": 3,

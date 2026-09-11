@@ -9,6 +9,7 @@
 | 第二问评分依据与提前停止效果 | [文献核查](problem2/references.md)、[等价性与计算量](problem2/results/scoring_benchmark.md) |
 | 第三问：自动搜索并清除全部全向源 | [问题3](problem3/README.md) |
 | 第四问：自动处理全向与定向混合源 | [问题4](problem4/README.md) |
+| 第四问新版与上一版的速度比较 | [第二轮提速结果](problem4/results/speed_comparison_v2.md) |
 | 去官方平台演练、正式测试 | [模拟测试简明说明](simulation_guide.md) |
 | 看本地比较与调优依据 | [实验说明](validation/search_experiments.md) |
 | 看程序检查是否通过 | [验证报告](validation/report.md) |

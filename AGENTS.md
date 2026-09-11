@@ -10,6 +10,7 @@
 - `problem2/`：第二问说明、求解实现、`examples/`、`results/`、`tests/`。
 - `problem3/`：全向搜索策略，共用几何、HTTP客户端、本地仿真器、样本生成器和运行入口。
 - `problem4/`：混合定向策略、覆盖证明及样本、结果和测试；复用第三问共用组件。
+- 第四问第二轮将上一版完整保存在 `legacy_policy.py`；新版几何、历史观测裁剪、路径排序分别在 `coverage.py`、`localization.py`、`routing.py`。`experiments/` 保留开发分支，默认运行不能依赖实验脚本或 `tmp/`。
 - `simulation_guide.md`：依据两份附件整理的平台演练、正式测试和日志导出步骤。
 - `validation/search_experiments.md`：第三四问开发、留出和压力测试口径及调优记录。
 - `scripts/`：跨问题的资料整理、验证入口。
@@ -29,6 +30,7 @@
 - `python scripts/verify_project.py` 运行四问测试、外部目录启动检查、第三四问各8例压力回归、资料完整性检查并更新验证报告。
 - `python problem3/solve.py`、`python problem4/solve.py` 默认仅跑本地案例；显式 `--online --robot-id 队号` 才连接平台。相对自选输入/输出路径按对应问题目录解析。
 - `python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical` 批量比较；第四问改为4，留出/压力集改为holdout/stress。生成数据写examples，结果写results。
+- 第四问第二轮使用 `--split development_v2/holdout_v2/stress_v2 --strategies legacy adaptive --save-cases`（三个集合分别运行），数量384/512/256。`python scripts/report_problem4_speed.py` 汇总配对速度与阈值变化；旧报告保留为历史结果，不与新代码混写。新参数只用开发集合选择，留出前冻结代码。
 - `python scripts/plot_search.py` 重建实验对照图；仅此可选绘图脚本需要matplotlib。核心算法、HTTP客户端、本地测试与统一验证仅需标准库。
 - `python problem2/compare_strategies.py` 重建同口径策略比较；统一验证也会运行此入口，计算输出放在 `problem2/results/`。
 - `python problem2/benchmark_scoring.py` 对照同一统一模型的完整扫描和提前停止，检查评分、排序、完整选点路径一致，并记录扫描量及本地耗时；统一验证也会运行。
@@ -47,9 +49,10 @@
 - 第二问评分与实际后验共用几何构造，扇区、条带和5米投影下界须同步半步增宽；唯一定位目标为最坏相容读数下的区域直径。先算A，扫描B的部分最大值达到A即停止；此时完整B及全局最坏单元必须记null，部分最大值仅为B的下界。依据与适用范围见 `problem2/references.md`。
 - 1800米目标圆约束干扰源位置，不限制第二检测点只能在圆内。
 - 原文件为权威来源；提取文本可能损失公式排版或图示。
-- 第三四问不能把自建环境、mock HTTP或本地奖励写成官方模拟器或官方成绩。每问开发96、留出192、压力96例，种子与误差场固定，策略不访问真值。留出后再调优须更换留出集合并披露。
+- 第三四问不能把自建环境、mock HTTP或本地奖励写成官方模拟器或官方成绩。第一轮每问开发96、留出192、压力96例；第四问第二轮另用384/512/256个不重叠种子，策略不访问真值。留出后再调优须更换留出集合并披露。
 - 接口读数两位小数，几何误差至少按±1.005°处理；阴性不自动删除定向候选区域，收紧前须验证相应距离/半平面前提。
 - 第四问允许检测点在目标圆外；全清终止须完成有证明的覆盖并清除已发现源，或成功清除上限16个，达到10个不能认定完成。
+- 第四问默认23点布局由有限Voronoi圆缺极值证书认证；不能仅用采样网格接受更少点。发现16个频道只允许停止发现阶段，实际清除16个才能结束，并保持 `coverage_complete` 与 `completion_certified` 的区别。历史阴性裁剪须先证明其在未知接收半径内，不能直接减圆盘。
 - 官方正式测试每问仅3次，成功启动和手工中止均占次。须先读两份附件，原名保存平台加密日志，本地JSONL不能替代。
 - 平台请求串行，同动作重试复用同ID同内容，未知结果不发新动作。clear不切频道，accepted=false不更新状态；读取enter实际剩余时间，结束后不能用exit查询原因。
 

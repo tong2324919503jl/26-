@@ -23,6 +23,11 @@ THRESHOLDS = {3: 300.0, 4: 500.0}
 
 
 def get_policy(problem, strategy, config=None):
+    if strategy == 'legacy':
+        if problem != 4:
+            raise ValueError('legacy is the previous problem4 adaptive policy')
+        from problem4.legacy_policy import SearchPolicy
+        return SearchPolicy(problem=4, strategy='adaptive', config=config)
     if problem == 3:
         from problem3.policy import SearchPolicy
     else:
@@ -89,7 +94,9 @@ def aggregate(rows):
 
 def source_fingerprint():
     paths = [ROOT/'problem3'/f for f in ('policy.py','geometry.py','simulator.py','scenarios.py')]
-    paths += [ROOT/'problem4/policy.py', Path(__file__).resolve()]
+    paths += [ROOT/'problem4'/f for f in
+              ('policy.py','legacy_policy.py','localization.py','coverage.py','routing.py','adaptive_coverage.py')]
+    paths += [Path(__file__).resolve()]
     return {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
             for p in paths if p.exists()}
 
@@ -127,6 +134,8 @@ def main():
                      for f in FAMILIES if any(r['family']==f for r in rows)} for s in args.strategies}
     body = dict(provenance='Local synthetic results, NOT official practice/formal results',
                 problem=args.problem, split=args.split, case_count=len(cases),
+                cases_sha256=hashlib.sha256(json.dumps(cases, sort_keys=True, separators=(',', ':'),
+                                                     ensure_ascii=False).encode('utf-8')).hexdigest(),
                 threshold_seconds_per_source=THRESHOLDS[args.problem],
                 threshold_definition='Full clearance AND completion certificate; total virtual time <= threshold * N',
                 config=config, source_sha256=fingerprints, summary=summary, by_family=by_family, episodes=rows)

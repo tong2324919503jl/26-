@@ -1,36 +1,41 @@
 # 问题四：混合全向、定向源的自动搜索与清除
 
-定向源只向一个半平面发射信号。**无信号不能直接解释为没有目标或距离太远**；光学清除则不受发射方向影响。
+默认已经使用第二轮提速算法。原来的自适应版本保留为 `legacy`，方便逐例比较。
 
-## 怎么运行
+## 直接运行
 
 ```powershell
 python problem4/solve.py
 ```
 
-默认运行自建困难案例。统计、路线图、动作记录分别输出到 `results/demo_result.json`、`results/demo_route.svg`、`results/demo_trace.jsonl`。
+默认跑一个本地自建案例，不联网。结果、路线图、动作记录放在 `problem4/results/`。换例子加 `--index 20`；运行旧版加 `--strategy legacy`。
 
-换例子：`python problem4/solve.py --index 20`。`--case examples/demo_case.json` 和 `--output-dir results/my_run` 的相对路径均按 `problem4/` 解析。
+官方平台的命令不变，按 [模拟测试说明](../simulation_guide.md) 操作。
 
-去官方平台运行：[模拟测试说明](../simulation_guide.md)。平台默认使用优化后的 `adaptive` 分支。
+## 提速结果
 
-## 与第三问有什么不同
+与**上一版**比较，代码冻结后使用全新样本，速度阈值仍为500秒/源：
 
-- 用内外两圈与中心构成的 **25 个检测点** 搜索，外圈可以超出目标圆，处理位于边界且向外发射的源。
-- 检测点把目标圆包在若干小三角形内，三角形直径小于最短接收半径；配合半平面性质，可证明任意朝向都不会漏检。
-- 定位时处理移动后的信号丢失；只有满足证明条件的阴性反馈才用于缩小区域，其余保留不确定性。
-- 保留光学覆盖兜底，完成确认与第三问一致。
+| 自建集合 | 平均秒/源：旧→新 | 耗时减少 | 阈值通过率：旧→新 |
+| --- | ---: | ---: | ---: |
+| 新留出512例 | 539.0 → 484.3 | 10.2% | 41.2% → 56.8% |
+| 新压力256例 | 629.1 → 537.8 | 14.5% | 34.0% → 43.4% |
 
-模型和证明见 [model.md](model.md)。共用协议、仿真、几何实现放在 `problem3/`，第四问不复制原附件。
+连同384例开发集，新版1280例全部清除并取得完成确认。时间包含最后一次清除后的覆盖确认；没有把阈值调高。仍有较慢案例，完整记录见 [速度比较](results/speed_comparison_v2.md)。这些是本地自建结果，不是官方成绩。
 
-## 比较分支
+## 改了什么
 
-`adaptive` 是默认优化策略；`baseline` 使用 31 点三角格网和基础定位；`optical` 使用光学覆盖作对照。
+- 把有覆盖证明的检测布局从25点减为23点。
+- 复用历史观测，只有能证明安全时才用“无信号”缩小候选区，减少过冲和绕行。
+- 保留已有路线，并比较多个起点方案、搬移连续停点；发现16个频道后停止找新源，全部清除后才结束。
+
+覆盖证明、定位和调度细节见 [model.md](model.md)，失败尝试见 [开发记录](experiments/README.md)。光学覆盖兜底继续保留。
+
+批量复现：
 
 ```powershell
-python scripts/benchmark_search.py --problem 4 --split development --strategies baseline adaptive optical --save-cases
+python scripts/benchmark_search.py --problem 4 --split holdout_v2 --strategies legacy adaptive --save-cases
+python scripts/verify_project.py
 ```
 
-自定速度阈值为 **全清且完成确认后，总时间 ≤ 500 × 源数秒**。奖励先惩罚漏清，再奖励更快完成；此阈值不是官方评分规则。不同分支用完全相同的自建场景和误差。
-
-结果、消融与泛化检查见 [实验说明](../validation/search_experiments.md)。本地结果不能替代平台演练和三次正式测试。
+核心程序只需Python 3.10以上和标准库。相对自选输入/输出路径按 `problem4/` 解析；例如 `--case examples/demo_case.json`、`--output-dir results/my_run`。

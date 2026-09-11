@@ -1,12 +1,12 @@
 {
-  "verified_at_utc": "2026-09-11T03:06:11.654151+00:00",
+  "verified_at_utc": "2026-09-11T03:36:08.424949+00:00",
   "python_version": "3.12.7",
   "passed": true,
   "unit_test_counts": {
     "problem1": 36,
     "problem2": 27,
     "problem3": 41,
-    "problem4": 9
+    "problem4": 38
   },
   "scope": "Local problems 1 to 4; synthetic examples and local mock HTTP; no official simulator run.",
   "checks": [
@@ -18,16 +18,16 @@
         "searchable_text_files_checked": 3,
         "method": "SHA-256 and byte counts; DOCX ZIP CRC and XML parsing; PDF signature"
       },
-      "elapsed_seconds": 0.033
+      "elapsed_seconds": 0.094
     },
     {
       "name": "problem1_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_teammate_optical_counterexample_is_physically_compatible (test_geometry.BearingModelTests.test_teammate_optical_counterexample_is_physically_compatible) ... ok\ntest_teammate_wide_baseline_source_and_coverage (test_geometry.BearingModelTests.test_teammate_wide_baseline_source_and_coverage) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_area_is_translation_invariant_and_zero_for_degenerate_sets (test_geometry.CalipersAndCoverageTests.test_area_is_translation_invariant_and_zero_for_degenerate_sets) ... ok\ntest_calipers_degenerate_cases (test_geometry.CalipersAndCoverageTests.test_calipers_degenerate_cases) ... ok\ntest_calipers_matches_independent_exact_pairs_on_random_hulls (test_geometry.CalipersAndCoverageTests.test_calipers_matches_independent_exact_pairs_on_random_hulls) ... ok\ntest_diameter_midpoint_can_be_worse_than_minimum_circle_center (test_geometry.CalipersAndCoverageTests.test_diameter_midpoint_can_be_worse_than_minimum_circle_center) ... ok\ntest_empty_and_unbounded_have_no_finite_coverage_decision (test_geometry.CalipersAndCoverageTests.test_empty_and_unbounded_have_no_finite_coverage_decision) ... ok\ntest_exact_diameter_40_is_necessary_but_not_sufficient (test_geometry.CalipersAndCoverageTests.test_exact_diameter_40_is_necessary_but_not_sufficient) ... ok\ntest_optical_decision_uses_radius_and_preserves_exact_threshold (test_geometry.CalipersAndCoverageTests.test_optical_decision_uses_radius_and_preserves_exact_threshold) ... ok\ntest_parallel_support_ties_and_large_translation (test_geometry.CalipersAndCoverageTests.test_parallel_support_ties_and_large_translation) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.370s\n\nOK"
+        "output": "test_adding_consistent_observation_cannot_increase_diameter (test_geometry.BearingModelTests.test_adding_consistent_observation_cannot_increase_diameter) ... ok\ntest_angles_wrap_consistently (test_geometry.BearingModelTests.test_angles_wrap_consistently) ... ok\ntest_cli_runs_outside_repository_and_writes_valid_json (test_geometry.BearingModelTests.test_cli_runs_outside_repository_and_writes_valid_json) ... ok\ntest_equilateral_counterexample_is_actual_bearing_intersection (test_geometry.BearingModelTests.test_equilateral_counterexample_is_actual_bearing_intersection) ... ok\ntest_invalid_numbers_and_error_bounds_rejected (test_geometry.BearingModelTests.test_invalid_numbers_and_error_bounds_rejected) ... ok\ntest_north_and_east_follow_official_convention (test_geometry.BearingModelTests.test_north_and_east_follow_official_convention) ... ok\ntest_positive_scale_preserves_relative_geometry (test_geometry.BearingModelTests.test_positive_scale_preserves_relative_geometry) ... ok\ntest_random_consistent_sources_and_vertex_feasibility (test_geometry.BearingModelTests.test_random_consistent_sources_and_vertex_feasibility) ... ok\ntest_same_direction_sectors_are_unbounded (test_geometry.BearingModelTests.test_same_direction_sectors_are_unbounded) ... ok\ntest_teammate_optical_counterexample_is_physically_compatible (test_geometry.BearingModelTests.test_teammate_optical_counterexample_is_physically_compatible) ... ok\ntest_teammate_wide_baseline_source_and_coverage (test_geometry.BearingModelTests.test_teammate_wide_baseline_source_and_coverage) ... ok\ntest_translation_preserves_size_even_at_large_coordinate_offset (test_geometry.BearingModelTests.test_translation_preserves_size_even_at_large_coordinate_offset) ... ok\ntest_unbounded_does_not_become_finite_from_vertex_pairs (test_geometry.BearingModelTests.test_unbounded_does_not_become_finite_from_vertex_pairs) ... ok\ntest_zero_error_is_ray_not_whole_line (test_geometry.BearingModelTests.test_zero_error_is_ray_not_whole_line) ... ok\ntest_zero_error_perpendicular_rays_make_point (test_geometry.BearingModelTests.test_zero_error_perpendicular_rays_make_point) ... ok\ntest_area_is_translation_invariant_and_zero_for_degenerate_sets (test_geometry.CalipersAndCoverageTests.test_area_is_translation_invariant_and_zero_for_degenerate_sets) ... ok\ntest_calipers_degenerate_cases (test_geometry.CalipersAndCoverageTests.test_calipers_degenerate_cases) ... ok\ntest_calipers_matches_independent_exact_pairs_on_random_hulls (test_geometry.CalipersAndCoverageTests.test_calipers_matches_independent_exact_pairs_on_random_hulls) ... ok\ntest_diameter_midpoint_can_be_worse_than_minimum_circle_center (test_geometry.CalipersAndCoverageTests.test_diameter_midpoint_can_be_worse_than_minimum_circle_center) ... ok\ntest_empty_and_unbounded_have_no_finite_coverage_decision (test_geometry.CalipersAndCoverageTests.test_empty_and_unbounded_have_no_finite_coverage_decision) ... ok\ntest_exact_diameter_40_is_necessary_but_not_sufficient (test_geometry.CalipersAndCoverageTests.test_exact_diameter_40_is_necessary_but_not_sufficient) ... ok\ntest_optical_decision_uses_radius_and_preserves_exact_threshold (test_geometry.CalipersAndCoverageTests.test_optical_decision_uses_radius_and_preserves_exact_threshold) ... ok\ntest_parallel_support_ties_and_large_translation (test_geometry.CalipersAndCoverageTests.test_parallel_support_ties_and_large_translation) ... ok\ntest_acute_triangle_needs_more_than_half_diameter_radius (test_geometry.HalfPlaneGeometryTests.test_acute_triangle_needs_more_than_half_diameter_radius) ... ok\ntest_bounded_segment (test_geometry.HalfPlaneGeometryTests.test_bounded_segment) ... ok\ntest_bounded_single_point (test_geometry.HalfPlaneGeometryTests.test_bounded_single_point) ... ok\ntest_circle_contains_polygon_not_only_support_points (test_geometry.HalfPlaneGeometryTests.test_circle_contains_polygon_not_only_support_points) ... ok\ntest_empty_parallel_constraints (test_geometry.HalfPlaneGeometryTests.test_empty_parallel_constraints) ... ok\ntest_near_parallel_is_large_bounded_not_unbounded (test_geometry.HalfPlaneGeometryTests.test_near_parallel_is_large_bounded_not_unbounded) ... ok\ntest_nonempty_halfplane_without_vertices (test_geometry.HalfPlaneGeometryTests.test_nonempty_halfplane_without_vertices) ... ok\ntest_rectangle_exact_diameter_and_cover (test_geometry.HalfPlaneGeometryTests.test_rectangle_exact_diameter_and_cover) ... ok\ntest_redundant_and_rescaled_constraints_leave_geometry_unchanged (test_geometry.HalfPlaneGeometryTests.test_redundant_and_rescaled_constraints_leave_geometry_unchanged) ... ok\ntest_unbounded_line_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_line_without_vertices) ... ok\ntest_unbounded_strip_without_vertices (test_geometry.HalfPlaneGeometryTests.test_unbounded_strip_without_vertices) ... ok\ntest_unconstrained_plane (test_geometry.HalfPlaneGeometryTests.test_unconstrained_plane) ... ok\ntest_zero_normal_redundant_and_inconsistent (test_geometry.HalfPlaneGeometryTests.test_zero_normal_redundant_and_inconsistent) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.417s\n\nOK"
       },
-      "elapsed_seconds": 0.473
+      "elapsed_seconds": 0.546
     },
     {
       "name": "problem1_solve_from_outside_repository",
@@ -36,16 +36,16 @@
         "exit_code": 0,
         "output": "inconsistent_measurements.json: status=empty, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\inconsistent_measurements.result.json\nparallel_unbounded.json: status=unbounded, diameter=None, covers=None\n  D:\\VS code\\Repository\\26-\\problem1\\results\\parallel_unbounded.result.json\ntriangle_counterexample.json: status=polygon, diameter=20.000000000000046, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_counterexample.result.json\ntriangle_optical_counterexample.json: status=polygon, diameter=40.00000000000003, covers=False\n  D:\\VS code\\Repository\\26-\\problem1\\results\\triangle_optical_counterexample.result.json\ntwo_station_crossing.json: status=polygon, diameter=4.938542582373425, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\two_station_crossing.result.json\nwide_baseline_crossing.json: status=polygon, diameter=31.47967474778005, covers=True\n  D:\\VS code\\Repository\\26-\\problem1\\results\\wide_baseline_crossing.result.json"
       },
-      "elapsed_seconds": 0.119
+      "elapsed_seconds": 0.138
     },
     {
       "name": "problem2_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_actual_posterior_uses_shared_candidate_geometry (test_solve.SecondPointTests.test_actual_posterior_uses_shared_candidate_geometry) ... ok\ntest_analytic_cap_short_circuit_equals_full_capped_score (test_solve.SecondPointTests.test_analytic_cap_short_circuit_equals_full_capped_score) ... ok\ntest_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_boundary_conditioning_changes_selection_and_allows_robot_outside (test_solve.SecondPointTests.test_boundary_conditioning_changes_selection_and_allows_robot_outside) ... ok\ntest_cap_equality_boundary_stops_without_tolerance_shift (test_solve.SecondPointTests.test_cap_equality_boundary_stops_without_tolerance_shift) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_circle_outer_relaxation_and_half_cell_endpoints_are_covered (test_solve.SecondPointTests.test_circle_outer_relaxation_and_half_cell_endpoints_are_covered) ... ok\ntest_clipping_tolerance_does_not_extrapolate_vertices (test_solve.SecondPointTests.test_clipping_tolerance_does_not_extrapolate_vertices) ... ok\ntest_conditioned_outer_prior_contains_physical_sources (test_solve.SecondPointTests.test_conditioned_outer_prior_contains_physical_sources) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_early_stop_input_validation_and_example_switch (test_solve.SecondPointTests.test_early_stop_input_validation_and_example_switch) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_boundary_extends_teammate_three_disk_region (test_solve.SecondPointTests.test_four_disk_boundary_extends_teammate_three_disk_region) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_large_or_infinite_analytic_cap_does_not_stop (test_solve.SecondPointTests.test_large_or_infinite_analytic_cap_does_not_stop) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_near_projection_lower_bound_widens_with_angle (test_solve.SecondPointTests.test_near_projection_lower_bound_widens_with_angle) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_refined_input_rejects_invalid_precision_and_stages (test_solve.SecondPointTests.test_refined_input_rejects_invalid_precision_and_stages) ... ok\ntest_refined_selection_retains_baseline_and_shorter_option (test_solve.SecondPointTests.test_refined_selection_retains_baseline_and_shorter_option) ... ok\ntest_search_recommendation_and_candidate_order_match_full_scan (test_solve.SecondPointTests.test_search_recommendation_and_candidate_order_match_full_scan) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_thin_boundary_posterior_uses_same_first_distance_lower_bound (test_solve.SecondPointTests.test_thin_boundary_posterior_uses_same_first_distance_lower_bound) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\ntest_widened_cells_cover_non_grid_observations (test_solve.SecondPointTests.test_widened_cells_cover_non_grid_observations) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 10.412s\n\nOK"
+        "output": "test_actual_posterior_uses_shared_candidate_geometry (test_solve.SecondPointTests.test_actual_posterior_uses_shared_candidate_geometry) ... ok\ntest_analytic_cap_short_circuit_equals_full_capped_score (test_solve.SecondPointTests.test_analytic_cap_short_circuit_equals_full_capped_score) ... ok\ntest_bound_is_symmetric (test_solve.SecondPointTests.test_bound_is_symmetric) ... ok\ntest_boundary_conditioning_changes_selection_and_allows_robot_outside (test_solve.SecondPointTests.test_boundary_conditioning_changes_selection_and_allows_robot_outside) ... ok\ntest_cap_equality_boundary_stops_without_tolerance_shift (test_solve.SecondPointTests.test_cap_equality_boundary_stops_without_tolerance_shift) ... ok\ntest_choice_and_rotation_equivariance (test_solve.SecondPointTests.test_choice_and_rotation_equivariance) ... ok\ntest_circle_outer_relaxation_and_half_cell_endpoints_are_covered (test_solve.SecondPointTests.test_circle_outer_relaxation_and_half_cell_endpoints_are_covered) ... ok\ntest_clipping_tolerance_does_not_extrapolate_vertices (test_solve.SecondPointTests.test_clipping_tolerance_does_not_extrapolate_vertices) ... ok\ntest_conditioned_outer_prior_contains_physical_sources (test_solve.SecondPointTests.test_conditioned_outer_prior_contains_physical_sources) ... ok\ntest_degenerate_crossing_has_no_finite_bound (test_solve.SecondPointTests.test_degenerate_crossing_has_no_finite_bound) ... ok\ntest_early_stop_input_validation_and_example_switch (test_solve.SecondPointTests.test_early_stop_input_validation_and_example_switch) ... ok\ntest_example_is_reproducible_and_writes_parseable_outputs (test_solve.SecondPointTests.test_example_is_reproducible_and_writes_parseable_outputs) ... ok\ntest_four_disk_boundary_extends_teammate_three_disk_region (test_solve.SecondPointTests.test_four_disk_boundary_extends_teammate_three_disk_region) ... ok\ntest_four_disk_receipt_on_dense_annular_sector (test_solve.SecondPointTests.test_four_disk_receipt_on_dense_annular_sector) ... ok\ntest_impossible_first_observation_and_bad_inputs (test_solve.SecondPointTests.test_impossible_first_observation_and_bad_inputs) ... ok\ntest_large_or_infinite_analytic_cap_does_not_stop (test_solve.SecondPointTests.test_large_or_infinite_analytic_cap_does_not_stop) ... ok\ntest_near_best_grid_respects_budget_and_bound (test_solve.SecondPointTests.test_near_best_grid_respects_budget_and_bound) ... ok\ntest_near_projection_lower_bound_widens_with_angle (test_solve.SecondPointTests.test_near_projection_lower_bound_widens_with_angle) ... ok\ntest_pure_transverse_move_can_lose_signal (test_solve.SecondPointTests.test_pure_transverse_move_can_lose_signal) ... ok\ntest_refined_input_rejects_invalid_precision_and_stages (test_solve.SecondPointTests.test_refined_input_rejects_invalid_precision_and_stages) ... ok\ntest_refined_selection_retains_baseline_and_shorter_option (test_solve.SecondPointTests.test_refined_selection_retains_baseline_and_shorter_option) ... ok\ntest_search_recommendation_and_candidate_order_match_full_scan (test_solve.SecondPointTests.test_search_recommendation_and_candidate_order_match_full_scan) ... ok\ntest_source_circle_does_not_constrain_robot (test_solve.SecondPointTests.test_source_circle_does_not_constrain_robot) ... ok\ntest_thin_boundary_posterior_uses_same_first_distance_lower_bound (test_solve.SecondPointTests.test_thin_boundary_posterior_uses_same_first_distance_lower_bound) ... ok\ntest_translated_rotated_posterior_respects_bound (test_solve.SecondPointTests.test_translated_rotated_posterior_respects_bound) ... ok\ntest_uniform_bound_against_exact_wedges_at_noise_extremes (test_solve.SecondPointTests.test_uniform_bound_against_exact_wedges_at_noise_extremes) ... ok\ntest_widened_cells_cover_non_grid_observations (test_solve.SecondPointTests.test_widened_cells_cover_non_grid_observations) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 8.794s\n\nOK"
       },
-      "elapsed_seconds": 10.519
+      "elapsed_seconds": 8.907
     },
     {
       "name": "problem2_solve_from_outside_repository",
@@ -54,16 +54,16 @@
         "exit_code": 0,
         "output": "{\n  \"selected\": {\n    \"local_xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"xy_m\": [\n      842.1437368791097,\n      546.8945372930203\n    ],\n    \"diameter_upper_bound_m\": 112.3293040324109,\n    \"analytic_diameter_upper_bound_m\": 164.12365704055676,\n    \"capped_diameter_upper_bound_m\": 112.3293040324109,\n    \"geometric_diameter_upper_bound_m\": 112.3293040324109,\n    \"geometric_max_lower_bound_m\": 112.3293040324109,\n    \"geometric_scan_status\": \"complete\",\n    \"geometric_scan_complete\": true,\n    \"stop_reason\": \"all_cells_scanned\",\n    \"analytic_cap_m\": 164.12365704055676,\n    \"scanned_cells\": 3600,\n    \"total_cells\": 3600,\n    \"early_stopped\": false,\n    \"score_exact_for_capped_objective\": true,\n    \"worst_cell_center_local_deg\": 317.90000000000003,\n    \"worst_cell_outer_polygon_local_xy_m\": [\n      [\n        1441.2766887911514,\n        25.157578183376152\n      ],\n      [\n        1399.4878034092008,\n        24.42815047575636\n      ],\n      [\n        1452.5944080110241,\n        -25.355129707198493\n      ],\n      [\n        1499.7715427345706,\n        -26.178609656925268\n      ],\n      [\n        1499.7715427355693,\n        -26.178609656925268\n      ],\n      [\n        1499.7783806584637,\n        -25.786865316669562\n      ]\n    ],\n    \"observed_max_cell_center_local_deg\": 317.90000000000003,\n    \"observed_max_cell_outer_polygon_local_xy_m\": [\n      [\n        1441.2766887911514,\n        25.157578183376152\n      ],\n      [\n        1399.4878034092008,\n        24.42815047575636\n      ],\n      [\n        1452.5944080110241,\n        -25.355129707198493\n      ],\n      [\n        1499.7715427345706,\n        -26.178609656925268\n      ],\n      [\n        1499.7715427355693,\n        -26.178609656925268\n      ],\n      [\n        1499.7783806584637,\n        -25.786865316669562\n      ]\n    ],\n    \"second_distance_upper_m\": 1000.0000000000001,\n    \"outer_distance_upper_m\": 1000.0000000013747,\n    \"move_distance_m\": 1004.141279146345,\n    \"move_and_detect_time_s\": 205.828255829269,\n    \"direction_clearance_m\": 532.1138078314206\n  },\n  \"candidate_count\": 198,\n  \"output_dir\": \"D:\\\\VS code\\\\Repository\\\\26-\\\\problem2\\\\results\"\n}"
       },
-      "elapsed_seconds": 19.26
+      "elapsed_seconds": 15.926
     },
     {
       "name": "problem3_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_accepted_but_lost_response_reuses_identical_request (test_client.ClientTests.test_accepted_but_lost_response_reuses_identical_request) ... ok\ntest_concurrent_callers_are_serialized_and_ids_are_new (test_client.ClientTests.test_concurrent_callers_are_serialized_and_ids_are_new) ... ok\ntest_enter_lost_response_does_not_extend_deadline (test_client.ClientTests.test_enter_lost_response_does_not_extend_deadline) ... ok\ntest_exhausted_retry_keeps_pending_and_blocks_new_action (test_client.ClientTests.test_exhausted_retry_keeps_pending_and_blocks_new_action) ... ok\ntest_http_error_is_not_an_accepted_action (test_client.ClientTests.test_http_error_is_not_an_accepted_action) ... ok\ntest_invalid_input_is_rejected_before_network (test_client.ClientTests.test_invalid_input_is_rejected_before_network) ... ok\ntest_no_overwrite_of_existing_log (test_client.ClientTests.test_no_overwrite_of_existing_log) ... ok\ntest_protocol_timing_example_and_clear_does_not_switch_channel (test_client.ClientTests.test_protocol_timing_example_and_clear_does_not_switch_channel) ... ok\ntest_rejection_zero_does_not_reset_accepted_state (test_client.ClientTests.test_rejection_zero_does_not_reset_accepted_state) ... ok\ntest_remaining_duration_and_exit_reserve (test_client.ClientTests.test_remaining_duration_and_exit_reserve) ... ok\ntest_truncated_response_is_retried_as_the_same_action (test_client.ClientTests.test_truncated_response_is_retried_as_the_same_action) ... ok\ntest_unknown_result_is_not_silently_no_signal (test_client.ClientTests.test_unknown_result_is_not_silently_no_signal) ... ok\ntest_zero_budget_does_not_probe_exit (test_client.ClientTests.test_zero_budget_does_not_probe_exit) ... ok\ntest_problem3_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem3_full_online_cli_on_local_synthetic_http) ... ok\ntest_problem4_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem4_full_online_cli_on_local_synthetic_http) ... ok\ntest_enclosing_circle_equilateral_not_half_diameter (test_policy.GeometryTests.test_enclosing_circle_equilateral_not_half_diameter) ... ok\ntest_quantized_adversarial_bearings_retain_truth (test_policy.GeometryTests.test_quantized_adversarial_bearings_retain_truth) ... ok\ntest_ring_coverage_certificate_and_dense_boundary (test_policy.GeometryTests.test_ring_coverage_certificate_and_dense_boundary) ... ok\ntest_rotated_optical_cover_contains_every_sample (test_policy.GeometryTests.test_rotated_optical_cover_contains_every_sample) ... ok\ntest_voronoi_cover_certificate (test_policy.GeometryTests.test_voronoi_cover_certificate) ... ok\ntest_directional_localization_remains_finite (test_policy.PolicyTests.test_directional_localization_remains_finite) ... ok\ntest_directional_negative_does_not_discard_true_region (test_policy.PolicyTests.test_directional_negative_does_not_discard_true_region) ... ok\ntest_end_to_end_adversarial_error_and_edge_positions (test_policy.PolicyTests.test_end_to_end_adversarial_error_and_edge_positions) ... ok\ntest_near_clears_without_bearing (test_policy.PolicyTests.test_near_clears_without_bearing) ... ok\ntest_rejected_action_never_becomes_a_reading (test_policy.PolicyTests.test_rejected_action_never_becomes_a_reading) ... ok\ntest_sixteen_clearances_certify_early_stop (test_policy.PolicyTests.test_sixteen_clearances_certify_early_stop) ... ok\ntest_budget_uses_exit_reserve_when_exit_is_safe (test_runner.RunnerTests.test_budget_uses_exit_reserve_when_exit_is_safe) ... ok\ntest_nonfinite_orientation_is_rejected_as_bad_case (test_runner.RunnerTests.test_nonfinite_orientation_is_rejected_as_bad_case) ... ok\ntest_rejected_enter_does_not_run_policy_or_probe_exit (test_runner.RunnerTests.test_rejected_enter_does_not_run_policy_or_probe_exit) ... ok\ntest_rejected_exit_is_not_reissued_as_a_new_request (test_runner.RunnerTests.test_rejected_exit_is_not_reissued_as_a_new_request) ... ok\ntest_relative_local_paths_are_based_on_problem_directory_from_outside (test_runner.RunnerTests.test_relative_local_paths_are_based_on_problem_directory_from_outside) ... ok\ntest_solver_wrappers_import_from_outside_repository (test_runner.RunnerTests.test_solver_wrappers_import_from_outside_repository) ... ok\ntest_success_keeps_platform_truth_and_runtime_unknown (test_runner.RunnerTests.test_success_keeps_platform_truth_and_runtime_unknown) ... ok\ntest_total_failure_is_retained_in_aggregate (test_runner.RunnerTests.test_total_failure_is_retained_in_aggregate) ... ok\ntest_unknown_outcome_does_not_exit_or_publish_final_average (test_runner.RunnerTests.test_unknown_outcome_does_not_exit_or_publish_final_average) ... ok\ntest_attachment_time_example (test_simulator.SimulatorTests.test_attachment_time_example) ... ok\ntest_directional_backside_and_optical (test_simulator.SimulatorTests.test_directional_backside_and_optical) ... ok\ntest_facade_exposes_no_case_fields (test_simulator.SimulatorTests.test_facade_exposes_no_case_fields) ... ok\ntest_fixed_local_error_rounding_and_boundary (test_simulator.SimulatorTests.test_fixed_local_error_rounding_and_boundary) ... ok\ntest_generator_reproducible_and_disjoint (test_simulator.SimulatorTests.test_generator_reproducible_and_disjoint) ... ok\ntest_invalid_action_does_not_move (test_simulator.SimulatorTests.test_invalid_action_does_not_move) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 9.804s\n\nOK"
+        "output": "test_accepted_but_lost_response_reuses_identical_request (test_client.ClientTests.test_accepted_but_lost_response_reuses_identical_request) ... ok\ntest_concurrent_callers_are_serialized_and_ids_are_new (test_client.ClientTests.test_concurrent_callers_are_serialized_and_ids_are_new) ... ok\ntest_enter_lost_response_does_not_extend_deadline (test_client.ClientTests.test_enter_lost_response_does_not_extend_deadline) ... ok\ntest_exhausted_retry_keeps_pending_and_blocks_new_action (test_client.ClientTests.test_exhausted_retry_keeps_pending_and_blocks_new_action) ... ok\ntest_http_error_is_not_an_accepted_action (test_client.ClientTests.test_http_error_is_not_an_accepted_action) ... ok\ntest_invalid_input_is_rejected_before_network (test_client.ClientTests.test_invalid_input_is_rejected_before_network) ... ok\ntest_no_overwrite_of_existing_log (test_client.ClientTests.test_no_overwrite_of_existing_log) ... ok\ntest_protocol_timing_example_and_clear_does_not_switch_channel (test_client.ClientTests.test_protocol_timing_example_and_clear_does_not_switch_channel) ... ok\ntest_rejection_zero_does_not_reset_accepted_state (test_client.ClientTests.test_rejection_zero_does_not_reset_accepted_state) ... ok\ntest_remaining_duration_and_exit_reserve (test_client.ClientTests.test_remaining_duration_and_exit_reserve) ... ok\ntest_truncated_response_is_retried_as_the_same_action (test_client.ClientTests.test_truncated_response_is_retried_as_the_same_action) ... ok\ntest_unknown_result_is_not_silently_no_signal (test_client.ClientTests.test_unknown_result_is_not_silently_no_signal) ... ok\ntest_zero_budget_does_not_probe_exit (test_client.ClientTests.test_zero_budget_does_not_probe_exit) ... ok\ntest_problem3_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem3_full_online_cli_on_local_synthetic_http) ... ok\ntest_problem4_full_online_cli_on_local_synthetic_http (test_http_integration.HttpEndToEndTests.test_problem4_full_online_cli_on_local_synthetic_http) ... ok\ntest_enclosing_circle_equilateral_not_half_diameter (test_policy.GeometryTests.test_enclosing_circle_equilateral_not_half_diameter) ... ok\ntest_quantized_adversarial_bearings_retain_truth (test_policy.GeometryTests.test_quantized_adversarial_bearings_retain_truth) ... ok\ntest_ring_coverage_certificate_and_dense_boundary (test_policy.GeometryTests.test_ring_coverage_certificate_and_dense_boundary) ... ok\ntest_rotated_optical_cover_contains_every_sample (test_policy.GeometryTests.test_rotated_optical_cover_contains_every_sample) ... ok\ntest_voronoi_cover_certificate (test_policy.GeometryTests.test_voronoi_cover_certificate) ... ok\ntest_directional_localization_remains_finite (test_policy.PolicyTests.test_directional_localization_remains_finite) ... ok\ntest_directional_negative_does_not_discard_true_region (test_policy.PolicyTests.test_directional_negative_does_not_discard_true_region) ... ok\ntest_end_to_end_adversarial_error_and_edge_positions (test_policy.PolicyTests.test_end_to_end_adversarial_error_and_edge_positions) ... ok\ntest_near_clears_without_bearing (test_policy.PolicyTests.test_near_clears_without_bearing) ... ok\ntest_rejected_action_never_becomes_a_reading (test_policy.PolicyTests.test_rejected_action_never_becomes_a_reading) ... ok\ntest_sixteen_clearances_certify_early_stop (test_policy.PolicyTests.test_sixteen_clearances_certify_early_stop) ... ok\ntest_budget_uses_exit_reserve_when_exit_is_safe (test_runner.RunnerTests.test_budget_uses_exit_reserve_when_exit_is_safe) ... ok\ntest_nonfinite_orientation_is_rejected_as_bad_case (test_runner.RunnerTests.test_nonfinite_orientation_is_rejected_as_bad_case) ... ok\ntest_rejected_enter_does_not_run_policy_or_probe_exit (test_runner.RunnerTests.test_rejected_enter_does_not_run_policy_or_probe_exit) ... ok\ntest_rejected_exit_is_not_reissued_as_a_new_request (test_runner.RunnerTests.test_rejected_exit_is_not_reissued_as_a_new_request) ... ok\ntest_relative_local_paths_are_based_on_problem_directory_from_outside (test_runner.RunnerTests.test_relative_local_paths_are_based_on_problem_directory_from_outside) ... ok\ntest_solver_wrappers_import_from_outside_repository (test_runner.RunnerTests.test_solver_wrappers_import_from_outside_repository) ... ok\ntest_success_keeps_platform_truth_and_runtime_unknown (test_runner.RunnerTests.test_success_keeps_platform_truth_and_runtime_unknown) ... ok\ntest_total_failure_is_retained_in_aggregate (test_runner.RunnerTests.test_total_failure_is_retained_in_aggregate) ... ok\ntest_unknown_outcome_does_not_exit_or_publish_final_average (test_runner.RunnerTests.test_unknown_outcome_does_not_exit_or_publish_final_average) ... ok\ntest_attachment_time_example (test_simulator.SimulatorTests.test_attachment_time_example) ... ok\ntest_directional_backside_and_optical (test_simulator.SimulatorTests.test_directional_backside_and_optical) ... ok\ntest_facade_exposes_no_case_fields (test_simulator.SimulatorTests.test_facade_exposes_no_case_fields) ... ok\ntest_fixed_local_error_rounding_and_boundary (test_simulator.SimulatorTests.test_fixed_local_error_rounding_and_boundary) ... ok\ntest_generator_reproducible_and_disjoint (test_simulator.SimulatorTests.test_generator_reproducible_and_disjoint) ... ok\ntest_invalid_action_does_not_move (test_simulator.SimulatorTests.test_invalid_action_does_not_move) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 8.770s\n\nOK"
       },
-      "elapsed_seconds": 9.996
+      "elapsed_seconds": 8.971
     },
     {
       "name": "problem3_solve_from_outside_repository",
@@ -72,25 +72,25 @@
         "exit_code": 0,
         "output": "本地自建案例 local_p3_development_0003：清除 14/14，总虚拟耗时 4569.6 秒，平均 326.4 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem3\\results\\demo_result.json"
       },
-      "elapsed_seconds": 0.11
+      "elapsed_seconds": 0.126
     },
     {
       "name": "problem4_tests",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "test_boundary_and_interior_have_convex_hull_witnesses (test_policy.DirectionalCoverageTests.test_boundary_and_interior_have_convex_hull_witnesses) ... ok\ntest_invalid_spacing_cannot_claim_coverage (test_policy.DirectionalCoverageTests.test_invalid_spacing_cannot_claim_coverage) ... ok\ntest_outward_boundary_sources_detectable (test_policy.DirectionalCoverageTests.test_outward_boundary_sources_detectable) ... ok\ntest_polar_cover_has_25_vertices_with_robust_margins (test_policy.DirectionalCoverageTests.test_polar_cover_has_25_vertices_with_robust_margins) ... ok\ntest_triangles_have_strictly_subminimum_receive_diameter (test_policy.DirectionalCoverageTests.test_triangles_have_strictly_subminimum_receive_diameter) ... ok\ntest_mixed_clustered_and_tangent_directions (test_policy.MixedPolicyTests.test_mixed_clustered_and_tangent_directions) ... ok\ntest_outward_boundary_minimum_radius_extreme_fixed_errors (test_policy.MixedPolicyTests.test_outward_boundary_minimum_radius_extreme_fixed_errors) ... ok\ntest_paired_negative_probe_reduces_range_before_optical_clear (test_policy.MixedPolicyTests.test_paired_negative_probe_reduces_range_before_optical_clear) ... ok\ntest_wrong_problem_rejected (test_policy.MixedPolicyTests.test_wrong_problem_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.039s\n\nOK"
+        "output": "test_degenerate_hull_and_invalid_margin_are_rejected (test_coverage.DirectionalCertificateTests.test_degenerate_hull_and_invalid_margin_are_rejected) ... ok\ntest_distinct_nearly_coincident_pairs_are_still_enumerated (test_coverage.DirectionalCertificateTests.test_distinct_nearly_coincident_pairs_are_still_enumerated) ... ok\ntest_frozen_23_point_layout_has_large_reception_margin (test_coverage.DirectionalCertificateTests.test_frozen_23_point_layout_has_large_reception_margin) ... ok\ntest_no_single_frozen_point_can_be_silently_deleted (test_coverage.DirectionalCertificateTests.test_no_single_frozen_point_can_be_silently_deleted) ... ok\ntest_old_25_point_proof_is_reproduced (test_coverage.DirectionalCertificateTests.test_old_25_point_proof_is_reproduced) ... ok\ntest_previously_failed_symmetric_23_points_are_rejected (test_coverage.DirectionalCertificateTests.test_previously_failed_symmetric_23_points_are_rejected) ... ok\ntest_rotation_and_order_do_not_change_the_proof (test_coverage.DirectionalCertificateTests.test_rotation_and_order_do_not_change_the_proof) ... ok\ntest_clipped_arc_endpoints_are_enumerated (test_coverage.VoronoiSegmentTests.test_clipped_arc_endpoints_are_enumerated) ... ok\ntest_narrow_circular_cap (test_coverage.VoronoiSegmentTests.test_narrow_circular_cap) ... ok\ntest_nearly_coincident_sites_do_not_lose_a_circular_cap (test_coverage.VoronoiSegmentTests.test_nearly_coincident_sites_do_not_lose_a_circular_cap) ... ok\ntest_one_site_farthest_arc_is_enumerated (test_coverage.VoronoiSegmentTests.test_one_site_farthest_arc_is_enumerated) ... ok\ntest_voronoi_bisector_and_circle_intersections (test_coverage.VoronoiSegmentTests.test_voronoi_bisector_and_circle_intersections) ... ok\ntest_collinear_negative_pair_cannot_claim_two_dimensional_cut (test_localization.HistoricalNegativeGeometryTests.test_collinear_negative_pair_cannot_claim_two_dimensional_cut) ... ok\ntest_in_range_backside_pair_removes_shadow_but_retains_source (test_localization.HistoricalNegativeGeometryTests.test_in_range_backside_pair_removes_shadow_but_retains_source) ... ok\ntest_out_of_range_negatives_must_not_remove_source_behind_pair (test_localization.HistoricalNegativeGeometryTests.test_out_of_range_negatives_must_not_remove_source_behind_pair) ... ok\ntest_positive_radius_lower_bound_cuts_beyond_1000m (test_localization.HistoricalNegativeGeometryTests.test_positive_radius_lower_bound_cuts_beyond_1000m) ... ok\ntest_random_physical_halfplanes_and_radius_causes_retain_true_source (test_localization.HistoricalNegativeGeometryTests.test_random_physical_halfplanes_and_radius_causes_retain_true_source) ... ok\ntest_rounded_fixed_error_boundary_is_retained_without_averaging (test_localization.HistoricalNegativeGeometryTests.test_rounded_fixed_error_boundary_is_retained_without_averaging) ... ok\ntest_singleton_feasible_region_survives_history_refinement (test_localization.HistoricalNegativeGeometryTests.test_singleton_feasible_region_survives_history_refinement) ... ok\ntest_two_negatives_may_require_different_positive_radius_witnesses (test_localization.HistoricalNegativeGeometryTests.test_two_negatives_may_require_different_positive_radius_witnesses) ... ok\ntest_boundary_and_interior_have_convex_hull_witnesses (test_policy.DirectionalCoverageTests.test_boundary_and_interior_have_convex_hull_witnesses) ... ok\ntest_invalid_spacing_cannot_claim_coverage (test_policy.DirectionalCoverageTests.test_invalid_spacing_cannot_claim_coverage) ... ok\ntest_outward_boundary_sources_detectable (test_policy.DirectionalCoverageTests.test_outward_boundary_sources_detectable) ... ok\ntest_polar_cover_has_25_vertices_with_robust_margins (test_policy.DirectionalCoverageTests.test_polar_cover_has_25_vertices_with_robust_margins) ... ok\ntest_triangles_have_strictly_subminimum_receive_diameter (test_policy.DirectionalCoverageTests.test_triangles_have_strictly_subminimum_receive_diameter) ... ok\ntest_mixed_clustered_and_tangent_directions (test_policy.MixedPolicyTests.test_mixed_clustered_and_tangent_directions) ... ok\ntest_outward_boundary_minimum_radius_extreme_fixed_errors (test_policy.MixedPolicyTests.test_outward_boundary_minimum_radius_extreme_fixed_errors) ... ok\ntest_paired_negative_probe_reduces_range_before_optical_clear (test_policy.MixedPolicyTests.test_paired_negative_probe_reduces_range_before_optical_clear) ... ok\ntest_wrong_problem_rejected (test_policy.MixedPolicyTests.test_wrong_problem_rejected) ... ok\ntest_oropt_escapes_a_two_opt_local_minimum (test_routing.RoutingTests.test_oropt_escapes_a_two_opt_local_minimum) ... ok\ntest_random_routes_preserve_visits_and_never_increase_length (test_routing.RoutingTests.test_random_routes_preserve_visits_and_never_increase_length) ... ok\ntest_sixteen_detected_stops_scanning_without_claiming_completion (test_routing.RoutingTests.test_sixteen_detected_stops_scanning_without_claiming_completion) ... ok\ntest_default_and_legacy_entry_points_keep_distinct_layouts (test_v2_integration.Version2IntegrationTests.test_default_and_legacy_entry_points_keep_distinct_layouts) ... ok\ntest_fast_uncertified_exit_does_not_earn_a_threshold_reward (test_v2_integration.Version2IntegrationTests.test_fast_uncertified_exit_does_not_earn_a_threshold_reward) ... ok\ntest_legacy_alias_replays_the_original_policy_actions (test_v2_integration.Version2IntegrationTests.test_legacy_alias_replays_the_original_policy_actions) ... ok\ntest_sixteen_discoveries_omit_scans_but_do_not_certify_clearance (test_v2_integration.Version2IntegrationTests.test_sixteen_discoveries_omit_scans_but_do_not_certify_clearance) ... ok\ntest_sixteen_successful_clears_certify_early_exit_without_fake_coverage (test_v2_integration.Version2IntegrationTests.test_sixteen_successful_clears_certify_early_exit_without_fake_coverage) ... ok\ntest_ten_early_clears_still_pay_for_complete_unknown_channel_search (test_v2_integration.Version2IntegrationTests.test_ten_early_clears_still_pay_for_complete_unknown_channel_search) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 1.048s\n\nOK"
       },
-      "elapsed_seconds": 0.131
+      "elapsed_seconds": 1.243
     },
     {
       "name": "problem4_solve_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "本地自建案例 local_p4_development_0003：清除 11/11，总虚拟耗时 7584.6 秒，平均 689.5 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem4\\results\\demo_result.json"
+        "output": "本地自建案例 local_p4_development_0003：清除 11/11，总虚拟耗时 6754.2 秒，平均 614.0 秒/源，完成确认=True。\n结果：D:\\VS code\\Repository\\26-\\problem4\\results\\demo_result.json"
       },
-      "elapsed_seconds": 0.114
+      "elapsed_seconds": 0.28
     },
     {
       "name": "problem2_strategy_comparison_from_outside_repository",
@@ -99,7 +99,7 @@
         "exit_code": 0,
         "output": "synthetic_case: selected=[842.1437368791097, 546.8945372930203], bound=112.329304\nboundary_case: selected=[220.9419376327556, 195.47291422364256], bound=15.768784\nbudget 600: 209.325746 m\nbudget 800: 152.080522 m\nbudget 1000: 113.037691 m\nbudget 1100: 112.329304 m\nfine search: 111.687447 m"
       },
-      "elapsed_seconds": 133.909
+      "elapsed_seconds": 103.66
     },
     {
       "name": "problem2_early_stop_equivalence_from_outside_repository",
@@ -108,25 +108,25 @@
         "exit_code": 0,
         "output": "origin_coarse: scores identical, cells 5040 -> 4921\norigin_fine: scores identical, cells 50400 -> 50400\nboundary_fine: scores identical, cells 50400 -> 50400\nrounded_bearing_error: scores identical, cells 5040 -> 4999"
       },
-      "elapsed_seconds": 38.281
+      "elapsed_seconds": 31.322
     },
     {
       "name": "problem3_search_smoke_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "p3 adaptive stress 8/8 cleared=10/10 T=3218.0s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0.25,\n    \"mean_virtual_time_s\": 3864.9065303268053,\n    \"p95_virtual_time_s\": 6025.266446691114,\n    \"worst_virtual_time_s\": 6025.266446691114,\n    \"mean_average_clear_time_s\": 386.49065303268054,\n    \"mean_actions\": 170.75,\n    \"mean_failed_clear\": 31.5,\n    \"mean_movement_m\": 14767.65765163404,\n    \"mean_reward\": 221.16978232243983,\n    \"total_program_runtime_s\": 0.04453449998982251,\n    \"max_program_runtime_s\": 0.015616000004229136,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0.25,\n      \"400\": 0.625,\n      \"500\": 0.875,\n      \"700\": 1,\n      \"1000\": 1\n    }\n  }\n}"
+        "output": "p3 adaptive stress 8/8 cleared=10/10 T=3218.0s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0.25,\n    \"mean_virtual_time_s\": 3864.9065303268053,\n    \"p95_virtual_time_s\": 6025.266446691114,\n    \"worst_virtual_time_s\": 6025.266446691114,\n    \"mean_average_clear_time_s\": 386.49065303268054,\n    \"mean_actions\": 170.75,\n    \"mean_failed_clear\": 31.5,\n    \"mean_movement_m\": 14767.65765163404,\n    \"mean_reward\": 221.16978232243983,\n    \"total_program_runtime_s\": 0.04318979999516159,\n    \"max_program_runtime_s\": 0.01546129999042023,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0.25,\n      \"400\": 0.625,\n      \"500\": 0.875,\n      \"700\": 1,\n      \"1000\": 1\n    }\n  }\n}"
       },
-      "elapsed_seconds": 0.176
+      "elapsed_seconds": 0.149
     },
     {
       "name": "problem4_search_smoke_from_outside_repository",
       "passed": true,
       "detail": {
         "exit_code": 0,
-        "output": "p4 adaptive stress 8/8 cleared=10/10 T=7344.3s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0,\n    \"mean_virtual_time_s\": 7689.1061545982775,\n    \"p95_virtual_time_s\": 9609.333793200805,\n    \"worst_virtual_time_s\": 9609.333793200805,\n    \"mean_average_clear_time_s\": 768.9106154598277,\n    \"mean_actions\": 403.75,\n    \"mean_failed_clear\": 3.625,\n    \"mean_movement_m\": 26587.40577299138,\n    \"mean_reward\": -53.782123091965545,\n    \"total_program_runtime_s\": 0.06768410003860481,\n    \"max_program_runtime_s\": 0.02255870000226423,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0,\n      \"400\": 0,\n      \"500\": 0,\n      \"700\": 0.375,\n      \"1000\": 1\n    }\n  }\n}"
+        "output": "p4 adaptive stress 8/8 cleared=10/10 T=6718.1s error=None\n{\n  \"adaptive\": {\n    \"cases\": 8,\n    \"all_clear_cases\": 8,\n    \"missed_sources\": 0,\n    \"threshold_pass_rate\": 0,\n    \"mean_virtual_time_s\": 6856.2035375647465,\n    \"p95_virtual_time_s\": 7390.613441896426,\n    \"worst_virtual_time_s\": 7390.613441896426,\n    \"mean_average_clear_time_s\": 685.6203537564746,\n    \"mean_actions\": 365,\n    \"mean_failed_clear\": 2.75,\n    \"mean_movement_m\": 23557.89268782373,\n    \"mean_reward\": -37.12407075129493,\n    \"total_program_runtime_s\": 0.7927550000167685,\n    \"max_program_runtime_s\": 0.1304320000053849,\n    \"failures\": [],\n    \"threshold_curve\": {\n      \"100\": 0,\n      \"150\": 0,\n      \"200\": 0,\n      \"250\": 0,\n      \"300\": 0,\n      \"400\": 0,\n      \"500\": 0,\n      \"700\": 0.625,\n      \"1000\": 1\n    }\n  }\n}"
       },
-      "elapsed_seconds": 0.169
+      "elapsed_seconds": 0.898
     },
     {
       "name": "result_files_readable",
@@ -219,13 +219,13 @@
         },
         {
           "path": "problem2/results/scoring_benchmark.json",
-          "bytes": 28837,
-          "sha256": "d957c323cdb3b6c735a5cb7bafcbe9c419dfc2374e15829846c9212bc81f8617"
+          "bytes": 28838,
+          "sha256": "db62be365104f442d675c26e55ae3e09806d0f753b162e689cf535281552268b"
         },
         {
           "path": "problem2/results/scoring_benchmark.md",
           "bytes": 2043,
-          "sha256": "1b6f58ee52fdb3e595daded747d50fbcc3381d31fa4e6f6e53d60f77adcbfe53"
+          "sha256": "8dd8244e888ba47bb610bf1db2511e31c9c6f035e913d66aca04465dfa13bc68"
         },
         {
           "path": "problem2/results/second_point_candidates.csv",
@@ -284,8 +284,8 @@
         },
         {
           "path": "problem3/results/benchmark_stress_verification.json",
-          "bytes": 28800,
-          "sha256": "e667d84c4f8f552df5b53aa1a43863e5f9031147124d6638eb2af063621bd425"
+          "bytes": 29276,
+          "sha256": "1a0431e9867d21c63a24d043ba4e74aed9d48286d1d6412de71e814a91353212"
         },
         {
           "path": "problem3/results/benchmark_stress_verification.md",
@@ -294,8 +294,8 @@
         },
         {
           "path": "problem3/results/demo_result.json",
-          "bytes": 2231,
-          "sha256": "10c98371c8becd7bcb8fdeb2184184719b7fa0a743d7c68d10ac72ecf135b9a8"
+          "bytes": 2230,
+          "sha256": "180565c8ec935bbe4ed6cf248ab3f94e584b37cf4df5138e946ca4d851bc9049"
         },
         {
           "path": "problem3/results/demo_route.svg",
@@ -305,7 +305,67 @@
         {
           "path": "problem3/results/demo_trace.jsonl",
           "bytes": 28877,
-          "sha256": "0dff34784679b7e29afc2a2e863d8f9de98888b0c0f85caf39a2502b0d687a0e"
+          "sha256": "bdc81ad7c052c2c64c3ceb2478fff3d3def7dcdc0560dd89b5abadc57f04d82f"
+        },
+        {
+          "path": "problem3/results/online/20260911_112556_299ba06d_client_trace.jsonl",
+          "bytes": 74436,
+          "sha256": "5cc26f6ee763ded3687592922d2a7ca359cdc436c98f88254166cc2252dc66b3"
+        },
+        {
+          "path": "problem3/results/online/20260911_112556_299ba06d_summary.json",
+          "bytes": 2241,
+          "sha256": "a9adcd02969449549bcbb9c9f92d74a3e44f2d41eaebd875af6325a58667a5af"
+        },
+        {
+          "path": "problem3/results/online/20260911_112834_6bba47d1_client_trace.jsonl",
+          "bytes": 70714,
+          "sha256": "7f1f95bed4676ffa3c4415d5e7539dee4d58502b2cac6c7a5d48639524b6b1ec"
+        },
+        {
+          "path": "problem3/results/online/20260911_112834_6bba47d1_summary.json",
+          "bytes": 2236,
+          "sha256": "680ae161c6199198fd7348f600219e00b4b55423690ecdcc7402b8a58ab4ab3a"
+        },
+        {
+          "path": "problem3/results/online/20260911_112901_6f8a5a7c_client_trace.jsonl",
+          "bytes": 66562,
+          "sha256": "b8b9cb67081e08a89ebd12346c2f22ec24a7dee6e74c34ac8a338a09e386bf56"
+        },
+        {
+          "path": "problem3/results/online/20260911_112901_6f8a5a7c_summary.json",
+          "bytes": 2281,
+          "sha256": "7ccef5ed4c72782a2d831f6e6496346acd014a0ed29e0b2fa4df776eed036232"
+        },
+        {
+          "path": "problem3/results/online/20260911_112927_d84d0fe9_client_trace.jsonl",
+          "bytes": 70126,
+          "sha256": "46cb35eaa1c52e90fe4710488a8c92a8158f4351014e13115da193133cd711b2"
+        },
+        {
+          "path": "problem3/results/online/20260911_112927_d84d0fe9_summary.json",
+          "bytes": 2281,
+          "sha256": "627cf21e68e4999a21416133c6f84362ae2ebee6401f5e292d9f7977499122c7"
+        },
+        {
+          "path": "problem3/results/online/20260911_112949_faa0e580_client_trace.jsonl",
+          "bytes": 70333,
+          "sha256": "2122bb66a33483f3bab18367989362443f5660877730f24821ed54de61040fd4"
+        },
+        {
+          "path": "problem3/results/online/20260911_112949_faa0e580_summary.json",
+          "bytes": 2321,
+          "sha256": "f8df4b81936d034d90c7d93c2fcfd4752f0043c0345748422a0c5706c21871e0"
+        },
+        {
+          "path": "problem3/results/online/20260911_113008_e851e2cc_client_trace.jsonl",
+          "bytes": 74652,
+          "sha256": "62b989089dcb8a179eeafd5a6c9c2815b305a831bbadf4d298473b2341a754e0"
+        },
+        {
+          "path": "problem3/results/online/20260911_113008_e851e2cc_summary.json",
+          "bytes": 2266,
+          "sha256": "3fd3a703a9f73d27d3cdceb6e5f0b427067746c2b3b7217eaa00bb4815435c54"
         },
         {
           "path": "problem3/results/README.md",
@@ -333,6 +393,16 @@
           "sha256": "d07cf3faad641f7aa1749334feb0ef8b965bc387dd9a8801ef9ed22e4cb93045"
         },
         {
+          "path": "problem4/results/benchmark_development_v2.json",
+          "bytes": 2236040,
+          "sha256": "daa8e2be3d01970e62529122e2e5d46f0fa11000158bb76f58a4eff2e725cb93"
+        },
+        {
+          "path": "problem4/results/benchmark_development_v2.md",
+          "bytes": 1496,
+          "sha256": "2821ec30a66e62e733fa97601748efb4ca14381c79696cf9786e7f2746318694"
+        },
+        {
           "path": "problem4/results/benchmark_holdout.json",
           "bytes": 514713,
           "sha256": "e2b86a682dd5d7c035ded7417d7d21ad91ed3c0158ba79c0bde290cb32dcf248"
@@ -341,6 +411,16 @@
           "path": "problem4/results/benchmark_holdout.md",
           "bytes": 1346,
           "sha256": "1c6ac9ba33c70f5ce957590966063c73aafd90c12c4972bc6977254b152c5d49"
+        },
+        {
+          "path": "problem4/results/benchmark_holdout_v2.json",
+          "bytes": 2965700,
+          "sha256": "982f578a6779c42bfba9f681ca6a812042c6f3782c38551901074d77f87236d6"
+        },
+        {
+          "path": "problem4/results/benchmark_holdout_v2.md",
+          "bytes": 1484,
+          "sha256": "adfb2e67fd75289664a60b8ceafa95f94014b0872eeb768d41c721e526c46401"
         },
         {
           "path": "problem4/results/benchmark_stress.json",
@@ -353,34 +433,189 @@
           "sha256": "8ab28de76878ed51fcf6ca5b53fc88471ca8acd3ef256030286f472668cf0756"
         },
         {
+          "path": "problem4/results/benchmark_stress_v2.json",
+          "bytes": 1494309,
+          "sha256": "1694de0cba6568487857f08f47a45e0a8c7a73a8e03846e657df1f79b53a4e0f"
+        },
+        {
+          "path": "problem4/results/benchmark_stress_v2.md",
+          "bytes": 1481,
+          "sha256": "e9258b7509d88bae363923dfcb80b3d41b33f64662ec0dd2a23bf0533b50720a"
+        },
+        {
           "path": "problem4/results/benchmark_stress_verification.json",
-          "bytes": 29338,
-          "sha256": "aa6d3f99482982e11dd8b30914dd2c5fa0f0c6db473efff52a476b65bd125429"
+          "bytes": 33790,
+          "sha256": "a4b736d8f8ed4880312155217a2fa9da89580ce1756e91e258f0e802058c1f1f"
         },
         {
           "path": "problem4/results/benchmark_stress_verification.md",
           "bytes": 1359,
-          "sha256": "c243eada96b5dbfb87a37e402af1e197701ac5816e59e95645bcb78aba6f4438"
+          "sha256": "d3c727a209395c9acfe526e4e1d09c67582a75c1f350b5d0d161022326451fb4"
+        },
+        {
+          "path": "problem4/results/coverage_certificate_v2.json",
+          "bytes": 1318671,
+          "sha256": "ff4127ff5c692f8f76082e763e819fca68af7c55c92766521b03ae75359e3b5f"
         },
         {
           "path": "problem4/results/demo_result.json",
-          "bytes": 2241,
-          "sha256": "b8ca54d5750b0e28ba6d23346ca9534851c473c08d185f42eaf0e47b596957cd"
+          "bytes": 2679,
+          "sha256": "88edcd93a8e5be86e56ae5c4cb8aae63dbf26cd5e47548abc1cffd6580535848"
         },
         {
           "path": "problem4/results/demo_route.svg",
-          "bytes": 3428,
-          "sha256": "5ef02ecb698bbc3f81d529848ffef6e65f705cce409f90d0b195885494fb2fac"
+          "bytes": 3386,
+          "sha256": "37f89d04e273cd82e08a7c4419e950e03ab55f6eac5d032f2066dd96ed7eb286"
         },
         {
           "path": "problem4/results/demo_trace.jsonl",
-          "bytes": 89300,
-          "sha256": "616ac4f7c6f1cb752a3d51b378716f977b6949ae39aea189c54ebd92e9e79682"
+          "bytes": 73038,
+          "sha256": "225f44abba84018c89803ee256f6ac4750e858118efaa7c3b4c8ba05fea1fa85"
+        },
+        {
+          "path": "problem4/results/iterations_v2/adaptive_coverage_development_v2_48.json",
+          "bytes": 528605,
+          "sha256": "a608e14aca9b11cadfbbedccdf451e10798b2ce4e745669d3f156fa9395741c0"
+        },
+        {
+          "path": "problem4/results/iterations_v2/combo_development_24.json",
+          "bytes": 173084,
+          "sha256": "1481b7aa96279378d8d7f1d8710ae9ca7287afb3b074c6c894881b73459fabba"
+        },
+        {
+          "path": "problem4/results/iterations_v2/combo_development_96.json",
+          "bytes": 696970,
+          "sha256": "94b98c16fed9c1ebf4c764d1aa20918abf832c6d9f2ecc18d9b6cb228347b03f"
+        },
+        {
+          "path": "problem4/results/iterations_v2/combo_development_v2_384.json",
+          "bytes": 1856966,
+          "sha256": "d3ab8b458b78b8452a08ce6ca2a3b862da567d77baff3a91e55dc68450d20869"
+        },
+        {
+          "path": "problem4/results/iterations_v2/coverlocatestop_development_v2_384.json",
+          "bytes": 939842,
+          "sha256": "e9b1b3033a6afb94f4f4d59d36efaa89343405c39b6e179fdfaa70c71ecb4733"
+        },
+        {
+          "path": "problem4/results/iterations_v2/coveronly_development_v2_384.json",
+          "bytes": 928756,
+          "sha256": "9df040b5771cb4a127cc22383613698e82e190d2dd424e23e78d78d7f3703007"
+        },
+        {
+          "path": "problem4/results/iterations_v2/coverradiusinfo_development_v2_384.json",
+          "bytes": 940092,
+          "sha256": "1ecb6c10881cbd1c624773adcac2b0ece1fe6bd2748cec205aab08ea3d079937"
         },
         {
           "path": "problem4/results/iterations_v2/dynamicpolicy_development_96.json",
           "bytes": 233408,
           "sha256": "a49e37d3f77f72f4f0cd63d009c6d12795157b1d7ad17ca7d971c150992398cb"
+        },
+        {
+          "path": "problem4/results/iterations_v2/entry_development_24.json",
+          "bytes": 53137,
+          "sha256": "0fb3c430823100ccd06615933290fc793ec5210d47e9c2eb9389bfef2a028c47"
+        },
+        {
+          "path": "problem4/results/iterations_v2/info_ablation_development_v2_384.json",
+          "bytes": 865181,
+          "sha256": "25c0d3a4e400ab49f832c412fd43c81979167881eeb4e5f1d47f5bcef954d84f"
+        },
+        {
+          "path": "problem4/results/iterations_v2/info_development_24.json",
+          "bytes": 227789,
+          "sha256": "1aee117528a69607485cecd61125da7e7419683da5b76775b79726c3c9383c70"
+        },
+        {
+          "path": "problem4/results/iterations_v2/info_development_96.json",
+          "bytes": 916519,
+          "sha256": "9274680663c54a37dc38e4ba3acd13fa83284618759c095376b737af26835d6e"
+        },
+        {
+          "path": "problem4/results/iterations_v2/info_development_v2_384.json",
+          "bytes": 3665286,
+          "sha256": "a26675138e1221783e71731e634ea3470cadc49ece7b0215b722384b9963f611"
+        },
+        {
+          "path": "problem4/results/iterations_v2/interleave_development_24.json",
+          "bytes": 170853,
+          "sha256": "612379a9741a59860861b97cda2cf4e9da611c71cd42163b4d4d0daf6c35a748"
+        },
+        {
+          "path": "problem4/results/iterations_v2/interleave_development_v2_384.json",
+          "bytes": 2749470,
+          "sha256": "8415cfdb19bbbcc1c16afff35f91dcafd75ec90beef13ba1b6afb887c60a897e"
+        },
+        {
+          "path": "problem4/results/iterations_v2/profile_development_v2_384.json",
+          "bytes": 405707,
+          "sha256": "1b4faa948b48d4d00c2e12dabb42964a9a4d757135446e7740aeaed9b5b8bdf5"
+        },
+        {
+          "path": "problem4/results/iterations_v2/rotation_development_24.json",
+          "bytes": 174956,
+          "sha256": "53b58452746551a8b87dc56faaef209e2b6444d5c4e54953fdcf79069ca6a00b"
+        },
+        {
+          "path": "problem4/results/iterations_v2/rotation_development_96.json",
+          "bytes": 703942,
+          "sha256": "41dd84af5a121d580d03b66a9ff522b6895195739e0ce1b30ee19284f1d8f627"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_development_v2_384_or23_multi23.json",
+          "bytes": 1983232,
+          "sha256": "a1f22e72963a8081b09cd7bd8608089ffc18a1eaabb561ba6030c5af25788744"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_development_v2_96_stop23_info23_or23_or25_multi23_hybrid23_warm23_infoor23.json",
+          "bytes": 1983847,
+          "sha256": "cd30eaa74947abc3490f7e2eb317a226ec098a82e639477aae75c7e871eed155"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_report.md",
+          "bytes": 3706,
+          "sha256": "0e02c37c930a2874ba1d93d2c252ca5d0c53b43a7db95eba6b25433f3f0585b4"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_rounded_1_warmhybrid_info.json",
+          "bytes": 3710,
+          "sha256": "906cae73b24acb9dd4e2c5f439932320ee92d1ce6277efe5033d6b256e96ae56"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_rounded_384_info_warm_warmhybrid_info.json",
+          "bytes": 3174986,
+          "sha256": "e7a4f0759c7fbb94a07fdad9f8ab73594974d4470d7f2059f4388368d7add39b"
+        },
+        {
+          "path": "problem4/results/iterations_v2/route_escape_rounded_96_stop_info_or_infoor_warm_warm_info_warmhybrid_info.json",
+          "bytes": 1853249,
+          "sha256": "fdbcfe0b02e989b1cb1dcd970df7835baa89ad6c4e0fbb2d32856ef19d680f15"
+        },
+        {
+          "path": "problem4/results/iterations_v2/routing_development_24_legacy_mixed_delay350_delay700_delay1100_insertion150_insertion400_sweep250_sweep600_neighbor3_neighbor6.json",
+          "bytes": 624748,
+          "sha256": "992ae307159d2316fff19045bf6fc025508443ac97d5495417e365f82d2e025a"
+        },
+        {
+          "path": "problem4/results/iterations_v2/routing_production_equivalence.json",
+          "bytes": 110,
+          "sha256": "6ab8771eab0e02a9cbc5a64a757b49f4a56243bb5a2adf2cf191ddd5f2a40514"
+        },
+        {
+          "path": "problem4/results/iterations_v2/routing_report.md",
+          "bytes": 3948,
+          "sha256": "30b6bab999377f22d229926b8d24e84f661cab9fb501135b4f39b7407983883a"
+        },
+        {
+          "path": "problem4/results/iterations_v2/strongdynamicpolicy_development_24.json",
+          "bytes": 58826,
+          "sha256": "60b83901a0f20db990a9e4fe87ee896f0b38d775bce3eecb53156d6009349901"
+        },
+        {
+          "path": "problem4/results/iterations_v2/sweep_development_24.json",
+          "bytes": 454888,
+          "sha256": "2b1f21efdc901c82da14514a428fa400adefdef18e3ad3e9973844f402e3625e"
         },
         {
           "path": "problem4/results/localization_development_sweep.json",
@@ -398,25 +633,45 @@
           "sha256": "bc62f8c33e94ab4692c826a0baed3e6ebdc68684704eafcfa7ab7fca7ed6b8c1"
         },
         {
+          "path": "problem4/results/localization_development_v2.json",
+          "bytes": 1983425,
+          "sha256": "f6325d97ad4c50617d807c200c4c25ff9024cf139d72110bd2974967a89af548"
+        },
+        {
+          "path": "problem4/results/localization_partitioned_radius_development_v2.json",
+          "bytes": 929678,
+          "sha256": "430ab426997fa4ed4aee3f15eb5c5568e5661c119090a13b1b16f7844e974ab1"
+        },
+        {
+          "path": "problem4/results/localization_positive_radius_development_v2.json",
+          "bytes": 1995194,
+          "sha256": "8049ddf84e41041f0a1a762d80b7cf6f9a44749dd48cbc02673bbc2aac8b8616"
+        },
+        {
           "path": "problem4/results/README.md",
           "bytes": 851,
           "sha256": "15b3da8b0af74481f13a07eb3b064c6db1bd92177b3679ca6099f90d81077d25"
+        },
+        {
+          "path": "problem4/results/speed_comparison_v2.json",
+          "bytes": 13718,
+          "sha256": "0fec308f137a32947b7c1da746c73245e505560fa79279fb56a8fa453a00d45e"
+        },
+        {
+          "path": "problem4/results/speed_comparison_v2.md",
+          "bytes": 3215,
+          "sha256": "6f59f19a26a7ad1f1daf7d081f78d894d12515116d08eded262d84575bb45122"
         }
       ],
-      "elapsed_seconds": 0.325
+      "elapsed_seconds": 0.436
     },
     {
       "name": "documentation_links",
       "passed": true,
       "detail": {
-        "local_links_checked": 61
+        "local_links_checked": 103
       },
-      "elapsed_seconds": 0.058
+      "elapsed_seconds": 0.015
     }
-  ],
-  "post_verification_documentation_check": {
-    "passed": true,
-    "scope": "Final problem2 documents, root README/AGENTS and merge notes; tests are the unchanged completed run above.",
-    "local_links_checked": 43
-  }
+  ]
 }

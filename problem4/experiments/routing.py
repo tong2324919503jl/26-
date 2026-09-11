@@ -258,5 +258,5 @@ if __name__=='__main__':
         full=[r['error'] is None and r['cleared_count']==r['source_count'] and r['policy']['completion_certified'] for r in rows]
         summary={'mean':statistics.mean(r['average_clear_time_s'] for r in rows),'move':statistics.mean(r['movement_m'] for r in rows),'action':statistics.mean(r['actions'] for r in rows),'pass':sum(good and r['average_clear_time_s']<=500 for good,r in zip(full,rows))/len(rows),'full':sum(full),'failures':[(r['id'],r['error']) for good,r in zip(full,rows) if not good]}
         body[name]={'summary':summary,'episodes':rows};print(name,json.dumps(summary),flush=True)
-    output=Path(__file__).resolve().parent / f'routing_{args.split}_{args.count}_{"_".join(args.names)}.json'
+    output=Path(__file__).resolve().parents[1] / 'results' / 'iterations_v2' / f'routing_{args.split}_{args.count}_{"_".join(args.names)}.json'
     output.write_text(json.dumps(body,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

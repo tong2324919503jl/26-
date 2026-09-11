@@ -1,0 +1,108 @@
+{
+  "provenance": "Only development_v2; rounded production coverage and localization; not official",
+  "source_sha256": {
+    "D:\\VS code\\Repository\\26-\\problem4\\coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "D:\\VS code\\Repository\\26-\\problem4\\localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "D:\\VS code\\Repository\\26-\\problem4\\experiments\\route_escape.py": "1352af84f2c1729081f95cce39f09e7c72b7eefd3edd84624408b613c56d3179",
+    "D:\\VS code\\Repository\\26-\\problem4\\experiments\\routing.py": "18e8c83c276f3f6ff6487ceed82f7b47101f93ef99f4405d5210d1cd60a2b915"
+  },
+  "results": {
+    "warmhybrid_info": {
+      "summary": {
+        "cases": 1,
+        "mean": 567.3166399213169,
+        "pass": 0,
+        "move": 22162.41519567242,
+        "actions": 306,
+        "full": 1,
+        "failures": [],
+        "cpu": 0.12512440000136849,
+        "cpu_max": 0.12495990000024904
+      },
+      "episodes": [
+        {
+          "case_id": "local_p4_development_v2_0000",
+          "family": "uniform",
+          "error": null,
+          "source_count": 11,
+          "cleared_count": 11,
+          "cleared_fraction": 1.0,
+          "virtual_time_s": 6240.483039134486,
+          "average_clear_time_s": 567.3166399213169,
+          "last_clear_time_s": 5257.64008301031,
+          "time_to_90_percent_s": 4679.158612157796,
+          "movement_m": 22162.41519567242,
+          "actions": 306,
+          "measure": 295,
+          "clear": 11,
+          "failed_clear": 0,
+          "switch": 278,
+          "no_signal": 268,
+          "policy": {
+            "problem": 4,
+            "strategy": "adaptive",
+            "cleared_channels": [
+              1,
+              6,
+              7,
+              9,
+              11,
+              12,
+              13,
+              14,
+              16,
+              19,
+              20
+            ],
+            "coverage_complete": true,
+            "completion_certified": true,
+            "termination_reason": "certified_coverage_and_all_detected_cleared",
+            "coverage_points_visited": 23,
+            "detected_channels": [
+              1,
+              6,
+              7,
+              9,
+              11,
+              12,
+              13,
+              14,
+              16,
+              19,
+              20
+            ],
+            "config": {
+              "ring_radius": 1150.0,
+              "bearing_error_deg": 1.005,
+              "max_probe_count": 5,
+              "lateral_fraction": 0.12,
+              "lateral_min_m": 45.0,
+              "lateral_max_m": 140.0,
+              "opportunistic_radius_m": 0.0,
+              "optical_spacing_m": 26.0,
+              "clear_guarantee_radius_m": 19.99,
+              "exploratory_clear_radius_m": 55.0,
+              "neighbor_updates": true,
+              "neighbor_max_distance_m": 1450.0,
+              "neighbor_min_parallax_deg": 12.0,
+              "adaptive_discovery": false,
+              "discovery_min_spacing_m": 700.0,
+              "discovery_replacement_only": true,
+              "target_uncertainty_weight": 0.5
+            },
+            "measure_actions": 295,
+            "clear_actions": 11,
+            "failed_clears": 0,
+            "optical_fallbacks": 0,
+            "negative_localization_reads": 1,
+            "paired_probe_actions": 5,
+            "history_clips": 20
+          },
+          "certified_full_clear": true,
+          "threshold_passed": false,
+          "program_runtime_s": 0.12495990000024904
+        }
+      ]
+    }
+  }
+}
