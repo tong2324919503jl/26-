@@ -6,6 +6,7 @@
 | --- | --- |
 | 第一问：根据测向信息计算定位区域 | [问题1](problem1/README.md) |
 | 第二问：选择第二个检测点 | [问题2](problem2/README.md) |
+| 第二问评分依据与提前停止效果 | [文献核查](problem2/references.md)、[等价性与计算量](problem2/results/scoring_benchmark.md) |
 | 第三问：自动搜索并清除全部全向源 | [问题3](problem3/README.md) |
 | 第四问：自动处理全向与定向混合源 | [问题4](problem4/README.md) |
 | 去官方平台演练、正式测试 | [模拟测试简明说明](simulation_guide.md) |

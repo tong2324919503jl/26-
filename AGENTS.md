@@ -31,6 +31,7 @@
 - `python scripts/benchmark_search.py --problem 3 --split development --strategies baseline adaptive optical` 批量比较；第四问改为4，留出/压力集改为holdout/stress。生成数据写examples，结果写results。
 - `python scripts/plot_search.py` 重建实验对照图；仅此可选绘图脚本需要matplotlib。核心算法、HTTP客户端、本地测试与统一验证仅需标准库。
 - `python problem2/compare_strategies.py` 重建同口径策略比较；统一验证也会运行此入口，计算输出放在 `problem2/results/`。
+- `python problem2/benchmark_scoring.py` 对照同一统一模型的完整扫描和提前停止，检查评分、排序、完整选点路径一致，并记录扫描量及本地耗时；统一验证也会运行。
 - `python scripts/verify_project.py --reference` 额外用 SciPy/HiGHS 独立核验第一问，输出 `validation/reference_geometry.json`；SciPy 仅是此可选检查的依赖。
 - 根目录队友 ZIP 保留为原始交付件。运行与验证不能依赖 `tmp/` 内解压副本，不另建一套平行求解目录。
 - 修改数学实现后必须运行对应测试；联合交付运行完整验证。改共用组件同时验证第三、四问。
@@ -43,6 +44,7 @@
 - 第一问旋转卡壳只优化凸多边形的直径步骤；半平面枚举和最小覆盖圆仍各有独立复杂度，不把完整求解说成线性时间。
 - 第二问未知真实距离和接收半径。首次收信条件也提供半径下界；必须解释候选区域的收信保证、定位指标及离散搜索局限。
 - 第二问保留四圆盘安全域和解析条带上界，融合目标圆条件化与第二读数网格半步增宽。比较选点时统一移动预算、圆盘边数和读数精度，分别报告评分变紧与选点变化，不能将不同上界之差写成真实误差改善。
+- 第二问评分与实际后验共用几何构造，扇区、条带和5米投影下界须同步半步增宽；唯一定位目标为最坏相容读数下的区域直径。先算A，扫描B的部分最大值达到A即停止；此时完整B及全局最坏单元必须记null，部分最大值仅为B的下界。依据与适用范围见 `problem2/references.md`。
 - 1800米目标圆约束干扰源位置，不限制第二检测点只能在圆内。
 - 原文件为权威来源；提取文本可能损失公式排版或图示。
 - 第三四问不能把自建环境、mock HTTP或本地奖励写成官方模拟器或官方成绩。每问开发96、留出192、压力96例，种子与误差场固定，策略不访问真值。留出后再调优须更换留出集合并披露。

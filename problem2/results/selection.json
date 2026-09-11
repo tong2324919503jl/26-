@@ -26,7 +26,17 @@
     ],
     "diameter_upper_bound_m": 112.3293040324109,
     "analytic_diameter_upper_bound_m": 164.12365704055676,
+    "capped_diameter_upper_bound_m": 112.3293040324109,
     "geometric_diameter_upper_bound_m": 112.3293040324109,
+    "geometric_max_lower_bound_m": 112.3293040324109,
+    "geometric_scan_status": "complete",
+    "geometric_scan_complete": true,
+    "stop_reason": "all_cells_scanned",
+    "analytic_cap_m": 164.12365704055676,
+    "scanned_cells": 3600,
+    "total_cells": 3600,
+    "early_stopped": false,
+    "score_exact_for_capped_objective": true,
     "worst_cell_center_local_deg": 317.90000000000003,
     "worst_cell_outer_polygon_local_xy_m": [
       [
@@ -54,6 +64,35 @@
         -25.786865316669562
       ]
     ],
+    "observed_max_cell_center_local_deg": 317.90000000000003,
+    "observed_max_cell_outer_polygon_local_xy_m": [
+      [
+        1441.2766887911514,
+        25.157578183376152
+      ],
+      [
+        1399.4878034092008,
+        24.42815047575636
+      ],
+      [
+        1452.5944080110241,
+        -25.355129707198493
+      ],
+      [
+        1499.7715427345706,
+        -26.178609656925268
+      ],
+      [
+        1499.7715427355693,
+        -26.178609656925268
+      ],
+      [
+        1499.7783806584637,
+        -25.786865316669562
+      ]
+    ],
+    "second_distance_upper_m": 1000.0000000000001,
+    "outer_distance_upper_m": 1000.0000000013747,
     "move_distance_m": 1004.141279146345,
     "move_and_detect_time_s": 205.828255829269,
     "direction_clearance_m": 532.1138078314206
@@ -69,7 +108,17 @@
     ],
     "diameter_upper_bound_m": 122.86527440272302,
     "analytic_diameter_upper_bound_m": 150.96101158190794,
+    "capped_diameter_upper_bound_m": 122.86527440272302,
     "geometric_diameter_upper_bound_m": 122.86527440272302,
+    "geometric_max_lower_bound_m": 122.86527440272302,
+    "geometric_scan_status": "complete",
+    "geometric_scan_complete": true,
+    "stop_reason": "all_cells_scanned",
+    "analytic_cap_m": 150.96101158190794,
+    "scanned_cells": 3600,
+    "total_cells": 3600,
+    "early_stopped": false,
+    "score_exact_for_capped_objective": true,
     "worst_cell_center_local_deg": 320.90000000000003,
     "worst_cell_outer_polygon_local_xy_m": [
       [
@@ -89,6 +138,27 @@
         -26.16397731971726
       ]
     ],
+    "observed_max_cell_center_local_deg": 320.90000000000003,
+    "observed_max_cell_outer_polygon_local_xy_m": [
+      [
+        1433.5353299429012,
+        25.022452262047317
+      ],
+      [
+        1386.8683112199333,
+        24.207876420231564
+      ],
+      [
+        1445.4748155802615,
+        -25.230856759057087
+      ],
+      [
+        1498.9332566973555,
+        -26.16397731971726
+      ]
+    ],
+    "second_distance_upper_m": 940.2420288538992,
+    "outer_distance_upper_m": 940.2420288552827,
     "move_distance_m": 944.2825206952808,
     "move_and_detect_time_s": 193.85650413905617,
     "direction_clearance_m": 528.0360844442696
@@ -105,7 +175,17 @@
       ],
       "diameter_upper_bound_m": 787.8304319608222,
       "analytic_diameter_upper_bound_m": 3867.9671464795124,
+      "capped_diameter_upper_bound_m": 787.8304319608222,
       "geometric_diameter_upper_bound_m": 787.8304319608222,
+      "geometric_max_lower_bound_m": 787.8304319608222,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 3867.9671464795124,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 354.40000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -133,6 +213,35 @@
           -25.35874615260916
         ]
       ],
+      "observed_max_cell_center_local_deg": 354.40000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          968.6614389144621,
+          16.90804831071276
+        ],
+        [
+          712.8883740401535,
+          12.443512856442494
+        ],
+        [
+          963.9343978192334,
+          -16.8255375014773
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7858535062694,
+          -25.35874615260916
+        ]
+      ],
+      "second_distance_upper_m": 1462.182959508577,
+      "outer_distance_upper_m": 1462.1829595096358,
       "move_distance_m": 99.99999999999999,
       "move_and_detect_time_s": 24.999999999999996,
       "direction_clearance_m": 89.87940462991669
@@ -148,7 +257,17 @@
       ],
       "diameter_upper_bound_m": 769.8034805576365,
       "analytic_diameter_upper_bound_m": 3334.620645023548,
+      "capped_diameter_upper_bound_m": 769.8034805576365,
       "geometric_diameter_upper_bound_m": 769.8034805576365,
+      "geometric_max_lower_bound_m": 769.8034805576365,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 3334.620645023548,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 354.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -176,6 +295,35 @@
           -24.6998694177183
         ]
       ],
+      "observed_max_cell_center_local_deg": 354.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          993.7843348203153,
+          17.346570089934282
+        ],
+        [
+          730.9534408995969,
+          12.75883977140667
+        ],
+        [
+          979.4872240790729,
+          -17.097013093660088
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7973542424565,
+          -24.6998694177183
+        ]
+      ],
+      "second_distance_upper_m": 1487.638955018297,
+      "outer_distance_upper_m": 1487.6389550193599,
       "move_distance_m": 100.0,
       "move_and_detect_time_s": 25.0,
       "direction_clearance_m": 98.16271834476639
@@ -191,7 +339,17 @@
       ],
       "diameter_upper_bound_m": 769.0805509072421,
       "analytic_diameter_upper_bound_m": 3293.8411809861745,
+      "capped_diameter_upper_bound_m": 769.0805509072421,
       "geometric_diameter_upper_bound_m": 769.0805509072421,
+      "geometric_max_lower_bound_m": 769.0805509072421,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 3293.8411809861745,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 354.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -219,6 +377,35 @@
           -24.280479905975177
         ]
       ],
+      "observed_max_cell_center_local_deg": 354.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          997.9613950395851,
+          17.41948094727071
+        ],
+        [
+          731.6779391708039,
+          12.771485935770972
+        ],
+        [
+          980.4580612908484,
+          -17.113959120226358
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.8046747136143,
+          -24.280479905975177
+        ]
+      ],
+      "second_distance_upper_m": 1496.3532530377854,
+      "outer_distance_upper_m": 1496.3532530388482,
       "move_distance_m": 100.00000000000001,
       "move_and_detect_time_s": 25.000000000000004,
       "direction_clearance_m": 99.45218953682735
@@ -234,7 +421,17 @@
       ],
       "diameter_upper_bound_m": 648.8823482871317,
       "analytic_diameter_upper_bound_m": 1796.9421261616694,
+      "capped_diameter_upper_bound_m": 648.8823482871317,
       "geometric_diameter_upper_bound_m": 648.8823482871317,
+      "geometric_max_lower_bound_m": 648.8823482871317,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 1796.9421261616694,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 352.6,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -254,6 +451,27 @@
           -26.106544912355126
         ]
       ],
+      "observed_max_cell_center_local_deg": 352.6,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1090.071252877009,
+          19.02726449635184
+        ],
+        [
+          848.0514739844916,
+          14.802793541870079
+        ],
+        [
+          1073.8692253430152,
+          -18.744457053777314
+        ],
+        [
+          1495.6429562832168,
+          -26.106544912355126
+        ]
+      ],
+      "second_distance_upper_m": 1496.752507511369,
+      "outer_distance_upper_m": 1496.7525075124556,
       "move_distance_m": 139.51294748825046,
       "move_and_detect_time_s": 32.90258949765009,
       "direction_clearance_m": 138.74868096442924
@@ -269,7 +487,17 @@
       ],
       "diameter_upper_bound_m": 524.325356036347,
       "analytic_diameter_upper_bound_m": 1116.1299951509366,
+      "capped_diameter_upper_bound_m": 524.325356036347,
       "geometric_diameter_upper_bound_m": 524.325356036347,
+      "geometric_max_lower_bound_m": 524.325356036347,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 1116.1299951509366,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 350.6,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -289,6 +517,27 @@
           -26.140323400933394
         ]
       ],
+      "observed_max_cell_center_local_deg": 350.6,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1179.2413803454606,
+          20.5837348609711
+        ],
+        [
+          975.0321167660571,
+          17.01924890624911
+        ],
+        [
+          1178.878057498281,
+          -20.577393037083787
+        ],
+        [
+          1497.5781245978108,
+          -26.140323400933394
+        ]
+      ],
+      "second_distance_upper_m": 1430.3698871811166,
+      "outer_distance_upper_m": 1430.3698871822335,
       "move_distance_m": 199.99999999999997,
       "move_and_detect_time_s": 44.99999999999999,
       "direction_clearance_m": 179.75880925983338
@@ -304,7 +553,17 @@
       ],
       "diameter_upper_bound_m": 515.4862064249353,
       "analytic_diameter_upper_bound_m": 1063.2770762742687,
+      "capped_diameter_upper_bound_m": 515.4862064249353,
       "geometric_diameter_upper_bound_m": 515.4862064249353,
+      "geometric_max_lower_bound_m": 515.4862064249353,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 1063.2770762742687,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 350.3,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -324,6 +583,27 @@
           -26.059432546122913
         ]
       ],
+      "observed_max_cell_center_local_deg": 350.3,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1185.6095217892516,
+          20.69489118334454
+        ],
+        [
+          979.2670643160371,
+          17.093170190701606
+        ],
+        [
+          1177.562704824731,
+          -20.55443347076347
+        ],
+        [
+          1492.943890629439,
+          -26.059432546122913
+        ]
+      ],
+      "second_distance_upper_m": 1464.5295704219154,
+      "outer_distance_upper_m": 1464.5295704230364,
       "move_distance_m": 200.0,
       "move_and_detect_time_s": 45.0,
       "direction_clearance_m": 192.25233918766375
@@ -339,7 +619,17 @@
       ],
       "diameter_upper_bound_m": 391.0009857617466,
       "analytic_diameter_upper_bound_m": 626.3917349614168,
+      "capped_diameter_upper_bound_m": 391.0009857617466,
       "geometric_diameter_upper_bound_m": 391.0009857617466,
+      "geometric_max_lower_bound_m": 391.0009857617466,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 626.3917349614168,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 346.40000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -359,6 +649,27 @@
           -26.12355867853104
         ]
       ],
+      "observed_max_cell_center_local_deg": 346.40000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1278.980712246053,
+          22.324691375192977
+        ],
+        [
+          1108.2693913808646,
+          19.34491418550933
+        ],
+        [
+          1266.8618779739388,
+          -22.113156336119037
+        ],
+        [
+          1496.6176742946295,
+          -26.12355867853104
+        ]
+      ],
+      "second_distance_upper_m": 1482.9730211516974,
+      "outer_distance_upper_m": 1482.9730211528731,
       "move_distance_m": 299.99999999999994,
       "move_and_detect_time_s": 64.99999999999999,
       "direction_clearance_m": 294.48815503429915
@@ -374,7 +685,17 @@
       ],
       "diameter_upper_bound_m": 386.7608893991706,
       "analytic_diameter_upper_bound_m": 626.1816953945486,
+      "capped_diameter_upper_bound_m": 386.7608893991706,
       "geometric_diameter_upper_bound_m": 386.7608893991706,
+      "geometric_max_lower_bound_m": 386.7608893991706,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 626.1816953945486,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 346.5,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -394,6 +715,27 @@
           -26.146089950251916
         ]
       ],
+      "observed_max_cell_center_local_deg": 346.5,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1278.4095806902747,
+          22.314722236804318
+        ],
+        [
+          1113.8437923705123,
+          19.442215716719552
+        ],
+        [
+          1274.4610312588788,
+          -22.245800050107142
+        ],
+        [
+          1497.9084899870106,
+          -26.146089950251916
+        ]
+      ],
+      "second_distance_upper_m": 1430.7301146577433,
+      "outer_distance_upper_m": 1430.730114658918,
       "move_distance_m": 300.0,
       "move_and_detect_time_s": 65.0,
       "direction_clearance_m": 280.0741279491605
@@ -409,7 +751,17 @@
       ],
       "diameter_upper_bound_m": 378.9776965193534,
       "analytic_diameter_upper_bound_m": 595.3445330873341,
+      "capped_diameter_upper_bound_m": 378.9776965193534,
       "geometric_diameter_upper_bound_m": 378.9776965193534,
+      "geometric_max_lower_bound_m": 378.9776965193534,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 595.3445330873341,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 345.90000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -429,6 +781,27 @@
           -26.118246395413898
         ]
       ],
+      "observed_max_cell_center_local_deg": 345.90000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1286.7324324899757,
+          22.459998155356033
+        ],
+        [
+          1120.0974646030115,
+          19.55137397157762
+        ],
+        [
+          1274.4694731977052,
+          -22.245947404697475
+        ],
+        [
+          1496.313333798677,
+          -26.118246395413898
+        ]
+      ],
+      "second_distance_upper_m": 1483.5958062407544,
+      "outer_distance_upper_m": 1483.5958062419368,
       "move_distance_m": 312.86893008046184,
       "move_and_detect_time_s": 67.57378601609237,
       "direction_clearance_m": 307.1206466231679
@@ -444,7 +817,17 @@
       ],
       "diameter_upper_bound_m": 304.51492741173286,
       "analytic_diameter_upper_bound_m": 438.860952395237,
+      "capped_diameter_upper_bound_m": 304.51492741173286,
       "geometric_diameter_upper_bound_m": 304.51492741173286,
+      "geometric_max_lower_bound_m": 304.51492741173286,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 438.860952395237,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 342.70000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -472,6 +855,35 @@
           -25.351835738997767
         ]
       ],
+      "observed_max_cell_center_local_deg": 342.70000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1332.9813579144707,
+          23.267276151500884
+        ],
+        [
+          1198.9221157085035,
+          20.927263374568078
+        ],
+        [
+          1332.1184986060182,
+          -23.25221488624805
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7859741279876,
+          -25.351835738997767
+        ]
+      ],
+      "second_distance_upper_m": 1386.3318608143722,
+      "outer_distance_upper_m": 1386.3318608155955,
       "move_distance_m": 399.99999999999994,
       "move_and_detect_time_s": 84.99999999999999,
       "direction_clearance_m": 359.51761851966677
@@ -487,7 +899,17 @@
       ],
       "diameter_upper_bound_m": 267.16656777290825,
       "analytic_diameter_upper_bound_m": 353.8521406221853,
+      "capped_diameter_upper_bound_m": 267.16656777290825,
       "geometric_diameter_upper_bound_m": 267.16656777290825,
+      "geometric_max_lower_bound_m": 267.16656777290825,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 353.8521406221853,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 339.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -515,6 +937,35 @@
           -26.15450072261747
         ]
       ],
+      "observed_max_cell_center_local_deg": 339.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1360.7699335915668,
+          23.752327544207283
+        ],
+        [
+          1236.9101692221593,
+          21.590347315145543
+        ],
+        [
+          1349.4979838069146,
+          -23.555574928848692
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.771963558583,
+          -26.15450072261747
+        ]
+      ],
+      "second_distance_upper_m": 1460.4614314862708,
+      "outer_distance_upper_m": 1460.4614314875332,
       "move_distance_m": 483.8437911993353,
       "move_and_detect_time_s": 101.76875823986707,
       "direction_clearance_m": 465.1005032974989
@@ -530,7 +981,17 @@
       ],
       "diameter_upper_bound_m": 250.77652599122905,
       "analytic_diameter_upper_bound_m": 338.45635381615693,
+      "capped_diameter_upper_bound_m": 250.77652599122905,
       "geometric_diameter_upper_bound_m": 250.77652599122905,
+      "geometric_max_lower_bound_m": 250.77652599122905,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 338.45635381615693,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 339.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -558,6 +1019,35 @@
           -25.931043079439352
         ]
       ],
+      "observed_max_cell_center_local_deg": 339.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1361.3671792238222,
+          23.762752505496398
+        ],
+        [
+          1253.6435220956184,
+          21.882429076018553
+        ],
+        [
+          1367.754463967617,
+          -23.874242975414475
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7758640262534,
+          -25.931043079439352
+        ]
+      ],
+      "second_distance_upper_m": 1288.8796083396928,
+      "outer_distance_upper_m": 1288.8796083409554,
       "move_distance_m": 499.99999999999994,
       "move_and_detect_time_s": 104.99999999999999,
       "direction_clearance_m": 404.5084971874737
@@ -573,7 +1063,17 @@
       ],
       "diameter_upper_bound_m": 249.56396442846463,
       "analytic_diameter_upper_bound_m": 333.7812849309872,
+      "capped_diameter_upper_bound_m": 249.56396442846463,
       "geometric_diameter_upper_bound_m": 249.56396442846463,
+      "geometric_max_lower_bound_m": 249.56396442846463,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 333.7812849309872,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 338.8,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -601,6 +1101,35 @@
           -25.57965436919486
         ]
       ],
+      "observed_max_cell_center_local_deg": 338.8,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1365.1321626788595,
+          23.828470536157738
+        ],
+        [
+          1254.883347371303,
+          21.90407030670527
+        ],
+        [
+          1366.7370406299685,
+          -23.856483784996332
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7819975390057,
+          -25.57965436919486
+        ]
+      ],
+      "second_distance_upper_m": 1331.4599391759764,
+      "outer_distance_upper_m": 1331.4599391772433,
       "move_distance_m": 500.0,
       "move_and_detect_time_s": 105.0,
       "direction_clearance_m": 428.5836503510561
@@ -616,7 +1145,17 @@
       ],
       "diameter_upper_bound_m": 209.46301497844792,
       "analytic_diameter_upper_bound_m": 265.8521588497359,
+      "capped_diameter_upper_bound_m": 209.46301497844792,
       "geometric_diameter_upper_bound_m": 209.46301497844792,
+      "geometric_max_lower_bound_m": 209.46301497844792,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 265.8521588497359,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 334.8,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -636,6 +1175,27 @@
           -26.159277627301638
         ]
       ],
+      "observed_max_cell_center_local_deg": 334.8,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1386.3501046689544,
+          24.198831091238
+        ],
+        [
+          1294.9560290634536,
+          22.603541567489557
+        ],
+        [
+          1389.9907130333954,
+          -24.26237814661765
+        ],
+        [
+          1498.6640114991883,
+          -26.159277627301638
+        ]
+      ],
+      "second_distance_upper_m": 1266.2751572042532,
+      "outer_distance_upper_m": 1266.2751572055583,
       "move_distance_m": 600.0,
       "move_and_detect_time_s": 125.0,
       "direction_clearance_m": 485.4101966249685
@@ -651,7 +1211,17 @@
       ],
       "diameter_upper_bound_m": 204.50358249542245,
       "analytic_diameter_upper_bound_m": 249.50758987486032,
+      "capped_diameter_upper_bound_m": 204.50358249542245,
       "geometric_diameter_upper_bound_m": 204.50358249542245,
+      "geometric_max_lower_bound_m": 204.50358249542245,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 249.50758987486032,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 332.40000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -671,6 +1241,27 @@
           -26.17611132556687
         ]
       ],
+      "observed_max_cell_center_local_deg": 332.40000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1398.3916790465373,
+          24.40901755383667
+        ],
+        [
+          1301.0538294050393,
+          22.70997906837124
+        ],
+        [
+          1386.9308688757444,
+          -24.208968368175626
+        ],
+        [
+          1499.628413426907,
+          -26.17611132556687
+        ]
+      ],
+      "second_distance_upper_m": 1427.5891403365054,
+      "outer_distance_upper_m": 1427.589140337831,
       "move_distance_m": 651.1363089143135,
       "move_and_detect_time_s": 135.2272617828627,
       "direction_clearance_m": 607.8881129840385
@@ -686,7 +1277,17 @@
       ],
       "diameter_upper_bound_m": 177.29672218815597,
       "analytic_diameter_upper_bound_m": 217.8450758622659,
+      "capped_diameter_upper_bound_m": 177.29672218815597,
       "geometric_diameter_upper_bound_m": 177.29672218815597,
+      "geometric_max_lower_bound_m": 177.29672218815597,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 217.8450758622659,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 330.70000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -706,6 +1307,27 @@
           -26.12223422228354
         ]
       ],
+      "observed_max_cell_center_local_deg": 330.70000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1402.369347027862,
+          24.47844800671358
+        ],
+        [
+          1326.229047555852,
+          23.149414135775718
+        ],
+        [
+          1407.7311678882932,
+          -24.572038937966006
+        ],
+        [
+          1496.5417962470287,
+          -26.12223422228354
+        ]
+      ],
+      "second_distance_upper_m": 1190.9774048214942,
+      "outer_distance_upper_m": 1190.9774048228323,
       "move_distance_m": 700.0,
       "move_and_detect_time_s": 145.0,
       "direction_clearance_m": 528.2967061559405
@@ -721,7 +1343,17 @@
       ],
       "diameter_upper_bound_m": 166.2114763902781,
       "analytic_diameter_upper_bound_m": 194.27661698352458,
+      "capped_diameter_upper_bound_m": 166.2114763902781,
       "geometric_diameter_upper_bound_m": 166.2114763902781,
+      "geometric_max_lower_bound_m": 166.2114763902781,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 194.27661698352458,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 326.0,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -741,6 +1373,27 @@
           -26.130551401885914
         ]
       ],
+      "observed_max_cell_center_local_deg": 326.0,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1418.503679088229,
+          24.760073820400713
+        ],
+        [
+          1338.3461432203408,
+          23.360918827340793
+        ],
+        [
+          1406.6475519044466,
+          -24.553124350610712
+        ],
+        [
+          1497.0182871473248,
+          -26.130551401885914
+        ]
+      ],
+      "second_distance_upper_m": 1383.4131908501088,
+      "outer_distance_upper_m": 1383.4131908514767,
       "move_distance_m": 799.9999999999999,
       "move_and_detect_time_s": 164.99999999999997,
       "direction_clearance_m": 719.0352370393335
@@ -756,7 +1409,17 @@
       ],
       "diameter_upper_bound_m": 152.3506781891922,
       "analytic_diameter_upper_bound_m": 181.75106811799785,
+      "capped_diameter_upper_bound_m": 152.3506781891922,
       "geometric_diameter_upper_bound_m": 152.3506781891922,
+      "geometric_max_lower_bound_m": 152.3506781891922,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 181.75106811799785,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 326.6,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -784,6 +1447,35 @@
           -25.96322849811821
         ]
       ],
+      "observed_max_cell_center_local_deg": 326.6,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1419.6618654336532,
+          24.780290038259068
+        ],
+        [
+          1355.8053072384955,
+          23.665669668870088
+        ],
+        [
+          1426.603183983073,
+          -24.901451204226756
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7753022276806,
+          -25.96322849811821
+        ]
+      ],
+      "second_distance_upper_m": 1105.8118786205937,
+      "outer_distance_upper_m": 1105.8118786219586,
       "move_distance_m": 800.0,
       "move_and_detect_time_s": 165.0,
       "direction_clearance_m": 555.7266963671979
@@ -799,7 +1491,17 @@
       ],
       "diameter_upper_bound_m": 131.50640310485056,
       "analytic_diameter_upper_bound_m": 155.89197777103527,
+      "capped_diameter_upper_bound_m": 131.50640310485056,
       "geometric_diameter_upper_bound_m": 131.50640310485056,
+      "geometric_max_lower_bound_m": 131.50640310485056,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 155.89197777103527,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 323.5,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -819,6 +1521,27 @@
           -26.165793681399286
         ]
       ],
+      "observed_max_cell_center_local_deg": 323.5,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1427.294416297618,
+          24.913516709157495
+        ],
+        [
+          1377.4935517011027,
+          24.044239384143946
+        ],
+        [
+          1441.504042618337,
+          -25.161546659191483
+        ],
+        [
+          1499.0373159884264,
+          -26.165793681399286
+        ]
+      ],
+      "second_distance_upper_m": 935.7639206486015,
+      "outer_distance_upper_m": 935.7639206499815,
       "move_distance_m": 899.9999999999999,
       "move_and_detect_time_s": 184.99999999999997,
       "direction_clearance_m": 503.2736131236721
@@ -834,7 +1557,17 @@
       ],
       "diameter_upper_bound_m": 131.36248523769697,
       "analytic_diameter_upper_bound_m": 153.33900614033254,
+      "capped_diameter_upper_bound_m": 131.36248523769697,
       "geometric_diameter_upper_bound_m": 131.36248523769697,
+      "geometric_max_lower_bound_m": 131.36248523769697,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 153.33900614033254,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 322.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -854,6 +1587,27 @@
           -26.168657497785823
         ]
       ],
+      "observed_max_cell_center_local_deg": 322.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1430.7141203645165,
+          24.973207865680504
+        ],
+        [
+          1377.816867900169,
+          24.049882889390997
+        ],
+        [
+          1438.856917606719,
+          -25.11534092024058
+        ],
+        [
+          1499.2013839193287,
+          -26.168657497785823
+        ]
+      ],
+      "second_distance_upper_m": 1011.0806760088514,
+      "outer_distance_upper_m": 1011.0806760102366,
       "move_distance_m": 900.0,
       "move_and_detect_time_s": 185.0,
       "direction_clearance_m": 566.3883519448538
@@ -869,7 +1623,17 @@
       ],
       "diameter_upper_bound_m": 130.32812857553225,
       "analytic_diameter_upper_bound_m": 154.61725479824364,
+      "capped_diameter_upper_bound_m": 130.32812857553225,
       "geometric_diameter_upper_bound_m": 130.32812857553225,
+      "geometric_max_lower_bound_m": 130.32812857553225,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 154.61725479824364,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 323.3,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -897,6 +1661,35 @@
           -25.742541603091382
         ]
       ],
+      "observed_max_cell_center_local_deg": 323.3,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1429.109638163402,
+          24.945201524683874
+        ],
+        [
+          1379.5237747129693,
+          24.07967705863484
+        ],
+        [
+          1443.156958959789,
+          -25.190398421252443
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7791543317621,
+          -25.742541603091382
+        ]
+      ],
+      "second_distance_upper_m": 934.3377849358974,
+      "outer_distance_upper_m": 934.3377849372786,
       "move_distance_m": 904.2825206952808,
       "move_and_detect_time_s": 185.85650413905617,
       "direction_clearance_m": 505.6683683054398
@@ -912,7 +1705,17 @@
       ],
       "diameter_upper_bound_m": 126.73218708488353,
       "analytic_diameter_upper_bound_m": 150.32948086470643,
+      "capped_diameter_upper_bound_m": 126.73218708488353,
       "geometric_diameter_upper_bound_m": 126.73218708488353,
+      "geometric_max_lower_bound_m": 126.73218708488353,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 150.32948086470643,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 322.1,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -932,6 +1735,27 @@
           -26.1725394084998
         ]
       ],
+      "observed_max_cell_center_local_deg": 322.1,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1431.1694818704084,
+          24.981156230331653
+        ],
+        [
+          1383.1075239466625,
+          24.142231634195408
+        ],
+        [
+          1444.1586992405007,
+          -25.207883862893475
+        ],
+        [
+          1499.4237784351865,
+          -26.1725394084998
+        ]
+      ],
+      "second_distance_upper_m": 927.9102206163233,
+      "outer_distance_upper_m": 927.910220617709,
       "move_distance_m": 924.2825206952808,
       "move_and_detect_time_s": 189.85650413905617,
       "direction_clearance_m": 516.8522263748547
@@ -947,7 +1771,17 @@
       ],
       "diameter_upper_bound_m": 124.79412253142785,
       "analytic_diameter_upper_bound_m": 184.4589460274649,
+      "capped_diameter_upper_bound_m": 124.79412253142785,
       "geometric_diameter_upper_bound_m": 124.79412253142785,
+      "geometric_max_lower_bound_m": 124.79412253142785,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 184.4589460274649,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 36.800000000000004,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -967,6 +1801,27 @@
           -24.91193392755036
         ]
       ],
+      "observed_max_cell_center_local_deg": 36.800000000000004,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1498.1332579197767,
+          26.150013289112
+        ],
+        [
+          1447.5295016011362,
+          25.266721436958427
+        ],
+        [
+          1383.9280817972478,
+          -24.156554524754856
+        ],
+        [
+          1427.203738800068,
+          -24.91193392755036
+        ]
+      ],
+      "second_distance_upper_m": 939.9557183069404,
+      "outer_distance_upper_m": 939.9557183082923,
       "move_distance_m": 944.2825206952807,
       "move_and_detect_time_s": 193.85650413905614,
       "direction_clearance_m": 443.3137907022138
@@ -982,7 +1837,17 @@
       ],
       "diameter_upper_bound_m": 122.86527440272302,
       "analytic_diameter_upper_bound_m": 150.96101158190794,
+      "capped_diameter_upper_bound_m": 122.86527440272302,
       "geometric_diameter_upper_bound_m": 122.86527440272302,
+      "geometric_max_lower_bound_m": 122.86527440272302,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 150.96101158190794,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 320.90000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1002,6 +1867,27 @@
           -26.16397731971726
         ]
       ],
+      "observed_max_cell_center_local_deg": 320.90000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1433.5353299429012,
+          25.022452262047317
+        ],
+        [
+          1386.8683112199333,
+          24.207876420231564
+        ],
+        [
+          1445.4748155802615,
+          -25.230856759057087
+        ],
+        [
+          1498.9332566973555,
+          -26.16397731971726
+        ]
+      ],
+      "second_distance_upper_m": 940.2420288538992,
+      "outer_distance_upper_m": 940.2420288552827,
       "move_distance_m": 944.2825206952808,
       "move_and_detect_time_s": 193.85650413905617,
       "direction_clearance_m": 528.0360844442696
@@ -1017,7 +1903,17 @@
       ],
       "diameter_upper_bound_m": 119.2438386236039,
       "analytic_diameter_upper_bound_m": 161.79683612990283,
+      "capped_diameter_upper_bound_m": 119.2438386236039,
       "geometric_diameter_upper_bound_m": 119.2438386236039,
+      "geometric_max_lower_bound_m": 119.2438386236039,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 161.79683612990283,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 320.3,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1037,6 +1933,27 @@
           -26.149904587999693
         ]
       ],
+      "observed_max_cell_center_local_deg": 320.3,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1434.126234673867,
+          25.032766542492713
+        ],
+        [
+          1390.0642459692756,
+          24.26366166878768
+        ],
+        [
+          1447.5474487617107,
+          -25.26703470581166
+        ],
+        [
+          1498.1270304372163,
+          -26.149904587999693
+        ]
+      ],
+      "second_distance_upper_m": 960.1414038131571,
+      "outer_distance_upper_m": 960.1414038145318,
       "move_distance_m": 964.2825206952808,
       "move_and_detect_time_s": 197.85650413905617,
       "direction_clearance_m": 510.9918838797835
@@ -1052,7 +1969,17 @@
       ],
       "diameter_upper_bound_m": 115.98431769884178,
       "analytic_diameter_upper_bound_m": 172.67258744855988,
+      "capped_diameter_upper_bound_m": 115.98431769884178,
       "geometric_diameter_upper_bound_m": 115.98431769884178,
+      "geometric_max_lower_bound_m": 115.98431769884178,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 172.67258744855988,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.70000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1072,6 +1999,27 @@
           -26.154407070078186
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.70000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1435.7013553265433,
+          25.060260375754954
+        ],
+        [
+          1393.9651050569573,
+          24.331751417438994
+        ],
+        [
+          1450.3791158767765,
+          -25.31646163916023
+        ],
+        [
+          1498.3849774627363,
+          -26.154407070078186
+        ]
+      ],
+      "second_distance_upper_m": 980.0117230935886,
+      "outer_distance_upper_m": 980.0117230949542,
       "move_distance_m": 984.2367302942888,
       "move_and_detect_time_s": 201.84734605885777,
       "direction_clearance_m": 495.8328519746388
@@ -1087,7 +2035,17 @@
       ],
       "diameter_upper_bound_m": 115.8399536532107,
       "analytic_diameter_upper_bound_m": 169.77695182699412,
+      "capped_diameter_upper_bound_m": 115.8399536532107,
       "geometric_diameter_upper_bound_m": 115.8399536532107,
+      "geometric_max_lower_bound_m": 115.8399536532107,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 169.77695182699412,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.5,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1107,6 +2065,27 @@
           -26.149976714982653
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.5,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1435.8935294224327,
+          25.063614787076226
+        ],
+        [
+          1393.8687059196373,
+          24.330068764238046
+        ],
+        [
+          1449.8754022564806,
+          -25.307669285212736
+        ],
+        [
+          1498.1311625893024,
+          -26.149976714982653
+        ]
+      ],
+      "second_distance_upper_m": 980.0352679259522,
+      "outer_distance_upper_m": 980.0352679273204,
       "move_distance_m": 984.2367302942889,
       "move_and_detect_time_s": 201.8473460588578,
       "direction_clearance_m": 503.23343526255394
@@ -1122,7 +2101,17 @@
       ],
       "diameter_upper_bound_m": 115.76238439853134,
       "analytic_diameter_upper_bound_m": 168.36650075243222,
+      "capped_diameter_upper_bound_m": 115.76238439853134,
       "geometric_diameter_upper_bound_m": 115.76238439853134,
+      "geometric_max_lower_bound_m": 115.76238439853134,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 168.36650075243222,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.40000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1142,6 +2131,27 @@
           -26.14643578956207
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.40000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1435.9154187395125,
+          25.063996866527084
+        ],
+        [
+          1393.7493104218597,
+          24.3279847080722
+        ],
+        [
+          1449.550752424903,
+          -25.302002501323617
+        ],
+        [
+          1497.9283031078198,
+          -26.14643578956207
+        ]
+      ],
+      "second_distance_upper_m": 980.047160847123,
+      "outer_distance_upper_m": 980.0471608484926,
       "move_distance_m": 984.236730294289,
       "move_and_detect_time_s": 201.8473460588578,
       "direction_clearance_m": 506.91939082653676
@@ -1157,7 +2167,17 @@
       ],
       "diameter_upper_bound_m": 115.03421871143244,
       "analytic_diameter_upper_bound_m": 170.07967690951895,
+      "capped_diameter_upper_bound_m": 115.03421871143244,
       "geometric_diameter_upper_bound_m": 115.03421871143244,
+      "geometric_max_lower_bound_m": 115.03421871143244,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 170.07967690951895,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.20000000000005,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1177,6 +2197,27 @@
           -26.157178594965213
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.20000000000005,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1436.935578055396,
+          25.081803813622958
+        ],
+        [
+          1395.1920459528976,
+          24.353167750440715
+        ],
+        [
+          1450.6523580337948,
+          -25.32123109875211
+        ],
+        [
+          1498.5437580171726,
+          -26.157178594965213
+        ]
+      ],
+      "second_distance_upper_m": 985.0352489789324,
+      "outer_distance_upper_m": 985.0352489803007,
       "move_distance_m": 989.2367302942888,
       "move_and_detect_time_s": 202.84734605885777,
       "direction_clearance_m": 505.7899006929391
@@ -1192,7 +2233,17 @@
       ],
       "diameter_upper_bound_m": 114.95888294495478,
       "analytic_diameter_upper_bound_m": 168.66702769710537,
+      "capped_diameter_upper_bound_m": 114.95888294495478,
       "geometric_diameter_upper_bound_m": 114.95888294495478,
+      "geometric_max_lower_bound_m": 114.95888294495478,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 168.66702769710537,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.1,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1212,6 +2263,27 @@
           -26.153319512514525
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.1,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1436.9373359413978,
+          25.08183449763726
+        ],
+        [
+          1395.0517320207423,
+          24.35071856164461
+        ],
+        [
+          1450.3082459790805,
+          -25.315224600494492
+        ],
+        [
+          1498.3226713316428,
+          -26.153319512514525
+        ]
+      ],
+      "second_distance_upper_m": 985.0471416430038,
+      "outer_distance_upper_m": 985.0471416443735,
       "move_distance_m": 989.2367302942889,
       "move_and_detect_time_s": 202.8473460588578,
       "direction_clearance_m": 509.49458120108693
@@ -1227,7 +2299,17 @@
       ],
       "diameter_upper_bound_m": 114.3788248017216,
       "analytic_diameter_upper_bound_m": 173.2873149945979,
+      "capped_diameter_upper_bound_m": 114.3788248017216,
       "geometric_diameter_upper_bound_m": 114.3788248017216,
+      "geometric_max_lower_bound_m": 114.3788248017216,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 173.2873149945979,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 319.1,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1247,6 +2329,27 @@
           -26.170466204537025
         ]
       ],
+      "observed_max_cell_center_local_deg": 319.1,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1437.879423692217,
+          25.098278700495886
+        ],
+        [
+          1396.7027988654959,
+          24.379538040620613
+        ],
+        [
+          1452.0247098238563,
+          -25.34518558835199
+        ],
+        [
+          1499.3050046597061,
+          -26.170466204537025
+        ]
+      ],
+      "second_distance_upper_m": 990.0116864080846,
+      "outer_distance_upper_m": 990.0116864094502,
       "move_distance_m": 994.2367302942888,
       "move_and_detect_time_s": 203.84734605885777,
       "direction_clearance_m": 500.87059174509403
@@ -1262,7 +2365,17 @@
       ],
       "diameter_upper_bound_m": 114.24307416984024,
       "analytic_diameter_upper_bound_m": 170.38269180597274,
+      "capped_diameter_upper_bound_m": 114.24307416984024,
       "geometric_diameter_upper_bound_m": 114.24307416984024,
+      "geometric_max_lower_bound_m": 114.24307416984024,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 170.38269180597274,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 318.90000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1282,6 +2395,27 @@
           -26.164747359313743
         ]
       ],
+      "observed_max_cell_center_local_deg": 318.90000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1437.9903333447187,
+          25.100214635681468
+        ],
+        [
+          1396.5221431475668,
+          24.376384683334507
+        ],
+        [
+          1451.4424235032998,
+          -25.335021742819865
+        ],
+        [
+          1498.9773722362922,
+          -26.164747359313743
+        ]
+      ],
+      "second_distance_upper_m": 990.0352302232897,
+      "outer_distance_upper_m": 990.035230224658,
       "move_distance_m": 994.2367302942889,
       "move_and_detect_time_s": 203.8473460588578,
       "direction_clearance_m": 508.3463661233246
@@ -1297,7 +2431,17 @@
       ],
       "diameter_upper_bound_m": 114.16988390108743,
       "analytic_diameter_upper_bound_m": 168.96784031303804,
+      "capped_diameter_upper_bound_m": 114.16988390108743,
       "geometric_diameter_upper_bound_m": 114.16988390108743,
+      "geometric_max_lower_bound_m": 114.16988390108743,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 168.96784031303804,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 318.8,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1317,6 +2461,27 @@
           -26.160565180042788
         ]
       ],
+      "observed_max_cell_center_local_deg": 318.8,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1437.971734306421,
+          25.09988998826038
+        ],
+        [
+          1396.3607081265181,
+          24.373566824560413
+        ],
+        [
+          1451.0786049724647,
+          -25.32867126674205
+        ],
+        [
+          1498.7377753463263,
+          -26.160565180042788
+        ]
+      ],
+      "second_distance_upper_m": 990.0471226328561,
+      "outer_distance_upper_m": 990.0471226342258,
       "move_distance_m": 994.236730294289,
       "move_and_detect_time_s": 203.8473460588578,
       "direction_clearance_m": 512.0697715756373
@@ -1332,7 +2497,17 @@
       ],
       "diameter_upper_bound_m": 113.46614796837356,
       "analytic_diameter_upper_bound_m": 170.6859926526544,
+      "capped_diameter_upper_bound_m": 113.46614796837356,
       "geometric_diameter_upper_bound_m": 113.46614796837356,
+      "geometric_max_lower_bound_m": 113.46614796837356,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 170.6859926526544,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 318.6,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1352,6 +2527,27 @@
           -26.172669183186194
         ]
       ],
+      "observed_max_cell_center_local_deg": 318.6,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1439.0572304407294,
+          25.118837393764064
+        ],
+        [
+          1397.8585742956416,
+          24.399712175796246
+        ],
+        [
+          1452.2450092780493,
+          -25.34903092962858
+        ],
+        [
+          1499.4312132219907,
+          -26.172669183186194
+        ]
+      ],
+      "second_distance_upper_m": 995.0352116561387,
+      "outer_distance_upper_m": 995.0352116575069,
       "move_distance_m": 999.2367302942888,
       "move_and_detect_time_s": 204.84734605885777,
       "direction_clearance_m": 510.90283155370975
@@ -1367,7 +2563,17 @@
       ],
       "diameter_upper_bound_m": 113.39501841324507,
       "analytic_diameter_upper_bound_m": 169.26893481024715,
+      "capped_diameter_upper_bound_m": 113.39501841324507,
       "geometric_diameter_upper_bound_m": 113.39501841324507,
+      "geometric_max_lower_bound_m": 113.39501841324507,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 169.26893481024715,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 318.5,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1387,6 +2593,27 @@
           -26.168159070494507
         ]
       ],
+      "observed_max_cell_center_local_deg": 318.5,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1439.0180527051073,
+          25.118153543845036
+        ],
+        [
+          1397.675818179445,
+          24.396522155922003
+        ],
+        [
+          1451.8612442104973,
+          -25.342332285457278
+        ],
+        [
+          1499.1728290389333,
+          -26.168159070494507
+        ]
+      ],
+      "second_distance_upper_m": 995.0471038137557,
+      "outer_distance_upper_m": 995.0471038151254,
       "move_distance_m": 999.2367302942889,
       "move_and_detect_time_s": 204.8473460588578,
       "direction_clearance_m": 514.6449619501875
@@ -1402,7 +2629,17 @@
       ],
       "diameter_upper_bound_m": 113.24350096723279,
       "analytic_diameter_upper_bound_m": 154.03208053911388,
+      "capped_diameter_upper_bound_m": 113.24350096723279,
       "geometric_diameter_upper_bound_m": 113.24350096723279,
+      "geometric_max_lower_bound_m": 113.24350096723279,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 154.03208053911388,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 317.5,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1422,6 +2659,27 @@
           -26.151426982054794
         ]
       ],
+      "observed_max_cell_center_local_deg": 317.5,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1440.140346627163,
+          25.137743257123063
+        ],
+        [
+          1396.871192215318,
+          24.382477357475235
+        ],
+        [
+          1449.128536308576,
+          -25.29463269159939
+        ],
+        [
+          1498.2142483342197,
+          -26.151426982054794
+        ]
+      ],
+      "second_distance_upper_m": 995.9592512027039,
+      "outer_distance_upper_m": 995.9592512040873,
       "move_distance_m": 999.9999999999999,
       "move_and_detect_time_s": 204.99999999999997,
       "direction_clearance_m": 559.1929034707467
@@ -1437,7 +2695,17 @@
       ],
       "diameter_upper_bound_m": 112.8218418865841,
       "analytic_diameter_upper_bound_m": 154.25600550343964,
+      "capped_diameter_upper_bound_m": 112.8218418865841,
       "geometric_diameter_upper_bound_m": 112.8218418865841,
+      "geometric_max_lower_bound_m": 112.8218418865841,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 154.25600550343964,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 317.3,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1457,6 +2725,27 @@
           -26.172032118902365
         ]
       ],
+      "observed_max_cell_center_local_deg": 317.3,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1441.6744965621028,
+          25.16452194384706
+        ],
+        [
+          1398.5480535760246,
+          24.41174708140199
+        ],
+        [
+          1450.496966978388,
+          -25.318518737790722
+        ],
+        [
+          1499.3947158336136,
+          -26.172032118902365
+        ]
+      ],
+      "second_distance_upper_m": 1000.0,
+      "outer_distance_upper_m": 1000.0000000013836,
       "move_distance_m": 1004.0407663187642,
       "move_and_detect_time_s": 205.80815326375284,
       "direction_clearance_m": 561.4524713207834
@@ -1472,7 +2761,17 @@
       ],
       "diameter_upper_bound_m": 112.44449384709573,
       "analytic_diameter_upper_bound_m": 159.0306129186695,
+      "capped_diameter_upper_bound_m": 112.44449384709573,
       "geometric_diameter_upper_bound_m": 112.44449384709573,
+      "geometric_max_lower_bound_m": 112.44449384709573,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 159.0306129186695,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 317.6,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1500,6 +2799,35 @@
           -25.83117259338269
         ]
       ],
+      "observed_max_cell_center_local_deg": 317.6,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1441.829414664483,
+          25.16722604938266
+        ],
+        [
+          1399.3576494651331,
+          24.425878630211997
+        ],
+        [
+          1451.894761960748,
+          -25.34291733996415
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.777607272072,
+          -25.83117259338269
+        ]
+      ],
+      "second_distance_upper_m": 1000.0000000000001,
+      "outer_distance_upper_m": 1000.0000000013795,
       "move_distance_m": 1004.091647838885,
       "move_and_detect_time_s": 205.818329567777,
       "direction_clearance_m": 546.8675061456188
@@ -1515,7 +2843,17 @@
       ],
       "diameter_upper_bound_m": 112.3293040324109,
       "analytic_diameter_upper_bound_m": 164.12365704055676,
+      "capped_diameter_upper_bound_m": 112.3293040324109,
       "geometric_diameter_upper_bound_m": 112.3293040324109,
+      "geometric_max_lower_bound_m": 112.3293040324109,
+      "geometric_scan_status": "complete",
+      "geometric_scan_complete": true,
+      "stop_reason": "all_cells_scanned",
+      "analytic_cap_m": 164.12365704055676,
+      "scanned_cells": 3600,
+      "total_cells": 3600,
+      "early_stopped": false,
+      "score_exact_for_capped_objective": true,
       "worst_cell_center_local_deg": 317.90000000000003,
       "worst_cell_outer_polygon_local_xy_m": [
         [
@@ -1543,6 +2881,35 @@
           -25.786865316669562
         ]
       ],
+      "observed_max_cell_center_local_deg": 317.90000000000003,
+      "observed_max_cell_outer_polygon_local_xy_m": [
+        [
+          1441.2766887911514,
+          25.157578183376152
+        ],
+        [
+          1399.4878034092008,
+          24.42815047575636
+        ],
+        [
+          1452.5944080110241,
+          -25.355129707198493
+        ],
+        [
+          1499.7715427345706,
+          -26.178609656925268
+        ],
+        [
+          1499.7715427355693,
+          -26.178609656925268
+        ],
+        [
+          1499.7783806584637,
+          -25.786865316669562
+        ]
+      ],
+      "second_distance_upper_m": 1000.0000000000001,
+      "outer_distance_upper_m": 1000.0000000013747,
       "move_distance_m": 1004.141279146345,
       "move_and_detect_time_s": 205.828255829269,
       "direction_clearance_m": 532.1138078314206
@@ -1557,6 +2924,12 @@
       "radial_step_m": 100.0,
       "azimuth_step_deg": 5.0,
       "angle_step_deg": 1.0,
+      "scan_statistics": {
+        "candidate_evaluations": 320,
+        "scanned_cells": 111258,
+        "total_cells": 115200,
+        "early_stopped_candidates": 22
+      },
       "selected_local_xy_m": [
         869.7341754987845,
         502.1412603476403
@@ -1569,6 +2942,12 @@
       "radial_step_m": 20.0,
       "azimuth_step_deg": 1.0,
       "angle_step_deg": 0.5,
+      "scan_statistics": {
+        "candidate_evaluations": 456,
+        "scanned_cells": 328320,
+        "total_cells": 328320,
+        "early_stopped_candidates": 0
+      },
       "selected_local_xy_m": [
         860.7988873722709,
         517.2201523247378
@@ -1581,6 +2960,12 @@
       "radial_step_m": 5.0,
       "azimuth_step_deg": 0.25,
       "angle_step_deg": 0.25,
+      "scan_statistics": {
+        "candidate_evaluations": 548,
+        "scanned_cells": 789120,
+        "total_cells": 789120,
+        "early_stopped_candidates": 0
+      },
       "selected_local_xy_m": [
         865.2796508080112,
         509.6886661185734
@@ -1588,6 +2973,42 @@
       "diameter_upper_bound_m": 114.42731016620588
     }
   ],
+  "early_stop_enabled": true,
+  "scan_statistics": {
+    "stages": [
+      {
+        "candidate_evaluations": 320,
+        "scanned_cells": 111258,
+        "total_cells": 115200,
+        "early_stopped_candidates": 22
+      },
+      {
+        "candidate_evaluations": 456,
+        "scanned_cells": 328320,
+        "total_cells": 328320,
+        "early_stopped_candidates": 0
+      },
+      {
+        "candidate_evaluations": 548,
+        "scanned_cells": 789120,
+        "total_cells": 789120,
+        "early_stopped_candidates": 0
+      }
+    ],
+    "final": {
+      "candidate_evaluations": 548,
+      "scanned_cells": 1972800,
+      "total_cells": 1972800,
+      "early_stopped_candidates": 0
+    },
+    "overall": {
+      "candidate_evaluations": 1872,
+      "scanned_cells": 3201498,
+      "total_cells": 3205440,
+      "early_stopped_candidates": 22
+    }
+  },
+  "geometry_model": "shared_prior_reception_disk_bearing_near_projection_and_strips",
   "circle_sides": 360,
   "final_angle_step_deg": 0.1,
   "widened_error_deg": 1.05,
@@ -1668,6 +3089,6 @@
       ]
     ],
     "posterior_outer_polygon_diameter_m": 71.12645019631522,
-    "polygon_note": "与评分共用首验外包，含首距下界的有效约束x>=5cos(error)；圆用360个局部相切半平面，另裁入第二扇区、接收圆与两条有效条带；未完整扣除5米近区"
+    "polygon_note": "与评分共用完整几何构造：首验、第二距离上界圆、第二扇区、两次5米近区的有效投影下界和两条有效条带；圆用360个局部相切半平面；实际读数用原半角，扫描单元同步增宽扇区/条带/近区投影"
   }
 }

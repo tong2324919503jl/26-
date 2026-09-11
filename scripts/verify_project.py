@@ -101,6 +101,12 @@ def main() -> int:
 
     record("problem2_strategy_comparison_from_outside_repository", strategy_comparison)
 
+    def scoring_benchmark():
+        with tempfile.TemporaryDirectory(prefix="cumcm_b_scoring_") as temporary:
+            return command([str(ROOT / "problem2/benchmark_scoring.py")], Path(temporary))
+
+    record("problem2_early_stop_equivalence_from_outside_repository", scoring_benchmark)
+
     for problem_number in (3, 4):
         def search_smoke(problem_number=problem_number):
             with tempfile.TemporaryDirectory(prefix="cumcm_b_search_") as temporary:
@@ -185,6 +191,7 @@ def main() -> int:
                   "problem1_solve_from_outside_repository": "第一问从仓库外目录运行",
                   "problem2_solve_from_outside_repository": "第二问从仓库外目录运行",
                   "problem2_strategy_comparison_from_outside_repository": "同口径策略比较及跨目录复现",
+                  "problem2_early_stop_equivalence_from_outside_repository": "提前停止的评分与选点等价性及计算量",
                   "independent_highs_geometry_reference": "独立 HiGHS 几何核验",
                   "result_files_readable": "结果文件完整且可读取", "documentation_links": "说明文档本地链接"}
         lines.extend(f"| {labels.get(check['name'], check['name'])} | {'通过' if check['passed'] else '失败'} |" for check in checks)

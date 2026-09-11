@@ -2,9 +2,9 @@
 
 总结果：全部通过。
 
-验证时间（UTC）：2026-09-10T16:34:10.865905+00:00；Python：3.12.7。
+验证时间（UTC）：2026-09-11T03:06:11.654151+00:00；Python：3.12.7。
 
-自动测试：问题1 36 项，问题2 19 项，问题3 41 项，问题4 9 项。
+自动测试：问题1 36 项，问题2 27 项，问题3 41 项，问题4 9 项。
 
 | 检查项 | 结果 |
 | --- | --- |
@@ -18,6 +18,7 @@
 | problem4_tests | 通过 |
 | problem4_solve_from_outside_repository | 通过 |
 | 同口径策略比较及跨目录复现 | 通过 |
+| 提前停止的评分与选点等价性及计算量 | 通过 |
 | problem3_search_smoke_from_outside_repository | 通过 |
 | problem4_search_smoke_from_outside_repository | 通过 |
 | 结果文件完整且可读取 | 通过 |

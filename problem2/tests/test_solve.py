@@ -14,6 +14,14 @@ spec.loader.exec_module(solve)
 
 
 class SecondPointTests(unittest.TestCase):
+    def assert_polygon_contains(self, polygon, point, tolerance=1e-6):
+        self.assertTrue(polygon)
+        for a,b in zip(polygon,polygon[1:]+polygon[:1]):
+            length=solve.distance(a,b)
+            if length > 1e-10:
+                cross=(b[0]-a[0])*(point[1]-a[1])-(b[1]-a[1])*(point[0]-a[0])
+                self.assertGreaterEqual(cross/length,-tolerance)
+
     def test_pure_transverse_move_can_lose_signal(self):
         self.assertFalse(solve.guaranteed_reception((0, 100)))
         self.assertGreater(solve.distance((0, 100), (1000, 0)), 1000)
@@ -138,15 +146,18 @@ class SecondPointTests(unittest.TestCase):
         q=(800.,600.)
         evaluator=solve.ContinuousDiameterEvaluator(poly,angle_step_deg=2)
         bound=evaluator.evaluate(q)["geometric_diameter_upper_bound_m"]
+        candidate=solve.prepare_candidate_region_local(poly,q)
         rng=random.Random(71023)
         for _ in range(250):
             # 任意第二读数而不只取离散噪声端点。
             theta=rng.uniform(0,360)
-            exact=solve.clip_bearing(poly,q,theta)
+            exact=solve.clip_candidate_observation_local(candidate,theta)
             self.assertLessEqual(solve.polygon_diameter(exact),bound+1e-7)
             nearest=round(theta/evaluator.step)*evaluator.step
-            widened=solve.clip_bearing(poly,q,nearest,evaluator.widened_error)
+            widened=solve.clip_candidate_observation_local(candidate,nearest,evaluator.widened_error)
             self.assertLessEqual(solve.polygon_diameter(exact),solve.polygon_diameter(widened)+1e-7)
+            for point in exact:
+                self.assert_polygon_contains(widened,point)
 
     def test_refined_selection_retains_baseline_and_shorter_option(self):
         p=solve.choose_second_refined((0,0),0,stages=((250,15,5),),final_angle_step_deg=2,
@@ -195,6 +206,128 @@ class SecondPointTests(unittest.TestCase):
             poly=solve.posterior_outer_polygon(first,0,q,theta,circle_sides=p["circle_sides"])
             self.assertLessEqual(solve.polygon_diameter(poly),p["selected"]["diameter_upper_bound_m"]+1e-7)
             self.assertGreaterEqual(min(v[0] for v in poly),x+5*math.cos(math.radians(1))-1e-7)
+
+    def test_analytic_cap_short_circuit_equals_full_capped_score(self):
+        ev=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((0,0),0),angle_step_deg=5)
+        q=(750.,660.)
+        capped=solve._candidate_row(q,(0,0),0,ev,early_stop=True)
+        full=solve._candidate_row(q,(0,0),0,ev,early_stop=False)
+        self.assertTrue(capped["early_stopped"])
+        self.assertEqual(capped["diameter_upper_bound_m"],full["diameter_upper_bound_m"])
+        self.assertEqual(capped["diameter_upper_bound_m"],solve.diameter_bound(q))
+        self.assertLess(capped["scanned_cells"],capped["total_cells"])
+        self.assertIsNone(capped["geometric_diameter_upper_bound_m"])
+        self.assertIsNone(capped["worst_cell_center_local_deg"])
+        self.assertIsNone(capped["worst_cell_outer_polygon_local_xy_m"])
+        self.assertFalse(capped["geometric_scan_complete"])
+        self.assertEqual(capped["stop_reason"],"analytic_cap_reached")
+        self.assertTrue(capped["score_exact_for_capped_objective"])
+        self.assertGreaterEqual(capped["geometric_max_lower_bound_m"],capped["analytic_diameter_upper_bound_m"])
+        self.assertLessEqual(capped["geometric_max_lower_bound_m"],full["geometric_diameter_upper_bound_m"])
+
+    def test_large_or_infinite_analytic_cap_does_not_stop(self):
+        ev=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((0,0),0),angle_step_deg=5)
+        for q in ((100.,100.),(500.,0.)):
+            result=solve._candidate_row(q,(0,0),0,ev)
+            self.assertFalse(result["early_stopped"])
+            self.assertEqual(result["scanned_cells"],result["total_cells"])
+            self.assertEqual(result["diameter_upper_bound_m"],result["geometric_diameter_upper_bound_m"])
+        self.assertIsNone(solve._candidate_row((500.,0.),(0,0),0,ev)["analytic_diameter_upper_bound_m"])
+
+    def test_cap_equality_boundary_stops_without_tolerance_shift(self):
+        ev=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((0,0),0),angle_step_deg=5)
+        q=(750.,660.)
+        full=ev.evaluate(q,early_stop=False)
+        cap=full["geometric_diameter_upper_bound_m"]
+        equal=ev.evaluate(q,analytic_cap_m=cap)
+        self.assertTrue(equal["early_stopped"])
+        self.assertEqual(equal["geometric_max_lower_bound_m"],cap)
+        self.assertEqual(equal["capped_diameter_upper_bound_m"],cap)
+        above=ev.evaluate(q,analytic_cap_m=math.nextafter(cap,math.inf))
+        self.assertFalse(above["early_stopped"])
+        self.assertEqual(above["capped_diameter_upper_bound_m"],cap)
+        zero=ev.evaluate(q,analytic_cap_m=0.)
+        self.assertTrue(zero["early_stopped"])
+        self.assertEqual(zero["capped_diameter_upper_bound_m"],0.)
+
+    def test_search_recommendation_and_candidate_order_match_full_scan(self):
+        options={"stages":((250,15,5),(100,5,2)),"final_angle_step_deg":2,
+                 "baseline_grid_step_m":25}
+        for first in ((0.,0.),(1500.,0.)):
+            short=solve.choose_second_refined(first,0,early_stop=True,**options)
+            full=solve.choose_second_refined(first,0,early_stop=False,**options)
+            self.assertEqual(short["selected"]["local_xy_m"],full["selected"]["local_xy_m"])
+            self.assertEqual(short["selected"]["diameter_upper_bound_m"],full["selected"]["diameter_upper_bound_m"])
+            self.assertEqual(short["safe_finite_bound_grid_count"],full["safe_finite_bound_grid_count"])
+            rows=lambda p:[(r["local_xy_m"],r["diameter_upper_bound_m"]) for r in p["shortlist"]]
+            self.assertEqual(rows(short),rows(full))
+            self.assertEqual(short["fastest_near_best"]["local_xy_m"],full["fastest_near_best"]["local_xy_m"])
+            self.assertEqual(full["scan_statistics"]["overall"]["early_stopped_candidates"],0)
+        self.assertGreater(solve.choose_second_refined((0,0),0,**options)["scan_statistics"]["overall"]["early_stopped_candidates"],0)
+
+    def test_actual_posterior_uses_shared_candidate_geometry(self):
+        first,theta=(500.,-400.),123.
+        q_local=(750.,660.)
+        second=solve.rotate_local(q_local,first,theta)
+        source=solve.rotate_local((800.,5.),first,theta)
+        theta2=solve.bearing(source,second)+.4
+        prior=solve.first_region_outer_local(first,theta,circle_sides=180)
+        candidate=solve.prepare_candidate_region_local(prior,q_local,circle_sides=180)
+        local=solve.clip_candidate_observation_local(candidate,theta2-theta)
+        actual=solve.posterior_outer_polygon(first,theta,second,theta2,circle_sides=180)
+        self.assertEqual(len(local),len(actual))
+        for a,b in zip(local,actual):
+            self.assertLess(solve.distance(solve.rotate_local(a,first,theta),b),1e-8)
+        self.assert_polygon_contains(actual,source)
+
+    def test_circle_outer_relaxation_and_half_cell_endpoints_are_covered(self):
+        # 极粗外切圆放松必须进入条带增宽，不能仅替换 sin(error)。
+        q=(500.,400.)
+        prior=solve.first_region_outer_local((0,0),0,circle_sides=8)
+        candidate=solve.prepare_candidate_region_local(prior,q,circle_sides=8)
+        theta=337.917140935712
+        exact=solve.clip_candidate_observation_local(candidate,theta)
+        widened=solve.clip_candidate_observation_local(candidate,theta+1.,2.)
+        self.assertTrue(exact)
+        for p in exact:
+            self.assert_polygon_contains(widened,p)
+        # 包括跨零和不整除360°的步长，使用实际h而不是输入近似。
+        ev=solve.ContinuousDiameterEvaluator(prior,angle_step_deg=7.,circle_sides=8)
+        bound=ev.evaluate(q)["geometric_diameter_upper_bound_m"]
+        for center in (0.,ev.step,51*ev.step):
+            for sign in (-1,1):
+                angle=center+sign*ev.step/2
+                actual=solve.clip_candidate_observation_local(candidate,angle)
+                cell=solve.clip_candidate_observation_local(candidate,center,ev.widened_error)
+                self.assertLessEqual(solve.polygon_diameter(actual),bound+1e-7)
+                for p in actual:
+                    self.assert_polygon_contains(cell,p)
+
+    def test_near_projection_lower_bound_widens_with_angle(self):
+        q=(500.,0.)
+        candidate=solve.prepare_candidate_region_local(solve.first_region_outer_local((0,0),0),q)
+        # 真距恰为5的闭包边界，实际读数+1度，增宽cell中心再+1度。
+        source=(505.,0.)
+        exact=solve.clip_candidate_observation_local(candidate,1.)
+        cell=solve.clip_candidate_observation_local(candidate,2.,2.)
+        self.assert_polygon_contains(exact,source)
+        self.assert_polygon_contains(cell,source)
+        for p in exact:
+            self.assert_polygon_contains(cell,p)
+
+    def test_early_stop_input_validation_and_example_switch(self):
+        ev=solve.ContinuousDiameterEvaluator(solve.first_region_outer_local((0,0),0),angle_step_deg=5)
+        for cap in (-1.,float("nan"),-math.inf):
+            with self.assertRaises(ValueError):
+                ev.evaluate((750,660),analytic_cap_m=cap)
+        with self.assertRaises(ValueError):
+            solve.choose_second_refined((0,0),0,early_stop="false")
+        config={"first_station_xy_m":[0,0],"first_bearing_deg":0,
+                "search_stages":[[250,15,5]],"final_angle_step_deg":5,"early_stop":False}
+        with tempfile.TemporaryDirectory() as tmp:
+            result=solve.run_example(config,Path(tmp))
+            self.assertFalse(result["early_stop_enabled"])
+            self.assertEqual(result["scan_statistics"]["overall"]["early_stopped_candidates"],0)
 
 
 if __name__ == "__main__":

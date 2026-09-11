@@ -5,6 +5,7 @@ import argparse
 import csv
 import json
 import math
+from functools import lru_cache
 from pathlib import Path
 from typing import Callable, Iterable
 
@@ -160,33 +161,14 @@ def clip_polygon(vertices: list[Point], normal: Point, offset: float) -> list[Po
 def posterior_outer_polygon(first: Point, first_bearing: float,
                             second: Point, second_bearing: float,
                             error_deg: float = 1.0, circle_sides: int = 720) -> list[Point]:
-    """真定位区域的外包多边形：圆用相切半平面外包，保留两示向度扇区。
+    """统一几何模型下实际第二读数的外包；与选点评分共用全部约束。
 
-    保留首/次距<=5部分作为保守放松。不是原题纯示向度交会多边形的替代。
+    5 米近区由有效投影下界保守放松，不是原题纯示向度多边形的替代。
     """
     q_local = to_local(second, first, first_bearing)
-    # 与几何评分共用局部首验外包，包括有效下界 x>=5 cos(error)。
-    # 同一 circle_sides 时，显示后验是评分外包的子集；不混用世界坐标圆网格。
-    vertices = first_region_outer_local(first, first_bearing, error_deg, circle_sides)
-    theta_local = second_bearing-first_bearing
-    vertices = clip_bearing(vertices, q_local, theta_local, error_deg)
-    for i in range(circle_sides):
-        t = 2*math.pi*i/circle_sides
-        normal = (math.cos(t), math.sin(t))
-        vertices = clip_polygon(vertices, normal, 1500+normal[0]*q_local[0]+normal[1]*q_local[1])
-    # 继续裁入两个有效条带，才能让显示外包也满足解析条带上界。
-    e = math.radians(error_deg)
-    r2_max = 1500.0
-    if guaranteed_reception(q_local, error_deg):
-        r2_max = max(distance(q_local, (r*math.cos(e), sign*r*math.sin(e)))
-                     for r in (5.0, 1500.0) for sign in (-1, 1))
-    for station, theta, radius in (((0., 0.), 0., 1500.0),
-                                   (q_local, theta_local, r2_max)):
-        t = math.radians(theta)
-        for sign in (-1, 1):
-            normal = (-sign*math.sin(t), sign*math.cos(t))
-            offset = normal[0]*station[0] + normal[1]*station[1] + radius*math.sin(e)
-            vertices = clip_polygon(vertices, normal, offset)
+    prior = first_region_outer_local(first, first_bearing, error_deg, circle_sides)
+    candidate = prepare_candidate_region_local(prior, q_local, error_deg, circle_sides)
+    vertices = clip_candidate_observation_local(candidate, second_bearing-first_bearing)
     return [rotate_local(p, first, first_bearing) for p in vertices]
 
 
@@ -203,6 +185,89 @@ def clip_bearing(vertices: list[Point], station: Point, theta: float,
         n = (-sign*math.sin(r), sign*math.cos(r))
         vertices = clip_polygon(vertices, n, n[0]*station[0]+n[1]*station[1])
     return vertices
+
+
+@lru_cache(maxsize=16)
+def _circle_normals(circle_sides: int) -> tuple[Point, ...]:
+    return tuple((math.cos(2*math.pi*i/circle_sides), math.sin(2*math.pi*i/circle_sides))
+                 for i in range(circle_sides))
+
+
+def prepare_candidate_region_local(first_polygon: list[Point], q_local: Point,
+                                   error_deg: float = 1., circle_sides: int = 360) -> dict:
+    """每候选只构造一次与第二读数无关的共用区域。
+
+    first_polygon 必须来自同一首读数的 first_region_outer_local；其中已有
+    首扇区、目标圆、首接收圆、首条带和首距有效下界。再裁入第二距离上界圆。
+    """
+    if circle_sides < 8 or int(circle_sides) != circle_sides:
+        raise ValueError("circle_sides 必须是至少为 8 的整数")
+    if not math.isfinite(error_deg) or not 0 < error_deg < 90:
+        raise ValueError("误差半角须为 (0,90) 度内的有限数值")
+    if not all(math.isfinite(v) for v in q_local):
+        raise ValueError("候选坐标必须为有限数值")
+    radius = 1500.
+    if guaranteed_reception(q_local, error_deg):
+        e = math.radians(error_deg)
+        radius = min(radius, max(distance(q_local, (r*math.cos(e), s*r*math.sin(e)))
+                                 for r in (5., 1500.) for s in (-1, 1)))
+    polygon = list(first_polygon)
+    # 凸多边形的全部顶点已在真圆内时，无需再枚举相切半平面。
+    if any(distance(v, q_local) > radius+EPS for v in polygon):
+        for n in _circle_normals(circle_sides):
+            polygon = clip_polygon(polygon, n, radius+n[0]*q_local[0]+n[1]*q_local[1])
+            if not polygon:
+                break
+    return {"polygon_local_xy_m": polygon, "q_local_xy_m": tuple(q_local),
+            "error_deg": error_deg, "circle_sides": circle_sides,
+            "second_distance_upper_m": radius,
+            "outer_distance_upper_m": max((distance(v, q_local) for v in polygon), default=0.)}
+
+
+def _observation_normals(angle_deg: float, error_deg: float) -> tuple[Point, ...]:
+    t, lo, hi = map(math.radians, (angle_deg, angle_deg-error_deg, angle_deg+error_deg))
+    return ((math.sin(lo), -math.cos(lo)), (-math.sin(hi), math.cos(hi)),
+            (-math.cos(t), -math.sin(t)), (-math.sin(t), math.cos(t)))
+
+
+def _observation_limits(candidate: dict, error_deg: float) -> tuple[float, float]:
+    base = candidate["error_deg"]
+    if not math.isfinite(error_deg) or not base <= error_deg < 90:
+        raise ValueError("第二读数半角不得小于原始误差，且必须小于 90 度")
+    extra = math.radians(error_deg-base)
+    # 原条带随读数中心旋转；外切圆允许 ||x-q|| 略大于真实距离上界。
+    # 法向差的范数<=2 sin(extra/2)，故以下增宽还覆盖实际外包的每个点。
+    width = (candidate["second_distance_upper_m"]*math.sin(math.radians(base))+
+             2*candidate["outer_distance_upper_m"]*math.sin(extra/2))
+    return width, 5*math.cos(math.radians(error_deg))
+
+
+def _clip_candidate_observation(candidate: dict, normals: tuple[Point, ...],
+                                 width: float, near_projection: float) -> list[Point]:
+    q = candidate["q_local_xy_m"]
+    polygon = candidate["polygon_local_xy_m"]
+    for n, delta in ((normals[0], 0.), (normals[1], 0.),
+                     (normals[2], -near_projection), (normals[3], width),
+                     ((-normals[3][0], -normals[3][1]), width)):
+        polygon = clip_polygon(polygon, n, n[0]*q[0]+n[1]*q[1]+delta)
+        if not polygon:
+            break
+    return polygon
+
+
+def clip_candidate_observation_local(candidate: dict, second_bearing_local_deg: float,
+                                     error_deg: float | None = None) -> list[Point]:
+    """实际后验/评分单元共用裁剪：扇区、近区投影下界和有效第二条带。
+
+    默认用原始误差；评分传入原误差+半格。后者还同步增宽条带及近区投影，
+    保证原始外包被最近读数单元包含（双精度容差除外）。
+    """
+    if not math.isfinite(second_bearing_local_deg):
+        raise ValueError("第二读数必须为有限数值")
+    error = candidate["error_deg"] if error_deg is None else error_deg
+    width, near_projection = _observation_limits(candidate, error)
+    return _clip_candidate_observation(candidate, _observation_normals(second_bearing_local_deg, error),
+                                       width, near_projection)
 
 
 def first_region_outer_local(station: Point, bearing_deg: float,
@@ -235,14 +300,15 @@ def first_region_outer_local(station: Point, bearing_deg: float,
 
 
 class ContinuousDiameterEvaluator:
-    """采用半格增宽，覆盖连续全部第二读数的几何直径上界。
+    """同一后验几何模型的全第二读数上界；支持 min(A,B) 的精确短路。
 
-    合并队友方案中的外包/增宽思想；没有用角噪声线性近似评分。
-    这是双精度数学外包计算，不是区间算术认证。
+    B 是共用外包几何增宽后的有限读数单元直径最大值；半格增宽覆盖连续读数。
+    geometric_max_lower_bound_m 只下界此离散 B，不能称为真实 J 或实际误差下界。
+    这是双精度外包计算，不是区间算术认证；没有用角噪声线性近似评分。
     """
 
     def __init__(self, polygon: list[Point], error_deg: float = 1.,
-                 angle_step_deg: float = .1):
+                 angle_step_deg: float = .1, circle_sides: int = 360):
         if not polygon:
             raise ValueError("首读数外包不能为空")
         if not math.isfinite(angle_step_deg) or not 0 < angle_step_deg <= 30:
@@ -254,29 +320,52 @@ class ContinuousDiameterEvaluator:
         if not 0 < error_deg < 90 or self.widened_error >= 90:
             raise ValueError("原始和增宽误差半角须在 (0,90) 度")
         self.polygon = list(polygon)
-        self.normals = []
-        for i in range(self.count):
-            angle = i*self.step
-            lower, upper = map(math.radians, (angle-self.widened_error,
-                                               angle+self.widened_error))
-            self.normals.append((angle, (math.sin(lower), -math.cos(lower)),
-                                 (-math.sin(upper), math.cos(upper))))
+        if circle_sides < 8 or int(circle_sides) != circle_sides:
+            raise ValueError("circle_sides 必须是至少为 8 的整数")
+        self.circle_sides = circle_sides
+        self.normals = [(i*self.step, _observation_normals(i*self.step, self.widened_error))
+                        for i in range(self.count)]
 
-    def evaluate(self, q_local: Point) -> dict:
-        maximum, worst_angle, worst_poly = 0., 0., []
-        for angle, n1, n2 in self.normals:
-            poly = clip_polygon(self.polygon, n1, n1[0]*q_local[0]+n1[1]*q_local[1])
-            if not poly:
-                continue
-            poly = clip_polygon(poly, n2, n2[0]*q_local[0]+n2[1]*q_local[1])
-            if not poly:
-                continue
-            value = polygon_diameter(poly)
+    def evaluate(self, q_local: Point, *, analytic_cap_m: float = math.inf,
+                  early_stop: bool = True) -> dict:
+        """返回 C=min(A,B)；部分最大值达到已知解析上界 A 时可正确短路。
+
+        不传 cap（即 A=+inf）或 early_stop=False 都完整扫描。短路后 B 未知，
+        仅 C=A 已确定；绝不把已扫描最大值当作完整几何上界。
+        """
+        if math.isnan(analytic_cap_m) or analytic_cap_m < 0:
+            raise ValueError("解析 cap 必须非负，允许正无穷")
+        if not isinstance(early_stop, bool):
+            raise ValueError("early_stop 必须为布尔值")
+        candidate = prepare_candidate_region_local(self.polygon, q_local, self.error, self.circle_sides)
+        width, near_projection = _observation_limits(candidate, self.widened_error)
+        maximum, worst_angle, worst_poly, scanned = 0., 0., [], 0
+        stopped = False
+        for angle, normals in self.normals:
+            scanned += 1
+            poly = _clip_candidate_observation(candidate, normals, width, near_projection)
+            value = polygon_diameter(poly) if poly else 0.
             if value > maximum:
                 maximum, worst_angle, worst_poly = value, angle, poly
-        return {"geometric_diameter_upper_bound_m": maximum,
-                "worst_cell_center_local_deg": worst_angle,
-                "worst_cell_outer_polygon_local_xy_m": [list(v) for v in worst_poly]}
+            if early_stop and maximum >= analytic_cap_m and scanned < self.count:
+                stopped = True
+                break
+        observed_polygon = [list(v) for v in worst_poly]
+        return {"capped_diameter_upper_bound_m": min(analytic_cap_m, maximum),
+                "geometric_diameter_upper_bound_m": None if stopped else maximum,
+                "geometric_max_lower_bound_m": maximum,
+                "geometric_scan_status": "capped_early_stop" if stopped else "complete",
+                "geometric_scan_complete": not stopped,
+                "stop_reason": "analytic_cap_reached" if stopped else "all_cells_scanned",
+                "analytic_cap_m": analytic_cap_m if math.isfinite(analytic_cap_m) else None,
+                "scanned_cells": scanned, "total_cells": self.count,
+                "early_stopped": stopped, "score_exact_for_capped_objective": True,
+                "worst_cell_center_local_deg": None if stopped else worst_angle,
+                "worst_cell_outer_polygon_local_xy_m": None if stopped else observed_polygon,
+                "observed_max_cell_center_local_deg": worst_angle,
+                "observed_max_cell_outer_polygon_local_xy_m": observed_polygon,
+                "second_distance_upper_m": candidate["second_distance_upper_m"],
+                "outer_distance_upper_m": candidate["outer_distance_upper_m"]}
 
 
 def direction_clearance(q_local: Point, error_deg: float = 1.) -> float:
@@ -296,13 +385,14 @@ def safe_radial_limit(beta_deg: float, error_deg: float = 1.,
 
 
 def _candidate_row(q_local: Point, station: Point, bearing_deg: float,
-                   evaluator: ContinuousDiameterEvaluator) -> dict:
-    geometric = evaluator.evaluate(q_local)
+                   evaluator: ContinuousDiameterEvaluator, *, early_stop: bool = True) -> dict:
+    # A 是同一后验模型的上界，只能作为 min(A,B) 的 cap，不能用于淘汰候选。
     strip = diameter_bound(q_local, evaluator.error)
+    geometric = evaluator.evaluate(q_local, analytic_cap_m=strip, early_stop=early_stop)
     d = math.hypot(*q_local)
     return {"local_xy_m": list(q_local),
             "xy_m": list(rotate_local(q_local, station, bearing_deg)),
-            "diameter_upper_bound_m": min(strip, geometric["geometric_diameter_upper_bound_m"]),
+            "diameter_upper_bound_m": geometric["capped_diameter_upper_bound_m"],
             "analytic_diameter_upper_bound_m": strip if math.isfinite(strip) else None,
             **geometric, "move_distance_m": d,
             "move_and_detect_time_s": d/5+5,
@@ -321,6 +411,7 @@ def choose_second_refined(station: Point, bearing_deg: float, *,
                           stages: tuple = ((100., 5., 1.), (20., 1., .5), (5., .25, .25)),
                           final_angle_step_deg: float = .1,
                           baseline_grid_step_m: float = 10.,
+                          early_stop: bool = True,
                           progress: Callable[[str], None] | None = None) -> dict:
     """四圆盘安全域内，合并解析保底和目标圆条件化的连续读数上界。
 
@@ -334,6 +425,8 @@ def choose_second_refined(station: Point, bearing_deg: float, *,
         raise ValueError("移动预算和网格步长须为正，容差非负，误差半角位于 (0,10) 度")
     if not stages or any(len(s) != 3 or any(not math.isfinite(v) or v <= 0 for v in s) for s in stages):
         raise ValueError("至少需要一层，每层包含三个正有限步长")
+    if not isinstance(early_stop, bool):
+        raise ValueError("early_stop 必须为布尔值")
     polygon = first_region_outer_local(station, bearing_deg, error_deg, circle_sides)
     # 四圆盘蕴含 ||q|| <= 1005；目标圆不参与此处的机器人位置筛选。
     maximum_radius = min(move_budget_m, 1005.)
@@ -357,6 +450,14 @@ def choose_second_refined(station: Point, bearing_deg: float, *,
 
     def grid(start, end, step):
         return [start+i*step for i in range(max(0, math.floor((end-start)/step+1e-8)+1))]
+
+    def scan_counts(rows):
+        return {"candidate_evaluations": len(rows),
+                "scanned_cells": sum(row["scanned_cells"] for row in rows),
+                "total_cells": sum(row["total_cells"] for row in rows),
+                "early_stopped_candidates": sum(row["early_stopped"] for row in rows)}
+
+    scan_stages = []
 
     for level, (r_step, beta_step, scan_step) in enumerate(stages):
         if best is None:
@@ -382,20 +483,26 @@ def choose_second_refined(station: Point, bearing_deg: float, *,
                     current[tuple(round(x, 8) for x in q)] = q
         if not current:
             raise ValueError("当前搜索没有保证正常示向度的候选；增加预算或减小网格")
-        evaluator = ContinuousDiameterEvaluator(polygon, error_deg, scan_step)
-        rows = [_candidate_row(q, station, bearing_deg, evaluator) for q in current.values()]
+        evaluator = ContinuousDiameterEvaluator(polygon, error_deg, scan_step, circle_sides)
+        rows = [_candidate_row(q, station, bearing_deg, evaluator, early_stop=early_stop)
+                for q in current.values()]
         best = min(rows, key=_score_key)
         visited.update(current)
         history.append({"level": level+1, "candidate_count": len(rows),
                         "radial_step_m": r_step, "azimuth_step_deg": beta_step,
                         "angle_step_deg": evaluator.step,
+                        "scan_statistics": scan_counts(rows),
                         "selected_local_xy_m": best["local_xy_m"],
                         "diameter_upper_bound_m": best["diameter_upper_bound_m"]})
         if progress:
             progress(f"第 {level+1} 层 {len(rows)} 个候选，上界 {best['diameter_upper_bound_m']:.3f} 米")
         last_r_step, last_beta_step = r_step, beta_step
-    evaluator = ContinuousDiameterEvaluator(polygon, error_deg, final_angle_step_deg)
-    candidates = sorted((_candidate_row(q, station, bearing_deg, evaluator) for q in visited.values()), key=_score_key)
+        scan_stages.append(scan_counts(rows))
+    evaluator = ContinuousDiameterEvaluator(polygon, error_deg, final_angle_step_deg, circle_sides)
+    candidates = sorted((_candidate_row(q, station, bearing_deg, evaluator, early_stop=early_stop)
+                         for q in visited.values()), key=_score_key)
+    final_scan = scan_counts(candidates)
+    all_scans = scan_stages+[final_scan]
     selected = candidates[0]
     threshold = selected["diameter_upper_bound_m"]*(1+tolerance)
     shortlist = [q for q in candidates if q["diameter_upper_bound_m"] <= threshold+EPS]
@@ -420,6 +527,10 @@ def choose_second_refined(station: Point, bearing_deg: float, *,
             "fastest_near_best": fastest, "pareto_frontier": pareto,
             "safe_finite_bound_grid_count": len(candidates), "near_best_grid_count": len(shortlist),
             "shortlist": shortlist, "search_history": history,
+            "early_stop_enabled": early_stop,
+            "scan_statistics": {"stages": scan_stages, "final": final_scan,
+                                "overall": {key: sum(row[key] for row in all_scans) for key in final_scan}},
+            "geometry_model": "shared_prior_reception_disk_bearing_near_projection_and_strips",
             "circle_sides": circle_sides, "final_angle_step_deg": evaluator.step,
             "widened_error_deg": evaluator.widened_error,
             "first_outer_polygon_local_xy_m": [list(p) for p in polygon],
@@ -492,6 +603,7 @@ def run_example(config: dict, output_dir: Path) -> dict:
                                      baseline_grid_step_m=float(config.get("grid_step_m", 10)),
                                      circle_sides=int(config.get("circle_sides", 360)),
                                      stages=tuple(tuple(s) for s in config.get("search_stages", ((100., 5., 1.), (20., 1., .5), (5., .25, .25)))),
+                                     early_stop=config.get("early_stop", True),
                                      final_angle_step_deg=float(config.get("final_angle_step_deg", .1)))
     else:
         raise ValueError("selection_mode 必须为 refined 或 analytic")
@@ -528,7 +640,7 @@ def run_example(config: dict, output_dir: Path) -> dict:
                 "source_distance_from_second_m":distance(source,second),
                 "posterior_outer_polygon_xy_m":[list(p) for p in poly],
                 "posterior_outer_polygon_diameter_m":polygon_diameter(poly),
-                "polygon_note":f"与评分共用首验外包，含首距下界的有效约束x>=5cos(error)；圆用{plan.get('circle_sides',720)}个局部相切半平面，另裁入第二扇区、接收圆与两条有效条带；未完整扣除5米近区"}
+                "polygon_note":f"与评分共用完整几何构造：首验、第二距离上界圆、第二扇区、两次5米近区的有效投影下界和两条有效条带；圆用{plan.get('circle_sides',720)}个局部相切半平面；实际读数用原半角，扫描单元同步增宽扇区/条带/近区投影"}
     (output_dir/"selection.json").write_text(json.dumps(plan,ensure_ascii=False,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     return plan
 

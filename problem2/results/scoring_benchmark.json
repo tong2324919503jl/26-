@@ -1,0 +1,924 @@
+{
+  "passed": true,
+  "verified_at_utc": "2026-09-11T03:06:10.904363+00:00",
+  "python_version": "3.12.7",
+  "scope": "Synthetic offline workload. Same unified geometry, candidates and angle grid; only early stopping changes. No official simulator.",
+  "query_benchmarks": [
+    {
+      "name": "origin_coarse",
+      "first_station_xy_m": [
+        0.0,
+        0.0
+      ],
+      "first_bearing_deg": 0.0,
+      "error_deg": 1.0,
+      "angle_step_deg": 1.0,
+      "circle_sides": 360,
+      "candidate_count": 14,
+      "repeats": 2,
+      "early_stopped_candidates": 3,
+      "full_scanned_cells": 5040,
+      "early_scanned_cells": 4921,
+      "saved_cell_fraction": 0.023611111111111138,
+      "full_median_seconds": 0.028740749999997206,
+      "early_median_seconds": 0.028836899997259025,
+      "measured_speed_ratio": 0.9966657304609386,
+      "max_score_difference_m": 0.0,
+      "ranking_identical": true,
+      "cells_counted_per_repeat": true,
+      "candidate_scores": [
+        {
+          "local_xy_m": [
+            250.0,
+            100.0
+          ],
+          "full_capped_score_m": 677.990545940581,
+          "early_capped_score_m": 677.990545940581,
+          "full_B_m": 677.990545940581,
+          "early_B_m": 677.990545940581,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            400.0
+          ],
+          "full_capped_score_m": 291.8714487807155,
+          "early_capped_score_m": 291.8714487807155,
+          "full_B_m": 291.8714487807155,
+          "early_B_m": 291.8714487807155,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            100.0
+          ],
+          "full_capped_score_m": 507.73589081560095,
+          "early_capped_score_m": 507.73589081560095,
+          "full_B_m": 507.73589081560095,
+          "early_B_m": 507.73589081560095,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            400.0
+          ],
+          "full_capped_score_m": 226.20141267507208,
+          "early_capped_score_m": 226.20141267507208,
+          "full_B_m": 226.20141267507208,
+          "early_B_m": 226.20141267507208,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            660.0
+          ],
+          "full_capped_score_m": 175.20380375337012,
+          "early_capped_score_m": 175.20380375337012,
+          "full_B_m": 175.56694352020952,
+          "early_B_m": null,
+          "analytic_A_m": 175.20380375337012,
+          "scanned_cells": 325,
+          "early_stopped": true
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            800.0
+          ],
+          "full_capped_score_m": 154.96101094077648,
+          "early_capped_score_m": 154.96101094077648,
+          "full_B_m": 160.28965461142752,
+          "early_B_m": null,
+          "analytic_A_m": 154.96101094077648,
+          "scanned_cells": 319,
+          "early_stopped": true
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            100.0
+          ],
+          "full_capped_score_m": 389.04764693919356,
+          "early_capped_score_m": 389.04764693919356,
+          "full_B_m": 389.04764693919356,
+          "early_B_m": 389.04764693919356,
+          "analytic_A_m": 978.4889175807124,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            400.0
+          ],
+          "full_capped_score_m": 166.2123123530571,
+          "early_capped_score_m": 166.2123123530571,
+          "full_B_m": 166.2123123530571,
+          "early_B_m": 166.2123123530571,
+          "analytic_A_m": 187.2158006423483,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "full_capped_score_m": 131.22100725349134,
+          "early_capped_score_m": 131.22100725349134,
+          "full_B_m": 133.59468601522067,
+          "early_B_m": null,
+          "analytic_A_m": 131.22100725349134,
+          "scanned_cells": 317,
+          "early_stopped": true
+        },
+        {
+          "local_xy_m": [
+            950.0,
+            100.0
+          ],
+          "full_capped_score_m": 330.8558525577496,
+          "early_capped_score_m": 330.8558525577496,
+          "full_B_m": 330.8558525577496,
+          "early_B_m": 330.8558525577496,
+          "analytic_A_m": 1413.769295731263,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -100.0
+          ],
+          "full_capped_score_m": 677.990545940582,
+          "early_capped_score_m": 677.990545940582,
+          "full_B_m": 677.990545940582,
+          "early_B_m": 677.990545940582,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -400.0
+          ],
+          "full_capped_score_m": 291.871448780716,
+          "early_capped_score_m": 291.871448780716,
+          "full_B_m": 291.871448780716,
+          "early_B_m": 291.871448780716,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -100.0
+          ],
+          "full_capped_score_m": 507.73589081560254,
+          "early_capped_score_m": 507.73589081560254,
+          "full_B_m": 507.73589081560254,
+          "early_B_m": 507.73589081560254,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -400.0
+          ],
+          "full_capped_score_m": 226.20141267507387,
+          "early_capped_score_m": 226.20141267507387,
+          "full_B_m": 226.20141267507387,
+          "early_B_m": 226.20141267507387,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 360,
+          "early_stopped": false
+        }
+      ]
+    },
+    {
+      "name": "origin_fine",
+      "first_station_xy_m": [
+        0.0,
+        0.0
+      ],
+      "first_bearing_deg": 0.0,
+      "error_deg": 1.0,
+      "angle_step_deg": 0.1,
+      "circle_sides": 360,
+      "candidate_count": 14,
+      "repeats": 2,
+      "early_stopped_candidates": 0,
+      "full_scanned_cells": 50400,
+      "early_scanned_cells": 50400,
+      "saved_cell_fraction": 0.0,
+      "full_median_seconds": 0.22947060000296915,
+      "early_median_seconds": 0.23060160000022734,
+      "measured_speed_ratio": 0.995095437337568,
+      "max_score_difference_m": 0.0,
+      "ranking_identical": true,
+      "cells_counted_per_repeat": true,
+      "candidate_scores": [
+        {
+          "local_xy_m": [
+            250.0,
+            100.0
+          ],
+          "full_capped_score_m": 635.4061589588913,
+          "early_capped_score_m": 635.4061589588913,
+          "full_B_m": 635.4061589588913,
+          "early_B_m": 635.4061589588913,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            400.0
+          ],
+          "full_capped_score_m": 264.2892804912601,
+          "early_capped_score_m": 264.2892804912601,
+          "full_B_m": 264.2892804912601,
+          "early_B_m": 264.2892804912601,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            100.0
+          ],
+          "full_capped_score_m": 495.5236277842382,
+          "early_capped_score_m": 495.5236277842382,
+          "full_B_m": 495.5236277842382,
+          "early_B_m": 495.5236277842382,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            400.0
+          ],
+          "full_capped_score_m": 202.58330406992923,
+          "early_capped_score_m": 202.58330406992923,
+          "full_B_m": 202.58330406992923,
+          "early_B_m": 202.58330406992923,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            660.0
+          ],
+          "full_capped_score_m": 149.98239924341905,
+          "early_capped_score_m": 149.98239924341905,
+          "full_B_m": 149.98239924341905,
+          "early_B_m": 149.98239924341905,
+          "analytic_A_m": 175.20380375337012,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            800.0
+          ],
+          "full_capped_score_m": 136.7827033491074,
+          "early_capped_score_m": 136.7827033491074,
+          "full_B_m": 136.7827033491074,
+          "early_B_m": 136.7827033491074,
+          "analytic_A_m": 154.96101094077648,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            100.0
+          ],
+          "full_capped_score_m": 364.07779937607603,
+          "early_capped_score_m": 364.07779937607603,
+          "full_B_m": 364.07779937607603,
+          "early_B_m": 364.07779937607603,
+          "analytic_A_m": 978.4889175807124,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            400.0
+          ],
+          "full_capped_score_m": 149.15088857546493,
+          "early_capped_score_m": 149.15088857546493,
+          "full_B_m": 149.15088857546493,
+          "early_B_m": 149.15088857546493,
+          "analytic_A_m": 187.2158006423483,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "full_capped_score_m": 115.69303933853314,
+          "early_capped_score_m": 115.69303933853314,
+          "full_B_m": 115.69303933853314,
+          "early_B_m": 115.69303933853314,
+          "analytic_A_m": 131.22100725349134,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            950.0,
+            100.0
+          ],
+          "full_capped_score_m": 281.151297507586,
+          "early_capped_score_m": 281.151297507586,
+          "full_B_m": 281.151297507586,
+          "early_B_m": 281.151297507586,
+          "analytic_A_m": 1413.769295731263,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -100.0
+          ],
+          "full_capped_score_m": 635.406158958893,
+          "early_capped_score_m": 635.406158958893,
+          "full_B_m": 635.406158958893,
+          "early_B_m": 635.406158958893,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -400.0
+          ],
+          "full_capped_score_m": 264.28928049125784,
+          "early_capped_score_m": 264.28928049125784,
+          "full_B_m": 264.28928049125784,
+          "early_B_m": 264.28928049125784,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -100.0
+          ],
+          "full_capped_score_m": 495.52362778423856,
+          "early_capped_score_m": 495.52362778423856,
+          "full_B_m": 495.52362778423856,
+          "early_B_m": 495.52362778423856,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -400.0
+          ],
+          "full_capped_score_m": 202.58330406992812,
+          "early_capped_score_m": 202.58330406992812,
+          "full_B_m": 202.58330406992812,
+          "early_B_m": 202.58330406992812,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        }
+      ]
+    },
+    {
+      "name": "boundary_fine",
+      "first_station_xy_m": [
+        1500.0,
+        0.0
+      ],
+      "first_bearing_deg": 0.0,
+      "error_deg": 1.0,
+      "angle_step_deg": 0.1,
+      "circle_sides": 360,
+      "candidate_count": 14,
+      "repeats": 2,
+      "early_stopped_candidates": 0,
+      "full_scanned_cells": 50400,
+      "early_scanned_cells": 50400,
+      "saved_cell_fraction": 0.0,
+      "full_median_seconds": 0.09544915000151377,
+      "early_median_seconds": 0.09695730000385083,
+      "measured_speed_ratio": 0.9844452145194105,
+      "max_score_difference_m": 0.0,
+      "ranking_identical": true,
+      "cells_counted_per_repeat": true,
+      "candidate_scores": [
+        {
+          "local_xy_m": [
+            250.0,
+            100.0
+          ],
+          "full_capped_score_m": 24.87192188890067,
+          "early_capped_score_m": 24.87192188890067,
+          "full_B_m": 24.87192188890067,
+          "early_B_m": 24.87192188890067,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            400.0
+          ],
+          "full_capped_score_m": 20.023944989054478,
+          "early_capped_score_m": 20.023944989054478,
+          "full_B_m": 20.023944989054478,
+          "early_B_m": 20.023944989054478,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            100.0
+          ],
+          "full_capped_score_m": 85.94339509773782,
+          "early_capped_score_m": 85.94339509773782,
+          "full_B_m": 85.94339509773782,
+          "early_B_m": 85.94339509773782,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            400.0
+          ],
+          "full_capped_score_m": 36.45385108655007,
+          "early_capped_score_m": 36.45385108655007,
+          "full_B_m": 36.45385108655007,
+          "early_B_m": 36.45385108655007,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            660.0
+          ],
+          "full_capped_score_m": 37.37877740016464,
+          "early_capped_score_m": 37.37877740016464,
+          "full_B_m": 37.37877740016464,
+          "early_B_m": 37.37877740016464,
+          "analytic_A_m": 175.20380375337012,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            800.0
+          ],
+          "full_capped_score_m": 40.1343539917104,
+          "early_capped_score_m": 40.1343539917104,
+          "full_B_m": 40.1343539917104,
+          "early_B_m": 40.1343539917104,
+          "analytic_A_m": 154.96101094077648,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            100.0
+          ],
+          "full_capped_score_m": 182.0652419986709,
+          "early_capped_score_m": 182.0652419986709,
+          "full_B_m": 182.0652419986709,
+          "early_B_m": 182.0652419986709,
+          "analytic_A_m": 978.4889175807124,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            400.0
+          ],
+          "full_capped_score_m": 63.5299462068488,
+          "early_capped_score_m": 63.5299462068488,
+          "full_B_m": 63.5299462068488,
+          "early_B_m": 63.5299462068488,
+          "analytic_A_m": 187.2158006423483,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "full_capped_score_m": 54.02356987549502,
+          "early_capped_score_m": 54.02356987549502,
+          "full_B_m": 54.02356987549502,
+          "early_B_m": 54.02356987549502,
+          "analytic_A_m": 131.22100725349134,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            950.0,
+            100.0
+          ],
+          "full_capped_score_m": 281.151297507586,
+          "early_capped_score_m": 281.151297507586,
+          "full_B_m": 281.151297507586,
+          "early_B_m": 281.151297507586,
+          "analytic_A_m": 1413.769295731263,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -100.0
+          ],
+          "full_capped_score_m": 24.871921888900747,
+          "early_capped_score_m": 24.871921888900747,
+          "full_B_m": 24.871921888900747,
+          "early_B_m": 24.871921888900747,
+          "analytic_A_m": 2316.3211617650722,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -400.0
+          ],
+          "full_capped_score_m": 20.023944989054204,
+          "early_capped_score_m": 20.023944989054204,
+          "full_B_m": 20.023944989054204,
+          "early_B_m": 20.023944989054204,
+          "analytic_A_m": 361.56540509562217,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -100.0
+          ],
+          "full_capped_score_m": 85.94339509773795,
+          "early_capped_score_m": 85.94339509773795,
+          "full_B_m": 85.94339509773795,
+          "early_B_m": 85.94339509773795,
+          "analytic_A_m": 1556.7641366382195,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -400.0
+          ],
+          "full_capped_score_m": 36.45385108655004,
+          "early_capped_score_m": 36.45385108655004,
+          "full_B_m": 36.45385108655004,
+          "early_B_m": 36.45385108655004,
+          "analytic_A_m": 266.7293112887904,
+          "scanned_cells": 3600,
+          "early_stopped": false
+        }
+      ]
+    },
+    {
+      "name": "rounded_bearing_error",
+      "first_station_xy_m": [
+        400.0,
+        -200.0
+      ],
+      "first_bearing_deg": 25.0,
+      "error_deg": 1.005,
+      "angle_step_deg": 1.0,
+      "circle_sides": 360,
+      "candidate_count": 14,
+      "repeats": 2,
+      "early_stopped_candidates": 1,
+      "full_scanned_cells": 5040,
+      "early_scanned_cells": 4999,
+      "saved_cell_fraction": 0.008134920634920606,
+      "full_median_seconds": 0.0213533499991172,
+      "early_median_seconds": 0.02143890000297688,
+      "measured_speed_ratio": 0.9960095898647878,
+      "max_score_difference_m": 0.0,
+      "ranking_identical": true,
+      "cells_counted_per_repeat": true,
+      "candidate_scores": [
+        {
+          "local_xy_m": [
+            250.0,
+            100.0
+          ],
+          "full_capped_score_m": 662.3502197077579,
+          "early_capped_score_m": 662.3502197077579,
+          "full_B_m": 662.3502197077579,
+          "early_B_m": 662.3502197077579,
+          "analytic_A_m": 2338.6978612629173,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            400.0
+          ],
+          "full_capped_score_m": 289.4107807194133,
+          "early_capped_score_m": 289.4107807194133,
+          "full_B_m": 289.4107807194133,
+          "early_B_m": 289.4107807194133,
+          "analytic_A_m": 363.6207923430532,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            100.0
+          ],
+          "full_capped_score_m": 506.2473321684218,
+          "early_capped_score_m": 506.2473321684218,
+          "full_B_m": 506.2473321684218,
+          "early_B_m": 506.2473321684218,
+          "analytic_A_m": 1570.6272371031057,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            400.0
+          ],
+          "full_capped_score_m": 227.15761305773248,
+          "early_capped_score_m": 227.15761305773248,
+          "full_B_m": 227.15761305773248,
+          "early_B_m": 227.15761305773248,
+          "analytic_A_m": 268.22554009249154,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            660.0
+          ],
+          "full_capped_score_m": 167.65918177506396,
+          "early_capped_score_m": 167.65918177506396,
+          "full_B_m": 167.65918177506396,
+          "early_B_m": 167.65918177506396,
+          "analytic_A_m": 176.14098267630513,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            800.0
+          ],
+          "full_capped_score_m": 155.77989550763857,
+          "early_capped_score_m": 155.77989550763857,
+          "full_B_m": 156.30823589482168,
+          "early_B_m": null,
+          "analytic_A_m": 155.77989550763857,
+          "scanned_cells": 319,
+          "early_stopped": true
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            100.0
+          ],
+          "full_capped_score_m": 372.47798926496677,
+          "early_capped_score_m": 372.47798926496677,
+          "full_B_m": 372.47798926496677,
+          "early_B_m": 372.47798926496677,
+          "analytic_A_m": 986.5684391169444,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            400.0
+          ],
+          "full_capped_score_m": 161.42969769884513,
+          "early_capped_score_m": 161.42969769884513,
+          "full_B_m": 161.42969769884513,
+          "early_B_m": 161.42969769884513,
+          "analytic_A_m": 188.25079913617023,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            750.0,
+            660.0
+          ],
+          "full_capped_score_m": 129.0753173626279,
+          "early_capped_score_m": 129.0753173626279,
+          "full_B_m": 129.0753173626279,
+          "early_B_m": 129.0753173626279,
+          "analytic_A_m": 131.91629512449785,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            950.0,
+            100.0
+          ],
+          "full_capped_score_m": 332.0573019678579,
+          "early_capped_score_m": 332.0573019678579,
+          "full_B_m": 332.0573019678579,
+          "early_B_m": 332.0573019678579,
+          "analytic_A_m": 1426.1371130442346,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -100.0
+          ],
+          "full_capped_score_m": 671.5869092657848,
+          "early_capped_score_m": 671.5869092657848,
+          "full_B_m": 671.5869092657848,
+          "early_B_m": 671.5869092657848,
+          "analytic_A_m": 2338.6978612629173,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            250.0,
+            -400.0
+          ],
+          "full_capped_score_m": 289.4107807194126,
+          "early_capped_score_m": 289.4107807194126,
+          "full_B_m": 289.4107807194126,
+          "early_B_m": 289.4107807194126,
+          "analytic_A_m": 363.6207923430532,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -100.0
+          ],
+          "full_capped_score_m": 506.24733216842736,
+          "early_capped_score_m": 506.24733216842736,
+          "full_B_m": 506.24733216842736,
+          "early_B_m": 506.24733216842736,
+          "analytic_A_m": 1570.6272371031057,
+          "scanned_cells": 360,
+          "early_stopped": false
+        },
+        {
+          "local_xy_m": [
+            500.0,
+            -400.0
+          ],
+          "full_capped_score_m": 227.15761305773225,
+          "early_capped_score_m": 227.15761305773225,
+          "full_B_m": 227.15761305773225,
+          "early_B_m": 227.15761305773225,
+          "analytic_A_m": 268.22554009249154,
+          "scanned_cells": 360,
+          "early_stopped": false
+        }
+      ]
+    }
+  ],
+  "end_to_end_plan": {
+    "first_station_xy_m": [
+      0.0,
+      0.0
+    ],
+    "first_bearing_deg": 0.0,
+    "same_unified_geometry": true,
+    "selected_identical": true,
+    "search_path_and_candidate_order_identical": true,
+    "selected_local_xy_m": [
+      842.1437368791097,
+      546.8945372930203
+    ],
+    "selected_score_m": 112.3293040324109,
+    "visited_candidate_count": 548,
+    "full_seconds": 17.967465199995786,
+    "early_seconds": 18.634845399996266,
+    "measured_speed_ratio": 0.9641864375220084,
+    "full_scan_statistics": {
+      "stages": [
+        {
+          "candidate_evaluations": 320,
+          "scanned_cells": 115200,
+          "total_cells": 115200,
+          "early_stopped_candidates": 0
+        },
+        {
+          "candidate_evaluations": 456,
+          "scanned_cells": 328320,
+          "total_cells": 328320,
+          "early_stopped_candidates": 0
+        },
+        {
+          "candidate_evaluations": 548,
+          "scanned_cells": 789120,
+          "total_cells": 789120,
+          "early_stopped_candidates": 0
+        }
+      ],
+      "final": {
+        "candidate_evaluations": 548,
+        "scanned_cells": 1972800,
+        "total_cells": 1972800,
+        "early_stopped_candidates": 0
+      },
+      "overall": {
+        "candidate_evaluations": 1872,
+        "scanned_cells": 3205440,
+        "total_cells": 3205440,
+        "early_stopped_candidates": 0
+      }
+    },
+    "early_scan_statistics": {
+      "stages": [
+        {
+          "candidate_evaluations": 320,
+          "scanned_cells": 111258,
+          "total_cells": 115200,
+          "early_stopped_candidates": 22
+        },
+        {
+          "candidate_evaluations": 456,
+          "scanned_cells": 328320,
+          "total_cells": 328320,
+          "early_stopped_candidates": 0
+        },
+        {
+          "candidate_evaluations": 548,
+          "scanned_cells": 789120,
+          "total_cells": 789120,
+          "early_stopped_candidates": 0
+        }
+      ],
+      "final": {
+        "candidate_evaluations": 548,
+        "scanned_cells": 1972800,
+        "total_cells": 1972800,
+        "early_stopped_candidates": 0
+      },
+      "overall": {
+        "candidate_evaluations": 1872,
+        "scanned_cells": 3201498,
+        "total_cells": 3205440,
+        "early_stopped_candidates": 22
+      }
+    }
+  },
+  "interpretation": "Saved cell counts are deterministic for these inputs. Local wall times are observational, not a universal speedup guarantee. No pruning based on a large upper bound is used."
+}
