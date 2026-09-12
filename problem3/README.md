@@ -1,29 +1,31 @@
-# 问题三：搜索并清除全向干扰源
+# 问题3：搜索并清除全向干扰源
 
-默认已启用 **`problem3_v4`**，包含上一轮表现最好的算法。启动时会显示版本。
-
-概率提前停止单独作为实验，默认算法不变；见[测试步骤](../simulation_guide.md#5-概率提前停止实验仅本地)和[漏清风险结果](../validation/probability_stop/report.md)。
+当前默认为 **`problem3_v5_continuous`**，对应用户实际使用的20260912新版演练包。生产策略入口是 `current_policy.py`，无需解压包或实验目录。
 
 ```powershell
 python problem3/solve.py --version
 python problem3/solve.py
 ```
 
-默认只跑本地自建案例，不联网。换案例加 `--index 20`；查看 `results/demo_result.json` 的统计和 `results/demo_route.svg` 的路线。
+默认只跑本地自建案例。换案例加 `--index 20`；统计、动作与路线放在 `results/demo_result.json`、`results/demo_trace.jsonl`、`results/demo_route.svg`。自选输入输出相对路径均按 `problem3/` 解析。
 
-新的均衡样例池为7,000例，10至16源各1,000例；每组构造难度呈截断正态形状，中等最多。仅测试当前solve方案并单独出图，见[大样本测试与绘图](../validation/balanced_search.md)。
+第三问核心仅需 Python 3.10 以上和标准库。
 
-去官方平台运行，按 [模拟测试说明](../simulation_guide.md) 操作。回放本轮之前的默认算法，加 `--strategy previous`。
+## 当前算法
 
-## 清除逻辑
+1. 依据原点反馈选择6点环或9点外环，保持连续覆盖保证。
+2. 由阳性、阴性反馈维护相容区域，沿前瞻评分作连续选点优化。
+3. 搜索、定位和清除交错调度；细长区域比较窄带光学与射频定位成本。
 
-1. 在原点搜索未知频道；原点没有发现源时使用9点外环，否则使用原有6点环。两种布局均有连续覆盖保证。
-2. 用方位误差和全向源的阴性观测维护可能区域，根据预计移动和后续定位成本选择检测点。
-3. 搜索、定位、清除交错进行，每一步更新路线；区域足够小时清除，狭长区域可做有限光学扫描。
-4. 完成覆盖并清除已发现源，或实际成功清除16个源，才确认结束。
+只有完成认证覆盖并清除已发现源，或实际成功清除16个源才结束。假想位置和可见性评分只用于动作排序，不能作为全清证明。数学说明见 [model.md](model.md)。
 
-本轮队友的途中截获等新组合未超过已有最好算法，因此没有加入。此前最快分支只在实验目录中，本轮已迁入默认入口。
+## 查结果与运行记录
 
-同一512例留出集合中，原默认 **272.55→226.78秒/源**，全部清除；仍未达到220秒均值目标。这是本地自建结果。完整比较见 [本轮报告](../validation/speed_v4_summary.md)，数学说明见 [model.md](model.md)。
+- [新版来源、模块对应与迁移验证](../validation/practice_v5/README.md)：保留原包7000例汇总；本次仅做迁移回归，没有重跑7000例或调参。
+- [均衡样例与分问绘图](../validation/balanced_search.md)：每问7000例，10至16源各1000例。新版必须使用新的运行批次名称，不能续接旧版结果。
+- [平台演练与正式测试步骤](../simulation_guide.md)：本地验证不占官方测试次数。
+- [历史v4对照](../validation/speed_v4_summary.md)：仅代表当时冻结代码；`speed_policy.py` 保留为新版依赖与显式 `--strategy v4` 历史回放入口。
+- `--strategy previous` 保留更早版本的原有含义；第四问 `--strategy legacy` 仍为最早25点版本。
+- [概率提前停止实验](../validation/probability_stop/report.md)：使用历史基线的独立风险实验，当前默认未启用。
 
-核心程序仅需 Python 3.10以上和标准库。生产入口在 `speed_policy.py`，不依赖实验目录或队友ZIP。自选 `--case`、`--output-dir` 的相对路径按 `problem3/` 解析。
+**所有本地汇总均不是官方成绩。**

@@ -52,8 +52,8 @@ class SpeedPolicyTests(unittest.TestCase):
     def test_production_imports_do_not_load_experiments(self):
         code = """
 import sys, json
-from problem3.speed_policy import SearchPolicy as P3
-from problem4.speed_policy import SearchPolicy as P4
+from problem3.current_policy import SearchPolicy as P3
+from problem4.current_policy import SearchPolicy as P4
 P3(); P4()
 print(json.dumps([name for name in sys.modules if '.experiments' in name]))
 """

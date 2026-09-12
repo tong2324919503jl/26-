@@ -1,5 +1,11 @@
 # Preserve the byte-level checksums of searchable material copies on all systems.
 materials/problem_b/extracted/*.md text eol=lf
 materials/problem_b/manifest.json text eol=lf
+problem3/examples/balanced_v1/* text eol=lf
+problem4/examples/balanced_v1/* text eol=lf
 problem3/examples/balanced_normal_v2/* text eol=lf
 problem4/examples/balanced_normal_v2/* text eol=lf
+# Preserve source evidence and generated SVG path formatting.
+validation/practice_v5/*.json text eol=lf
+paper/figures/**/*.svg -whitespace
+paper/figures/图片/** -whitespace

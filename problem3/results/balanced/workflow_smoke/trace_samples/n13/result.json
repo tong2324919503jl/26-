@@ -1,0 +1,179 @@
+{
+  "case_id": "local_p3_balanced_v1_n13_000000",
+  "case_sha256": "3dc6f3d05ee6f57b717e4116ce99b24f0ba58b8e91e97dc77028a9d4aff7e1bb",
+  "source_count": 13,
+  "cleared_count": 13,
+  "cleared_fraction": 1.0,
+  "virtual_time_s": 2734.4805684155494,
+  "average_clear_time_s": 210.3446591088884,
+  "last_clear_time_s": 2734.4805684155494,
+  "time_to_90_percent_s": 2494.0784941311776,
+  "movement_m": 10162.402842077749,
+  "actions": 122,
+  "measure": 104,
+  "clear": 18,
+  "failed_clear": 5,
+  "switch": 102,
+  "no_signal": 64,
+  "source_truth_all_cleared": true,
+  "policy_claimed_complete": true,
+  "independent_public_completion": {
+    "certified": true,
+    "reason": "independent_public_per_channel_coverage",
+    "unknown_channels": [
+      3,
+      9,
+      11,
+      12,
+      14,
+      15,
+      16
+    ],
+    "checks": [
+      {
+        "channel": 3,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 9,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 11,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 12,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 14,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 15,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      },
+      {
+        "channel": 16,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418303
+        }
+      }
+    ]
+  },
+  "certified_full_clear": true,
+  "actual_exit_time_s": 2734.4805684155494,
+  "normal_exit": true,
+  "error": null,
+  "policy_cpu_s": 0.15625,
+  "policy_wall_s": 0.15394820002256893,
+  "endpoint_counts": {
+    "/enter": 1,
+    "/measure": 104,
+    "/clear": 18,
+    "/exit": 1
+  },
+  "policy": {
+    "problem": 3,
+    "strategy": "adaptive",
+    "cleared_channels": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage_complete": true,
+    "completion_certified": true,
+    "termination_reason": "certified_coverage_and_all_detected_cleared",
+    "coverage_points_visited": 7,
+    "detected_channels": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      17,
+      18,
+      19,
+      20
+    ],
+    "config": {
+      "ring_radius": 1150.0,
+      "bearing_error_deg": 1.005,
+      "max_probe_count": 5,
+      "lateral_fraction": 0.12,
+      "lateral_min_m": 45.0,
+      "lateral_max_m": 140.0,
+      "opportunistic_radius_m": 0.0,
+      "optical_spacing_m": 26.0,
+      "clear_guarantee_radius_m": 19.99,
+      "exploratory_clear_radius_m": 55.0,
+      "neighbor_updates": true,
+      "neighbor_max_distance_m": 1450.0,
+      "neighbor_min_parallax_deg": 12.0,
+      "adaptive_discovery": false,
+      "discovery_min_spacing_m": 700.0,
+      "discovery_replacement_only": true,
+      "target_uncertainty_weight": 0.5
+    },
+    "measure_actions": 104,
+    "clear_actions": 18,
+    "failed_clears": 5,
+    "optical_fallbacks": 0,
+    "negative_localization_reads": 0,
+    "safe_clear_offsets": 8,
+    "lookahead_choices": 12,
+    "band_sweeps": 2,
+    "band_clear_attempts": 5,
+    "zero_origin_geometry": {
+      "count": 9,
+      "radius_m": 1700.0,
+      "triggered": false,
+      "phase_candidates": 16
+    },
+    "algorithm_version": "problem3_v4"
+  },
+  "problem": 3,
+  "algorithm_version": "problem3_v4",
+  "provenance": "self_constructed_not_official"
+}

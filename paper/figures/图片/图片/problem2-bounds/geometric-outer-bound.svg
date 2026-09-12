@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <rect width="1200" height="780" fill="#f7f7f5"/>
+  <style>
+    text{font-family:"Noto Sans CJK SC","Microsoft YaHei",Arial,sans-serif;fill:#27313a}
+    .title{font-size:30px;font-weight:700}.label{font-size:20px}.small{font-size:18px}
+  </style>
+  <text x="55" y="55" class="title">几何外包上界 B(q)</text>
+  <rect x="55" y="95" width="1090" height="405" rx="12" fill="#fff" stroke="#c7cdd1" stroke-width="2"/>
+
+  <!-- 共同约束的粗外包区域 -->
+  <path d="M160 150 Q420 115 700 125 Q950 130 1045 260 L1065 450 L760 480 L180 450 Q140 310 160 150Z" fill="#e3e7e8" stroke="#69777d" stroke-width="4"/>
+
+  <!-- 角度单元：由两侧方向和参考点围成的浅色扇形，仅作范围示意 -->
+  <path d="M500 350 L1100 80 L1100 495 Z" fill="#d6c9a9" fill-opacity="0.14" stroke="#b7a98c" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- 离散角度单元的多边形外包 -->
+  <polygon points="650,280 770,220 945,285 960,405 790,420 650,380" fill="#d7d1df" stroke="#75657c" stroke-width="4"/>
+  <!-- 连续合法读数对应的真实区域 -->
+  <path d="M700 345 L775 285 L875 300 L910 375 L815 415 L720 390Z" fill="#cbded3" stroke="#5f806d" stroke-width="3"/>
+
+  <!-- 外包单元直径，端点位于紫色多边形边界 -->
+  <line x1="650" y1="380" x2="945" y2="285" stroke="#9b4d45" stroke-width="5"/>
+  <circle cx="650" cy="380" r="6" fill="#9b4d45"/><circle cx="945" cy="285" r="6" fill="#9b4d45"/>
+  <!-- 角度单元的边界与中心方向置于最上层：仅作辅助，不是候选区域边界 -->
+  <line x1="500" y1="350" x2="1100" y2="80" stroke="#9aa4a8" stroke-width="3" stroke-dasharray="10 8"/>
+  <line x1="500" y1="350" x2="1100" y2="350" stroke="#9aa4a8" stroke-width="3" stroke-dasharray="10 8"/>
+  <line x1="500" y1="350" x2="1100" y2="495" stroke="#9aa4a8" stroke-width="3" stroke-dasharray="10 8"/>
+  <circle cx="500" cy="350" r="7" fill="#27313a"/>
+  <text x="472" y="385" class="label">q</text>
+  <text x="925" y="90" class="small">角度下界</text>
+  <text x="1008" y="320" class="small">中心方向</text>
+  <text x="925" y="488" class="small">角度上界</text>
+  <text x="70" y="122" class="label">真实区域被外包单元覆盖</text>
+
+  <!-- 分行图例，避免文字与符号重叠 -->
+  <rect x="55" y="545" width="1090" height="195" rx="12" fill="#fff" stroke="#c7cdd1" stroke-width="2"/>
+  <text x="80" y="580" class="label" font-weight="600">图例</text>
+  <rect x="120" y="602" width="28" height="19" fill="#e3e7e8" stroke="#69777d"/>
+  <text x="170" y="618" class="small">共同约束的粗外包区域</text>
+  <rect x="450" y="602" width="28" height="19" fill="#d7d1df" stroke="#75657c"/>
+  <text x="500" y="618" class="small">离散角度单元的多边形外包</text>
+  <rect x="810" y="602" width="28" height="19" fill="#cbded3" stroke="#5f806d"/>
+  <text x="860" y="618" class="small">连续合法读数对应的真实区域</text>
+  <line x1="120" y1="660" x2="158" y2="660" stroke="#9b4d45" stroke-width="5"/>
+  <text x="180" y="666" class="small">红色线段：外包单元边界上两点间的直径</text>
+  <line x1="620" y1="660" x2="690" y2="660" stroke="#9aa4a8" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="710" y="666" class="small">灰色虚线：角度单元的中心方向及两侧边界</text>
+  <rect x="120" y="700" width="28" height="18" fill="#d6c9a9" fill-opacity="0.35" stroke="#b7a98c"/>
+  <text x="170" y="716" class="small">浅色扇形：角度单元的范围</text>
+  <circle cx="650" cy="700" r="6" fill="#27313a"/>
+  <text x="670" y="706" class="small">q：当前评估的第二检测点</text>
+</svg>

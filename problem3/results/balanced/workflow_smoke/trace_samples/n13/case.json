@@ -1,0 +1,102 @@
+{
+  "case_id": "local_p3_balanced_v1_n13_000000",
+  "dataset": "balanced_v1",
+  "noise": "hash_uniform",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "seed": 6303000000,
+  "source_count": 13,
+  "sources": [
+    {
+      "channel": 7,
+      "orientation_deg": null,
+      "radius": 1253.0554174788515,
+      "x": 1375.9176124064024,
+      "y": -432.27149812178067
+    },
+    {
+      "channel": 6,
+      "orientation_deg": null,
+      "radius": 1017.4152793537172,
+      "x": -128.22614101275525,
+      "y": 381.27526256540284
+    },
+    {
+      "channel": 1,
+      "orientation_deg": null,
+      "radius": 1345.5007894302887,
+      "x": 717.5327048352842,
+      "y": -109.53046550472267
+    },
+    {
+      "channel": 8,
+      "orientation_deg": null,
+      "radius": 1198.5686352347532,
+      "x": -1512.3596147801936,
+      "y": -131.50739118261023
+    },
+    {
+      "channel": 13,
+      "orientation_deg": null,
+      "radius": 1185.6514100162326,
+      "x": -199.13356280708933,
+      "y": 961.5687792644356
+    },
+    {
+      "channel": 10,
+      "orientation_deg": null,
+      "radius": 1384.5292921044243,
+      "x": 994.1236102688268,
+      "y": 795.9543395440903
+    },
+    {
+      "channel": 18,
+      "orientation_deg": null,
+      "radius": 1272.599427851328,
+      "x": -1163.3487183909924,
+      "y": -386.6270285793062
+    },
+    {
+      "channel": 17,
+      "orientation_deg": null,
+      "radius": 1108.6444721323298,
+      "x": -363.0812977050272,
+      "y": -587.0726413377305
+    },
+    {
+      "channel": 4,
+      "orientation_deg": null,
+      "radius": 1168.4652459783613,
+      "x": 320.45252072398137,
+      "y": 34.650477596886965
+    },
+    {
+      "channel": 20,
+      "orientation_deg": null,
+      "radius": 1043.074112555974,
+      "x": 463.96590266945606,
+      "y": 484.3352081681767
+    },
+    {
+      "channel": 5,
+      "orientation_deg": null,
+      "radius": 1029.1420086950463,
+      "x": -1039.4376221332097,
+      "y": -526.9815140738721
+    },
+    {
+      "channel": 19,
+      "orientation_deg": null,
+      "radius": 1167.91671574735,
+      "x": -1351.0303515385267,
+      "y": -585.6599077650513
+    },
+    {
+      "channel": 2,
+      "orientation_deg": null,
+      "radius": 1306.8958519342739,
+      "x": 267.2705209092174,
+      "y": -699.0163618332721
+    }
+  ]
+}

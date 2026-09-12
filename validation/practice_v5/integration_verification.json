@@ -1,0 +1,134 @@
+{
+  "verified_at_utc": "2026-09-12T12:23:42.377079+00:00",
+  "passed": true,
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "source": {
+    "files_checked": 30,
+    "paths": [
+      "problem3/current_policy.py",
+      "problem3/continuous_probe.py",
+      "problem4/current_policy.py",
+      "problem4/discovery_route.py",
+      "problem4/discovery_policy.py",
+      "problem4/global_discovery.py",
+      "problem4/incremental_localization.py",
+      "problem4/incremental_visibility.py",
+      "problem4/visibility.py",
+      "problem3/__init__.py",
+      "problem3/client.py",
+      "problem3/geometry.py",
+      "problem3/lookahead.py",
+      "problem3/planning.py",
+      "problem3/policy.py",
+      "problem3/speed_policy.py",
+      "problem4/__init__.py",
+      "problem4/bystander.py",
+      "problem4/coverage.py",
+      "problem4/legacy_policy.py",
+      "problem4/localization.py",
+      "problem4/optical_repair.py",
+      "problem4/policy.py",
+      "problem4/routing.py",
+      "problem4/search_layout.py",
+      "problem4/shared_baseline.py",
+      "problem4/speed_policy.py",
+      "problem3/scenarios.py",
+      "problem3/simulator.py",
+      "problem4/results/coverage_certificate_v4.json"
+    ],
+    "comparison": "AST after ImportFrom renaming; shared files byte-equal after LF normalization"
+  },
+  "scope": "Source migration and six matched local training cases; no 7000-case rerun or official calls",
+  "official_platform_calls": 0,
+  "paired_cases": [
+    {
+      "problem": 3,
+      "training_index": 0,
+      "algorithm_version": "problem3_v5_continuous",
+      "action_count": 132,
+      "action_sha256": "fc1c817ffbf1c2331b1d27796fe1660bb6d1209d188f3237936edc66249ba136",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 10,
+      "virtual_time_s": 2832.5330656594833
+    },
+    {
+      "problem": 3,
+      "training_index": 2,
+      "algorithm_version": "problem3_v5_continuous",
+      "action_count": 187,
+      "action_sha256": "75b7a8ae27ffda6036808a19a7988250496751b8fcc7758dfd57d6b839b97888",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 11,
+      "virtual_time_s": 3414.0001291917024
+    },
+    {
+      "problem": 3,
+      "training_index": 6,
+      "algorithm_version": "problem3_v5_continuous",
+      "action_count": 111,
+      "action_sha256": "cc27b75a7f0977739698b6aa548db8674dc9d1fd9b402dcfa74b848ca82b4977",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 16,
+      "virtual_time_s": 2377.0875635734315
+    },
+    {
+      "problem": 4,
+      "training_index": 0,
+      "algorithm_version": "problem4_v5_visibility_discovery",
+      "action_count": 286,
+      "action_sha256": "dca09bafe00e00cef0c1d0304c12e984ea4c959e6326e8592a263a7e3447c3d5",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 10,
+      "virtual_time_s": 5714.626065667053
+    },
+    {
+      "problem": 4,
+      "training_index": 2,
+      "algorithm_version": "problem4_v5_visibility_discovery",
+      "action_count": 336,
+      "action_sha256": "b71056b399d030c51857b974b2ceff82ca02c568712fe147736dc4d4cef4303d",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 15,
+      "virtual_time_s": 5858.588062168339
+    },
+    {
+      "problem": 4,
+      "training_index": 6,
+      "algorithm_version": "problem4_v5_visibility_discovery",
+      "action_count": 220,
+      "action_sha256": "f2c3698df80ee9ad147d8e5f32d779577237362844af5016cf5d71759ff20bc5",
+      "identical_actions_and_policy": true,
+      "certified_full_clear": true,
+      "source_count": 14,
+      "virtual_time_s": 5495.198505909124
+    }
+  ],
+  "unified_verification": {
+    "passed": true,
+    "unit_test_counts": {
+      "problem1": 36,
+      "problem2": 27,
+      "problem3": 106,
+      "problem4": 49
+    },
+    "report": "validation/report.json",
+    "stress_cases_per_problem": 8
+  },
+  "additional_checks": {
+    "p4_current_balanced_worker": {
+      "algorithm_version": "problem4_v5_visibility_discovery",
+      "certified_full_clear": true
+    },
+    "historical_archive_recovery_sha256": "bce6c749b633275e01c20913d1b9980b4f810cf6fad57f9de58732edbe5b4332",
+    "organized_navigation_links_checked": 55,
+    "paper_pages": 25,
+    "paper_sha256": "9384cd6d6bd8dc7d375249ba0d8723800d42dc6bec5ec78b0c57bef964c211e6",
+    "paper_compile_warnings": 0
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "p2_04_lateral_loss",
+  "title": "纯横向移动失收的合法反例",
+  "caption": "取自建源 G=(1000,0) 米及接收半径 1000 米。纯横移至 (0,200) 米后失收；(80,200) 米则同时满足四圆盘安全约束与正常测向条件。",
+  "section": "四圆盘安全候选域；方法引入的动机",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132"
+  },
+  "notes": "真实源位于首示向中心线，首示向误差为 0°，符合 ±1° 限制。接收圆是这个反例的真实圆，不是普遍已知圆。",
+  "recommendation": "优先：直观说明为什么不能只追求横向交会角。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "source_m": [
+      1000.0,
+      0.0
+    ],
+    "radius_m": 1000.0,
+    "bad_q_m": [
+      0.0,
+      200.0
+    ],
+    "bad_distance_m": 1019.803902718557,
+    "good_q_m": [
+      80.0,
+      200.0
+    ],
+    "good_distance_m": 941.4881836751856,
+    "good_q_all_sources_safe": true
+  }
+}

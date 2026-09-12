@@ -1,0 +1,81 @@
+{
+  "case_id": "local_p3_balanced_v1_n10_000000",
+  "dataset": "balanced_v1",
+  "noise": "hash_uniform",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "seed": 6300000000,
+  "source_count": 10,
+  "sources": [
+    {
+      "channel": 17,
+      "orientation_deg": null,
+      "radius": 1180.0277521764162,
+      "x": -1326.7682471996304,
+      "y": -1173.2849698942525
+    },
+    {
+      "channel": 2,
+      "orientation_deg": null,
+      "radius": 1468.835594216578,
+      "x": 1271.366866567066,
+      "y": -813.2434568100025
+    },
+    {
+      "channel": 12,
+      "orientation_deg": null,
+      "radius": 1242.9997192350577,
+      "x": -326.67937112847716,
+      "y": -977.0131312849975
+    },
+    {
+      "channel": 16,
+      "orientation_deg": null,
+      "radius": 1280.8367323515579,
+      "x": -829.5782254849877,
+      "y": -1076.413945902164
+    },
+    {
+      "channel": 11,
+      "orientation_deg": null,
+      "radius": 1459.7335864790914,
+      "x": -1242.1994791867232,
+      "y": -1296.8897335390625
+    },
+    {
+      "channel": 5,
+      "orientation_deg": null,
+      "radius": 1486.6333857741295,
+      "x": -1441.186505979968,
+      "y": 891.5744834417627
+    },
+    {
+      "channel": 1,
+      "orientation_deg": null,
+      "radius": 1411.4294529167084,
+      "x": 664.1239335853271,
+      "y": -706.1570872534869
+    },
+    {
+      "channel": 19,
+      "orientation_deg": null,
+      "radius": 1081.0873255092076,
+      "x": -1242.3877311440413,
+      "y": 873.6412735423511
+    },
+    {
+      "channel": 20,
+      "orientation_deg": null,
+      "radius": 1250.9934099607578,
+      "x": 129.37976136223574,
+      "y": -531.1755255921249
+    },
+    {
+      "channel": 18,
+      "orientation_deg": null,
+      "radius": 1337.9223711236123,
+      "x": 782.5755445191159,
+      "y": -492.50060162215163
+    }
+  ]
+}

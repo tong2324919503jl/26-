@@ -1,0 +1,29 @@
+# 问题 1 交会定位主流程图
+
+该版本按实际求解顺序展示：先判定可行性，再判定有界性，最后对有界区域计算直径并检验覆盖性；空集、无界性和退化分类由 problem1/solve.py 完整处理。
+
+```mermaid
+%%{init: {"theme": "base", "themeVariables": {"background": "#ffffff", "lineColor": "#1f2937", "textColor": "#17212b", "fontFamily": "Noto Sans CJK SC, Arial, sans-serif"}, "flowchart": {"curve": "basis", "nodeSpacing": 45, "rankSpacing": 55}}}%%
+flowchart LR
+    start([开始]) --> input["输入检测点、示向度与误差"]
+    input --> model["扇区建模<br/>每次观测转换为半平面约束"]
+    model --> feasible["求可行点与候选顶点<br/>交点筛选、凸包与可行性见证"]
+    feasible --> nonempty{"是否存在共同可行点？"}
+    nonempty -->|否| empty["空集<br/>无共同可行位置"]
+    nonempty -->|是| bounded{"是否存在非零衰退方向？"}
+    bounded -->|是| unbounded["非空无界<br/>直径无有限值"]
+    bounded -->|否| geometry["有界区域几何计算<br/>分类点/线段/多边形并求直径 D"]
+    geometry --> cover["覆盖性判断<br/>检查直径圆、最小覆盖圆与 20 米阈值"]
+    empty --> output([输出结果])
+    unbounded --> output
+    cover --> output
+    classDef startNode fill:#e8f5e9,stroke:#2e7d32,color:#16351b,stroke-width:1.5px;
+    classDef processNode fill:#eaf2ff,stroke:#2563eb,color:#172554,stroke-width:1.5px;
+    classDef decisionNode fill:#fff7e6,stroke:#c77700,color:#4a2a00,stroke-width:1.5px;
+    classDef terminalNode fill:#fff0e6,stroke:#d55e00,color:#562100,stroke-width:1.5px;
+    class start,input startNode;
+    class model,feasible,geometry,cover processNode;
+    class nonempty,bounded decisionNode;
+    class empty,unbounded,output terminalNode;
+    linkStyle default stroke:#1f2937,stroke-width:2.5px;
+```

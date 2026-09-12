@@ -9,10 +9,10 @@
 % \ProcessOptions\relax
 \LoadClass[oneside,a4paper,UTF8,zihao=-4,fontset=none]{ctexart}
 % Configure CJK families once. SimSun is supplied in the project.
-\setCJKmainfont[Path=fonts/,FontIndex=0,Mapping=fullwidth-stop,AutoFakeBold=true]{simsun.ttc}
+\setCJKmainfont[Path=fonts/,FontIndex=0,AutoFakeBold=true]{simsun.ttc}
 \setCJKsansfont[AutoFakeBold=true]{FandolHei-Regular.otf}
 \setCJKmonofont{FandolFang-Regular.otf}
-\setCJKfamilyfont{zhsong}[Path=fonts/,FontIndex=0,Mapping=fullwidth-stop,AutoFakeBold=true]{simsun.ttc}
+\setCJKfamilyfont{zhsong}[Path=fonts/,FontIndex=0,AutoFakeBold=true]{simsun.ttc}
 \setCJKfamilyfont{zhhei}[AutoFakeBold=true]{FandolHei-Regular.otf}
 \setCJKfamilyfont{zhkai}{FandolKai-Regular.otf}
 \setCJKfamilyfont{zhfs}{FandolFang-Regular.otf}

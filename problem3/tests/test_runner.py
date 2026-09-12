@@ -64,8 +64,8 @@ class RunnerTests(unittest.TestCase):
         self.assertIsNone(result['cleared_fraction'])
         self.assertIsNone(result['platform_program_runtime_s'])
         self.assertIsNone(result['platform_case_code'])
-        self.assertEqual(result['algorithm_version'], 'problem3_v4')
-        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v4')
+        self.assertEqual(result['algorithm_version'], 'problem3_v5_continuous')
+        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v5_continuous')
         client.exit.assert_called_once()
 
     def test_unknown_outcome_does_not_exit_or_publish_final_average(self):
@@ -77,8 +77,8 @@ class RunnerTests(unittest.TestCase):
         self.assertIsNone(result['average_clear_time_s'])
         self.assertEqual(result['observed_average_clear_time_s'], 46.25)
         self.assertEqual(result['pending_request_id'], 'measure-uncertain')
-        self.assertEqual(result['algorithm_version'], 'problem3_v4')
-        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v4')
+        self.assertEqual(result['algorithm_version'], 'problem3_v5_continuous')
+        self.assertEqual(result['policy']['algorithm_version'], 'problem3_v5_continuous')
 
     def test_budget_uses_exit_reserve_when_exit_is_safe(self):
         code, result, client, _ = self.online(failure=BudgetExceeded('reserve reached'))
@@ -129,17 +129,17 @@ class RunnerTests(unittest.TestCase):
         self.assertEqual(local_run.call_args.args[0]['case_id'], case['case_id'])
         self.assertTrue((problem/'results/check/demo_result.json').exists())
         saved = json.loads((problem/'results/check/demo_result.json').read_text(encoding='utf-8'))
-        self.assertEqual(saved['algorithm_version'], 'problem3_v4')
-        self.assertEqual(saved['policy']['algorithm_version'], 'problem3_v4')
+        self.assertEqual(saved['algorithm_version'], 'problem3_v5_continuous')
+        self.assertEqual(saved['policy']['algorithm_version'], 'problem3_v5_continuous')
         self.assertTrue((problem/'results/check/demo_route.svg').exists())
         self.assertFalse((self.destination/'results').exists())
         self.assertIn('无定义', output.getvalue())
-        self.assertIn('algorithm_version=problem3_v4', output.getvalue())
+        self.assertIn('algorithm_version=problem3_v5_continuous', output.getvalue())
 
     def test_version_display_is_read_only_and_never_enters_arena(self):
-        for problem, strategy, version in ((3, 'adaptive', 'problem3_v4'),
+        for problem, strategy, version in ((3, 'adaptive', 'problem3_v5_continuous'),
                                            (3, 'previous', 'problem3_v1'),
-                                           (4, 'adaptive', 'problem4_v4'),
+                                           (4, 'adaptive', 'problem4_v5_visibility_discovery'),
                                            (4, 'previous', 'problem4_v2'),
                                            (4, 'legacy', 'problem4_v1')):
             destination = self.destination/f'p{problem}_{strategy}'

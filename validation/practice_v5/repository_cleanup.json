@@ -1,0 +1,45 @@
+{
+  "moves": [
+    {
+      "old": "国赛ABC题完成难易度分析.md",
+      "new": "docs/background/abc_difficulty.md",
+      "sha256": "22c921434fcbfc9fc9de7f9f6216d9fa7a61e4f1849f69c93168ec3046694ef2"
+    },
+    {
+      "old": "国赛ABC题国内参考文献清单.md",
+      "new": "docs/background/abc_references.md",
+      "sha256": "c206ea550062658e40b6a6f7652b44bec1437b56be0911f484dff8948c61eba8"
+    },
+    {
+      "old": "北京赛区注意事项(1).pptx",
+      "new": "docs/background/beijing_contest_notes.pptx",
+      "sha256": "63cffebec07c4328042ba92f9f3dc7a2cc2046775942a640c3775b5b79243fd4"
+    }
+  ],
+  "removed_archives": [
+    {
+      "path": "B题第一二问_GitHub项目.zip",
+      "bytes": 670703,
+      "sha256": "9c3303da9a2f5becc559f615fde89b622afab6fa10e8ccb6f96cc7e8a3d8b9ed",
+      "recovery": "Git commit 8aefbd7"
+    },
+    {
+      "path": "B题第三四问_第三轮演练包.zip",
+      "bytes": 99034,
+      "sha256": "bce6c749b633275e01c20913d1b9980b4f810cf6fad57f9de58732edbe5b4332",
+      "recovery": "Git commit 8aefbd7"
+    },
+    {
+      "path": "paper/results/p2_figure_candidates.zip",
+      "bytes": 17750476,
+      "sha256": "7f5c7125b821cf0b3f3cecfae23f66c24119288d40e9e209d464a8a0299488b1",
+      "recovery": "Regenerate with the corresponding paper/build_*_figure_catalog.py"
+    },
+    {
+      "path": "paper/results/p34_figure_candidates.zip",
+      "bytes": 3215551,
+      "sha256": "cb054c34e271d8a5c28c6fef95c5a968e6f790ecf47bc5e8cb76a88e19f2d6bc",
+      "recovery": "Regenerate with the corresponding paper/build_*_figure_catalog.py"
+    }
+  ]
+}

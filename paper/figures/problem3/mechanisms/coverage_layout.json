@@ -1,0 +1,125 @@
+{
+  "problem": 3,
+  "algorithm_version": "problem3_v4",
+  "scope": "geometry_mechanism_not_test_result",
+  "caption": "问题3当前solve默认方案的覆盖布局。检测点直接读取当前策略，每个布局重新进行连续区域几何核验；图不包含运行轨迹或测试成绩。 (a)常规布局；(b)原点全频道无收信时采用的条件外环。相位仅作示意，实际按公开观测选择。",
+  "source_sha256": {
+    "problem3/__init__.py": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+    "problem3/balanced_scenarios.py": "e3e5804b7127cf5b9ff5713d413f19d467066d1acdecb7389117e7add1134255",
+    "problem3/client.py": "b31bfd764cc0bf1fb5c8e8c4a4884ddbdab89ba6ba21d8c4494740ed4eb870c4",
+    "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+    "problem3/lookahead.py": "657d5f5f6a1b8c51af43f6a506e358b864d639e1b7042d38781bd32bcd8d3b92",
+    "problem3/planning.py": "0f4e6b1681ccc781c386079c9fcad07b069c7edf09fb8470384bb04159d2f62d",
+    "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+    "problem3/probability_numeric.py": "b046c66fd39caf9414d82e3a5f2bb97a0a60772a8bfb5142345578005a91a20e",
+    "problem3/probability_scenarios.py": "069a4abc37f0fd009a59aa9045d1c3bd7ebece6d628f9efd6593a628a801338c",
+    "problem3/probability_stop.py": "f6c43ff6756852444c6b5f43d0b036d0dafded9e86ec08409726d0b5676812a6",
+    "problem3/probability_trace.py": "0cf9e97645daaa0e571a7c8edb099ed60946c6c2ede14551723c74eefc583025",
+    "problem3/run.py": "6c8fc1794f81f8aae04c6cdeba10abe5c19827a0f227ab4d7870d9d30e3faa7f",
+    "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+    "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+    "problem3/solve.py": "b7ffbf97838a3a56b26ce4c8c62b1561e8ac0dd426b71365e8aaebff1e96e9c7",
+    "problem3/speed_policy.py": "616ff58f0d7040902d5fbc275d4750efb5c079bb7fe2db5eb0ebce47ecefbdd8",
+    "problem4/__init__.py": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+    "problem4/bystander.py": "ab58b029e5a1d8b9f982a24a8f52e8e78eeb3294498c8101ed1b5b27ebc772c8",
+    "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+    "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "problem4/optical_repair.py": "69ac91d90111455263951869d4901bfd477ce16a7d8cf49475a26c85d1a44c88",
+    "problem4/policy.py": "4238826909d6ac0cec9a1f1f4355e8abe56142ec17d89ad4474f00a2e847c810",
+    "problem4/routing.py": "70d96a68250ad1dcd1d466cc75bc1c5f0f601b61832144338695ca223b732057",
+    "problem4/search_layout.py": "82f3b1b169a962d5625042b8cbd2f123fbc76ba7840cd25abe201221f1716a8a",
+    "problem4/shared_baseline.py": "a5d65cccce8c8ac1c35984e3f623963737a3c8f0c6116af79e8f8d65a329ae69",
+    "problem4/solve.py": "486a63f5a5338ad15cb83c01862cd71341712f6b7544ea4d56447f83d0feaa8c",
+    "problem4/speed_policy.py": "a1a5d824de959d76d1b4f9721a31b4a5ab907f47274c3f0654da9475aa12838e",
+    "scripts/benchmark_search.py": "51ea48779de418fb731520cc2076d615c2842bdec0ab5c1147dd426b41c4b283"
+  },
+  "plotting_source_sha256": {
+    "paper/plot_search_mechanisms.py": "7948dd17224308b0a646ba8784427500efac4256f27f64f64fa9e5f1b7109db9",
+    "paper/figure_candidate_style.py": "bdbd66bc734aad0a462195c5b6e0f247f141b309016a19db375c4cbd942c65b3"
+  },
+  "layouts": [
+    [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1150.0,
+        0.0
+      ],
+      [
+        575.0000000000001,
+        995.9292143521044
+      ],
+      [
+        -574.9999999999998,
+        995.9292143521045
+      ],
+      [
+        -1150.0,
+        1.4083438190194562e-13
+      ],
+      [
+        -575.0000000000005,
+        -995.9292143521043
+      ],
+      [
+        575.0000000000001,
+        -995.9292143521044
+      ]
+    ],
+    [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        1700.0,
+        0.0
+      ],
+      [
+        1302.2755533022626,
+        1092.7389364671167
+      ],
+      [
+        295.2019020337817,
+        1674.1731801207536
+      ],
+      [
+        -849.9999999999997,
+        1472.2431864335458
+      ],
+      [
+        -1597.4774553360442,
+        581.434243653637
+      ],
+      [
+        -1597.4774553360444,
+        -581.4342436536367
+      ],
+      [
+        -850.0000000000008,
+        -1472.2431864335454
+      ],
+      [
+        295.2019020337809,
+        -1674.1731801207538
+      ],
+      [
+        1302.2755533022623,
+        -1092.7389364671174
+      ]
+    ]
+  ],
+  "geometry_certificates": [
+    {
+      "certified": true,
+      "radius_bound_m": 988.5114228306762
+    },
+    {
+      "certified": true,
+      "radius_bound_m": 904.5511087837032
+    }
+  ]
+}

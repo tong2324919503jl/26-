@@ -1,0 +1,294 @@
+{
+  "case_id": "local_p4_balanced_normal_v2_n13_000000",
+  "case_sha256": "7030a62eb2b38afda09e4055c5038d064a0e7f26ffb3b581fceb341287a0acee",
+  "source_count": 13,
+  "cleared_count": 13,
+  "cleared_fraction": 1.0,
+  "virtual_time_s": 5946.974105756422,
+  "average_clear_time_s": 457.4595465966479,
+  "last_clear_time_s": 5178.604820609787,
+  "time_to_90_percent_s": 5072.9301751286075,
+  "movement_m": 21584.87052878212,
+  "actions": 277,
+  "measure": 264,
+  "clear": 13,
+  "failed_clear": 0,
+  "switch": 245,
+  "no_signal": 222,
+  "source_truth_all_cleared": true,
+  "policy_claimed_complete": true,
+  "independent_public_completion": {
+    "certified": true,
+    "reason": "independent_public_per_channel_coverage",
+    "unknown_channels": [
+      3,
+      4,
+      6,
+      7,
+      11,
+      13,
+      20
+    ],
+    "checks": [
+      {
+        "channel": 3,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 4,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 6,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 7,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 11,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 13,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      },
+      {
+        "channel": 20,
+        "observed_station_count": 22,
+        "certificate": {
+          "point_count": 22,
+          "points_sha256": "94f7e25276c6a8e16a59a9d77fdf484315fe80e16d08a98e22373c9b3464a346",
+          "target_radius_m": 1800.0,
+          "receive_radius_m": 1000.0,
+          "numerical_margin_m": 0.001,
+          "certified": true,
+          "hull_inradius_m": 1800.2810700912394,
+          "max_directional_radius_bound_m": 999.6245505618116,
+          "witness": [
+            869.4848057075142,
+            -196.4941622254268
+          ],
+          "pair": [
+            16,
+            14
+          ],
+          "pair_checks": 448
+        }
+      }
+    ]
+  },
+  "certified_full_clear": true,
+  "actual_exit_time_s": 5946.974105756422,
+  "normal_exit": true,
+  "error": null,
+  "policy_cpu_s": 0.140625,
+  "policy_wall_s": 0.16277600001194514,
+  "endpoint_counts": {
+    "/enter": 1,
+    "/measure": 264,
+    "/clear": 13,
+    "/exit": 1
+  },
+  "policy": {
+    "problem": 4,
+    "strategy": "adaptive",
+    "cleared_channels": [
+      1,
+      2,
+      5,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage_complete": true,
+    "completion_certified": true,
+    "termination_reason": "certified_coverage_and_all_detected_cleared",
+    "coverage_points_visited": 22,
+    "detected_channels": [
+      1,
+      2,
+      5,
+      8,
+      9,
+      10,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "config": {
+      "ring_radius": 1150.0,
+      "bearing_error_deg": 1.005,
+      "max_probe_count": 5,
+      "lateral_fraction": 0.12,
+      "lateral_min_m": 45.0,
+      "lateral_max_m": 140.0,
+      "opportunistic_radius_m": 0.0,
+      "optical_spacing_m": 26.0,
+      "clear_guarantee_radius_m": 19.99,
+      "exploratory_clear_radius_m": 55.0,
+      "neighbor_updates": true,
+      "neighbor_max_distance_m": 1450.0,
+      "neighbor_min_parallax_deg": 12.0,
+      "adaptive_discovery": false,
+      "discovery_min_spacing_m": 700.0,
+      "discovery_replacement_only": true,
+      "target_uncertainty_weight": 0.5
+    },
+    "measure_actions": 264,
+    "clear_actions": 13,
+    "failed_clears": 0,
+    "optical_fallbacks": 0,
+    "negative_localization_reads": 0,
+    "shared_baselines": 7,
+    "shared_baseline_reads": 13,
+    "paired_probe_actions": 7,
+    "history_clips": 27,
+    "algorithm_version": "problem4_v4",
+    "effective_settings": {
+      "coverage_points": 22,
+      "history_slices": 12,
+      "probe_quantile": 0.2,
+      "probe_width_fraction": 0.04,
+      "probe_min_width_m": 15.0,
+      "probe_rounds": 5,
+      "route_initial_constructions": 4,
+      "reuse_previous_route": true,
+      "max_relocated_chain": 3,
+      "expected_scan_cost_weight": 1.0,
+      "shared_baseline_m": 50.0,
+      "optical_repair_max_actions": 16,
+      "optical_repair_mode": "unionmass",
+      "bystander_prediction_radius_m": 75.0
+    }
+  },
+  "problem": 4,
+  "algorithm_version": "problem4_v4",
+  "provenance": "self_constructed_not_official"
+}

@@ -11,7 +11,7 @@ from problem3.simulator import LocalSimulator, ObservationClient
 from problem4.coverage import static_coverage_points
 from problem4.legacy_policy import SearchPolicy as LegacyPolicy
 from problem4.policy import SearchPolicy
-from problem4.speed_policy import SearchPolicy as SpeedPolicy
+from problem4.current_policy import SearchPolicy as CurrentPolicy
 from scripts.benchmark_search import get_policy, run_case
 
 
@@ -36,14 +36,14 @@ class Version2IntegrationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             get_policy(3, "legacy")
 
-    def test_default_entry_selects_the_speed_version(self):
+    def test_default_entry_selects_the_current_practice_version(self):
         policy = get_policy(4, "adaptive")
-        self.assertIsInstance(policy, SpeedPolicy)
-        self.assertEqual(policy.algorithm_version, "problem4_v4")
+        self.assertIsInstance(policy, CurrentPolicy)
+        self.assertEqual(policy.algorithm_version, "problem4_v5_visibility_discovery")
         self.assertEqual(len(policy.coverage_points()), 22)
         row, _ = run_case(_near_origin_case(16))
-        self.assertEqual(row["algorithm_version"], "problem4_v4")
-        self.assertEqual(row["policy"]["algorithm_version"], "problem4_v4")
+        self.assertEqual(row["algorithm_version"], "problem4_v5_visibility_discovery")
+        self.assertEqual(row["policy"]["algorithm_version"], "problem4_v5_visibility_discovery")
         self.assertTrue(row["certified_full_clear"])
         self.assertFalse(row["coverage_complete"])
         self.assertEqual(row["policy"]["termination_reason"], "maximum_source_count_cleared")

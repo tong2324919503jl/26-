@@ -1,0 +1,28 @@
+{
+  "id": "p2_03_feasible_direction",
+  "title": "从保证收信到保证正常测向",
+  "caption": "在四圆盘安全域中，进一步排除到首扇区距离不超过 5 米的保守带；右侧以真实比例放大这一局部条件。",
+  "section": "四圆盘安全候选域",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132"
+  },
+  "notes": "图示蓝域为严格可行域的闭包，边界等号不属于正常测向保证条件。移动预算 L=1100 米在此不激活。灰色带是保守排除范围，并不代表所有相应点必然产生近区反馈。",
+  "recommendation": "补充：适合正文解释最后一个可行性约束。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "error_deg": 1.0,
+    "near_threshold_m": 5.0,
+    "move_budget_m": 1100.0,
+    "perpendicular_gap_verified_m": 5.0,
+    "safe_and_clearance_checks_passed": true
+  }
+}

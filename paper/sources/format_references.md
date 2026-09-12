@@ -1,6 +1,6 @@
 # 官方格式与参考文献核验（2026-09-11）
 
-本文件仅作论文整合依据，不是提交论文。已读仓库 `北京赛区注意事项(1).pptx` 的原始 slide XML；赛题依据 `materials/problem_b/statement.pdf` 的检索副本；论文格式与 AI 规定另与全国组委会当前原文核对。参考文献优先核对作者全文、作者机构出版记录和出版社页面。
+本文件仅作论文整合依据，不是提交论文。已读仓库 `docs/background/beijing_contest_notes.pptx`（原名“北京赛区注意事项(1).pptx”） 的原始 slide XML；赛题依据 `materials/problem_b/statement.pdf` 的检索副本；论文格式与 AI 规定另与全国组委会当前原文核对。参考文献优先核对作者全文、作者机构出版记录和出版社页面。
 
 ## 1. 应直接落实的格式
 

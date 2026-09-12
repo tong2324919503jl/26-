@@ -1,0 +1,201 @@
+{
+  "package_version": "v5_practice_20260912",
+  "created_at_utc": "2026-09-12T06:52:15.765260+00:00",
+  "files": {
+    ".gitignore": {
+      "sha256": "1af4fb73d0255ec47dd0bdbc07c46c1781d24d6fca2eb0019869ed73e77ba01a",
+      "bytes": 101
+    },
+    "AGENTS.md": {
+      "sha256": "802e8f5b8e3dabee5c3b99354adaa68c64f3c54bafb91794a5837be287bd75fd",
+      "bytes": 1135
+    },
+    "experiments_v5/__init__.py": {
+      "sha256": "1e6f5a3e818f7d92665b6a00a5eacb8f39f18d833ae118600872104a4331c4f2",
+      "bytes": 72
+    },
+    "experiments_v5/p3_candidate.py": {
+      "sha256": "3d189ca89dbcc86b4852c852100d8692e4732afa15274e5be9793a73524dfb2a",
+      "bytes": 225
+    },
+    "experiments_v5/p3_probe_geometry.py": {
+      "sha256": "5a5df0a05035f2160fb468306a679ea0ff4859d1977bafd5cf42ae4f3edb717a",
+      "bytes": 10325
+    },
+    "experiments_v5/p4_candidate.py": {
+      "sha256": "d3971f5ce9235aba65099d4f46025a3ed8ac5111b85e7a2a3cbe1ac4015c03ea",
+      "bytes": 248
+    },
+    "experiments_v5/p4_discovery_route.py": {
+      "sha256": "76e27b208135cbbc0d86eeff1d76322ea4967d4dbf82e81d82c97229d20362cf",
+      "bytes": 10521
+    },
+    "experiments_v5/p4_discovery_route_combo.py": {
+      "sha256": "ae3e8c8334c2676e16eee8ee5ae17e629d4e0695ca8170356c6040562facb75f",
+      "bytes": 447
+    },
+    "experiments_v5/p4_discovery_route_global.py": {
+      "sha256": "1362033913b78999097e95ef43947ab2f3f05ad0c0d3130fa9047373541ce193",
+      "bytes": 3500
+    },
+    "experiments_v5/p4_incremental.py": {
+      "sha256": "332670fd4f3b9f276ca8174ce292c5e5c1d8156d492ecd90cc0235e7bb688140",
+      "bytes": 9435
+    },
+    "experiments_v5/p4_incremental_visibility.py": {
+      "sha256": "9c52ec5bc00a6f10284b29c76b23e74cb4bea97a938e29cfa73e6eb1738cd06d",
+      "bytes": 1320
+    },
+    "experiments_v5/p4_visibility.py": {
+      "sha256": "344281b776191a136a7224b9ae90c09242662cf03c5d9436fd3887489931e90d",
+      "bytes": 15603
+    },
+    "PowerShell操作.md": {
+      "sha256": "fb8c926f852de070d159353a7dc27cf8285cd5fe0a8a49ba2921436947d22e35",
+      "bytes": 1469
+    },
+    "practice.py": {
+      "sha256": "55e946b304398ff8376f0bbad5a90e0e6408912d1d58b9d5777500805aa857cb",
+      "bytes": 12839
+    },
+    "problem3/__init__.py": {
+      "sha256": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+      "bytes": 58
+    },
+    "problem3/client.py": {
+      "sha256": "b31bfd764cc0bf1fb5c8e8c4a4884ddbdab89ba6ba21d8c4494740ed4eb870c4",
+      "bytes": 14022
+    },
+    "problem3/geometry.py": {
+      "sha256": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "bytes": 7517
+    },
+    "problem3/lookahead.py": {
+      "sha256": "3028190aaac132182cf79e7fd2dd0e4a0c1fd4b4a0132a176bcae268e5d39fb3",
+      "bytes": 11228
+    },
+    "problem3/planning.py": {
+      "sha256": "4b3d5ab6f26103e0e67c982f2cf001bd7fb0b095b8114b7566e38f7aeee90140",
+      "bytes": 15241
+    },
+    "problem3/policy.py": {
+      "sha256": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "bytes": 12838
+    },
+    "problem3/run.py": {
+      "sha256": "1750f9f7ff117c139471290b52acdfaa5820546df7a2f32a8f0506b694cefe2a",
+      "bytes": 396
+    },
+    "problem3/scenarios.py": {
+      "sha256": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+      "bytes": 3912
+    },
+    "problem3/simulator.py": {
+      "sha256": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "bytes": 7952
+    },
+    "problem3/speed_policy.py": {
+      "sha256": "6f744b18eb06c863165cb10894f0f3a361de9b533da2e9109fc46c1db41a6a4b",
+      "bytes": 694
+    },
+    "problem4/__init__.py": {
+      "sha256": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+      "bytes": 64
+    },
+    "problem4/bystander.py": {
+      "sha256": "0414031c564d771274b12bf2016d1a70cd33bd7a2bb2501165d1d34fd313fe40",
+      "bytes": 1796
+    },
+    "problem4/coverage.py": {
+      "sha256": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+      "bytes": 9854
+    },
+    "problem4/legacy_policy.py": {
+      "sha256": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+      "bytes": 11456
+    },
+    "problem4/localization.py": {
+      "sha256": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "bytes": 11185
+    },
+    "problem4/optical_repair.py": {
+      "sha256": "567620b452caf5bac83b7e7d399f39cb1ce4735a3694d416565bac2f255e0235",
+      "bytes": 5154
+    },
+    "problem4/policy.py": {
+      "sha256": "4b0d3339b1cc2ae0c3744c8a92703e11219d78c3b4f0af4ae96ef71d7181611f",
+      "bytes": 1831
+    },
+    "problem4/results/coverage_certificate_v4.json": {
+      "sha256": "432e7c8985ba2d3773299fba3692e8af58103edd4b4d59415fa60a317cead23c",
+      "bytes": 1115268
+    },
+    "problem4/routing.py": {
+      "sha256": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+      "bytes": 8998
+    },
+    "problem4/run.py": {
+      "sha256": "ce8706af5521cd48e1cea1c439412b8adc28be576214fff91d6d392124d933b3",
+      "bytes": 396
+    },
+    "problem4/search_layout.py": {
+      "sha256": "a53fde6a38b60b5b0fe96ff8539d382596ee19ffc3eb3e2188f3f1a5e6846171",
+      "bytes": 1619
+    },
+    "problem4/shared_baseline.py": {
+      "sha256": "5cc51a5e02308668b6326e231f7de7c24f4dd6cee4d6637bd120be1062a891cf",
+      "bytes": 3601
+    },
+    "problem4/speed_policy.py": {
+      "sha256": "b6c0dd44af247ed131b9ea94e8d85b7dfa706f0d83b8b8e181e6fa8c8351e7f0",
+      "bytes": 1449
+    },
+    "README.md": {
+      "sha256": "f8c5192e4ca74a9ef8967e357e528e53164583632f856ce830bf8c606995fba1",
+      "bytes": 4010
+    },
+    "requirements.txt": {
+      "sha256": "05c4e68c8f60e2cf26744591ec58c04e49892f98c8327316fac99f523754c856",
+      "bytes": 214
+    },
+    "source_manifest.json": {
+      "sha256": "72d2414174766cea95b31c84ce1236b8fde57653b4626d3f6ea78073bb2d9f68",
+      "bytes": 4024
+    },
+    "start.py": {
+      "sha256": "e422d942a1e73f4827ec3257ded8404c4d2eb87c4a3dd2f27363abdc84854a58",
+      "bytes": 1979
+    },
+    "启动菜单.cmd": {
+      "sha256": "d5a0268a03ea3081170b3ec1915863ea45f273da8cb9f504897469e68721989f",
+      "bytes": 420
+    },
+    "本地验证摘要.md": {
+      "sha256": "830c1ffed633a90bdc2ee3da7b251fd87dc75d89e0d699f5c50c249e285d2bba",
+      "bytes": 1894
+    },
+    "版本与结果/7000例测试结果.md": {
+      "sha256": "0db3a5c0a0603ce103e35e9e8420763f2230a7e30061bd7a58d1df5bbe6def3a",
+      "bytes": 2054
+    },
+    "版本与结果/problem3_7000例汇总.json": {
+      "sha256": "46ef3ec2abf24491b102d26cd8331c2bc47fe9329502e7a0f483a4a6949c8290",
+      "bytes": 2488
+    },
+    "版本与结果/problem4_7000例汇总.json": {
+      "sha256": "5dfef7437e5a82b11452b94b6c90f859d9957789086720f97ad43856f22ff954",
+      "bytes": 2482
+    },
+    "版本与结果/原候选冻结记录.json": {
+      "sha256": "9a23dcf81c2bb5b553519ff683171ac5d6e71607bef47f70a73a4006a3f1e810",
+      "bytes": 9021
+    }
+  },
+  "excluded": [
+    "outputs/",
+    "cache/",
+    "shared test inputs and private logs"
+  ],
+  "official_simulator_calls_by_packager": 0,
+  "formal_tests_by_packager": 0
+}

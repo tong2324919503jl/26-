@@ -1,0 +1,11 @@
+{
+  "id": "05_time_cost_breakdown",
+  "title": "平均定位清除时间的构成",
+  "caption": "留出集各方案的计费时间分解：移动L/5、检测5Nm、切频Ns、失败清除3Nf及成功清除5Nc。每项先除Nc再对案例取均值，分项之和与退出总时间对应的均值严格一致。",
+  "sources": [
+    "validation/speed_v4/p3_holdout_v3.json",
+    "validation/speed_v4/p4_holdout_v3.json"
+  ],
+  "recommendation": "推荐用于解释时间瓶颈；比额外一张阈值通过率图更有分析价值。",
+  "notes": ""
+}

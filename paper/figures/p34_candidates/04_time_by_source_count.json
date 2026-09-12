@@ -1,0 +1,11 @@
+{
+  "id": "04_time_by_source_count",
+  "title": "源数量与每源耗时的关系",
+  "caption": "冻结留出案例按真实源总数事后分组，展示逐例T/Nc的分布与组均值。图示与固定搜索成本被更多源分摊的机制一致，但不控制其他场景差异，不能作因果结论。",
+  "sources": [
+    "validation/speed_v4/p3_holdout_v3.json",
+    "validation/speed_v4/p4_holdout_v3.json"
+  ],
+  "recommendation": "用于本地结果分析，解释少源场景为何每源用时更高。",
+  "notes": ""
+}

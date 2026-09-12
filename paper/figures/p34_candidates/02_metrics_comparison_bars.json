@@ -1,0 +1,15 @@
+{
+  "id": "02_metrics_comparison_bars",
+  "title": "两项指标的方案对照：柔和分组柱图",
+  "caption": "同一模拟器、相同案例和计费规则下的冻结方案比较。所有图示分支清除比例均100%，柱高为逐例T/Nc的均值；220/400秒每源虚线仅为本地优化目标。",
+  "sources": [
+    "validation/speed_v4/p3_development_v3.json",
+    "validation/speed_v4/p3_holdout_v3.json",
+    "validation/speed_v4/p3_stress_v3.json",
+    "validation/speed_v4/p4_development_v3.json",
+    "validation/speed_v4/p4_holdout_v3.json",
+    "validation/speed_v4/p4_stress_v3.json"
+  ],
+  "recommendation": "可替换正文原 search_comparison 图；与01按篇幅二选一，或一张主文一张备选。",
+  "notes": ""
+}

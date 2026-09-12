@@ -1,0 +1,58 @@
+{
+  "protocol": "external_checked_v1",
+  "data_origin": "external_jsonl_local_simulation_not_official",
+  "data_role": "external_test_frozen_algorithms_no_tuning",
+  "problem": 3,
+  "dataset": "balanced_normal_v2",
+  "requested_records": 7000,
+  "recorded_runs": 7000,
+  "candidates": [
+    {
+      "name": "candidate_v5",
+      "module": "experiments_v5.p3_candidate"
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "implementation": "cpython",
+    "numpy": "2.3.5"
+  },
+  "frozen_selection_sha256": "9a23dcf81c2bb5b553519ff683171ac5d6e71607bef47f70a73a4006a3f1e810",
+  "adapter_sha256": "0d331030f9333ecaceba54bcaba832b907f96965d4a51244ed254e61106201bf",
+  "cases_file_sha256": "9a31464bfbc136f683e75155de7a09a91c1dafdf0c48b9186173d9491ad7eda6",
+  "dataset_manifest_sha256": "f4b19a69de9148a91d53a9e951e09ff1d62492c1304b51229d2c1c3028411cf3",
+  "run_started_utc": "2026-09-12T06:10:24.421862+00:00",
+  "run_finished_utc": "2026-09-12T06:23:31.656579+00:00",
+  "wall_s": 787.2340867999992,
+  "evidence_valid": true,
+  "evidence_errors": [],
+  "audit_fixture": false,
+  "public_client_attribute_whitelist": true,
+  "network_forbidden": true,
+  "prior_usage_or_overlap_audit": "not performed; user requested execution first",
+  "no_generator_rebuild_no_dedup_no_difficulty_stratification": true,
+  "summary": {
+    "candidate_v5": {
+      "cases": 7000,
+      "recorded": 7000,
+      "complete": 7000,
+      "evidence_valid": true,
+      "score_usable": true,
+      "eligible_mean_s": 186.19417874231095,
+      "target_s": 220.0,
+      "mean_target_met": true,
+      "p95_s": 240.2018222539169,
+      "p95_definition": "nearest rank ceil(0.95*n), one-based",
+      "worst_s": 315.4171644191786,
+      "mean_movement_m": 8701.3260860141,
+      "mean_measure": 90.85971428571429,
+      "mean_failed_clear": 4.037571428571429,
+      "failures": 0,
+      "full_7000_threshold_met": true
+    }
+  },
+  "private_rows": "results/p3_shared7000_v5.json.private_rows.jsonl",
+  "journal": "results/p3_shared7000_v5.json.journal.jsonl",
+  "note": "The summary intentionally contains no case contents, source truth or hard-case identities. A missing journal end means an incomplete unusable run. No historical nonaccess claim follows from the dataset name."
+}

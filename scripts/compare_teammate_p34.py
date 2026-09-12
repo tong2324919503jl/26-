@@ -15,6 +15,7 @@ from pathlib import Path,PurePosixPath
 import queue
 import statistics
 import subprocess
+import subprocess
 import sys
 import tempfile
 import threading
@@ -29,6 +30,25 @@ from problem4.coverage import directional_cover_certificate,segment_cover_radius
 
 ZIP_NAME='B题第三四问_第三轮演练包.zip'
 ZIP_SHA='bce6c749b633275e01c20913d1b9980b4f810cf6fad57f9de58732edbe5b4332'
+ZIP_COMMIT='8aefbd7'
+
+
+def archived_teammate_package(destination):
+    """Recover the removed historical delivery from Git only for its replay."""
+    original = ROOT / ZIP_NAME
+    if original.is_file():
+        return original
+    result = subprocess.run(['git', 'show', f'{ZIP_COMMIT}:{ZIP_NAME}'], cwd=ROOT,
+                            capture_output=True)
+    if result.returncode:
+        raise FileNotFoundError(
+            f'Historical package requires Git commit {ZIP_COMMIT}; '
+            'use a full-history checkout to replay the v3 comparison.')
+    if hashlib.sha256(result.stdout).hexdigest() != ZIP_SHA:
+        raise ValueError('Historical archive fingerprint mismatch')
+    archive = destination / 'historical_p34_round3.zip'
+    archive.write_bytes(result.stdout)
+    return archive
 
 
 def inspect_extract(archive,destination):
@@ -182,7 +202,7 @@ def run(count=48,problems=(3,4),split='development_v3',targets=None,output_path=
     body['evaluator_sha256']={name:hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in
         ('scripts/compare_teammate_p34.py','scripts/compare_teammate_p34_worker.py','problem3/simulator.py','problem3/scenarios.py','problem4/coverage.py')}
     try:
-        body['archive_review']=inspect_extract(ROOT/ZIP_NAME,extracted)
+        body['archive_review']=inspect_extract(archived_teammate_package(extracted),extracted)
         for problem in problems:
             cases=generate_suite(problem,split,count)
             body['results'][str(problem)]={}

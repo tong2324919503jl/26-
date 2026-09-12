@@ -1,0 +1,18 @@
+{
+  "candidate_count": 19,
+  "catalog_pages": 20,
+  "source_hash_checks": 54,
+  "source_hashes_current": true,
+  "all_individual_pdfs_single_page": true,
+  "figure_formats": [
+    "pdf",
+    "svg",
+    "png"
+  ],
+  "contact_sheets": [
+    "p2_intro_overview.png",
+    "p2_scoring_overview.png",
+    "p2_selection_overview.png"
+  ],
+  "scope": "当前论文方法与自建离线结果；未修改生产算法或论文正文。"
+}

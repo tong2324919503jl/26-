@@ -1,0 +1,253 @@
+{
+  "scope": "冻结的本地自建案例，非平台正式测试；所有源真值仅用于事后统计。",
+  "groups": [
+    {
+      "problem": 3,
+      "split": "development_v3",
+      "branch": "problem3.policy:SearchPolicy",
+      "cases": 384,
+      "cleared_sources": 5019,
+      "sources": 5019,
+      "mean_seconds_per_source": 270.91549765330683,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 3,
+      "split": "development_v3",
+      "branch": "problem3.speed_policy:SearchPolicy",
+      "cases": 384,
+      "cleared_sources": 5019,
+      "sources": 5019,
+      "mean_seconds_per_source": 225.36704808994378,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 3,
+      "split": "development_v3",
+      "branch": "teammate",
+      "cases": 384,
+      "cleared_sources": 5019,
+      "sources": 5019,
+      "mean_seconds_per_source": 235.94388305653948,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 3,
+      "split": "holdout_v3",
+      "branch": "problem3.policy:SearchPolicy",
+      "cases": 512,
+      "cleared_sources": 6664,
+      "sources": 6664,
+      "mean_seconds_per_source": 272.5485277955859,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 3,
+      "split": "holdout_v3",
+      "branch": "problem3.speed_policy:SearchPolicy",
+      "cases": 512,
+      "cleared_sources": 6664,
+      "sources": 6664,
+      "mean_seconds_per_source": 226.7793346584187,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 3,
+      "split": "holdout_v3",
+      "branch": "teammate",
+      "cases": 512,
+      "cleared_sources": 6664,
+      "sources": 6664,
+      "mean_seconds_per_source": 237.131254697335,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 3,
+      "split": "stress_v3",
+      "branch": "problem3.policy:SearchPolicy",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 314.15574696133086,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 3,
+      "split": "stress_v3",
+      "branch": "problem3.speed_policy:SearchPolicy",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 239.66905631357093,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 3,
+      "split": "stress_v3",
+      "branch": "teammate",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 250.15765496368545,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 4,
+      "split": "development_v3",
+      "branch": "problem4.policy:SearchPolicy",
+      "cases": 384,
+      "cleared_sources": 4988,
+      "sources": 4988,
+      "mean_seconds_per_source": 482.46063137988415,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 4,
+      "split": "development_v3",
+      "branch": "problem4.experiments_v3.posterior:Shared21Policy",
+      "cases": 384,
+      "cleared_sources": 4988,
+      "sources": 4988,
+      "mean_seconds_per_source": 444.38429693718086,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 4,
+      "split": "development_v3",
+      "branch": "problem4.speed_policy:SearchPolicy",
+      "cases": 384,
+      "cleared_sources": 4988,
+      "sources": 4988,
+      "mean_seconds_per_source": 440.1590471840568,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 4,
+      "split": "development_v3",
+      "branch": "teammate",
+      "cases": 384,
+      "cleared_sources": 4988,
+      "sources": 4988,
+      "mean_seconds_per_source": 449.274915598614,
+      "all_cleared_cases": 384
+    },
+    {
+      "problem": 4,
+      "split": "holdout_v3",
+      "branch": "problem4.policy:SearchPolicy",
+      "cases": 512,
+      "cleared_sources": 6610,
+      "sources": 6610,
+      "mean_seconds_per_source": 485.6592654788766,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 4,
+      "split": "holdout_v3",
+      "branch": "problem4.experiments_v3.posterior:Shared21Policy",
+      "cases": 512,
+      "cleared_sources": 6610,
+      "sources": 6610,
+      "mean_seconds_per_source": 447.7591493592937,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 4,
+      "split": "holdout_v3",
+      "branch": "problem4.speed_policy:SearchPolicy",
+      "cases": 512,
+      "cleared_sources": 6610,
+      "sources": 6610,
+      "mean_seconds_per_source": 441.71617915688023,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 4,
+      "split": "holdout_v3",
+      "branch": "teammate",
+      "cases": 512,
+      "cleared_sources": 6610,
+      "sources": 6610,
+      "mean_seconds_per_source": 451.86129196617003,
+      "all_cleared_cases": 512
+    },
+    {
+      "problem": 4,
+      "split": "stress_v3",
+      "branch": "problem4.policy:SearchPolicy",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 541.3114549313927,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 4,
+      "split": "stress_v3",
+      "branch": "problem4.experiments_v3.posterior:Shared21Policy",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 489.0648967972856,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 4,
+      "split": "stress_v3",
+      "branch": "problem4.speed_policy:SearchPolicy",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 482.93047939518334,
+      "all_cleared_cases": 256
+    },
+    {
+      "problem": 4,
+      "split": "stress_v3",
+      "branch": "teammate",
+      "cases": 256,
+      "cleared_sources": 3328,
+      "sources": 3328,
+      "mean_seconds_per_source": 496.44097627431523,
+      "all_cleared_cases": 256
+    }
+  ],
+  "sources": [
+    {
+      "path": "validation/speed_v4/p3_development_v3.json",
+      "sha256": "91373d22b44e21dcc1125ca9f6579b4e19de64522e5eb4dfde6533868802cf71"
+    },
+    {
+      "path": "validation/speed_v4/p3_holdout_v3.json",
+      "sha256": "a7fd9dc977c7762c6bd80dba5b5e1a4cd7be4d446347d768bd79a66a3884e948"
+    },
+    {
+      "path": "validation/speed_v4/p3_stress_v3.json",
+      "sha256": "68d8098b5a1eee4e2dae770b494672abc8810552f01a2d0dba77211ddd7c1e68"
+    },
+    {
+      "path": "validation/speed_v4/p4_development_v3.json",
+      "sha256": "9ede2e35576d83dc77f7bfc59983c139a7731c59ca434227a807e5c134167e63"
+    },
+    {
+      "path": "validation/speed_v4/p4_holdout_v3.json",
+      "sha256": "e14da97d5b90a99df479dc433da40d396225f3fda0a3e9e3eeb3bcf8850f87d0"
+    },
+    {
+      "path": "validation/speed_v4/p4_stress_v3.json",
+      "sha256": "f8a8f3370c12231ab21c97a905fa1317bc362872419cb3cbe6db6050450748ac"
+    }
+  ],
+  "paired_vs_original": {
+    "3": {
+      "faster": 493,
+      "slower": 19,
+      "mean_saving": 45.769193137167264
+    },
+    "4": {
+      "faster": 459,
+      "slower": 53,
+      "mean_saving": 43.94308632199637
+    }
+  }
+}

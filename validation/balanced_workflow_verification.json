@@ -1,0 +1,154 @@
+{
+  "verified_at_utc": "2026-09-12T05:02:09.536028+00:00",
+  "scope": "Dataset preparation and 14-case-per-problem local workflow verification; not a full 9996-case benchmark or official result.",
+  "full_benchmark_run": false,
+  "official_test_run": false,
+  "problems": {
+    "3": {
+      "dataset_manifest": "problem3/examples/balanced_v1/manifest.json",
+      "dataset_total": 4998,
+      "per_source_count": 714,
+      "dataset_sha256": "d1212361c91fc473b7b84e6c87ada7cfaaaf4f28f4ff67c5640f7ead2b334340",
+      "smoke_run": "problem3/results/balanced/workflow_smoke",
+      "cases_tested": 14,
+      "per_source_count_tested": 2,
+      "algorithm_version": "problem3_v4",
+      "source_fingerprint_verified": true,
+      "episodes_sha256": "38f71a89c6098373bf6efa949a6f74c8ee19adc80180e5593b526e5a9760dfe8",
+      "all_cleared_cases": 14,
+      "error_cases": 0,
+      "metric_figures": 6,
+      "figure_catalog": "paper/figures/problem3/workflow_smoke/figures.pdf",
+      "resume_check": "Previously completed resume with the same limit skipped all 14 existing episodes."
+    },
+    "4": {
+      "dataset_manifest": "problem4/examples/balanced_v1/manifest.json",
+      "dataset_total": 4998,
+      "per_source_count": 714,
+      "dataset_sha256": "2e95087ac6ae948f458f0837e920c37268d678932b594f93e64890f16f4e2f82",
+      "smoke_run": "problem4/results/balanced/workflow_smoke",
+      "cases_tested": 14,
+      "per_source_count_tested": 2,
+      "algorithm_version": "problem4_v4",
+      "source_fingerprint_verified": true,
+      "episodes_sha256": "8967814baa6a23d6b59399b5b44fa2aca78c66018080f086a07dc406a61d0082",
+      "all_cleared_cases": 14,
+      "error_cases": 0,
+      "metric_figures": 6,
+      "figure_catalog": "paper/figures/problem4/workflow_smoke/figures.pdf",
+      "resume_check": "Previously completed resume with the same limit skipped all 14 existing episodes."
+    }
+  },
+  "pdf_checks": [
+    {
+      "path": "paper/figures/problem3/workflow_smoke/case_progress.pdf",
+      "pages": 1,
+      "sha256": "a3753ad9e5701fab7a1ca624bd1eff23dbdb185cf9c0e3de4bf54e771c40321c"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/case_route.pdf",
+      "pages": 1,
+      "sha256": "b320e0282a44bed7bf630196953d1469734e1c6094aab1f05972bf1493ba8dbf"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/figures.pdf",
+      "pages": 6,
+      "sha256": "35f2568a57910ce1885a587f14694de8bb3f581c2094b48286d67e864955ff94"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/time_components.pdf",
+      "pages": 1,
+      "sha256": "da1835bd8c208d1ba724cd0112fa822a1ceff1956a29575da52b11d12170cfcf"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/time_distribution.pdf",
+      "pages": 1,
+      "sha256": "6e350c922320e6bda08629e29b3789639ac92928817ebbe4344a46de8a402d6b"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/time_ecdf.pdf",
+      "pages": 1,
+      "sha256": "ce36084bac166ef6bcb55e6cff8e269b7d2188daecfac1ae88725220c9a7f6a7"
+    },
+    {
+      "path": "paper/figures/problem3/workflow_smoke/two_metrics.pdf",
+      "pages": 1,
+      "sha256": "3c710284e2d469b6997ffc9690057f7db7f264af1498892cfe89f9494e7a1260"
+    },
+    {
+      "path": "paper/figures/problem3/mechanisms/coverage_layout.pdf",
+      "pages": 1,
+      "sha256": "0130c0c5ca3f7b250ac8d2b663bdd390c78abb48a4ab9bbcfc28924e5645ac7a"
+    },
+    {
+      "path": "paper/figures/problem3/mechanisms/optical_grid.pdf",
+      "pages": 1,
+      "sha256": "f089f6baf245a4c22c98b4548a9a1fdd26f61d430111134e3c44bc96211ce6ca"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/case_progress.pdf",
+      "pages": 1,
+      "sha256": "1030baedd4ead1e6104614f026d8c30d28787fd4caaabd1d2d3a2a67c20c4269"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/case_route.pdf",
+      "pages": 1,
+      "sha256": "c21af41fe303d5d588b0d6ba10e19c3b0ab48bf962dc048be9810c094d291ace"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/figures.pdf",
+      "pages": 6,
+      "sha256": "7bc45f4e49fe0f3e8e863736b57de244fb70c7b9a25541c7fdbbcf48cf2817fd"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/time_components.pdf",
+      "pages": 1,
+      "sha256": "8a59f84a5724d5ac09c3444a6e710669277cc93ad62f3eb7a88c3e7dcbd33fca"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/time_distribution.pdf",
+      "pages": 1,
+      "sha256": "7aed3b857cb6bccbc4dbac88517e3373e03aeefcecfc3b39bcd454090bb25158"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/time_ecdf.pdf",
+      "pages": 1,
+      "sha256": "5f50d51025d02a5e4f68773e25d8fb58446c0a2d6fdb7a6befe343774272e7f6"
+    },
+    {
+      "path": "paper/figures/problem4/workflow_smoke/two_metrics.pdf",
+      "pages": 1,
+      "sha256": "929feb9b8dff974a7f435641ed2fe060fb342291651f16d98dcb278a2d314b87"
+    },
+    {
+      "path": "paper/figures/problem4/mechanisms/coverage_layout.pdf",
+      "pages": 1,
+      "sha256": "e6fc29e7891ae70e0a7e99676f6b18640bdf5e2a7fe4719104f6781b694f83e1"
+    },
+    {
+      "path": "paper/figures/problem4/mechanisms/directional_visibility.pdf",
+      "pages": 1,
+      "sha256": "976a99ad06622e8e3a5c85eb65b5c52fc1290623525c6cf7fd272952eca47d1f"
+    },
+    {
+      "path": "paper/figures/problem4/mechanisms/optical_grid.pdf",
+      "pages": 1,
+      "sha256": "ec9e823f5d52cdcdd3225bd465307a3b1f9599ef4fd5062767699324262f4229"
+    }
+  ],
+  "project_validation": {
+    "path": "validation/report.json",
+    "sha256": "86425817fc4ec745cc5b584a493b6b2520fbc3426e791579047fe3b8a94c77f7",
+    "passed": true,
+    "verified_at_utc": "2026-09-12T04:54:46.310600+00:00",
+    "unit_test_counts": {
+      "problem1": 36,
+      "problem2": 27,
+      "problem3": 91,
+      "problem4": 49
+    },
+    "total_unit_tests": 203
+  },
+  "dataset_total": 9996,
+  "smoke_total": 28
+}

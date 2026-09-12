@@ -47,7 +47,7 @@ def main(problem):
     parser.add_argument('--online',action='store_true')
     parser.add_argument('--robot-id')
     parser.add_argument('--base-url',default='http://127.0.0.1:2026')
-    strategies = ('adaptive','previous','legacy','baseline','optical') if problem == 4 else ('adaptive','previous','baseline','optical')
+    strategies = ('adaptive','v4','previous','legacy','baseline','optical') if problem == 4 else ('adaptive','v4','previous','baseline','optical')
     parser.add_argument('--strategy',choices=strategies,default='adaptive')
     parser.add_argument('--version',action='store_true',help='Print the selected algorithm version and exit')
     parser.add_argument('--case',type=Path,help='Local case JSON; relative to this problem directory')

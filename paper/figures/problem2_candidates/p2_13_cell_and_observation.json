@@ -1,0 +1,81 @@
+{
+  "id": "p2_13_cell_and_observation",
+  "title": "评分外包与正常读数外包",
+  "caption": "在完整扫描的最坏格中心317.9°处，对比1.05°评分单元外包与同中心1°正常读数外包；右图放大外包边界差异。",
+  "section": "评分方法二：几何外包上界",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py",
+    "problem2/results/selection.json"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372"
+  },
+  "notes": "同中心读数是固定合法读数的几何演示，可由自建源(1450,0)米、接收半径1500米产生；不是selection.json所保存的304.332489°自建观测。两者都是共享模型外包，均不等于精确U；图中的单次外包直径不是J。",
+  "recommendation": "适合放在半步增宽公式之后，直观区分评分阶段与获得正常读数之后。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "q_local_xy_m": [
+      842.1437368791097,
+      546.8945372930203
+    ],
+    "cell_center_and_fixed_reading_deg": 317.90000000000003,
+    "cell_polygon": [
+      [
+        1441.2766887911514,
+        25.157578183376152
+      ],
+      [
+        1399.4878034092008,
+        24.42815047575636
+      ],
+      [
+        1452.5944080110241,
+        -25.355129707198493
+      ],
+      [
+        1499.7715427345706,
+        -26.178609656925268
+      ],
+      [
+        1499.7715427355693,
+        -26.178609656925268
+      ],
+      [
+        1499.7783806584637,
+        -25.786865316669562
+      ]
+    ],
+    "fixed_reading_polygon": [
+      [
+        1440.2427305362758,
+        25.13953037490423
+      ],
+      [
+        1400.445626495618,
+        24.444869339919517
+      ],
+      [
+        1453.6833783913264,
+        -25.374137755891578
+      ],
+      [
+        1499.0554913699198,
+        -26.166110933863347
+      ]
+    ],
+    "cell_diameter_m": 112.3293040324109,
+    "fixed_reading_outer_diameter_m": 110.83941886712192,
+    "illustrative_legal_source_xy_m": [
+      1450.0,
+      0.0
+    ],
+    "illustrative_radius_m": 1500.0
+  }
+}

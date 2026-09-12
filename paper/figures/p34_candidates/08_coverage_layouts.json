@@ -1,0 +1,23 @@
+{
+  "id": "08_coverage_layouts",
+  "title": "第三、四问的条件覆盖与认证布局",
+  "caption": "第三问先在原点扫描：常规分支采用原点加六个1150米环点；原点全频道无信号时，内盘已排除源，采用九个1700米环点覆盖外环。第四问展示生产22点固定坐标及独立连续区域证书。",
+  "sources": [
+    "paper/sections/p34.tex:eq:p3-points,eq:p3-cover,eq:p3-annular,eq:directional-certificate",
+    "problem3/planning.py",
+    "problem3/lookahead.py",
+    "problem4/search_layout.py",
+    "problem4/results/coverage_certificate_v4.json"
+  ],
+  "recommendation": "适合替换正文原覆盖布局图；兼顾第三问条件分支与第四问当前22点布局。",
+  "notes": {
+    "type": "geometry_mechanism",
+    "not_official_results": true,
+    "p3_rotation": "图示相位为0；生产按反馈选择相位并重新核验覆盖。",
+    "p3_7_radius_bound_m": 988.5114204360128,
+    "p3_annulus_radius_bound_m": 833.6936423698525,
+    "p4_coordinate_sha256": "7dc92616892ba34956ad4d6fb5a0ca5f619aec8161acd39c92db8189d645c8fd",
+    "p4_continuous_certificate_radius_m": 999.6245505618116,
+    "limits": "右图的凸包轮廓仅展示布局；凸包包含目标圆本身不足以保证定向接收，覆盖依据为独立证书。浅蓝接收圆只用于第三问。"
+  }
+}

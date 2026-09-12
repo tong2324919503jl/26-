@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "dataset": "balanced_v1",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "total_cases": 4998,
+  "per_count": 714,
+  "counts_by_source_count": {
+    "10": 714,
+    "11": 714,
+    "12": 714,
+    "13": 714,
+    "14": 714,
+    "15": 714,
+    "16": 714
+  },
+  "cases_file": "cases.jsonl",
+  "cases_sha256": "d1212361c91fc473b7b84e6c87ada7cfaaaf4f28f4ff67c5640f7ead2b334340",
+  "generator_file": "problem3/balanced_scenarios.py",
+  "generator_sha256": "e3e5804b7127cf5b9ff5713d413f19d467066d1acdecb7389117e7add1134255",
+  "sampling": {
+    "source_count": "10至16源，每种源数的样例数量完全相同。",
+    "position": "各源独立按面积均匀分布于半径1800米的目标圆内。",
+    "receiving_radius": "各源接收半径独立服从[1000,1500]米均匀分布。",
+    "channel": "从1至20频道中无放回均匀抽取，每源占用独立频道。",
+    "source_type": "全部为全向源。",
+    "orientation": "不适用。",
+    "bearing_error": "hash_uniform：误差由样例种子、频道及观测位置固定，在正负1度内；模拟读数保留两位小数。",
+    "ordering": "每轮依次输出10至16源，完成一轮后增加该源数内的样例序号。",
+    "scope": "自建本地样例；不划分数据子集或难度等级；各源数采用相同抽样分布。"
+  },
+  "seed_ranges": {
+    "10": {
+      "first": 6300000000,
+      "last": 6300000713,
+      "reserved_last": 6300999999
+    },
+    "11": {
+      "first": 6301000000,
+      "last": 6301000713,
+      "reserved_last": 6301999999
+    },
+    "12": {
+      "first": 6302000000,
+      "last": 6302000713,
+      "reserved_last": 6302999999
+    },
+    "13": {
+      "first": 6303000000,
+      "last": 6303000713,
+      "reserved_last": 6303999999
+    },
+    "14": {
+      "first": 6304000000,
+      "last": 6304000713,
+      "reserved_last": 6304999999
+    },
+    "15": {
+      "first": 6305000000,
+      "last": 6305000713,
+      "reserved_last": 6305999999
+    },
+    "16": {
+      "first": 6306000000,
+      "last": 6306000713,
+      "reserved_last": 6306999999
+    }
+  }
+}

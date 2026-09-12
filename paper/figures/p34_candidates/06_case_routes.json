@@ -1,0 +1,42 @@
+{
+  "id": "06_case_routes",
+  "title": "本地外缘示例的搜索轨迹与两项指标",
+  "caption": "第三、四问已存本地外缘示例的执行轨迹。底图叠加事后获知的源位置，数字为实际成功清除次序，虚线为半径1800米的源位置约束圆，机器人检测点可在圆外。两例清除比例均为100%，平均清除时间分别为252.36和527.80秒/源。时间按结束总虚拟时间除以实际清除数计算，包含最后清除后的覆盖确认。仅用于阐释案例，不代表批量平均或正式成绩。",
+  "sources": [
+    "problem3/examples/demo_case.json",
+    "problem3/results/demo_result.json",
+    "problem3/results/demo_trace.jsonl",
+    "problem4/examples/demo_case.json",
+    "problem4/results/demo_result.json",
+    "problem4/results/demo_trace.jsonl",
+    "problem3/simulator.py"
+  ],
+  "recommendation": "适合案例分析中的执行过程图；与07配套时可减少本图指标重复。",
+  "notes": {
+    "evidence": "仅使用已存本地自建案例与动作记录；非正式测试，非批量平均。",
+    "ground_truth": "源位置和源数仅供事后绘图与核验，策略不读取真值。",
+    "timing": "按相邻动作距离/5、测量5秒、换频道1秒、成功清除5秒、失败清除3秒逐条核对。总时间与结果文件一致。动作日志不含enter/exit行；本地exit不增加虚拟时间。",
+    "checks": [
+      {
+        "case_id": "local_p3_development_0003",
+        "algorithm_version": "problem3_v4",
+        "source_count": 14,
+        "cleared_count": 14,
+        "virtual_time_s": 3533.035762144835,
+        "average_clear_time_s": 252.35969729605966,
+        "after_last_clear_s": 0.0,
+        "verified_action_count": 184
+      },
+      {
+        "case_id": "local_p4_development_0003",
+        "algorithm_version": "problem4_v4",
+        "source_count": 11,
+        "cleared_count": 11,
+        "virtual_time_s": 5805.7838841441635,
+        "average_clear_time_s": 527.7985349221967,
+        "after_last_clear_s": 92.7158232606098,
+        "verified_action_count": 353
+      }
+    ]
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "id": "p2_14_visited_candidate_regions",
+  "title": "安全候选域与已访问近优代表点",
+  "caption": "两种自建首验场景的安全候选域、已访问近优代表点和推荐点。采用局部坐标；四圆盘与正常测向条件定义灰色区域，蓝点为CSV中实际访问且满足10%阈值的代表点。",
+  "section": "评分组合与分层选点",
+  "sources": [
+    "problem2/results/selection.json",
+    "problem2/results/boundary/selection.json",
+    "problem2/results/second_point_candidates.csv",
+    "problem2/results/boundary/second_point_candidates.csv",
+    "paper/sections/p12.tex"
+  ],
+  "source_sha256": {
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372",
+    "problem2/results/boundary/selection.json": "d80729e7c38597dfcbb088b5cd02c9792038385e815521c584bde0b073245a9d",
+    "problem2/results/second_point_candidates.csv": "3ae14cf9499047a085ba98e91f9d0808c4d693b7200778b145f459164f55204b",
+    "problem2/results/boundary/second_point_candidates.csv": "599f723dbaca8548957bc371e857b7b233502058134546366a549145048d2d1e",
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7"
+  },
+  "notes": "全部数值来自自建离线算例；A、B、C为最坏相容读数下区域直径的上界，不是真实定位误差。只在已访问离散候选内选点，未证明连续全局最优。比较中的选点均满足四圆盘收信条件和正常测向的5米排除条件。灰色区域不施加源位置的1800米目标圆于第二检测点；蓝点不代表连续近优域的全部点。首次示向度均为0度；M=360，h=0.1度。",
+  "recommendation": "适合替换现有问题二候选点图，展示相同安全域中随首验而改变的推荐点。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "scenes": [
+      {
+        "first_station_xy_m": [
+          0.0,
+          0.0
+        ],
+        "visited_near_best_count": 198,
+        "selected": {
+          "local_xy_m": [
+            842.1437368791097,
+            546.8945372930203
+          ],
+          "xy_m": [
+            842.1437368791097,
+            546.8945372930203
+          ],
+          "diameter_upper_bound_m": 112.3293040324109,
+          "analytic_diameter_upper_bound_m": 164.12365704055676,
+          "capped_diameter_upper_bound_m": 112.3293040324109,
+          "geometric_diameter_upper_bound_m": 112.3293040324109,
+          "geometric_max_lower_bound_m": 112.3293040324109,
+          "geometric_scan_status": "complete",
+          "geometric_scan_complete": true,
+          "stop_reason": "all_cells_scanned",
+          "analytic_cap_m": 164.12365704055676,
+          "scanned_cells": 3600,
+          "total_cells": 3600,
+          "early_stopped": false,
+          "score_exact_for_capped_objective": true,
+          "worst_cell_center_local_deg": 317.90000000000003,
+          "worst_cell_outer_polygon_local_xy_m": [
+            [
+              1441.2766887911514,
+              25.157578183376152
+            ],
+            [
+              1399.4878034092008,
+              24.42815047575636
+            ],
+            [
+              1452.5944080110241,
+              -25.355129707198493
+            ],
+            [
+              1499.7715427345706,
+              -26.178609656925268
+            ],
+            [
+              1499.7715427355693,
+              -26.178609656925268
+            ],
+            [
+              1499.7783806584637,
+              -25.786865316669562
+            ]
+          ],
+          "observed_max_cell_center_local_deg": 317.90000000000003,
+          "observed_max_cell_outer_polygon_local_xy_m": [
+            [
+              1441.2766887911514,
+              25.157578183376152
+            ],
+            [
+              1399.4878034092008,
+              24.42815047575636
+            ],
+            [
+              1452.5944080110241,
+              -25.355129707198493
+            ],
+            [
+              1499.7715427345706,
+              -26.178609656925268
+            ],
+            [
+              1499.7715427355693,
+              -26.178609656925268
+            ],
+            [
+              1499.7783806584637,
+              -25.786865316669562
+            ]
+          ],
+          "second_distance_upper_m": 1000.0000000000001,
+          "outer_distance_upper_m": 1000.0000000013747,
+          "move_distance_m": 1004.141279146345,
+          "move_and_detect_time_s": 205.828255829269,
+          "direction_clearance_m": 532.1138078314206
+        },
+        "fastest_near_best": {
+          "local_xy_m": [
+            773.5109572139015,
+            541.618203128982
+          ],
+          "xy_m": [
+            773.5109572139015,
+            541.618203128982
+          ],
+          "diameter_upper_bound_m": 122.86527440272302,
+          "analytic_diameter_upper_bound_m": 150.96101158190794,
+          "capped_diameter_upper_bound_m": 122.86527440272302,
+          "geometric_diameter_upper_bound_m": 122.86527440272302,
+          "geometric_max_lower_bound_m": 122.86527440272302,
+          "geometric_scan_status": "complete",
+          "geometric_scan_complete": true,
+          "stop_reason": "all_cells_scanned",
+          "analytic_cap_m": 150.96101158190794,
+          "scanned_cells": 3600,
+          "total_cells": 3600,
+          "early_stopped": false,
+          "score_exact_for_capped_objective": true,
+          "worst_cell_center_local_deg": 320.90000000000003,
+          "worst_cell_outer_polygon_local_xy_m": [
+            [
+              1433.5353299429012,
+              25.022452262047317
+            ],
+            [
+              1386.8683112199333,
+              24.207876420231564
+            ],
+            [
+              1445.4748155802615,
+              -25.230856759057087
+            ],
+            [
+              1498.9332566973555,
+              -26.16397731971726
+            ]
+          ],
+          "observed_max_cell_center_local_deg": 320.90000000000003,
+          "observed_max_cell_outer_polygon_local_xy_m": [
+            [
+              1433.5353299429012,
+              25.022452262047317
+            ],
+            [
+              1386.8683112199333,
+              24.207876420231564
+            ],
+            [
+              1445.4748155802615,
+              -25.230856759057087
+            ],
+            [
+              1498.9332566973555,
+              -26.16397731971726
+            ]
+          ],
+          "second_distance_upper_m": 940.2420288538992,
+          "outer_distance_upper_m": 940.2420288552827,
+          "move_distance_m": 944.2825206952808,
+          "move_and_detect_time_s": 193.85650413905617,
+          "direction_clearance_m": 528.0360844442696
+        }
+      },
+      {
+        "first_station_xy_m": [
+          1500.0,
+          0.0
+        ],
+        "visited_near_best_count": 196,
+        "selected": {
+          "local_xy_m": [
+            220.9419376327556,
+            195.47291422364256
+          ],
+          "xy_m": [
+            1720.9419376327555,
+            195.47291422364256
+          ],
+          "diameter_upper_bound_m": 15.768784303874716,
+          "analytic_diameter_upper_bound_m": 856.0853101947221,
+          "capped_diameter_upper_bound_m": 15.768784303874716,
+          "geometric_diameter_upper_bound_m": 15.768784303874716,
+          "geometric_max_lower_bound_m": 15.768784303874716,
+          "geometric_scan_status": "complete",
+          "geometric_scan_complete": true,
+          "stop_reason": "all_cells_scanned",
+          "analytic_cap_m": 856.0853101947221,
+          "scanned_cells": 3600,
+          "total_cells": 3600,
+          "early_stopped": false,
+          "score_exact_for_capped_objective": true,
+          "worst_cell_center_local_deg": 290.40000000000003,
+          "worst_cell_outer_polygon_local_xy_m": [
+            [
+              295.7157224159114,
+              5.16173713606465
+            ],
+            [
+              287.82284770996995,
+              5.023966495602156
+            ],
+            [
+              291.3731934708544,
+              -5.085938011376099
+            ],
+            [
+              299.7998533985372,
+              -5.233025907541811
+            ]
+          ],
+          "observed_max_cell_center_local_deg": 290.40000000000003,
+          "observed_max_cell_outer_polygon_local_xy_m": [
+            [
+              295.7157224159114,
+              5.16173713606465
+            ],
+            [
+              287.82284770996995,
+              5.023966495602156
+            ],
+            [
+              291.3731934708544,
+              -5.085938011376099
+            ],
+            [
+              299.7998533985372,
+              -5.233025907541811
+            ]
+          ],
+          "second_distance_upper_m": 1297.8962042178262,
+          "outer_distance_upper_m": 291.3331973140486,
+          "move_distance_m": 295.0,
+          "move_and_detect_time_s": 64.0,
+          "direction_clearance_m": 191.5871742574042
+        },
+        "fastest_near_best": {
+          "local_xy_m": [
+            199.1715552109343,
+            167.1247785185002
+          ],
+          "xy_m": [
+            1699.1715552109342,
+            167.1247785185002
+          ],
+          "diameter_upper_bound_m": 17.142573708796878,
+          "analytic_diameter_upper_bound_m": 1086.323894442709,
+          "capped_diameter_upper_bound_m": 17.142573708796878,
+          "geometric_diameter_upper_bound_m": 17.142573708796878,
+          "geometric_max_lower_bound_m": 17.142573708796878,
+          "geometric_scan_status": "complete",
+          "geometric_scan_complete": true,
+          "stop_reason": "all_cells_scanned",
+          "analytic_cap_m": 1086.323894442709,
+          "scanned_cells": 3600,
+          "total_cells": 3600,
+          "early_stopped": false,
+          "score_exact_for_capped_objective": true,
+          "worst_cell_center_local_deg": 299.2,
+          "worst_cell_outer_polygon_local_xy_m": [
+            [
+              293.64667114659306,
+              5.125621711818889
+            ],
+            [
+              285.9249291173429,
+              4.99083820333938
+            ],
+            [
+              291.31620024171457,
+              -5.084943190860994
+            ],
+            [
+              299.6865020308535,
+              -5.231047352059189
+            ]
+          ],
+          "observed_max_cell_center_local_deg": 299.2,
+          "observed_max_cell_outer_polygon_local_xy_m": [
+            [
+              293.64667114659306,
+              5.125621711818889
+            ],
+            [
+              285.9249291173429,
+              4.99083820333938
+            ],
+            [
+              291.31620024171457,
+              -5.084943190860994
+            ],
+            [
+              299.6865020308535,
+              -5.231047352059189
+            ]
+          ],
+          "second_distance_upper_m": 1314.8865074318157,
+          "outer_distance_upper_m": 256.24744894757055,
+          "move_distance_m": 260.0,
+          "move_and_detect_time_s": 57.0,
+          "direction_clearance_m": 163.62330167295772
+        }
+      }
+    ],
+    "domain": {
+      "four_disk_centres_local_m": [
+        [
+          4.999238475781956,
+          -0.08726203218641757
+        ],
+        [
+          4.999238475781956,
+          0.08726203218641757
+        ],
+        [
+          999.8476951563913,
+          -17.45240643728351
+        ],
+        [
+          999.8476951563913,
+          17.45240643728351
+        ]
+      ],
+      "disk_radius_m": 1000.0,
+      "move_budget_m": 1100.0,
+      "normal_direction_clearance_m": 5.0,
+      "rendering": "analytic disk cross-sections sampled for display only"
+    }
+  }
+}

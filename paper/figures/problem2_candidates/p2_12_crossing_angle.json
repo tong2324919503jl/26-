@@ -1,0 +1,37 @@
+{
+  "id": "p2_12_crossing_angle",
+  "title": "评分一：交会夹角对条带直径的影响",
+  "caption": "固定推荐点对应的两条带半宽，仅改变中心线锐交会角，解析直径随夹角增大而减小。下方以相同坐标尺度比较夹角下界β₀、60°、90°三组条带交集。",
+  "section": "评分方法一：解析条带上界",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py",
+    "problem2/results/selection.json"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372"
+  },
+  "notes": "固定w₁、w₂的参数敏感性图，不是不同第二点q的实际评分曲线，也不宣称60°或90°构型在安全域内必可达。下方均为条带中心交点处的局部示意坐标。",
+  "recommendation": "作为图08的替代或补充，解释改善交会角的动机。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "w1_m": 26.178609655925268,
+    "w2_m": 17.452406437283514,
+    "angles_deg": [
+      30.882206778179885,
+      60.0,
+      90.0
+    ],
+    "diameters_m": [
+      164.12365704055676,
+      87.84185273236265,
+      62.925546289863505
+    ]
+  }
+}

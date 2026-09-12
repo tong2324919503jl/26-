@@ -1,0 +1,82 @@
+{
+  "problem": 3,
+  "run_id": "workflow_smoke",
+  "complete": true,
+  "is_subset": true,
+  "cases": 14,
+  "figures": [
+    {
+      "figure": "two_metrics",
+      "title": "问题3的两项指标",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/two_metrics.pdf",
+        "paper/figures/problem3/workflow_smoke/two_metrics.svg",
+        "paper/figures/problem3/workflow_smoke/two_metrics.png",
+        "paper/figures/problem3/workflow_smoke/two_metrics.json",
+        "paper/figures/problem3/workflow_smoke/two_metrics.caption.md"
+      ]
+    },
+    {
+      "figure": "time_distribution",
+      "title": "问题3的平均定位清除时间分布",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/time_distribution.pdf",
+        "paper/figures/problem3/workflow_smoke/time_distribution.svg",
+        "paper/figures/problem3/workflow_smoke/time_distribution.png",
+        "paper/figures/problem3/workflow_smoke/time_distribution.json",
+        "paper/figures/problem3/workflow_smoke/time_distribution.caption.md"
+      ]
+    },
+    {
+      "figure": "time_components",
+      "title": "问题3的耗时构成",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/time_components.pdf",
+        "paper/figures/problem3/workflow_smoke/time_components.svg",
+        "paper/figures/problem3/workflow_smoke/time_components.png",
+        "paper/figures/problem3/workflow_smoke/time_components.json",
+        "paper/figures/problem3/workflow_smoke/time_components.caption.md"
+      ]
+    },
+    {
+      "figure": "time_ecdf",
+      "title": "问题3的平均定位清除时间累积分布",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/time_ecdf.pdf",
+        "paper/figures/problem3/workflow_smoke/time_ecdf.svg",
+        "paper/figures/problem3/workflow_smoke/time_ecdf.png",
+        "paper/figures/problem3/workflow_smoke/time_ecdf.json",
+        "paper/figures/problem3/workflow_smoke/time_ecdf.caption.md"
+      ]
+    },
+    {
+      "figure": "case_route",
+      "title": "问题3的样例搜索轨迹",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/case_route.pdf",
+        "paper/figures/problem3/workflow_smoke/case_route.svg",
+        "paper/figures/problem3/workflow_smoke/case_route.png",
+        "paper/figures/problem3/workflow_smoke/case_route.json",
+        "paper/figures/problem3/workflow_smoke/case_route.caption.md"
+      ]
+    },
+    {
+      "figure": "case_progress",
+      "title": "问题3的样例清除进度",
+      "files": [
+        "paper/figures/problem3/workflow_smoke/case_progress.pdf",
+        "paper/figures/problem3/workflow_smoke/case_progress.svg",
+        "paper/figures/problem3/workflow_smoke/case_progress.png",
+        "paper/figures/problem3/workflow_smoke/case_progress.json",
+        "paper/figures/problem3/workflow_smoke/case_progress.caption.md"
+      ]
+    }
+  ],
+  "figure_book": {
+    "path": "paper/figures/problem3/workflow_smoke/figures.pdf",
+    "sha256": "35f2568a57910ce1885a587f14694de8bb3f581c2094b48286d67e864955ff94",
+    "pages": 6
+  },
+  "skipped_missing_trace": [],
+  "skipped_undefined_time": []
+}

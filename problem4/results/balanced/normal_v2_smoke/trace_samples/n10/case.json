@@ -1,0 +1,87 @@
+{
+  "case_id": "local_p4_balanced_normal_v2_n10_000000",
+  "construction_difficulty": {
+    "quantile_count": 1000,
+    "quantile_index": 75,
+    "score": 0.262000155379,
+    "z": -1.427999067728
+  },
+  "dataset": "balanced_normal_v2",
+  "noise": "hash_uniform",
+  "problem": 4,
+  "provenance": "self_constructed_not_official",
+  "seed": 7400000000,
+  "source_count": 10,
+  "sources": [
+    {
+      "channel": 20,
+      "orientation_deg": null,
+      "radius": 1279.290162084,
+      "x": 48.917503239,
+      "y": -180.909684972
+    },
+    {
+      "channel": 12,
+      "orientation_deg": 323.778684563,
+      "radius": 1314.026635272,
+      "x": 979.245503352,
+      "y": -78.193028555
+    },
+    {
+      "channel": 15,
+      "orientation_deg": null,
+      "radius": 1358.102065364,
+      "x": 931.472228662,
+      "y": 635.126590993
+    },
+    {
+      "channel": 17,
+      "orientation_deg": null,
+      "radius": 1345.957553645,
+      "x": -869.81468926,
+      "y": -15.596500232
+    },
+    {
+      "channel": 6,
+      "orientation_deg": 143.521443942,
+      "radius": 1272.690787004,
+      "x": 646.423107956,
+      "y": -396.662289076
+    },
+    {
+      "channel": 1,
+      "orientation_deg": null,
+      "radius": 1319.268346187,
+      "x": -372.74407049,
+      "y": -281.81714913
+    },
+    {
+      "channel": 16,
+      "orientation_deg": null,
+      "radius": 1278.68734283,
+      "x": -666.525969821,
+      "y": -591.261127114
+    },
+    {
+      "channel": 8,
+      "orientation_deg": null,
+      "radius": 1285.512092525,
+      "x": -785.71679128,
+      "y": 584.966692492
+    },
+    {
+      "channel": 2,
+      "orientation_deg": null,
+      "radius": 1303.468569745,
+      "x": 394.813139788,
+      "y": -994.746261619
+    },
+    {
+      "channel": 7,
+      "orientation_deg": 97.267620322,
+      "radius": 1259.948636944,
+      "x": -162.92034456,
+      "y": -262.9162666
+    }
+  ]
+}

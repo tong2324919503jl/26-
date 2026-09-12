@@ -1,0 +1,57 @@
+{
+  "id": "p2_01_method_overview",
+  "title": "保证收信选点与二次定位",
+  "caption": "自建算例中，先在四圆盘安全域内选择第二点，再由两次正常示向更新候选源区域；右图为实际第二读数的后验外包及其直径。",
+  "section": "首验信息与最坏直径目标；问题二方法引入",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py",
+    "problem2/results/selection.json",
+    "problem2/examples/synthetic_case.json"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372",
+    "problem2/examples/synthetic_case.json": "5cecad890bbce93532efa3b47c538bf1e5889acf4a92fdbbef6bcedcb6cda5ac"
+  },
+  "notes": "两次示向均按真实 ±1° 绘制；右图圆约束使用生产实现的 360 边外包。该次后验直径不等于选点评分 C，也不是最坏读数结果。",
+  "recommendation": "优先：与问题一的大图及区域放大结构衔接最直接。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "q_m": [
+      842.1437368791097,
+      546.8945372930203
+    ],
+    "source_m": [
+      1200.0,
+      15.0
+    ],
+    "second_bearing_deg": 304.33248942355385,
+    "posterior_diameter_m": 71.12645019631522,
+    "posterior_vertices_m": [
+      [
+        1214.8007927226467,
+        21.204426712824144
+      ],
+      [
+        1188.189962075871,
+        20.739932936090874
+      ],
+      [
+        1215.7876454391621,
+        -21.221652291065624
+      ],
+      [
+        1245.2407083168114,
+        -21.735757415929868
+      ]
+    ],
+    "source_contained": true,
+    "guaranteed_reception": true
+  }
+}

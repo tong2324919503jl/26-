@@ -1,0 +1,45 @@
+{
+  "id": "p2_02_four_disks",
+  "title": "四圆盘安全区域与角端点",
+  "caption": "四个半径 1000 米的圆盘给出保证收信区域，右侧分别放大 5 米与 1000 米径向端点处的两个圆心。",
+  "section": "四圆盘安全候选域",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132"
+  },
+  "notes": "各面板均等比例；不同面板的放大倍数不同，角误差仍为 ±1°。边界由生产 safe_radial_limit 计算并逐点检查四圆盘包含。",
+  "recommendation": "优先：直接配合四圆盘公式与证明。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "circle_centers_m": [
+      [
+        4.999238475781956,
+        -0.08726203218641757
+      ],
+      [
+        4.999238475781956,
+        0.08726203218641757
+      ],
+      [
+        999.8476951563913,
+        -17.45240643728351
+      ],
+      [
+        999.8476951563913,
+        17.45240643728351
+      ]
+    ],
+    "radius_m": 1000,
+    "near_center_separation_m": 0.17452406437283513,
+    "far_center_separation_m": 34.90481287456702,
+    "boundary_points_verified": 3601
+  }
+}

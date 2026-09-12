@@ -1,0 +1,87 @@
+{
+  "id": "p2_09_reading_cells_outer_bounds",
+  "caption": "在原图三个读数及单元直径不变的条件下，显式标出Q由第一扇区、第一条带、有效投影下界与三个圆的360边外包求交。(a)—(c)为三组读数单元；(d)目标圆外切边界、(e)第二距离圆外切边界展示圆弧与外包折线，(f)第一距离圆局部裁边对应(c)圆圈内的实际裁边。",
+  "notes": "本原点算例中目标圆1800米被第一距离圆1500米包含，第二距离圆1000米未进一步裁切Q；(a)(b)三圆约束均不活跃。(d)(e)展示各自圆边界的外切几何，不对应(a)(b)单元附近的位置。(c)实际外切边的法向为359度，跨度2.377米，单元顶点最大越出真实圆约1.884毫米。最下排横轴为切向米，纵轴为法向毫米，采用不同显示比例以分辨外包增量；360边数未减少，原图几何与1.05度评分半角未夸张。",
+  "original_preserved": true,
+  "original_sha256": {
+    "paper\\figures\\problem2_candidates\\p2_09_outer_bounds_trial\\original\\p2_09_reading_cells.pdf": "bd52ac7d619a46dd56c0828aa145aa5e0f9dcf9c9ee7ce14dbf6176c76f37e94",
+    "paper\\figures\\problem2_candidates\\p2_09_outer_bounds_trial\\original\\p2_09_reading_cells.svg": "bcf272a9f9db17d56f25b052c4d768dec142bc92835feb6dc3cf288cd67493fb",
+    "paper\\figures\\problem2_candidates\\p2_09_outer_bounds_trial\\original\\p2_09_reading_cells.png": "50976c787842d14d889918a9de02d81391aa748afac5b2d9661c92d7464e4a3d",
+    "paper\\figures\\problem2_candidates\\p2_09_outer_bounds_trial\\original\\p2_09_reading_cells.json": "188002c34c0d0323099a5dcc750abed4e17e27f2cfaa9aea133e7e7ca6c50771"
+  },
+  "manuscript_asset": "paper/figures/p2_09_reading_cells.pdf",
+  "manuscript_sha256": "2de27074c758aa997968666886cc7b43a112e5e342ad68159e20f72dbeddcb9a",
+  "panel_names": {
+    "a": "第1组读数单元",
+    "b": "第2组读数单元",
+    "c": "第3组读数单元",
+    "d": "目标圆外切边界",
+    "e": "第二距离圆外切边界",
+    "f": "第一距离圆局部裁边"
+  },
+  "source_sha256": {
+    "paper/sections/p12.tex": "c148a8eda0653ccb7759884318338bb086ec3fea3691bf3084ca31c6c29cdc34",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372",
+    "paper/figures/problem2_candidates/p2_09_reading_cells.json": "188002c34c0d0323099a5dcc750abed4e17e27f2cfaa9aea133e7e7ca6c50771"
+  },
+  "q_local_xy_m": [
+    842.1437368791097,
+    546.8945372930203
+  ],
+  "cell_centers_deg": [
+    231.0,
+    276.0,
+    318.0
+  ],
+  "cell_diameters_m": [
+    46.59821695892082,
+    39.28172085484785,
+    110.63622713325117
+  ],
+  "circle_constraints": [
+    {
+      "name": "target",
+      "symbol": "D_0",
+      "center": [
+        0.0,
+        0.0
+      ],
+      "radius": 1800.0,
+      "max_radial_expansion_m": 0.06854109432659072
+    },
+    {
+      "name": "first_distance",
+      "symbol": "D_1",
+      "center": [
+        0.0,
+        0.0
+      ],
+      "radius": 1500.0,
+      "max_radial_expansion_m": 0.05711757860549227
+    },
+    {
+      "name": "second_distance",
+      "symbol": "D_2",
+      "center": [
+        842.1437368791097,
+        546.8945372930203
+      ],
+      "radius": 1000.0000000000001,
+      "max_radial_expansion_m": 0.03807838573699485
+    }
+  ],
+  "active_edge_normal_deg": 359,
+  "active_edge_endpoints_m": [
+    [
+      1499.7715427345706,
+      -26.178609656925268
+    ],
+    [
+      1499.8130300276482,
+      -23.80180428555548
+    ]
+  ],
+  "active_edge_length_m": 2.3771674245001257,
+  "max_cell_vertex_outside_true_first_circle_mm": 1.8836414717497973
+}

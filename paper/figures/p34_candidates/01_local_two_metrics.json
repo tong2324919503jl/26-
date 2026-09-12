@@ -1,0 +1,15 @@
+{
+  "id": "01_local_two_metrics",
+  "title": "本地测试的两项实际指标",
+  "caption": "问题三、四本文方案在开发、留出与压力集合中的清除比例和平均定位清除时间分布。各例先计算 T/Nc，图中菱形再对案例取均值；箱体为25%至75%分位，须为1.5倍四分位距内的最远样本，散点为离群值，小提琴仅作平滑分布显示。",
+  "sources": [
+    "validation/speed_v4/p3_development_v3.json",
+    "validation/speed_v4/p3_holdout_v3.json",
+    "validation/speed_v4/p3_stress_v3.json",
+    "validation/speed_v4/p4_development_v3.json",
+    "validation/speed_v4/p4_holdout_v3.json",
+    "validation/speed_v4/p4_stress_v3.json"
+  ],
+  "recommendation": "推荐作为本地实验主结果图；清除比例不另占整张图。",
+  "notes": "不是正式测试成绩；正式两指标为 Nc/N 和 T/Nc，220/400阈值通过率不是清除比例。"
+}

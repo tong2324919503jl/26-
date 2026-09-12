@@ -1,0 +1,28 @@
+{
+  "archive": "releases/p34_practice_20260912.zip",
+  "original_archive_name": "B题第三四问_新版演练包_20260912.zip",
+  "archive_sha256": "85829e5f8c7e0ac9c5c94084eeca71d19dd3169cfe33db4c82753ef88ca14a33",
+  "source_manifest": "source_manifest.json",
+  "module_mapping": {
+    "experiments_v5/p3_candidate.py": "problem3/current_policy.py",
+    "experiments_v5/p3_probe_geometry.py": "problem3/continuous_probe.py",
+    "experiments_v5/p4_candidate.py": "problem4/current_policy.py",
+    "experiments_v5/p4_discovery_route.py": "problem4/discovery_route.py",
+    "experiments_v5/p4_discovery_route_combo.py": "problem4/discovery_policy.py",
+    "experiments_v5/p4_discovery_route_global.py": "problem4/global_discovery.py",
+    "experiments_v5/p4_incremental.py": "problem4/incremental_localization.py",
+    "experiments_v5/p4_incremental_visibility.py": "problem4/incremental_visibility.py",
+    "experiments_v5/p4_visibility.py": "problem4/visibility.py"
+  },
+  "transform": "Only ImportFrom module paths are renamed; all algorithm bodies and parameters remain unchanged.",
+  "algorithm_versions": {
+    "3": "problem3_v5_continuous",
+    "4": "problem4_v5_visibility_discovery"
+  },
+  "candidate_arguments": {
+    "strategy": "adaptive",
+    "config": null
+  },
+  "historical_git_commit": "8aefbd7",
+  "official_platform_calls": 0
+}

@@ -1,0 +1,42 @@
+{
+  "id": "07_case_progress",
+  "title": "本地外缘示例的清除进度与平均清除时间",
+  "caption": "与轨迹图相同的两例本地外缘场景。上图按动作日志中每次成功清除时刻绘制清除比例阶梯，空心方块标记任务结束；下图使用结束总虚拟时间T除以实际清除数Nc。第三问T/Nc=3533.04/14=252.36秒/源；第四问T/Nc=5805.78/11=527.80秒/源。第四问最后清除至任务结束的92.72秒仍计入T，对平均时间贡献8.43秒/源。真实源数仅事后计算清除比例，两例不能代表批量平均或正式测试。",
+  "sources": [
+    "problem3/examples/demo_case.json",
+    "problem3/results/demo_result.json",
+    "problem3/results/demo_trace.jsonl",
+    "problem4/examples/demo_case.json",
+    "problem4/results/demo_result.json",
+    "problem4/results/demo_trace.jsonl",
+    "problem3/simulator.py"
+  ],
+  "recommendation": "适合说明清除比例与平均清除时间的统计口径，特别是末次清除与结束时间的区别。",
+  "notes": {
+    "evidence": "仅使用已存本地自建案例与动作记录；非正式测试，非批量平均。",
+    "ground_truth": "源位置和源数仅供事后绘图与核验，策略不读取真值。",
+    "timing": "按相邻动作距离/5、测量5秒、换频道1秒、成功清除5秒、失败清除3秒逐条核对。总时间与结果文件一致。动作日志不含enter/exit行；本地exit不增加虚拟时间。",
+    "checks": [
+      {
+        "case_id": "local_p3_development_0003",
+        "algorithm_version": "problem3_v4",
+        "source_count": 14,
+        "cleared_count": 14,
+        "virtual_time_s": 3533.035762144835,
+        "average_clear_time_s": 252.35969729605966,
+        "after_last_clear_s": 0.0,
+        "verified_action_count": 184
+      },
+      {
+        "case_id": "local_p4_development_0003",
+        "algorithm_version": "problem4_v4",
+        "source_count": 11,
+        "cleared_count": 11,
+        "virtual_time_s": 5805.7838841441635,
+        "average_clear_time_s": 527.7985349221967,
+        "after_last_clear_s": 92.7158232606098,
+        "verified_action_count": 353
+      }
+    ]
+  }
+}

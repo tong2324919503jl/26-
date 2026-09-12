@@ -1,4 +1,6 @@
-# Core solve and default verification use the Python standard library.
+# Problem 4 v5 discovery ranking requires NumPy. Problem 3 uses the standard library.
+# The source practice package was validated with NumPy 2.3.5.
+numpy>=1.26,<3
 # The optional verify_project.py --reference check additionally needs SciPy.
 # Only rebuilding PDF searchable text requires this dependency.
 # Optional scripts/plot_search.py additionally needs matplotlib (not core).

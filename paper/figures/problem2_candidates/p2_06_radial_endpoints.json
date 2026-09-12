@@ -1,0 +1,51 @@
+{
+  "id": "p2_06_radial_endpoints",
+  "title": "径向端点约束与首次收信信息",
+  "caption": "自建安全点 q=(400,650) 米。首次收信提供 R≥r，故第二次距离须与 max(1000,r) 比较；图中两条角端点曲线始终低于 1。",
+  "section": "四圆盘安全候选域；径向端点归约证明",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132"
+  },
+  "notes": "左侧使用真实 ±1° 示向扇区；5 米处取闭包端点。右侧是距离函数示意，不以有限采样代替四圆盘解析安全证明。",
+  "recommendation": "补充：适合解释为何不用半径 1000 米去约束所有 1500 米源位置。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "q_m": [
+      400.0,
+      650.0
+    ],
+    "safe_centers_m": [
+      [
+        4.999238475781956,
+        -0.08726203218641757
+      ],
+      [
+        4.999238475781956,
+        0.08726203218641757
+      ],
+      [
+        999.8476951563913,
+        -17.45240643728351
+      ],
+      [
+        999.8476951563913,
+        17.45240643728351
+      ]
+    ],
+    "guaranteed_reception": true,
+    "sample_max_normalized_distances": [
+      0.8973538915304605,
+      0.8717083630890999
+    ],
+    "sample_count_per_endpoint": 1000
+  }
+}

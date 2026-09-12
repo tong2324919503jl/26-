@@ -1,0 +1,169 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="第 1 页" id="VoAD4VAJcBNZX97PVlLU">
+    <mxGraphModel dx="1317" dy="1010" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Zg0JFoeP4lU2S9v8rqtv-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;dashPattern=12 12;labelBackgroundColor=light-dark(#FFB0B5,#EDEDED);" value="" vertex="1">
+          <mxGeometry height="353" width="1104" x="45" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="FGShizSPNbLf-BKGq3zs-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;输入首站坐标、示向度、误差与移动预算&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="139" x="66" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="FGShizSPNbLf-BKGq3zs-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;fillColor=light-dark(#efb4b6, #ededed);strokeColor=light-dark(#995e56, #ededed);" value="" vertex="1">
+          <mxGeometry height="321" width="430" x="709" y="99" as="geometry" />
+        </mxCell>
+        <mxCell id="0FMTdVa7YvxCIKZegY4W-3" edge="1" parent="1" source="FGShizSPNbLf-BKGq3zs-22" style="endArrow=classic;html=1;rounded=0;exitX=1.015;exitY=0.504;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;exitPerimeter=0;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="705" y="266" as="sourcePoint" />
+            <mxPoint x="246" y="182" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FMTdVa7YvxCIKZegY4W-7" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-15" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#8d6158, #ededed);strokeWidth=1;" target="Hizp6U22i1oh16bHZzHr-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1118" y="450.36" as="sourcePoint" />
+            <mxPoint x="1037" y="393.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FMTdVa7YvxCIKZegY4W-15" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-12" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="891" y="433" as="sourcePoint" />
+            <mxPoint x="809" y="433" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0FMTdVa7YvxCIKZegY4W-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 24px;&quot;&gt;问题二：安全候选区域内的第二检测点选择&lt;/font&gt;&lt;/p&gt;" vertex="1">
+          <mxGeometry height="40" width="460" x="143" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="0FMTdVa7YvxCIKZegY4W-18" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;forced-color-adjust: none; float: right; width: 111px; height: 369px; shape-outside: polygon(99.95% 0.05%, 99.95% 99.95%, 0.08% 99.95%, 0.08% 75.17%, 99.95% 49.93%, 0.08% 24.7%, 0.08% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;是&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="22.72" width="15" x="687" y="329" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;构造首读数外包区域&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;首扇区、目标圆、距离与有效边界&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="139" x="232" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;构造安全收信区域&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;四圆盘交集与移动预算约束&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="396" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;多层搜索生成候选点&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;粗到细搜索半径与方位&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="143" x="548" y="167" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;补充候选点&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;解析基线、对称点与安全边界点&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="726" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;获得第二次示向度后&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;按共用几何模型构造后验区域外包&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="129" x="66" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;计算解析上界 A(q)&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;连续读数的保守直径上界&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="867" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-7" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-2" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="416" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-8" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-3" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="397" y="279" as="sourcePoint" />
+            <mxPoint x="423" y="279" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-9" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="410" y="305" as="sourcePoint" />
+            <mxPoint x="436" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;统一最终精度复核&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;对全部已访问候选重新计算 C&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="548" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;结果筛选&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;最优点、近优最快点与 Pareto 前沿&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="396" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;合并评分 C(q)=min(A,B)&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;记录扫描状态&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="922" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;计算几何上界 B(q)&lt;/p&gt;&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;读数网格半步增宽后的区域直径&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1010" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-14" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=#A75A53;fontFamily=Times New Roman;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="84.64" width="177" x="893.5" y="203" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-15" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=#A75A53;fontFamily=Times New Roman;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="90" width="161" x="714" y="308" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-16" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-14" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#8d6158, #ededed);strokeWidth=1;" target="Hizp6U22i1oh16bHZzHr-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="622" y="301" as="sourcePoint" />
+            <mxPoint x="643.7399999999998" y="357.9" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-18" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-14" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#8d6158, #ededed);strokeWidth=1;" target="Hizp6U22i1oh16bHZzHr-12" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="987" y="298" as="sourcePoint" />
+            <mxPoint x="1005" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-19" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-4" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-6" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="837" y="174" as="sourcePoint" />
+            <mxPoint x="861" y="114" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-21" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-6" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1025" y="200" as="sourcePoint" />
+            <mxPoint x="1048" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-23" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-15" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#8d6158, #ededed);strokeWidth=1;" target="Hizp6U22i1oh16bHZzHr-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="659" y="464" as="sourcePoint" />
+            <mxPoint x="608" y="343" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-24" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-10" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-11" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="457" y="310" as="sourcePoint" />
+            <mxPoint x="488" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=light-dark(#FFB0B5,#EDEDED);strokeColor=light-dark(#a75a53, #ededed);shadow=1;fontFamily=Times New Roman;fontSize=14;fontColor=default;fontStyle=0;align=center;verticalAlign=middle;" value="&lt;p style=&quot;margin-top: 0pt; margin-bottom: 0pt; margin-left: 0in; direction: ltr; unicode-bidi: embed; word-break: normal;&quot;&gt;输出第二检测点、候选区域与时间指标&lt;/p&gt;" vertex="1">
+          <mxGeometry height="60" width="129" x="237" y="323" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-26" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-11" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;" target="Hizp6U22i1oh16bHZzHr-25" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="418" y="264" as="sourcePoint" />
+            <mxPoint x="391" y="264" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-27" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-25" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#995e56, #ededed);strokeWidth=2;jumpSize=10;jumpStyle=none;sourcePerimeterSpacing=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="Hizp6U22i1oh16bHZzHr-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="247" y="276" as="sourcePoint" />
+            <mxPoint x="220" y="276" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-28" parent="1" style="text;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align: center; forced-color-adjust: none; float: right; width: 111px; height: 369px; shape-outside: polygon(99.95% 0.05%, 99.95% 99.95%, 0.08% 99.95%, 0.08% 75.17%, 99.95% 49.93%, 0.08% 24.7%, 0.08% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;否：以当前最优点为中心缩小步长&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="22.72" width="126" x="709" y="253" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-29" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;text-align: center; forced-color-adjust: none; float: right; width: 111px; height: 369px; shape-outside: polygon(99.95% 0.05%, 99.95% 99.95%, 0.08% 99.95%, 0.08% 75.17%, 99.95% 49.93%, 0.08% 24.7%, 0.08% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;否：继续扫描至完整 B&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="23.44" width="131" x="1023" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="Hizp6U22i1oh16bHZzHr-30" parent="1" style="text;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;div style=&quot;text-align: center; forced-color-adjust: none; float: right; width: 111px; height: 369px; shape-outside: polygon(99.95% 0.05%, 99.95% 99.95%, 0.08% 99.95%, 0.08% 75.17%, 99.95% 49.93%, 0.08% 24.7%, 0.08% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;是：提前确定 C=A&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="25.44" width="104" x="846" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="etIn87XpIrKo5-hLtXbt-1" edge="1" parent="1" source="Hizp6U22i1oh16bHZzHr-13" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=light-dark(#995e56, #ededed);" target="Hizp6U22i1oh16bHZzHr-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1072" y="251" as="sourcePoint" />
+            <mxPoint x="1122" y="201" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="etIn87XpIrKo5-hLtXbt-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 14px;&quot;&gt;是否完成预设搜索层？&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="146" x="726" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="etIn87XpIrKo5-hLtXbt-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; font-size: 14px;&quot;&gt;部分扫描最大值是否达到 A(q)？&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="114" x="925" y="233" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

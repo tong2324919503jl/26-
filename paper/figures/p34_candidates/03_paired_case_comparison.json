@@ -1,0 +1,11 @@
+{
+  "id": "03_paired_case_comparison",
+  "title": "留出案例的逐例速度比较",
+  "caption": "两问各512个冻结留出案例的配对耗时。横纵坐标均为每例T/Nc；对角线以下表示本文更快。源真值只用于事后确认全清。",
+  "sources": [
+    "validation/speed_v4/p3_holdout_v3.json",
+    "validation/speed_v4/p4_holdout_v3.json"
+  ],
+  "recommendation": "用于解释均值改善不等于每一个案例都改善；不重复放入多张均值图。",
+  "notes": ""
+}

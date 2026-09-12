@@ -1,0 +1,94 @@
+{
+  "case_id": "local_p3_balanced_normal_v2_n11_000000",
+  "construction_difficulty": {
+    "quantile_count": 1000,
+    "quantile_index": 477,
+    "score": 0.490620573161,
+    "z": -0.056276561033
+  },
+  "dataset": "balanced_normal_v2",
+  "noise": "hash_uniform",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "seed": 7301000000,
+  "source_count": 11,
+  "sources": [
+    {
+      "channel": 11,
+      "orientation_deg": null,
+      "radius": 1236.872465801,
+      "x": 1054.749933937,
+      "y": -207.276030002
+    },
+    {
+      "channel": 17,
+      "orientation_deg": null,
+      "radius": 1278.182682762,
+      "x": 936.064263331,
+      "y": 772.901039048
+    },
+    {
+      "channel": 4,
+      "orientation_deg": null,
+      "radius": 1242.287336275,
+      "x": -816.563282303,
+      "y": 569.157983135
+    },
+    {
+      "channel": 20,
+      "orientation_deg": null,
+      "radius": 1242.924595581,
+      "x": -920.69168111,
+      "y": -853.28726679
+    },
+    {
+      "channel": 18,
+      "orientation_deg": null,
+      "radius": 1289.856893083,
+      "x": -815.938955979,
+      "y": 364.032204133
+    },
+    {
+      "channel": 3,
+      "orientation_deg": null,
+      "radius": 1209.297768555,
+      "x": -945.114862215,
+      "y": -934.3170808
+    },
+    {
+      "channel": 8,
+      "orientation_deg": null,
+      "radius": 1217.259694684,
+      "x": -603.504909917,
+      "y": -634.855631785
+    },
+    {
+      "channel": 9,
+      "orientation_deg": null,
+      "radius": 1216.368940582,
+      "x": -681.405342047,
+      "y": 144.146541853
+    },
+    {
+      "channel": 12,
+      "orientation_deg": null,
+      "radius": 1236.32473792,
+      "x": 797.359233061,
+      "y": -502.16328323
+    },
+    {
+      "channel": 14,
+      "orientation_deg": null,
+      "radius": 1311.195610923,
+      "x": 74.664628052,
+      "y": -694.84917177
+    },
+    {
+      "channel": 16,
+      "orientation_deg": null,
+      "radius": 1235.623387448,
+      "x": -569.362152494,
+      "y": 957.373384437
+    }
+  ]
+}

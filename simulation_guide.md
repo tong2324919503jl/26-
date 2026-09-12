@@ -15,7 +15,7 @@ python problem3/solve.py --version
 python problem4/solve.py --version
 ```
 
-应分别显示 **`problem3_v4`、`problem4_v4`**。默认已接入本轮选择的算法；加 `--strategy previous` 才会运行本轮之前的默认版本。新版本地结果见 [本轮比较](validation/speed_v4_summary.md)。
+应分别显示 **`problem3_v5_continuous`、`problem4_v5_visibility_discovery`**。默认已接入本轮选择的算法；加 `--strategy v4` 回放上一版，`previous` 保留更早历史含义。新版来源与包内本地汇总见 [新版记录](validation/practice_v5/README.md)。第四问需已安装 NumPy（见 `requirements.txt`）。
 
 ## 2. 先做演练
 

@@ -1,0 +1,52 @@
+{
+  "package_version": "v5_practice_20260912",
+  "created_at_utc": "2026-09-12T06:44:48.614458+00:00",
+  "original_upstream_commit": "3789170daeb3d781d04eff2d2af478c6b6d41cea",
+  "candidate_frozen_at_utc": "2026-09-12T05:47:23.228667+00:00",
+  "original_freeze_sha256": "9a23dcf81c2bb5b553519ff683171ac5d6e71607bef47f70a73a4006a3f1e810",
+  "algorithm_versions": {
+    "3": "problem3_v5_continuous",
+    "4": "problem4_v5_visibility_discovery"
+  },
+  "candidate_arguments": {
+    "strategy": "adaptive",
+    "config": null
+  },
+  "copied_files_sha256": {
+    "experiments_v5/__init__.py": "1e6f5a3e818f7d92665b6a00a5eacb8f39f18d833ae118600872104a4331c4f2",
+    "experiments_v5/p3_candidate.py": "3d189ca89dbcc86b4852c852100d8692e4732afa15274e5be9793a73524dfb2a",
+    "experiments_v5/p3_probe_geometry.py": "5a5df0a05035f2160fb468306a679ea0ff4859d1977bafd5cf42ae4f3edb717a",
+    "experiments_v5/p4_candidate.py": "d3971f5ce9235aba65099d4f46025a3ed8ac5111b85e7a2a3cbe1ac4015c03ea",
+    "experiments_v5/p4_discovery_route.py": "76e27b208135cbbc0d86eeff1d76322ea4967d4dbf82e81d82c97229d20362cf",
+    "experiments_v5/p4_discovery_route_combo.py": "ae3e8c8334c2676e16eee8ee5ae17e629d4e0695ca8170356c6040562facb75f",
+    "experiments_v5/p4_discovery_route_global.py": "1362033913b78999097e95ef43947ab2f3f05ad0c0d3130fa9047373541ce193",
+    "experiments_v5/p4_incremental.py": "332670fd4f3b9f276ca8174ce292c5e5c1d8156d492ecd90cc0235e7bb688140",
+    "experiments_v5/p4_incremental_visibility.py": "9c52ec5bc00a6f10284b29c76b23e74cb4bea97a938e29cfa73e6eb1738cd06d",
+    "experiments_v5/p4_visibility.py": "344281b776191a136a7224b9ae90c09242662cf03c5d9436fd3887489931e90d",
+    "problem3/__init__.py": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+    "problem3/client.py": "b31bfd764cc0bf1fb5c8e8c4a4884ddbdab89ba6ba21d8c4494740ed4eb870c4",
+    "problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+    "problem3/lookahead.py": "3028190aaac132182cf79e7fd2dd0e4a0c1fd4b4a0132a176bcae268e5d39fb3",
+    "problem3/planning.py": "4b3d5ab6f26103e0e67c982f2cf001bd7fb0b095b8114b7566e38f7aeee90140",
+    "problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+    "problem3/speed_policy.py": "6f744b18eb06c863165cb10894f0f3a361de9b533da2e9109fc46c1db41a6a4b",
+    "problem4/__init__.py": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+    "problem4/bystander.py": "0414031c564d771274b12bf2016d1a70cd33bd7a2bb2501165d1d34fd313fe40",
+    "problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+    "problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+    "problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+    "problem4/optical_repair.py": "567620b452caf5bac83b7e7d399f39cb1ce4735a3694d416565bac2f255e0235",
+    "problem4/policy.py": "4b0d3339b1cc2ae0c3744c8a92703e11219d78c3b4f0af4ae96ef71d7181611f",
+    "problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+    "problem4/search_layout.py": "a53fde6a38b60b5b0fe96ff8539d382596ee19ffc3eb3e2188f3f1a5e6846171",
+    "problem4/shared_baseline.py": "5cc51a5e02308668b6326e231f7de7c24f4dd6cee4d6637bd120be1062a891cf",
+    "problem4/speed_policy.py": "b6c0dd44af247ed131b9ea94e8d85b7dfa706f0d83b8b8e181e6fa8c8351e7f0",
+    "problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+    "problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+    "problem4/results/coverage_certificate_v4.json": "432e7c8985ba2d3773299fba3692e8af58103edd4b4d59415fa60a317cead23c"
+  },
+  "algorithm_changed_for_packaging": false,
+  "entry_scope": "New wrapper only; operator-confirmed rehearsal or previously used local startup case",
+  "official_simulator_calls_by_packager": 0,
+  "formal_test_calls_by_packager": 0
+}

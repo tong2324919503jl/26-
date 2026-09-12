@@ -1,0 +1,88 @@
+{
+  "case_id": "local_p3_balanced_v1_n11_000000",
+  "dataset": "balanced_v1",
+  "noise": "hash_uniform",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "seed": 6301000000,
+  "source_count": 11,
+  "sources": [
+    {
+      "channel": 19,
+      "orientation_deg": null,
+      "radius": 1124.4797490451717,
+      "x": -268.4866699464443,
+      "y": -1195.1694800714135
+    },
+    {
+      "channel": 14,
+      "orientation_deg": null,
+      "radius": 1472.0512059719736,
+      "x": -707.300489130447,
+      "y": 766.8154452424602
+    },
+    {
+      "channel": 3,
+      "orientation_deg": null,
+      "radius": 1294.414858674079,
+      "x": -1513.3362142856158,
+      "y": -263.42610748663316
+    },
+    {
+      "channel": 20,
+      "orientation_deg": null,
+      "radius": 1301.0047212396473,
+      "x": -953.4993154533909,
+      "y": 1345.4112192494422
+    },
+    {
+      "channel": 10,
+      "orientation_deg": null,
+      "radius": 1299.1350264362345,
+      "x": 220.40446472189393,
+      "y": -1119.7197184228924
+    },
+    {
+      "channel": 1,
+      "orientation_deg": null,
+      "radius": 1084.4505214459537,
+      "x": 952.0385940111374,
+      "y": -1498.9127217872776
+    },
+    {
+      "channel": 11,
+      "orientation_deg": null,
+      "radius": 1252.877069745542,
+      "x": 813.5875325936165,
+      "y": 620.7625671543618
+    },
+    {
+      "channel": 5,
+      "orientation_deg": null,
+      "radius": 1291.0927357715857,
+      "x": 1390.5743783595221,
+      "y": 72.45401838586334
+    },
+    {
+      "channel": 9,
+      "orientation_deg": null,
+      "radius": 1211.3495352200318,
+      "x": -353.51563889871596,
+      "y": -1458.6468531706964
+    },
+    {
+      "channel": 17,
+      "orientation_deg": null,
+      "radius": 1206.922166213463,
+      "x": 106.61996363494133,
+      "y": -946.8574102369606
+    },
+    {
+      "channel": 4,
+      "orientation_deg": null,
+      "radius": 1374.955458382121,
+      "x": 64.79966016986965,
+      "y": 454.3305094897732
+    }
+  ]
+}

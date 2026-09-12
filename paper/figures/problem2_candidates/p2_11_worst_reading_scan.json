@@ -1,0 +1,33 @@
+{
+  "id": "p2_11_worst_reading_scan",
+  "title": "评分二：完整扫描与最坏单元",
+  "caption": "固定推荐点q*，完整扫描3600个增宽单元；最大直径B=112.3293米，发生于格中心317.9°。右图放大最大值附近。",
+  "section": "评分方法二：几何外包上界",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py",
+    "problem2/results/selection.json"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372"
+  },
+  "notes": "空单元按求解器惯例记0；无提前停止，B不是部分最大值bₜ，不是真实未知最坏值J。图示是外包直径随格中心的曲线，不是源位置或读数的概率分布。",
+  "recommendation": "两种评分展示中优先选择，可直接支撑B=max diam(Pₖ)。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "q_local_xy_m": [
+      842.1437368791097,
+      546.8945372930203
+    ],
+    "full_scan_cells": 3600,
+    "B_m": 112.3293040324109,
+    "worst_cell_center_deg": 317.90000000000003,
+    "curve_file": "p2_07_13_scoring_data.json"
+  }
+}

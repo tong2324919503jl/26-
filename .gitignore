@@ -2,3 +2,6 @@ tmp/
 __pycache__/
 *.py[cod]
 .venv/
+# Rebuildable figure bundles and editor recovery files.
+paper/results/*_figure_candidates.zip
+*.drawio.bkp

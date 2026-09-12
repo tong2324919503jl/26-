@@ -18,6 +18,10 @@ def main():
         raise ValueError('problem must be 3 or 4')
     sys.dont_write_bytecode = True
     sys.path.insert(0, str(root))
+    # Load the installed numerical runtime before the native-call audit guard.
+    # Policy construction and every subsequent action still run under protect().
+    if problem == 4:
+        import numpy
     protect(root)
     from scripts.benchmark_search import get_algorithm_version, get_policy
 

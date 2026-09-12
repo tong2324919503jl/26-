@@ -63,7 +63,10 @@ class PublicProxy:
 
 def main():
     implementation,root_text,problem_text=sys.argv[1:4];root=Path(root_text).resolve();problem=int(problem_text)
-    sys.dont_write_bytecode=True;sys.path.insert(0,str(root));protect(root)
+    sys.dont_write_bytecode=True;sys.path.insert(0,str(root))
+    if problem == 4:
+        import numpy
+    protect(root)
     if implementation=='teammate':
         config=json.loads((root/f'problem{problem}/config.json').read_text(encoding='utf-8-sig'))
         expected='phase3_intercept' if problem==3 else 'phase3_optical_nonuniform'

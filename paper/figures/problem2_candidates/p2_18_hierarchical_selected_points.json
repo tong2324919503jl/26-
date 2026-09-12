@@ -1,0 +1,159 @@
+{
+  "id": "p2_18_hierarchical_selected_points",
+  "title": "分层搜索中的优选点更新",
+  "caption": "按照输出search_history展示各层优选点，箭头表示算法优选点的更新顺序；星形点为全部已访问候选经最终0.1度读数精度复核后的推荐点。坐标为局部坐标。",
+  "section": "评分组合与分层选点",
+  "sources": [
+    "problem2/results/selection.json",
+    "problem2/results/boundary/selection.json",
+    "paper/sections/p12.tex"
+  ],
+  "source_sha256": {
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372",
+    "problem2/results/boundary/selection.json": "d80729e7c38597dfcbb088b5cd02c9792038385e815521c584bde0b073245a9d",
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7"
+  },
+  "notes": "全部数值来自自建离线算例；A、B、C为最坏相容读数下区域直径的上界，不是真实定位误差。只在已访问离散候选内选点，未证明连续全局最优。比较中的选点均满足四圆盘收信条件和正常测向的5米排除条件。箭头不是机器人实际移动轨迹。各层读数步长依次为1、0.5、0.25度，最终复核为0.1度；不同层的评分精度不同，故本图不画跨层分数下降曲线，也不声称收敛。图示距离/方位为候选搜索网格步长。",
+  "recommendation": "适合解释分层细化与最终统一精度复核，是算法方法图的补充。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": [
+    {
+      "first_station_xy_m": [
+        0.0,
+        0.0
+      ],
+      "search_history": [
+        {
+          "level": 1,
+          "candidate_count": 320,
+          "radial_step_m": 100.0,
+          "azimuth_step_deg": 5.0,
+          "angle_step_deg": 1.0,
+          "scan_statistics": {
+            "candidate_evaluations": 320,
+            "scanned_cells": 111258,
+            "total_cells": 115200,
+            "early_stopped_candidates": 22
+          },
+          "selected_local_xy_m": [
+            869.7341754987845,
+            502.1412603476403
+          ],
+          "diameter_upper_bound_m": 124.88806100326929
+        },
+        {
+          "level": 2,
+          "candidate_count": 456,
+          "radial_step_m": 20.0,
+          "azimuth_step_deg": 1.0,
+          "angle_step_deg": 0.5,
+          "scan_statistics": {
+            "candidate_evaluations": 456,
+            "scanned_cells": 328320,
+            "total_cells": 328320,
+            "early_stopped_candidates": 0
+          },
+          "selected_local_xy_m": [
+            860.7988873722709,
+            517.2201523247378
+          ],
+          "diameter_upper_bound_m": 117.60391992234563
+        },
+        {
+          "level": 3,
+          "candidate_count": 548,
+          "radial_step_m": 5.0,
+          "azimuth_step_deg": 0.25,
+          "angle_step_deg": 0.25,
+          "scan_statistics": {
+            "candidate_evaluations": 548,
+            "scanned_cells": 789120,
+            "total_cells": 789120,
+            "early_stopped_candidates": 0
+          },
+          "selected_local_xy_m": [
+            865.2796508080112,
+            509.6886661185734
+          ],
+          "diameter_upper_bound_m": 114.42731016620588
+        }
+      ],
+      "final_selected_local_xy_m": [
+        842.1437368791097,
+        546.8945372930203
+      ],
+      "final_angle_step_deg": 0.1
+    },
+    {
+      "first_station_xy_m": [
+        1500.0,
+        0.0
+      ],
+      "search_history": [
+        {
+          "level": 1,
+          "candidate_count": 320,
+          "radial_step_m": 100.0,
+          "azimuth_step_deg": 5.0,
+          "angle_step_deg": 1.0,
+          "scan_statistics": {
+            "candidate_evaluations": 320,
+            "scanned_cells": 115200,
+            "total_cells": 115200,
+            "early_stopped_candidates": 0
+          },
+          "selected_local_xy_m": [
+            212.13203435596427,
+            212.13203435596427
+          ],
+          "diameter_upper_bound_m": 20.785743777986607
+        },
+        {
+          "level": 2,
+          "candidate_count": 560,
+          "radial_step_m": 20.0,
+          "azimuth_step_deg": 1.0,
+          "angle_step_deg": 0.5,
+          "scan_statistics": {
+            "candidate_evaluations": 560,
+            "scanned_cells": 403200,
+            "total_cells": 403200,
+            "early_stopped_candidates": 0
+          },
+          "selected_local_xy_m": [
+            208.08055113367038,
+            187.3565697804803
+          ],
+          "diameter_upper_bound_m": 17.58982869716342
+        },
+        {
+          "level": 3,
+          "candidate_count": 716,
+          "radial_step_m": 5.0,
+          "azimuth_step_deg": 0.25,
+          "angle_step_deg": 0.25,
+          "scan_statistics": {
+            "candidate_evaluations": 716,
+            "scanned_cells": 1031040,
+            "total_cells": 1031040,
+            "early_stopped_candidates": 0
+          },
+          "selected_local_xy_m": [
+            215.09223036349002,
+            186.97682326229457
+          ],
+          "diameter_upper_bound_m": 16.413796676252943
+        }
+      ],
+      "final_selected_local_xy_m": [
+        220.9419376327556,
+        195.47291422364256
+      ],
+      "final_angle_step_deg": 0.1
+    }
+  ]
+}

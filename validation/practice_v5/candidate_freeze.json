@@ -1,0 +1,102 @@
+{
+  "frozen_at_utc": "2026-09-12T05:47:23.228667+00:00",
+  "status": "research_candidate_target_not_met",
+  "source": "work",
+  "upstream_commit": "3789170daeb3d781d04eff2d2af478c6b6d41cea",
+  "targets_s_per_source": {
+    "3": 220,
+    "4": 400
+  },
+  "selected_using": "384 previously exposed train_v5 cases per problem; all eight families kept equally",
+  "validation_disclosure": "224 validation_v5 cases per problem were run after selecting these candidates. They are now seen; no candidate parameter was changed in response.",
+  "historical_disclosure": "Downloaded historical reports were read and are not independent blind evidence. No historical single 16-source platform run was used to select or certify.",
+  "new_evaluation_plan": {
+    "holdout_v5": {
+      "cases_per_problem": 1120,
+      "rounds": 5,
+      "cases_per_round": 224
+    },
+    "stress_v5": {
+      "cases_per_problem": 224
+    }
+  },
+  "rules": [
+    "Local self-constructed simulation only. No official simulator or formal test.",
+    "No probabilistic early stopping. Require complete coverage and known clears, or 16 actual successful clears.",
+    "Policy only receives position, current_channel, virtual_time_s, check_budget, measure and clear.",
+    "Case truth, seed, family and total count are evaluation-side only.",
+    "Do not retune these candidates using the new holdout/stress outcomes. Any future tuning needs another fresh holdout."
+  ],
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "implementation": "cpython",
+    "numpy": "2.3.5"
+  },
+  "dependencies": {
+    "3": {
+      "specs/p3_final_pair.json": "92d73d5cd4c90bf388c655e5374a5a6452031f867c186d3fa9f9ba2cc4f2b66b",
+      "v5_checked_benchmark.py": "1fa7c679a97e25cdcc5bfe2221171728331e9bb781659eed9467a1653f228675",
+      "work/experiments_v5/__init__.py": "1e6f5a3e818f7d92665b6a00a5eacb8f39f18d833ae118600872104a4331c4f2",
+      "work/experiments_v5/p3_candidate.py": "3d189ca89dbcc86b4852c852100d8692e4732afa15274e5be9793a73524dfb2a",
+      "work/experiments_v5/p3_probe_geometry.py": "5a5df0a05035f2160fb468306a679ea0ff4859d1977bafd5cf42ae4f3edb717a",
+      "work/problem3/__init__.py": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+      "work/problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "work/problem3/lookahead.py": "3028190aaac132182cf79e7fd2dd0e4a0c1fd4b4a0132a176bcae268e5d39fb3",
+      "work/problem3/planning.py": "4b3d5ab6f26103e0e67c982f2cf001bd7fb0b095b8114b7566e38f7aeee90140",
+      "work/problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "work/problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+      "work/problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "work/problem3/speed_policy.py": "6f744b18eb06c863165cb10894f0f3a361de9b533da2e9109fc46c1db41a6a4b",
+      "work/problem4/__init__.py": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+      "work/problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "work/problem4/results/coverage_certificate_v2.json": "e955fe626d8cc4258c56af15c51d81d5bbbdc723798b024383ec5309dc8ece24",
+      "work/problem4/results/coverage_certificate_v4.json": "432e7c8985ba2d3773299fba3692e8af58103edd4b4d59415fa60a317cead23c",
+      "work/problem4/results/iterations_v3/coverage21_independent_certificate.json": "8cd9db58b92d36cf41e37252ba9fe8fc3e3c4266d155776727cdc106b9af4e41",
+      "work/problem4/results/iterations_v3/coverage_noorigin20_independent_certificate.json": "45cb7e6520777cbe6f0dac30bc0911021dfb5e50c8f189d43d6301c492e73c0d",
+      "work/problem4/results/iterations_v3/coverage_tangent20_independent_certificate.json": "be57f5ce3ede887bc8bf37b91936888841bcdc899602d6894dcacb402c6ea2b0",
+      "work/problem4/results/iterations_v3/Ring12CoverPolicy_certificate.json": "98cee58b9c803bbb8e4abed590f7e5686c3ab6a6a387856f635573f0e8099f85",
+      "work/problem4/results/iterations_v3/Ring13CoverPolicy_certificate.json": "0ef6cf08888b508023a5a49cca45d79731f0857055520cb11ab3b9b553a417b7",
+      "work/problem4/results/iterations_v3/Ring14CoverPolicy_certificate.json": "7621be752457ae8cca7faef4666696ad8d56e221b51bcbfc2ed502a9fa1969b8",
+      "work/problem4/results/iterations_v3/SearchPolicy_certificate.json": "40e190c09fdc52d4e6b9a0248e5a39a1e2f696210dee859489af70e70371b0ea",
+      "work/problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee"
+    },
+    "4": {
+      "specs/p4_final_pair.json": "df7197bbd2f839d08580c2fa40be3c7a4e4c43cc0380ebfac5bdd30b03c54e64",
+      "v5_checked_benchmark.py": "1fa7c679a97e25cdcc5bfe2221171728331e9bb781659eed9467a1653f228675",
+      "work/experiments_v5/__init__.py": "1e6f5a3e818f7d92665b6a00a5eacb8f39f18d833ae118600872104a4331c4f2",
+      "work/experiments_v5/p4_candidate.py": "d3971f5ce9235aba65099d4f46025a3ed8ac5111b85e7a2a3cbe1ac4015c03ea",
+      "work/experiments_v5/p4_discovery_route.py": "76e27b208135cbbc0d86eeff1d76322ea4967d4dbf82e81d82c97229d20362cf",
+      "work/experiments_v5/p4_discovery_route_combo.py": "ae3e8c8334c2676e16eee8ee5ae17e629d4e0695ca8170356c6040562facb75f",
+      "work/experiments_v5/p4_discovery_route_global.py": "1362033913b78999097e95ef43947ab2f3f05ad0c0d3130fa9047373541ce193",
+      "work/experiments_v5/p4_incremental.py": "332670fd4f3b9f276ca8174ce292c5e5c1d8156d492ecd90cc0235e7bb688140",
+      "work/experiments_v5/p4_incremental_visibility.py": "9c52ec5bc00a6f10284b29c76b23e74cb4bea97a938e29cfa73e6eb1738cd06d",
+      "work/experiments_v5/p4_visibility.py": "344281b776191a136a7224b9ae90c09242662cf03c5d9436fd3887489931e90d",
+      "work/problem3/__init__.py": "9e6c9241f1b0df08fb85500ab36915bed7f799e0d9678a22b8e913c4f9d88e47",
+      "work/problem3/geometry.py": "748ab2f700b10a7771bfb77694edf6454b8fa9311f367d27923634371c3dd923",
+      "work/problem3/policy.py": "45eb1b4ae2a56bdfe449bbf3334045b08bbb0c6091697c85ca5cf2187e947034",
+      "work/problem3/scenarios.py": "f24777cc0a797779776894b1a3b4c74a295be4261020f2500ff35cd672d2203f",
+      "work/problem3/simulator.py": "1cb7c5287979abcac85664a50e476ef72d7f89bec3c2cde9c857d0c77ce111f6",
+      "work/problem4/__init__.py": "c5b7ecabb4669d099cce85480d5e4299cc17020ee5e98f9b61019a8bd4142a93",
+      "work/problem4/bystander.py": "0414031c564d771274b12bf2016d1a70cd33bd7a2bb2501165d1d34fd313fe40",
+      "work/problem4/coverage.py": "09d7e85f92c78d0bf7a82ab3712a43bf7dba855c06585d8cf0b4bc5eae8732d1",
+      "work/problem4/legacy_policy.py": "3d4693bea1dd455ad6640167e0a58fbf92c0cabbb72968ede6dfdabcf3996fcf",
+      "work/problem4/localization.py": "cd939960916ffcf741b5e1d3e79ee35a58a09e0bdde5f6b3bf7d5bb12f393e1d",
+      "work/problem4/optical_repair.py": "567620b452caf5bac83b7e7d399f39cb1ce4735a3694d416565bac2f255e0235",
+      "work/problem4/policy.py": "4b0d3339b1cc2ae0c3744c8a92703e11219d78c3b4f0af4ae96ef71d7181611f",
+      "work/problem4/results/coverage_certificate_v2.json": "e955fe626d8cc4258c56af15c51d81d5bbbdc723798b024383ec5309dc8ece24",
+      "work/problem4/results/coverage_certificate_v4.json": "432e7c8985ba2d3773299fba3692e8af58103edd4b4d59415fa60a317cead23c",
+      "work/problem4/results/iterations_v3/coverage21_independent_certificate.json": "8cd9db58b92d36cf41e37252ba9fe8fc3e3c4266d155776727cdc106b9af4e41",
+      "work/problem4/results/iterations_v3/coverage_noorigin20_independent_certificate.json": "45cb7e6520777cbe6f0dac30bc0911021dfb5e50c8f189d43d6301c492e73c0d",
+      "work/problem4/results/iterations_v3/coverage_tangent20_independent_certificate.json": "be57f5ce3ede887bc8bf37b91936888841bcdc899602d6894dcacb402c6ea2b0",
+      "work/problem4/results/iterations_v3/Ring12CoverPolicy_certificate.json": "98cee58b9c803bbb8e4abed590f7e5686c3ab6a6a387856f635573f0e8099f85",
+      "work/problem4/results/iterations_v3/Ring13CoverPolicy_certificate.json": "0ef6cf08888b508023a5a49cca45d79731f0857055520cb11ab3b9b553a417b7",
+      "work/problem4/results/iterations_v3/Ring14CoverPolicy_certificate.json": "7621be752457ae8cca7faef4666696ad8d56e221b51bcbfc2ed502a9fa1969b8",
+      "work/problem4/results/iterations_v3/SearchPolicy_certificate.json": "40e190c09fdc52d4e6b9a0248e5a39a1e2f696210dee859489af70e70371b0ea",
+      "work/problem4/routing.py": "710d955f09e3fd3b21615130c0cb660ad6c08dd31503fa8f0ddfdd5bd2b32aee",
+      "work/problem4/search_layout.py": "a53fde6a38b60b5b0fe96ff8539d382596ee19ffc3eb3e2188f3f1a5e6846171",
+      "work/problem4/shared_baseline.py": "5cc51a5e02308668b6326e231f7de7c24f4dd6cee4d6637bd120be1062a891cf",
+      "work/problem4/speed_policy.py": "b6c0dd44af247ed131b9ea94e8d85b7dfa706f0d83b8b8e181e6fa8c8351e7f0"
+    }
+  }
+}

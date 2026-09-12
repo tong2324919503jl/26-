@@ -32,10 +32,16 @@ def _policy_entry(problem, strategy):
         return SearchPolicy, 'adaptive', 'problem4_v1'
     if strategy == 'adaptive':
         if problem == 3:
+            from problem3.current_policy import SearchPolicy
+        else:
+            from problem4.current_policy import SearchPolicy
+        return SearchPolicy, strategy, SearchPolicy.algorithm_version
+    if strategy == 'v4':
+        if problem == 3:
             from problem3.speed_policy import SearchPolicy
         else:
             from problem4.speed_policy import SearchPolicy
-        return SearchPolicy, strategy, SearchPolicy.algorithm_version
+        return SearchPolicy, 'adaptive', SearchPolicy.algorithm_version
     if strategy not in ('previous', 'baseline', 'optical'):
         raise ValueError(f'Unknown strategy: {strategy}')
     if problem == 3:

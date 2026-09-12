@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620">
+<rect width="1100" height="620" fill="#f8fafc"/><g stroke="#cbd5e1" stroke-width="2"><path d="M80 520H1030M140 80V560"/></g>
+<g fill="none" stroke-width="5" opacity=".9"><path d="M155 485L600 270L300 150Z" stroke="#2563eb"/><path d="M940 460L600 270L760 105Z" stroke="#0f766e"/><path d="M360 545L600 270L540 70Z" stroke="#d97706"/></g>
+<path d="M485 300L600 270L555 365L470 350Z" fill="#dbeafe" stroke="#1d4ed8" stroke-width="4"/>
+<g fill="#17212b"><circle cx="155" cy="485" r="10"/><circle cx="940" cy="460" r="10"/><circle cx="360" cy="545" r="10"/></g>
+<g font-family="Noto Sans CJK SC,Arial,sans-serif" font-size="26" fill="#17212b"><text x="110" y="535">检测点 1</text><text x="890" y="510">检测点 2</text><text x="300" y="590">检测点 3</text><text x="470" y="335" fill="#1d4ed8">可能的源位置区域</text><text x="390" y="55" font-size="32" font-weight="700">问题 1：多站交会定位</text></g></svg>

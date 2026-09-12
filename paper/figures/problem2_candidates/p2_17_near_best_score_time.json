@@ -1,0 +1,49 @@
+{
+  "id": "p2_17_near_best_score_time",
+  "title": "已访问近优点的上界评分与行动时间",
+  "caption": "仅展示两份候选CSV实际保存的近优代表点。虚线表示默认10%上界阈值；星形点按评分优先选取，菱形点在满足阈值的已访问集合中最短。对称点可能在图上重叠。",
+  "section": "评分组合与分层选点",
+  "sources": [
+    "problem2/results/selection.json",
+    "problem2/results/boundary/selection.json",
+    "problem2/results/second_point_candidates.csv",
+    "problem2/results/boundary/second_point_candidates.csv",
+    "paper/sections/p12.tex"
+  ],
+  "source_sha256": {
+    "problem2/results/selection.json": "4241b4b9ed79311eca55e919cd45d485bc7e1e73f30d05ebdb4474427dc87372",
+    "problem2/results/boundary/selection.json": "d80729e7c38597dfcbb088b5cd02c9792038385e815521c584bde0b073245a9d",
+    "problem2/results/second_point_candidates.csv": "3ae14cf9499047a085ba98e91f9d0808c4d693b7200778b145f459164f55204b",
+    "problem2/results/boundary/second_point_candidates.csv": "599f723dbaca8548957bc371e857b7b233502058134546366a549145048d2d1e",
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7"
+  },
+  "notes": "全部数值来自自建离线算例；A、B、C为最坏相容读数下区域直径的上界，不是真实定位误差。只在已访问离散候选内选点，未证明连续全局最优。比较中的选点均满足四圆盘收信条件和正常测向的5米排除条件。不将离散点连接成连续Pareto前沿；图中未显示阈值之外的所有访问点。同一场景下缩短路程等价于减少本次移动加检测时间。",
+  "recommendation": "适合解释10%容差的含义，比单列最短点坐标更直观。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "scenes": [
+      {
+        "first_station_xy_m": [
+          0.0,
+          0.0
+        ],
+        "near_best_count": 198,
+        "threshold_m": 123.562234435652,
+        "candidate_csv": "problem2/results/second_point_candidates.csv"
+      },
+      {
+        "first_station_xy_m": [
+          1500.0,
+          0.0
+        ],
+        "near_best_count": 196,
+        "threshold_m": 17.345662734262188,
+        "candidate_csv": "problem2/results/boundary/second_point_candidates.csv"
+      }
+    ]
+  }
+}

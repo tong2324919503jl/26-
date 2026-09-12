@@ -1,0 +1,62 @@
+{
+  "id": "p2_02_four_disks",
+  "title": "四圆盘及其保证收信交集",
+  "caption": "以5u±与1000u±为圆心、1000米为共同半径的四个圆盘，其交集给出保证收信区域。蓝色和金色区分两组径向端点，实线与虚线分别对应正、负角端点。",
+  "section": "5.2.2 四圆盘安全候选域",
+  "sources": [
+    "paper/sections/p12.tex",
+    "problem2/solve.py",
+    "paper/plot_p2_intro_candidates.py"
+  ],
+  "source_sha256": {
+    "paper/sections/p12.tex": "38fef5b853569c5dbf70b1a93f6a42be101d7b1f14b1834b65ba86c555b5d3a9",
+    "problem2/solve.py": "3ebf83e11c48cbbf300614439166918a637d657e1b0303b673757f63762f2132",
+    "paper/plot_p2_intro_candidates.py": "9d3d5e5ff9a9227f0670968598086ab6153b111737c7c1ac0ee59fc7a7b22dae"
+  },
+  "notes": "仅保留原图(a)，改为单幅等比例图；角误差仍为±1°，近端两圆心在当前尺度下近乎重合。交集用四圆盘的解析纵截面绘制，明确纳入上下换弧角点及左右端点，逐点核验包含。本图仅表示C_safe，未叠加5米正常测向排除条件或目标圆约束。",
+  "recommendation": "用于5.2.2四圆盘公式及安全性证明。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "circle_centers_m": [
+      [
+        4.999238475781956,
+        -0.08726203218641757
+      ],
+      [
+        4.999238475781956,
+        0.08726203218641757
+      ],
+      [
+        999.8476951563913,
+        -17.45240643728351
+      ],
+      [
+        999.8476951563913,
+        17.45240643728351
+      ]
+    ],
+    "radius_m": 1000,
+    "near_center_separation_m": 0.17452406437283513,
+    "far_center_separation_m": 34.90481287456702,
+    "boundary_points_verified": 14004,
+    "boundary_method": "exact vertical circle sections with arc switch points",
+    "x_support_m": [
+      0.0,
+      1004.9992346684508
+    ],
+    "upper_arc_switch_m": [
+      517.5628006983836,
+      858.562022997317
+    ],
+    "lower_arc_switch_m": [
+      517.5628006983836,
+      -858.562022997317
+    ],
+    "equal_aspect": true,
+    "panel_count": 1
+  }
+}

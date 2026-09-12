@@ -1,0 +1,165 @@
+{
+  "case_id": "local_p3_balanced_v1_n15_000000",
+  "case_sha256": "255be02aa003db3448aef8d6cd3365cd50deacae7980580437e4071b4dc321ed",
+  "source_count": 15,
+  "cleared_count": 15,
+  "cleared_fraction": 1.0,
+  "virtual_time_s": 2923.937658920502,
+  "average_clear_time_s": 194.92917726136682,
+  "last_clear_time_s": 2867.425093685268,
+  "time_to_90_percent_s": 2583.7608860218415,
+  "movement_m": 11269.68829460251,
+  "actions": 124,
+  "measure": 90,
+  "clear": 34,
+  "failed_clear": 19,
+  "switch": 88,
+  "no_signal": 51,
+  "source_truth_all_cleared": true,
+  "policy_claimed_complete": true,
+  "independent_public_completion": {
+    "certified": true,
+    "reason": "independent_public_per_channel_coverage",
+    "unknown_channels": [
+      3,
+      5,
+      6,
+      10,
+      11
+    ],
+    "checks": [
+      {
+        "channel": 3,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418302
+        }
+      },
+      {
+        "channel": 5,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418302
+        }
+      },
+      {
+        "channel": 6,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418302
+        }
+      },
+      {
+        "channel": 10,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418302
+        }
+      },
+      {
+        "channel": 11,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418302
+        }
+      }
+    ]
+  },
+  "certified_full_clear": true,
+  "actual_exit_time_s": 2923.937658920502,
+  "normal_exit": true,
+  "error": null,
+  "policy_cpu_s": 0.171875,
+  "policy_wall_s": 0.17396779998671263,
+  "endpoint_counts": {
+    "/enter": 1,
+    "/measure": 90,
+    "/clear": 34,
+    "/exit": 1
+  },
+  "policy": {
+    "problem": 3,
+    "strategy": "adaptive",
+    "cleared_channels": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage_complete": true,
+    "completion_certified": true,
+    "termination_reason": "certified_coverage_and_all_detected_cleared",
+    "coverage_points_visited": 7,
+    "detected_channels": [
+      1,
+      2,
+      4,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "config": {
+      "ring_radius": 1150.0,
+      "bearing_error_deg": 1.005,
+      "max_probe_count": 5,
+      "lateral_fraction": 0.12,
+      "lateral_min_m": 45.0,
+      "lateral_max_m": 140.0,
+      "opportunistic_radius_m": 0.0,
+      "optical_spacing_m": 26.0,
+      "clear_guarantee_radius_m": 19.99,
+      "exploratory_clear_radius_m": 55.0,
+      "neighbor_updates": true,
+      "neighbor_max_distance_m": 1450.0,
+      "neighbor_min_parallax_deg": 12.0,
+      "adaptive_discovery": false,
+      "discovery_min_spacing_m": 700.0,
+      "discovery_replacement_only": true,
+      "target_uncertainty_weight": 0.5
+    },
+    "measure_actions": 90,
+    "clear_actions": 34,
+    "failed_clears": 19,
+    "optical_fallbacks": 0,
+    "negative_localization_reads": 0,
+    "safe_clear_offsets": 4,
+    "lookahead_choices": 15,
+    "band_sweeps": 5,
+    "band_clear_attempts": 24,
+    "zero_origin_geometry": {
+      "count": 9,
+      "radius_m": 1700.0,
+      "triggered": false,
+      "phase_candidates": 16
+    },
+    "algorithm_version": "problem3_v4"
+  },
+  "problem": 3,
+  "algorithm_version": "problem3_v4",
+  "provenance": "self_constructed_not_official"
+}

@@ -1,6 +1,6 @@
 # 前两问合并说明
 
-当前 `problem1/`、`problem2/` 是统一维护入口。队友 ZIP 作为原始交付保留；解压审阅文件位于被 Git 忽略的 `tmp/`，正式程序与验证不依赖它。
+当前 `problem1/`、`problem2/` 是统一维护入口。队友 ZIP 原始交付保留在 Git 提交 `8aefbd7`，20260912整理时从工作树删除；解压审阅文件位于被 Git 忽略的 `tmp/`，正式程序与验证不依赖它。
 
 2026-09-11 后续更新：第二问已整理为统一后验模型，评分与实际观测共用约束，并实现“先A、部分B达到A即停止”。下文数值记录原合并时状态；当前结果以 [策略比较](../problem2/results/strategy_comparison.md)、[提前停止对照](../problem2/results/scoring_benchmark.md) 为准。评分的一手文献和适用边界见 [文献核查](../problem2/references.md)。取min本身只收紧保证；加速只归因于实际少扫的单元。
 

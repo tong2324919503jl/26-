@@ -1,0 +1,63 @@
+{
+  "id": "p2_19_discretization_sensitivity",
+  "title": "固定候选点的离散精度敏感性",
+  "caption": "固定原点场景中的解析基线点与本文推荐点，同时加密圆外包和第二读数网格，比较同一候选点的C。纵轴范围为111至118.8米，展示外包保守性的细微变化。",
+  "section": "评分组合与分层选点",
+  "sources": [
+    "problem2/results/strategy_comparison.json",
+    "paper/sections/p12.tex"
+  ],
+  "source_sha256": {
+    "problem2/results/strategy_comparison.json": "947d74cccf5ef1c0701c0b9afb15b5ae0537c51d775598232e14e9d393c57789",
+    "paper/sections/p12.tex": "e75305de693a6b79a3b2f5d9e4b879fa293beac0af28df8adf750043fad75fb7"
+  },
+  "notes": "全部数值来自自建离线算例；A、B、C为最坏相容读数下区域直径的上界，不是真实定位误差。只在已访问离散候选内选点，未证明连续全局最优。比较中的选点均满足四圆盘收信条件和正常测向的5米排除条件。横轴为三组联合精度配置，不是时间或迭代次数；本图没有在每种精度重新选点。不能将差异归因于某一单独离散参数。",
+  "recommendation": "适合数值敏感性或局限说明；展示离散外包仍有保守性。",
+  "style_reference": [
+    "paper/figures/p1_orthogonal_bearings.pdf",
+    "paper/figures/p12_geometry.pdf"
+  ],
+  "provenance": "论文方法几何图或自建离线算例；不是官方数据或正式成绩。",
+  "data": {
+    "configurations": [
+      {
+        "circle_sides": 180,
+        "angle_step_deg": 0.2
+      },
+      {
+        "circle_sides": 360,
+        "angle_step_deg": 0.1
+      },
+      {
+        "circle_sides": 720,
+        "angle_step_deg": 0.05
+      }
+    ],
+    "fixed_candidates": [
+      {
+        "key": "legacy_analytic",
+        "fixed_local_xy_m": [
+          750.0,
+          660.0
+        ],
+        "bounds_m": [
+          117.78547309460497,
+          115.69303933853314,
+          114.93810939561726
+        ]
+      },
+      {
+        "key": "merged",
+        "fixed_local_xy_m": [
+          842.1437368791097,
+          546.8945372930203
+        ],
+        "bounds_m": [
+          114.2226135932832,
+          112.3293040324109,
+          111.79318816872892
+        ]
+      }
+    ]
+  }
+}

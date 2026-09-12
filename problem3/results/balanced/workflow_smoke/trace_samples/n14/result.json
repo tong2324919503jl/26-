@@ -1,0 +1,172 @@
+{
+  "case_id": "local_p3_balanced_v1_n14_000000",
+  "case_sha256": "185765c0923f123111b6da4694ebf2d0e7d305cb8a9f727c40b3762487d1dc55",
+  "source_count": 14,
+  "cleared_count": 14,
+  "cleared_fraction": 1.0,
+  "virtual_time_s": 2946.7856214047297,
+  "average_clear_time_s": 210.48468724319497,
+  "last_clear_time_s": 2868.071912019412,
+  "time_to_90_percent_s": 2465.0697506736115,
+  "movement_m": 11513.928107023648,
+  "actions": 115,
+  "measure": 91,
+  "clear": 24,
+  "failed_clear": 10,
+  "switch": 89,
+  "no_signal": 54,
+  "source_truth_all_cleared": true,
+  "policy_claimed_complete": true,
+  "independent_public_completion": {
+    "certified": true,
+    "reason": "independent_public_per_channel_coverage",
+    "unknown_channels": [
+      7,
+      8,
+      11,
+      13,
+      16,
+      19
+    ],
+    "checks": [
+      {
+        "channel": 7,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      },
+      {
+        "channel": 8,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      },
+      {
+        "channel": 11,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      },
+      {
+        "channel": 13,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      },
+      {
+        "channel": 16,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      },
+      {
+        "channel": 19,
+        "observed_station_count": 7,
+        "certificate": {
+          "certified": true,
+          "max_radius_bound_m": 988.5114204418304
+        }
+      }
+    ]
+  },
+  "certified_full_clear": true,
+  "actual_exit_time_s": 2946.7856214047297,
+  "normal_exit": true,
+  "error": null,
+  "policy_cpu_s": 0.125,
+  "policy_wall_s": 0.12065500000608154,
+  "endpoint_counts": {
+    "/enter": 1,
+    "/measure": 91,
+    "/clear": 24,
+    "/exit": 1
+  },
+  "policy": {
+    "problem": 3,
+    "strategy": "adaptive",
+    "cleared_channels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      12,
+      14,
+      15,
+      17,
+      18,
+      20
+    ],
+    "coverage_complete": true,
+    "completion_certified": true,
+    "termination_reason": "certified_coverage_and_all_detected_cleared",
+    "coverage_points_visited": 7,
+    "detected_channels": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      12,
+      14,
+      15,
+      17,
+      18,
+      20
+    ],
+    "config": {
+      "ring_radius": 1150.0,
+      "bearing_error_deg": 1.005,
+      "max_probe_count": 5,
+      "lateral_fraction": 0.12,
+      "lateral_min_m": 45.0,
+      "lateral_max_m": 140.0,
+      "opportunistic_radius_m": 0.0,
+      "optical_spacing_m": 26.0,
+      "clear_guarantee_radius_m": 19.99,
+      "exploratory_clear_radius_m": 55.0,
+      "neighbor_updates": true,
+      "neighbor_max_distance_m": 1450.0,
+      "neighbor_min_parallax_deg": 12.0,
+      "adaptive_discovery": false,
+      "discovery_min_spacing_m": 700.0,
+      "discovery_replacement_only": true,
+      "target_uncertainty_weight": 0.5
+    },
+    "measure_actions": 91,
+    "clear_actions": 24,
+    "failed_clears": 10,
+    "optical_fallbacks": 0,
+    "negative_localization_reads": 0,
+    "lookahead_choices": 11,
+    "band_sweeps": 5,
+    "band_clear_attempts": 15,
+    "safe_clear_offsets": 2,
+    "zero_origin_geometry": {
+      "count": 9,
+      "radius_m": 1700.0,
+      "triggered": false,
+      "phase_candidates": 16
+    },
+    "algorithm_version": "problem3_v4"
+  },
+  "problem": 3,
+  "algorithm_version": "problem3_v4",
+  "provenance": "self_constructed_not_official"
+}
