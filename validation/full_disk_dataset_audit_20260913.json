@@ -1,0 +1,42 @@
+{
+  "official_distribution_known": false,
+  "user_accepted_assumptions": true,
+  "datasets": {
+    "3": {
+      "case_count": 7000,
+      "source_count": 91000,
+      "unique_seeds": 7000,
+      "counts": {
+        "10": 1000,
+        "11": 1000,
+        "12": 1000,
+        "13": 1000,
+        "14": 1000,
+        "15": 1000,
+        "16": 1000
+      },
+      "mean_source_distance_m": 1203.6724551863058,
+      "outer_1500_1800_fraction": 0.30826373626373627,
+      "mean_receiving_radius_m": 1249.5312510381793,
+      "cases_sha256": "637ddbfff9b40cf0b6d13f6fc95ff88e60c29042b8e8ada31c0c5bbf573ad256"
+    },
+    "4": {
+      "case_count": 7000,
+      "source_count": 91000,
+      "unique_seeds": 7000,
+      "counts": {
+        "10": 1000,
+        "11": 1000,
+        "12": 1000,
+        "13": 1000,
+        "14": 1000,
+        "15": 1000,
+        "16": 1000
+      },
+      "mean_source_distance_m": 1199.021394134701,
+      "outer_1500_1800_fraction": 0.306010989010989,
+      "mean_receiving_radius_m": 1249.9329256817362,
+      "cases_sha256": "652f07ff6f6b99c353bccd43189168eed6720f650b7d7fee06b9f5b8122eeec1"
+    }
+  }
+}

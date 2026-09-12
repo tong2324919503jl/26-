@@ -1,0 +1,71 @@
+{
+  "schema_version": 3,
+  "dataset": "balanced_full_disk_v3",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "total_cases": 7000,
+  "per_count": 1000,
+  "counts_by_source_count": {
+    "10": 1000,
+    "11": 1000,
+    "12": 1000,
+    "13": 1000,
+    "14": 1000,
+    "15": 1000,
+    "16": 1000
+  },
+  "cases_file": "cases.jsonl",
+  "cases_sha256": "637ddbfff9b40cf0b6d13f6fc95ff88e60c29042b8e8ada31c0c5bbf573ad256",
+  "generator_file": "problem3/full_disk_scenarios.py",
+  "generator_sha256": "b01d8d65f29c77362c47ef4d51ba7f41c239ab89897eaae26300943996315800",
+  "official_distribution_known": false,
+  "policy_visible_fields": "Only accepted public action replies; no N, source coordinates, radii, orientation, seed or case id.",
+  "sampling": {
+    "source_count": "10至16源，每种源数的样例数量完全相同。",
+    "position": "各源独立按面积均匀分布于半径1800米的目标圆内。",
+    "receiving_radius": "各源接收半径独立服从[1000,1500]米均匀分布。",
+    "channel": "从1至20频道中无放回均匀抽取，每源占用独立频道。",
+    "source_type": "全部为全向源。",
+    "orientation": "不适用。",
+    "bearing_error": "hash_uniform：误差由样例种子、频道及观测位置固定，在正负1度内；模拟读数保留两位小数。",
+    "ordering": "每轮依次输出10至16源，完成一轮后增加该源数内的样例序号。",
+    "scope": "符合公开物理约束的自建场景；官方未公开抽样分布，均匀分布是本地评价假设，不能称为与官方同分布。未用本批结果调参；不宣称独立留出集。"
+  },
+  "seed_ranges": {
+    "10": {
+      "first": 10300000000,
+      "last": 10300000999,
+      "reserved_last": 10300999999
+    },
+    "11": {
+      "first": 10301000000,
+      "last": 10301000999,
+      "reserved_last": 10301999999
+    },
+    "12": {
+      "first": 10302000000,
+      "last": 10302000999,
+      "reserved_last": 10302999999
+    },
+    "13": {
+      "first": 10303000000,
+      "last": 10303000999,
+      "reserved_last": 10303999999
+    },
+    "14": {
+      "first": 10304000000,
+      "last": 10304000999,
+      "reserved_last": 10304999999
+    },
+    "15": {
+      "first": 10305000000,
+      "last": 10305000999,
+      "reserved_last": 10305999999
+    },
+    "16": {
+      "first": 10306000000,
+      "last": 10306000999,
+      "reserved_last": 10306999999
+    }
+  }
+}

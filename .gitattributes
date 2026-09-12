@@ -5,6 +5,8 @@ problem3/examples/balanced_v1/* text eol=lf
 problem4/examples/balanced_v1/* text eol=lf
 problem3/examples/balanced_normal_v2/* text eol=lf
 problem4/examples/balanced_normal_v2/* text eol=lf
+problem3/examples/balanced_full_disk_v3/* text eol=lf
+problem4/examples/balanced_full_disk_v3/* text eol=lf
 # Preserve source evidence and generated SVG path formatting.
 validation/practice_v5/*.json text eol=lf
 paper/figures/**/*.svg -whitespace
