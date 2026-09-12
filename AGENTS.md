@@ -21,6 +21,8 @@
 - `validation/merge_notes.md`：当前版与队友 ZIP 的合并取舍、来源指纹和比较口径。
 - `paper/`：论文正文与图表。按用户最新要求，当前主文件只含摘要、正文、AI声明和参考文献，暂不制作或并入附录。正文采用生产方案和冻结的本地结果；六次第三问演练可从Git历史日志封装头核对，正式测试各三次成绩仍未齐备。修改模型或表中结果后应同步论文与PDF，参见 `paper/README.md`。
 - `tmp/`：被 Git 忽略的临时渲染与检查文件。
+- `problem3/examples/balanced_normal_v2/`、`problem4/examples/balanced_normal_v2/`：默认单一样例池，每问7,000例，10至16源各1,000例。每组以截断标准正态[-3,3]等概率分位点构造连续难度，再固定随机打乱；中间[-1,1]共684例，两侧各158例，不按难度拆分目录或数据子集。难度参数改变空间范围、接收半径和第四问方向条件，不保证实际耗时正态。清单保存独立种子域、生成器指纹与数据校验值。旧`balanced_v1`为本地历史池，保留读取兼容；新默认不覆盖它。`validation/balanced_search.md`为使用说明。
+- `scripts/run_balanced_search.py`：校验样例、运行当前solve默认方案、分别出图的一键入口；`prepare_balanced_search.py`只生成/校验，`benchmark_balanced_search.py`支持同指纹断点续跑。结果按`problemN/results/balanced/<run-id>/`隔离，策略只接收独立进程中的公开响应；失败和零清除记录不得丢弃。`paper/plot_balanced_search.py`读取批次结果，`plot_search_mechanisms.py`读取当前配置并核验几何。新入口不连接平台。
 
 原根目录的选题分析、文献清单、北京赛区注意事项以及原题包均是既有资料。修改前核对其用途；本轮未改写它们。
 
@@ -46,6 +48,7 @@
 - `python scripts/verify_project.py --reference` 额外用 SciPy/HiGHS 独立核验第一问，输出 `validation/reference_geometry.json`；SciPy 仅是此可选检查的依赖。
 - 根目录队友 ZIP 保留为原始交付件。运行与验证不能依赖 `tmp/` 内解压副本，不另建一套平行求解目录。
 - 修改数学实现后必须运行对应测试；联合交付运行完整验证。改共用组件同时验证第三、四问。
+- 均衡样例固定LF；不得覆盖损坏数据或把不同代码指纹的批次续接。算法定稿后用新`--run-id`完整运行；`--limit-per-count`仅作均衡小样本流程预览，不得标成7,000例实验。此单一样例池不宣称独立留出集；若据此调参须披露，旧留出边界仍有效。构造难度只用于外部数据审计，不能传给策略；不同生成分布的均值变化不能称为算法改善。
 
 ## 数学与证据边界
 

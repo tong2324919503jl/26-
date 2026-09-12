@@ -16,6 +16,7 @@
 | 220/400秒目标的历史开发记录 | [第三轮实验](validation/threshold_220_400_v3.md)、[第二轮提速](problem4/results/speed_comparison_v2.md) |
 | 看程序检查是否通过 | [验证报告](validation/report.md) |
 | 论文正文与图表 | [论文工作稿](paper/README.md)（暂不含附录，正式成绩待核对补齐） |
+| 第三四问均衡样例、当前solve批测与分问绘图 | [使用说明](validation/balanced_search.md)（每问7,000例，10至16源各1,000例；构造难度按截断正态分布） |
 
 ## 先在本地跑
 

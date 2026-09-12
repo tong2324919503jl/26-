@@ -11,6 +11,8 @@ python problem3/solve.py
 
 默认只跑本地自建案例，不联网。换案例加 `--index 20`；查看 `results/demo_result.json` 的统计和 `results/demo_route.svg` 的路线。
 
+新的均衡样例池为7,000例，10至16源各1,000例；每组构造难度呈截断正态形状，中等最多。仅测试当前solve方案并单独出图，见[大样本测试与绘图](../validation/balanced_search.md)。
+
 去官方平台运行，按 [模拟测试说明](../simulation_guide.md) 操作。回放本轮之前的默认算法，加 `--strategy previous`。
 
 ## 清除逻辑

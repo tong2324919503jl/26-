@@ -9,6 +9,7 @@
 - 第二问引用范围及核查见 [评分参考文献](../problem2/references.md)：Tokekar–Isler 对应最坏扇区交集直径与几何外包上界框架，Bertsimas 等对应鲁棒可行性，Mavrotas 对应字典序与阈值约束，DIRECT/MCS 仅用于说明全域探索与局部细化思想。Jaulin–Walter 保留为历史核对，不再作为正文依据；条带 A、读数分格与同步增宽 B 由本题推导，10%容差仍为可调整偏好。
 - `ai_usage.tex`：使用范围说明的预备草稿，后续整理支撑材料时再核对更新；不作为本次正文交付。
 - `results/`：当前正文PDF。此前预备草稿不作为已完成支撑材料交付。
+- `figures/problem3/`、`figures/problem4/`：均衡样例的分问图；`plot_balanced_search.py`读取指定批次的当前solve单方案结果，`plot_search_mechanisms.py`读取当前策略配置生成独立机制图。图内只保留必要标签和图例，解释放配套图注。新默认每问7,000例，10至16源各1,000例；构造难度呈截断正态形状，中等最多，不按难度拆分数据子集。算法定稿后的测试与出图使用`python scripts/run_balanced_search.py --run-id normal_v2_final`，详见[使用说明](../validation/balanced_search.md)。旧预览保持原数据口径，本轮不替换正文。
 
 本轮第三、四问更新只运行`python paper/plot_search_results.py`重建两张搜索图，再运行`python paper/build_paper.py`合并正文，在`paper/`目录用XeLaTeX编译`main.tex`两次。`plot_geometry.py`及第一、二问两张图保留并行修订内容，本轮不重建。合并入口只生成正文，不冻结程序或生成附录。LaTeX使用既有JXUST模板及项目字体，最终正文保存在`results/paper_body.pdf`。
 

@@ -1,0 +1,887 @@
+{
+  "schema_version": 2,
+  "dataset": "balanced_normal_v2",
+  "problem": 3,
+  "provenance": "self_constructed_not_official",
+  "total_cases": 7000,
+  "per_count": 1000,
+  "counts_by_source_count": {
+    "10": 1000,
+    "11": 1000,
+    "12": 1000,
+    "13": 1000,
+    "14": 1000,
+    "15": 1000,
+    "16": 1000
+  },
+  "cases_file": "cases.jsonl",
+  "cases_sha256": "9a31464bfbc136f683e75155de7a09a91c1dafdf0c48b9186173d9491ad7eda6",
+  "distribution_file": "distribution.json",
+  "distribution_sha256": "81827012255e2951e498a8a11e1c70aef4999e5a3332ea93bc0ecc54a6d3797f",
+  "readme_file": "README.md",
+  "readme_sha256": "277241517c870527c7d39b703c928aba8490ddb52e547405d1fc95a2c3dd22af",
+  "generator_file": "problem3/normal_scenarios.py",
+  "generator_sha256": "7f64c0a639316777d3521b2c237d40b930d43455db873cfedd1cce6b232e2dc0",
+  "sampling": {
+    "score": "m midpoint quantiles of standard normal truncated to [-3,3], then d=(z+3)/6; independent fixed permutation per source count",
+    "position": "area-uniform disk with L(d)=900+900d meters",
+    "receiving_radius": "1350-350d+150u_R meters, u_R~Uniform[0,1)",
+    "channels": "N channels sampled uniformly without replacement from 1..20",
+    "directional_count": "P3: 0; P4: 1+floor((N-2)d+u_K), u_K~Uniform[0,1)",
+    "directional_selection": "first K indices from an independent fixed random permutation",
+    "directional_orientation": "radial angle + (0 with probability d, else 180 degrees) + Uniform[-90,90) degrees, modulo 360; full directional support",
+    "bearing_error": "hash_uniform fixed by seed/channel/position; +/-1 degree before rounding to 0.01 degree",
+    "scope": "Predefined construction difficulty; no solver outcomes or official results; solving times need not be normal or monotonic"
+  },
+  "rounding": {
+    "source_parameters_decimal_places": 9,
+    "z_and_score_decimal_places": 12,
+    "audit_decimal_places": 9
+  },
+  "seed_ranges": {
+    "10": {
+      "first": 7300000000,
+      "last": 7300000999,
+      "reserved_last": 7300999998,
+      "difficulty_shuffle_seed": 7300999999
+    },
+    "11": {
+      "first": 7301000000,
+      "last": 7301000999,
+      "reserved_last": 7301999998,
+      "difficulty_shuffle_seed": 7301999999
+    },
+    "12": {
+      "first": 7302000000,
+      "last": 7302000999,
+      "reserved_last": 7302999998,
+      "difficulty_shuffle_seed": 7302999999
+    },
+    "13": {
+      "first": 7303000000,
+      "last": 7303000999,
+      "reserved_last": 7303999998,
+      "difficulty_shuffle_seed": 7303999999
+    },
+    "14": {
+      "first": 7304000000,
+      "last": 7304000999,
+      "reserved_last": 7304999998,
+      "difficulty_shuffle_seed": 7304999999
+    },
+    "15": {
+      "first": 7305000000,
+      "last": 7305000999,
+      "reserved_last": 7305999998,
+      "difficulty_shuffle_seed": 7305999999
+    },
+    "16": {
+      "first": 7306000000,
+      "last": 7306000999,
+      "reserved_last": 7306999998,
+      "difficulty_shuffle_seed": 7306999999
+    }
+  },
+  "difficulty_summary_by_source_count": {
+    "10": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "11": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "12": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "13": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "14": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "15": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    },
+    "16": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      }
+    }
+  },
+  "geometry_summary_by_source_count": {
+    "10": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 899.452795756,
+        "population_std": 138.070804586,
+        "minimum": 491.35813464,
+        "maximum": 1427.517844779,
+        "quantiles": {
+          "0.05": 681.807714008,
+          "0.25": 808.637568018,
+          "0.5": 895.967618384,
+          "0.75": 983.906477878,
+          "0.95": 1135.632862115
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1250.008468513,
+        "population_std": 58.767772222,
+        "minimum": 1072.175916727,
+        "maximum": 1427.650201061,
+        "quantiles": {
+          "0.05": 1154.209389339,
+          "0.25": 1210.463825112,
+          "0.5": 1247.17054383,
+          "0.75": 1291.540400849,
+          "0.95": 1346.38958641
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1220.788097163,
+        "population_std": 188.155815219,
+        "minimum": 643.026199583,
+        "maximum": 1904.715406448,
+        "quantiles": {
+          "0.05": 910.136806979,
+          "0.25": 1098.429022279,
+          "0.5": 1215.735327648,
+          "0.75": 1341.38634925,
+          "0.95": 1531.841182312
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 507.651548404,
+        "population_std": 85.39756339,
+        "minimum": 243.286364219,
+        "maximum": 805.84147374,
+        "quantiles": {
+          "0.05": 375.591909066,
+          "0.25": 449.857645944,
+          "0.5": 505.932576746,
+          "0.75": 563.668121796,
+          "0.95": 656.307854542
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.753718175,
+        "population_std": 44.658821693,
+        "minimum": 0.0,
+        "maximum": 344.960748634,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 5.296772241,
+          "0.75": 35.911380001,
+          "0.95": 115.348647693
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "11": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 903.932480586,
+        "population_std": 135.318399391,
+        "minimum": 481.318764371,
+        "maximum": 1357.686318956,
+        "quantiles": {
+          "0.05": 681.79350712,
+          "0.25": 815.022794734,
+          "0.5": 894.344558487,
+          "0.75": 991.397956928,
+          "0.95": 1129.235325393
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1249.647830542,
+        "population_std": 58.610230435,
+        "minimum": 1087.809168494,
+        "maximum": 1434.4979655,
+        "quantiles": {
+          "0.05": 1152.676959481,
+          "0.25": 1210.327586294,
+          "0.5": 1248.684835984,
+          "0.75": 1290.208099958,
+          "0.95": 1347.238066788
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1227.761598279,
+        "population_std": 183.730166307,
+        "minimum": 663.73816123,
+        "maximum": 1847.610888804,
+        "quantiles": {
+          "0.05": 929.768287753,
+          "0.25": 1106.071832273,
+          "0.5": 1224.072791789,
+          "0.75": 1340.126366638,
+          "0.95": 1542.457709165
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 488.236704483,
+        "population_std": 78.962002332,
+        "minimum": 247.771928327,
+        "maximum": 753.941924537,
+        "quantiles": {
+          "0.05": 360.773759312,
+          "0.25": 435.519223793,
+          "0.5": 487.011375681,
+          "0.75": 540.139796612,
+          "0.95": 615.272749602
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.909350851,
+        "population_std": 43.497361382,
+        "minimum": 0.0,
+        "maximum": 339.25608399,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 6.49063318,
+          "0.75": 36.594416723,
+          "0.95": 116.034589508
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "12": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 895.724269576,
+        "population_std": 132.936489659,
+        "minimum": 531.370990257,
+        "maximum": 1321.58356977,
+        "quantiles": {
+          "0.05": 680.348426007,
+          "0.25": 804.259217308,
+          "0.5": 889.368255574,
+          "0.75": 985.947647112,
+          "0.95": 1133.007287906
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1249.180133926,
+        "population_std": 58.68225679,
+        "minimum": 1081.803431186,
+        "maximum": 1412.981082362,
+        "quantiles": {
+          "0.05": 1151.862707653,
+          "0.25": 1207.772537637,
+          "0.5": 1248.640031935,
+          "0.75": 1287.340144576,
+          "0.95": 1347.988110878
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1220.490840592,
+        "population_std": 180.0064863,
+        "minimum": 732.47824838,
+        "maximum": 1767.185403513,
+        "quantiles": {
+          "0.05": 932.393550956,
+          "0.25": 1099.37745834,
+          "0.5": 1216.306989436,
+          "0.75": 1337.637721339,
+          "0.95": 1520.813908711
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 466.057507794,
+        "population_std": 73.815430399,
+        "minimum": 253.73076799,
+        "maximum": 701.680689442,
+        "quantiles": {
+          "0.05": 350.238114005,
+          "0.25": 414.272750752,
+          "0.5": 464.813868542,
+          "0.75": 511.842904819,
+          "0.95": 595.337077466
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.545658016,
+        "population_std": 42.984397834,
+        "minimum": 0.0,
+        "maximum": 263.176545605,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 5.861876931,
+          "0.75": 33.34298253,
+          "0.95": 126.398011557
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "13": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 898.934884617,
+        "population_std": 136.173696788,
+        "minimum": 548.449786163,
+        "maximum": 1401.66445728,
+        "quantiles": {
+          "0.05": 683.361171263,
+          "0.25": 807.251863411,
+          "0.5": 896.583815732,
+          "0.75": 990.203704531,
+          "0.95": 1132.043238035
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1250.28059111,
+        "population_std": 58.495736858,
+        "minimum": 1074.504909134,
+        "maximum": 1416.550168945,
+        "quantiles": {
+          "0.05": 1151.61270404,
+          "0.25": 1209.537930619,
+          "0.5": 1249.89685589,
+          "0.75": 1289.05706922,
+          "0.95": 1350.089727731
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1219.311039983,
+        "population_std": 181.861352457,
+        "minimum": 758.535813769,
+        "maximum": 1893.263615912,
+        "quantiles": {
+          "0.05": 941.979585074,
+          "0.25": 1089.979848513,
+          "0.5": 1209.630226505,
+          "0.75": 1334.621266926,
+          "0.95": 1534.811230803
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 449.648259513,
+        "population_std": 71.689109289,
+        "minimum": 257.472182866,
+        "maximum": 717.647430533,
+        "quantiles": {
+          "0.05": 337.363458478,
+          "0.25": 396.705147686,
+          "0.5": 447.198827723,
+          "0.75": 499.827687837,
+          "0.95": 566.301679383
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.854932798,
+        "population_std": 44.582961351,
+        "minimum": 0.0,
+        "maximum": 355.938988922,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 5.60751445,
+          "0.75": 38.992348757,
+          "0.95": 124.294540481
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "14": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 897.583114149,
+        "population_std": 130.635443488,
+        "minimum": 507.383281684,
+        "maximum": 1361.435958107,
+        "quantiles": {
+          "0.05": 686.716452716,
+          "0.25": 812.592332393,
+          "0.5": 895.172209365,
+          "0.75": 987.305142288,
+          "0.95": 1101.489236984
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1249.668685737,
+        "population_std": 58.230443969,
+        "minimum": 1083.839066113,
+        "maximum": 1422.189617728,
+        "quantiles": {
+          "0.05": 1156.087749626,
+          "0.25": 1210.232685732,
+          "0.5": 1249.653336668,
+          "0.75": 1289.775293905,
+          "0.95": 1345.736058296
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1219.178588279,
+        "population_std": 175.265294267,
+        "minimum": 635.270801355,
+        "maximum": 1842.577113697,
+        "quantiles": {
+          "0.05": 937.828287275,
+          "0.25": 1104.724497661,
+          "0.5": 1208.942564531,
+          "0.75": 1340.184369649,
+          "0.95": 1505.829362944
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 434.497785179,
+        "population_std": 66.047713566,
+        "minimum": 226.805604624,
+        "maximum": 715.012812308,
+        "quantiles": {
+          "0.05": 336.09804292,
+          "0.25": 391.278857554,
+          "0.5": 428.508145301,
+          "0.75": 478.50749123,
+          "0.95": 547.850089729
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.537723914,
+        "population_std": 42.342758887,
+        "minimum": 0.0,
+        "maximum": 345.329392327,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 6.26396365,
+          "0.75": 35.667285824,
+          "0.95": 119.422327349
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "15": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 900.142530499,
+        "population_std": 128.971035909,
+        "minimum": 529.559786772,
+        "maximum": 1298.605579686,
+        "quantiles": {
+          "0.05": 694.344063621,
+          "0.25": 811.518615378,
+          "0.5": 899.755644878,
+          "0.75": 988.27140118,
+          "0.95": 1102.379904505
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1249.586019425,
+        "population_std": 59.394573239,
+        "minimum": 1070.793900853,
+        "maximum": 1417.579840022,
+        "quantiles": {
+          "0.05": 1150.43606867,
+          "0.25": 1209.951690249,
+          "0.5": 1249.929920514,
+          "0.75": 1290.557594143,
+          "0.95": 1345.049336462
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1223.62517292,
+        "population_std": 171.642215641,
+        "minimum": 726.7728917,
+        "maximum": 1754.990810472,
+        "quantiles": {
+          "0.05": 950.343555794,
+          "0.25": 1101.507181525,
+          "0.5": 1218.271831951,
+          "0.75": 1343.792828435,
+          "0.95": 1508.418932269
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 422.09645244,
+        "population_std": 61.104592265,
+        "minimum": 245.461807817,
+        "maximum": 604.24491095,
+        "quantiles": {
+          "0.05": 328.958209269,
+          "0.25": 379.475691882,
+          "0.5": 421.328228984,
+          "0.75": 461.75079315,
+          "0.95": 527.393885896
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.899669165,
+        "population_std": 42.899106749,
+        "minimum": 0.0,
+        "maximum": 280.246882155,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 6.644025572,
+          "0.75": 37.259004822,
+          "0.95": 111.16539474
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    },
+    "16": {
+      "mean_source_distance_from_origin_m": {
+        "mean": 900.786429478,
+        "population_std": 127.666999836,
+        "minimum": 555.498563656,
+        "maximum": 1359.708597427,
+        "quantiles": {
+          "0.05": 695.765153241,
+          "0.25": 810.015294154,
+          "0.5": 897.872543036,
+          "0.75": 986.49271174,
+          "0.95": 1110.334084245
+        }
+      },
+      "mean_receiving_radius_m": {
+        "mean": 1249.906080433,
+        "population_std": 58.738248294,
+        "minimum": 1074.522334705,
+        "maximum": 1426.957605157,
+        "quantiles": {
+          "0.05": 1150.870090554,
+          "0.25": 1210.072744168,
+          "0.5": 1250.428232049,
+          "0.75": 1290.49173251,
+          "0.95": 1346.778228093
+        }
+      },
+      "mean_pairwise_source_distance_m": {
+        "mean": 1223.763642441,
+        "population_std": 168.590202537,
+        "minimum": 816.193903011,
+        "maximum": 1854.820836274,
+        "quantiles": {
+          "0.05": 955.158556667,
+          "0.25": 1106.550721799,
+          "0.5": 1226.559226862,
+          "0.75": 1335.056745699,
+          "0.95": 1497.688799659
+        }
+      },
+      "source_mst_m_per_source": {
+        "mean": 408.880775422,
+        "population_std": 58.483532721,
+        "minimum": 250.510114717,
+        "maximum": 634.385278536,
+        "quantiles": {
+          "0.05": 319.067340228,
+          "0.25": 367.102503423,
+          "0.5": 407.730950361,
+          "0.75": 444.85283796,
+          "0.95": 508.657431994
+        }
+      },
+      "mean_origin_to_receiving_region_m": {
+        "mean": 26.156503987,
+        "population_std": 41.806618472,
+        "minimum": 0.0,
+        "maximum": 291.550044067,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 6.758455872,
+          "0.75": 35.809969134,
+          "0.95": 109.992054222
+        }
+      },
+      "directional_fraction": {
+        "mean": 0.0,
+        "population_std": 0.0,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "quantiles": {
+          "0.05": 0.0,
+          "0.25": 0.0,
+          "0.5": 0.0,
+          "0.75": 0.0,
+          "0.95": 0.0
+        }
+      }
+    }
+  }
+}

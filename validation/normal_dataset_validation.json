@@ -1,0 +1,119 @@
+{
+  "verified_at_utc": "2026-09-12T05:26:36.088489+00:00",
+  "dataset": "balanced_normal_v2",
+  "total_cases": 14000,
+  "cases_per_problem": 7000,
+  "cases_per_source_count": 1000,
+  "scope": "Local dataset construction and workflow checks; no full 14000-case solver benchmark and no official test.",
+  "construction_score_distribution": "Midpoint quantiles of standard normal truncated to [-3,3], then d=(z+3)/6; separately permuted for each problem and source count.",
+  "interval_counts_per_source_count": {
+    "z_lt_minus1": 158,
+    "minus1_le_z_le_1": 684,
+    "z_gt_1": 158
+  },
+  "independent_audit": {
+    "method": "Kruskal versus production Prim; independent Cartesian semicircle projection versus production receiving-distance formula; all 14000 cases.",
+    "geometry_statistic_max_difference_below": 5e-10,
+    "unique_ids_seeds_and_source_configurations": 14000,
+    "solver_outcome_fields_in_dataset": false
+  },
+  "project_verification": {
+    "path": "validation/report.json",
+    "sha256": "5b2833cbbb2229100e059640d36aef45ef49b35317af4b053d722647b40142c2",
+    "sha256_method": "UTF-8 text with LF newlines, matching the Git blob",
+    "passed": true,
+    "verified_at_utc": "2026-09-12T05:25:05.140872+00:00",
+    "unit_test_counts": {
+      "problem1": 36,
+      "problem2": 27,
+      "problem3": 104,
+      "problem4": 49
+    }
+  },
+  "problems": {
+    "3": {
+      "directory": "problem3/examples/balanced_normal_v2",
+      "file_sha256": {
+        "cases.jsonl": "9a31464bfbc136f683e75155de7a09a91c1dafdf0c48b9186173d9491ad7eda6",
+        "manifest.json": "f4b19a69de9148a91d53a9e951e09ff1d62492c1304b51229d2c1c3028411cf3",
+        "distribution.json": "81827012255e2951e498a8a11e1c70aef4999e5a3332ea93bc0ecc54a6d3797f",
+        "README.md": "277241517c870527c7d39b703c928aba8490ddb52e547405d1fc95a2c3dd22af"
+      },
+      "cases": 7000,
+      "spearman_with_construction_score_by_source_count": {
+        "source_mst_m_per_source": {
+          "minimum": 0.581317085,
+          "maximum": 0.742725143
+        },
+        "mean_origin_to_receiving_region_m": {
+          "minimum": 0.894965621,
+          "maximum": 0.936331818
+        },
+        "mean_receiving_radius_m": {
+          "minimum": -0.981720502,
+          "maximum": -0.971619336
+        }
+      },
+      "workflow_smoke": {
+        "cases": 14,
+        "case_counts_by_source_count": {
+          "10": 2,
+          "11": 2,
+          "12": 2,
+          "13": 2,
+          "14": 2,
+          "15": 2,
+          "16": 2
+        },
+        "algorithm_version": "problem3_v4",
+        "dataset_version": "balanced_normal_v2",
+        "completed": true,
+        "error_cases": 0,
+        "separate_figures": 6,
+        "scope": "Local integration only; 14/7000 cases. Preview result files are not part of this dataset upload."
+      }
+    },
+    "4": {
+      "directory": "problem4/examples/balanced_normal_v2",
+      "file_sha256": {
+        "cases.jsonl": "3c64ef7c04700ccd470b05be72ab05badc74feff91ba8ec352e3d31ab3d9eed5",
+        "manifest.json": "97549caeb4a6928b5be90ad729966bb4e3fdfbcaa3ae1f452cbfdacb8768776c",
+        "distribution.json": "ec38a2b42f87fdaff1a3832f6914e93e98f4b8e99a1738463a86f97011e57a8c",
+        "README.md": "c7be7cd18d1c0415cbda6be9866829b19127318cbaf05b822f148b81951eebbf"
+      },
+      "cases": 7000,
+      "spearman_with_construction_score_by_source_count": {
+        "source_mst_m_per_source": {
+          "minimum": 0.629881638,
+          "maximum": 0.744209232
+        },
+        "mean_origin_to_receiving_region_m": {
+          "minimum": 0.79771823,
+          "maximum": 0.87545521
+        },
+        "mean_receiving_radius_m": {
+          "minimum": -0.982584791,
+          "maximum": -0.969598174
+        }
+      },
+      "workflow_smoke": {
+        "cases": 14,
+        "case_counts_by_source_count": {
+          "10": 2,
+          "11": 2,
+          "12": 2,
+          "13": 2,
+          "14": 2,
+          "15": 2,
+          "16": 2
+        },
+        "algorithm_version": "problem4_v4",
+        "dataset_version": "balanced_normal_v2",
+        "completed": true,
+        "error_cases": 0,
+        "separate_figures": 6,
+        "scope": "Local integration only; 14/7000 cases. Preview result files are not part of this dataset upload."
+      }
+    }
+  }
+}

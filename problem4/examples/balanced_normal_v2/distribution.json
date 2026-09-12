@@ -1,0 +1,2440 @@
+{
+  "schema_version": 1,
+  "problem": 4,
+  "dataset": "balanced_normal_v2",
+  "provenance": "self_constructed_not_official",
+  "scope": "External construction audit only; no solver outcomes, no official results.",
+  "quantile_rule": "z_k = Phi^-1(Phi(-3) + (k+0.5)/m * (Phi(3)-Phi(-3))); d=(z_k+3)/6",
+  "interpretation": {
+    "score": "预定义连续构造难度；不是已验证的求解难度，也不保证求解耗时正态或逐例单调。",
+    "source_mst_m_per_source": "原点与所有源位置的欧氏最小生成树长度除以源数，仅为空间分散代理；不是清除路程的严格下界。",
+    "mean_origin_to_receiving_region_m": "原点到每个源可收信圆盘或半圆盘的精确最短距离，再对源求平均；仅为观测接近负担代理。",
+    "correlations": "只在同一问题、同一源数内计算，Pearson与采用平均秩的Spearman；常量向量相关系数为null。",
+    "bins": "连续分数的十个等频统计箱，不是独立数据集或算法评价等级。"
+  },
+  "audit_decimal_places": 9,
+  "by_source_count": {
+    "10": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 898.303246343,
+          "population_std": 140.582775638,
+          "minimum": 498.570642005,
+          "maximum": 1441.237503388,
+          "quantiles": {
+            "0.05": 672.759953324,
+            "0.25": 799.045745161,
+            "0.5": 894.498586487,
+            "0.75": 986.760976147,
+            "0.95": 1138.382361532
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1250.315879205,
+          "population_std": 58.184752853,
+          "minimum": 1077.68567393,
+          "maximum": 1415.974708939,
+          "quantiles": {
+            "0.05": 1155.012127207,
+            "0.25": 1211.92738073,
+            "0.5": 1251.776966961,
+            "0.75": 1289.902437185,
+            "0.95": 1345.796192004
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1218.411028199,
+          "population_std": 193.999276833,
+          "minimum": 666.946329267,
+          "maximum": 1984.459820241,
+          "quantiles": {
+            "0.05": 917.794176682,
+            "0.25": 1076.551413794,
+            "0.5": 1219.976739341,
+            "0.75": 1349.465132924,
+            "0.95": 1540.353389573
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 505.664193356,
+          "population_std": 86.694166677,
+          "minimum": 284.992536272,
+          "maximum": 825.723216984,
+          "quantiles": {
+            "0.05": 369.776546137,
+            "0.25": 443.490192525,
+            "0.5": 503.095583599,
+            "0.75": 564.23796605,
+            "0.95": 653.850165287
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 172.061074784,
+          "population_std": 145.078748145,
+          "minimum": 0.0,
+          "maximum": 878.335930212,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 57.650619994,
+            "0.5": 143.050413442,
+            "0.75": 251.341717231,
+            "0.95": 452.503177244
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.4983,
+          "population_std": 0.137866276,
+          "minimum": 0.1,
+          "maximum": 0.9,
+          "quantiles": {
+            "0.05": 0.3,
+            "0.25": 0.4,
+            "0.5": 0.5,
+            "0.75": 0.6,
+            "0.95": 0.7
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.490903175,
+          "population_std": 0.270600002,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.666666667,
+            "0.95": 1.0
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": -0.017727006,
+          "population_std": 0.366949372,
+          "minimum": -0.956142078,
+          "maximum": 0.888247024,
+          "quantiles": {
+            "0.05": -0.661666826,
+            "0.25": -0.270022647,
+            "0.5": 0.000637123,
+            "0.75": 0.243207658,
+            "0.95": 0.570792519
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 732.684982144,
+            "mean_receiving_radius_m": 1347.67365004,
+            "mean_pairwise_source_distance_m": 989.77654067,
+            "source_mst_m_per_source": 414.654859024,
+            "mean_origin_to_receiving_region_m": 25.958315366,
+            "directional_fraction": 0.268,
+            "directional_outward_fraction": 0.206666667,
+            "directional_mean_outward_cosine": -0.373547408
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 792.831829712,
+            "mean_receiving_radius_m": 1311.97893695,
+            "mean_pairwise_source_distance_m": 1081.480981581,
+            "source_mst_m_per_source": 450.003279646,
+            "mean_origin_to_receiving_region_m": 60.314465372,
+            "directional_fraction": 0.355,
+            "directional_outward_fraction": 0.341666667,
+            "directional_mean_outward_cosine": -0.225478589
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 826.877611782,
+            "mean_receiving_radius_m": 1289.604242659,
+            "mean_pairwise_source_distance_m": 1119.183947617,
+            "source_mst_m_per_source": 462.142871087,
+            "mean_origin_to_receiving_region_m": 84.695831134,
+            "directional_fraction": 0.405,
+            "directional_outward_fraction": 0.391666667,
+            "directional_mean_outward_cosine": -0.128681815
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 850.378534948,
+            "mean_receiving_radius_m": 1270.590297409,
+            "mean_pairwise_source_distance_m": 1147.344060073,
+            "source_mst_m_per_source": 474.476925775,
+            "mean_origin_to_receiving_region_m": 107.808719181,
+            "directional_fraction": 0.453,
+            "directional_outward_fraction": 0.432,
+            "directional_mean_outward_cosine": -0.075376602
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 879.765112738,
+            "mean_receiving_radius_m": 1256.949177062,
+            "mean_pairwise_source_distance_m": 1197.834731239,
+            "source_mst_m_per_source": 489.825396241,
+            "mean_origin_to_receiving_region_m": 118.832180921,
+            "directional_fraction": 0.481,
+            "directional_outward_fraction": 0.452,
+            "directional_mean_outward_cosine": -0.067237168
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 912.592964673,
+            "mean_receiving_radius_m": 1245.488750084,
+            "mean_pairwise_source_distance_m": 1233.663175852,
+            "source_mst_m_per_source": 513.802487198,
+            "mean_origin_to_receiving_region_m": 150.922931896,
+            "directional_fraction": 0.517,
+            "directional_outward_fraction": 0.474333333,
+            "directional_mean_outward_cosine": -0.038565116
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 945.889125989,
+            "mean_receiving_radius_m": 1227.761518366,
+            "mean_pairwise_source_distance_m": 1289.333292586,
+            "source_mst_m_per_source": 539.826803085,
+            "mean_origin_to_receiving_region_m": 204.937573425,
+            "directional_fraction": 0.55,
+            "directional_outward_fraction": 0.580666667,
+            "directional_mean_outward_cosine": 0.093611899
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 976.744723437,
+            "mean_receiving_radius_m": 1210.982629411,
+            "mean_pairwise_source_distance_m": 1332.960304607,
+            "source_mst_m_per_source": 554.84692194,
+            "mean_origin_to_receiving_region_m": 246.513931985,
+            "directional_fraction": 0.592,
+            "directional_outward_fraction": 0.611380952,
+            "directional_mean_outward_cosine": 0.136693234
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1005.088269848,
+            "mean_receiving_radius_m": 1191.698476898,
+            "mean_pairwise_source_distance_m": 1355.58621233,
+            "source_mst_m_per_source": 565.103299692,
+            "mean_origin_to_receiving_region_m": 299.260406689,
+            "directional_fraction": 0.634,
+            "directional_outward_fraction": 0.650714286,
+            "directional_mean_outward_cosine": 0.169221829
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1060.179308158,
+            "mean_receiving_radius_m": 1150.43111317,
+            "mean_pairwise_source_distance_m": 1436.947035437,
+            "source_mst_m_per_source": 591.95908987,
+            "mean_origin_to_receiving_region_m": 421.366391875,
+            "directional_fraction": 0.728,
+            "directional_outward_fraction": 0.767936508,
+            "directional_mean_outward_cosine": 0.332089675
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.696279066,
+          "spearman": 0.700807073
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.971555495,
+          "spearman": -0.969598174
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.682403117,
+          "spearman": 0.685179601
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.625902957,
+          "spearman": 0.629881638
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.78546803,
+          "spearman": 0.79771823
+        },
+        "directional_fraction": {
+          "pearson": 0.954433201,
+          "spearman": 0.952216964
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.583829596,
+          "spearman": 0.566305272
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.537057335,
+          "spearman": 0.519818884
+        }
+      }
+    },
+    "11": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 903.507012355,
+          "population_std": 140.383446428,
+          "minimum": 536.903608711,
+          "maximum": 1371.983442041,
+          "quantiles": {
+            "0.05": 676.445230162,
+            "0.25": 801.085273983,
+            "0.5": 900.36951249,
+            "0.75": 996.354172024,
+            "0.95": 1146.161300255
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1250.297322934,
+          "population_std": 58.951404984,
+          "minimum": 1073.215722194,
+          "maximum": 1422.754219075,
+          "quantiles": {
+            "0.05": 1150.760130537,
+            "0.25": 1210.812462407,
+            "0.5": 1249.383299072,
+            "0.75": 1292.032867167,
+            "0.95": 1345.957403747
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1227.618781828,
+          "population_std": 187.365345718,
+          "minimum": 713.234522363,
+          "maximum": 1820.2220003,
+          "quantiles": {
+            "0.05": 935.363932348,
+            "0.25": 1095.04077655,
+            "0.5": 1222.182701411,
+            "0.75": 1351.461576139,
+            "0.95": 1554.93885365
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 489.885117955,
+          "population_std": 80.90835074,
+          "minimum": 282.08429541,
+          "maximum": 780.067318874,
+          "quantiles": {
+            "0.05": 368.166339952,
+            "0.25": 434.130551532,
+            "0.5": 486.560235433,
+            "0.75": 544.321098553,
+            "0.95": 623.816724951
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 179.551887609,
+          "population_std": 152.452994782,
+          "minimum": 0.0,
+          "maximum": 760.485163001,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 66.130715051,
+            "0.5": 143.202805129,
+            "0.75": 260.765410569,
+            "0.95": 481.267541612
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.501636364,
+          "population_std": 0.139410684,
+          "minimum": 0.090909091,
+          "maximum": 0.909090909,
+          "quantiles": {
+            "0.05": 0.272727273,
+            "0.25": 0.363636364,
+            "0.5": 0.454545455,
+            "0.75": 0.636363636,
+            "0.95": 0.727272727
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.493874206,
+          "population_std": 0.257903771,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.666666667,
+            "0.95": 0.875
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": -0.013095051,
+          "population_std": 0.35466532,
+          "minimum": -0.987001216,
+          "maximum": 0.803657057,
+          "quantiles": {
+            "0.05": -0.656982885,
+            "0.25": -0.257071397,
+            "0.5": 0.000417151,
+            "0.75": 0.250621494,
+            "0.95": 0.551255199
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 721.937681268,
+            "mean_receiving_radius_m": 1349.82389886,
+            "mean_pairwise_source_distance_m": 980.051265646,
+            "source_mst_m_per_source": 388.811581871,
+            "mean_origin_to_receiving_region_m": 25.013306365,
+            "directional_fraction": 0.269090909,
+            "directional_outward_fraction": 0.199166667,
+            "directional_mean_outward_cosine": -0.402376313
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 799.584829665,
+            "mean_receiving_radius_m": 1310.925038938,
+            "mean_pairwise_source_distance_m": 1095.0784771,
+            "source_mst_m_per_source": 437.155155931,
+            "mean_origin_to_receiving_region_m": 60.621310379,
+            "directional_fraction": 0.357272727,
+            "directional_outward_fraction": 0.34,
+            "directional_mean_outward_cosine": -0.192978283
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 837.386810469,
+            "mean_receiving_radius_m": 1292.412698609,
+            "mean_pairwise_source_distance_m": 1143.247189965,
+            "source_mst_m_per_source": 458.77294059,
+            "mean_origin_to_receiving_region_m": 92.195917512,
+            "directional_fraction": 0.408181818,
+            "directional_outward_fraction": 0.3885,
+            "directional_mean_outward_cosine": -0.126825485
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 854.273325965,
+            "mean_receiving_radius_m": 1271.659983564,
+            "mean_pairwise_source_distance_m": 1151.01361377,
+            "source_mst_m_per_source": 455.678904253,
+            "mean_origin_to_receiving_region_m": 103.973664466,
+            "directional_fraction": 0.451818182,
+            "directional_outward_fraction": 0.4155,
+            "directional_mean_outward_cosine": -0.107303772
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 903.280848658,
+            "mean_receiving_radius_m": 1258.174038678,
+            "mean_pairwise_source_distance_m": 1233.962783476,
+            "source_mst_m_per_source": 494.088162523,
+            "mean_origin_to_receiving_region_m": 128.381526396,
+            "directional_fraction": 0.482727273,
+            "directional_outward_fraction": 0.455,
+            "directional_mean_outward_cosine": -0.065380312
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 909.771691567,
+            "mean_receiving_radius_m": 1241.184212777,
+            "mean_pairwise_source_distance_m": 1234.295079082,
+            "source_mst_m_per_source": 492.811590804,
+            "mean_origin_to_receiving_region_m": 155.550278687,
+            "directional_fraction": 0.515454545,
+            "directional_outward_fraction": 0.495,
+            "directional_mean_outward_cosine": -0.012666909
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 936.279986551,
+            "mean_receiving_radius_m": 1227.202142815,
+            "mean_pairwise_source_distance_m": 1274.400102086,
+            "source_mst_m_per_source": 506.930521384,
+            "mean_origin_to_receiving_region_m": 202.540925283,
+            "directional_fraction": 0.55,
+            "directional_outward_fraction": 0.574571429,
+            "directional_mean_outward_cosine": 0.069522591
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 982.30277991,
+            "mean_receiving_radius_m": 1213.069452303,
+            "mean_pairwise_source_distance_m": 1325.200093547,
+            "source_mst_m_per_source": 523.026793148,
+            "mean_origin_to_receiving_region_m": 261.963462875,
+            "directional_fraction": 0.596363636,
+            "directional_outward_fraction": 0.644047619,
+            "directional_mean_outward_cosine": 0.163316712
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1019.628148146,
+            "mean_receiving_radius_m": 1190.871351472,
+            "mean_pairwise_source_distance_m": 1380.958208981,
+            "source_mst_m_per_source": 548.662231847,
+            "mean_origin_to_receiving_region_m": 313.189886351,
+            "directional_fraction": 0.644545455,
+            "directional_outward_fraction": 0.661071429,
+            "directional_mean_outward_cosine": 0.213104281
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1070.624021349,
+            "mean_receiving_radius_m": 1147.65041132,
+            "mean_pairwise_source_distance_m": 1457.981004626,
+            "source_mst_m_per_source": 592.913297194,
+            "mean_origin_to_receiving_region_m": 452.088597775,
+            "directional_fraction": 0.740909091,
+            "directional_outward_fraction": 0.765884921,
+            "directional_mean_outward_cosine": 0.330636975
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.725212233,
+          "spearman": 0.708529105
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.975533273,
+          "spearman": -0.973418617
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.72737796,
+          "spearman": 0.710348042
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.694842243,
+          "spearman": 0.671701968
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.802695216,
+          "spearman": 0.815143068
+        },
+        "directional_fraction": {
+          "pearson": 0.968063001,
+          "spearman": 0.965102793
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.633751905,
+          "spearman": 0.615773162
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.578490795,
+          "spearman": 0.559405303
+        }
+      }
+    },
+    "12": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 899.527737406,
+          "population_std": 135.213698541,
+          "minimum": 485.82193943,
+          "maximum": 1382.618979607,
+          "quantiles": {
+            "0.05": 681.360301952,
+            "0.25": 808.087468323,
+            "0.5": 896.761228222,
+            "0.75": 984.56199595,
+            "0.95": 1124.107548077
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1249.484522707,
+          "population_std": 58.940163362,
+          "minimum": 1070.296984926,
+          "maximum": 1419.559450867,
+          "quantiles": {
+            "0.05": 1146.982317324,
+            "0.25": 1209.747330098,
+            "0.5": 1249.495888321,
+            "0.75": 1289.542360169,
+            "0.95": 1348.275258562
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1219.774173542,
+          "population_std": 184.319965636,
+          "minimum": 552.156771693,
+          "maximum": 1846.243647389,
+          "quantiles": {
+            "0.05": 920.708037857,
+            "0.25": 1094.282508745,
+            "0.5": 1219.288809453,
+            "0.75": 1342.268873602,
+            "0.95": 1525.707134115
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 466.754017481,
+          "population_std": 74.979327463,
+          "minimum": 228.542969818,
+          "maximum": 760.311350071,
+          "quantiles": {
+            "0.05": 347.746015109,
+            "0.25": 417.8205058,
+            "0.5": 467.376563247,
+            "0.75": 511.595531251,
+            "0.95": 593.815033717
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 179.470484914,
+          "population_std": 148.641365588,
+          "minimum": 0.0,
+          "maximum": 987.012522259,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 68.945087389,
+            "0.5": 151.187678077,
+            "0.75": 255.297585664,
+            "0.95": 468.196037422
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.500416667,
+          "population_std": 0.140904198,
+          "minimum": 0.083333333,
+          "maximum": 0.916666667,
+          "quantiles": {
+            "0.05": 0.25,
+            "0.25": 0.416666667,
+            "0.5": 0.5,
+            "0.75": 0.583333333,
+            "0.95": 0.75
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.500732937,
+          "population_std": 0.258129143,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.675,
+            "0.95": 0.888888889
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": 0.002054573,
+          "population_std": 0.35262273,
+          "minimum": -0.997996102,
+          "maximum": 0.920283708,
+          "quantiles": {
+            "0.05": -0.602465017,
+            "0.25": -0.239472556,
+            "0.5": 0.019974308,
+            "0.75": 0.25921015,
+            "0.95": 0.555818297
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 713.647955301,
+            "mean_receiving_radius_m": 1350.399545971,
+            "mean_pairwise_source_distance_m": 968.615557485,
+            "source_mst_m_per_source": 369.958051494,
+            "mean_origin_to_receiving_region_m": 29.429519161,
+            "directional_fraction": 0.263333333,
+            "directional_outward_fraction": 0.235,
+            "directional_mean_outward_cosine": -0.339335142
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 791.199087436,
+            "mean_receiving_radius_m": 1312.083518682,
+            "mean_pairwise_source_distance_m": 1075.962395004,
+            "source_mst_m_per_source": 411.91306134,
+            "mean_origin_to_receiving_region_m": 62.744660158,
+            "directional_fraction": 0.355833333,
+            "directional_outward_fraction": 0.3315,
+            "directional_mean_outward_cosine": -0.216997313
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 846.421073654,
+            "mean_receiving_radius_m": 1289.613703305,
+            "mean_pairwise_source_distance_m": 1148.590122504,
+            "source_mst_m_per_source": 435.712797624,
+            "mean_origin_to_receiving_region_m": 80.709618547,
+            "directional_fraction": 0.405,
+            "directional_outward_fraction": 0.363833333,
+            "directional_mean_outward_cosine": -0.15776705
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 867.079806831,
+            "mean_receiving_radius_m": 1271.232571505,
+            "mean_pairwise_source_distance_m": 1175.365307253,
+            "source_mst_m_per_source": 453.476886696,
+            "mean_origin_to_receiving_region_m": 104.067512408,
+            "directional_fraction": 0.444166667,
+            "directional_outward_fraction": 0.409666667,
+            "directional_mean_outward_cosine": -0.09601898
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 896.149605328,
+            "mean_receiving_radius_m": 1255.545925064,
+            "mean_pairwise_source_distance_m": 1215.206187565,
+            "source_mst_m_per_source": 464.559012005,
+            "mean_origin_to_receiving_region_m": 142.567607672,
+            "directional_fraction": 0.484166667,
+            "directional_outward_fraction": 0.494333333,
+            "directional_mean_outward_cosine": -0.007316304
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 910.526370169,
+            "mean_receiving_radius_m": 1241.498323996,
+            "mean_pairwise_source_distance_m": 1234.492582603,
+            "source_mst_m_per_source": 473.85677689,
+            "mean_origin_to_receiving_region_m": 161.574294344,
+            "directional_fraction": 0.5225,
+            "directional_outward_fraction": 0.539047619,
+            "directional_mean_outward_cosine": 0.044902387
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 948.8940295,
+            "mean_receiving_radius_m": 1225.900489845,
+            "mean_pairwise_source_distance_m": 1287.231017005,
+            "source_mst_m_per_source": 490.978406981,
+            "mean_origin_to_receiving_region_m": 206.873377595,
+            "directional_fraction": 0.550833333,
+            "directional_outward_fraction": 0.580238095,
+            "directional_mean_outward_cosine": 0.088844673
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 955.766242097,
+            "mean_receiving_radius_m": 1210.868025873,
+            "mean_pairwise_source_distance_m": 1284.752065866,
+            "source_mst_m_per_source": 491.478621833,
+            "mean_origin_to_receiving_region_m": 251.628712358,
+            "directional_fraction": 0.590833333,
+            "directional_outward_fraction": 0.625,
+            "directional_mean_outward_cosine": 0.159967256
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 996.693307097,
+            "mean_receiving_radius_m": 1189.379199903,
+            "mean_pairwise_source_distance_m": 1359.225640925,
+            "source_mst_m_per_source": 519.844543988,
+            "mean_origin_to_receiving_region_m": 304.68640039,
+            "directional_fraction": 0.6425,
+            "directional_outward_fraction": 0.669821429,
+            "directional_mean_outward_cosine": 0.216846768
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1068.899896644,
+            "mean_receiving_radius_m": 1148.323922928,
+            "mean_pairwise_source_distance_m": 1448.30085921,
+            "source_mst_m_per_source": 555.762015961,
+            "mean_origin_to_receiving_region_m": 450.423146508,
+            "directional_fraction": 0.745,
+            "directional_outward_fraction": 0.758888889,
+            "directional_mean_outward_cosine": 0.327419438
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.730782035,
+          "spearman": 0.701008673
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.978552325,
+          "spearman": -0.977185409
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.723312373,
+          "spearman": 0.69364753
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.683479608,
+          "spearman": 0.65415357
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.812032622,
+          "spearman": 0.826688726
+        },
+        "directional_fraction": {
+          "pearson": 0.970983485,
+          "spearman": 0.967436626
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.616856202,
+          "spearman": 0.607227161
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.570319177,
+          "spearman": 0.557275409
+        }
+      }
+    },
+    "13": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 895.205404295,
+          "population_std": 134.427213887,
+          "minimum": 499.500232931,
+          "maximum": 1403.501743614,
+          "quantiles": {
+            "0.05": 686.066462726,
+            "0.25": 802.324328573,
+            "0.5": 890.456498633,
+            "0.75": 981.834791348,
+            "0.95": 1123.15258019
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1250.676252951,
+          "population_std": 58.550622012,
+          "minimum": 1078.300842955,
+          "maximum": 1426.073151506,
+          "quantiles": {
+            "0.05": 1154.753244868,
+            "0.25": 1210.872755717,
+            "0.5": 1251.443810977,
+            "0.75": 1290.03155993,
+            "0.95": 1346.611368351
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1215.084906069,
+          "population_std": 178.36808851,
+          "minimum": 567.454175439,
+          "maximum": 1770.586220664,
+          "quantiles": {
+            "0.05": 933.390359913,
+            "0.25": 1093.311776364,
+            "0.5": 1207.571310056,
+            "0.75": 1337.466309769,
+            "0.95": 1517.850161278
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 447.944046969,
+          "population_std": 70.054832988,
+          "minimum": 213.769071084,
+          "maximum": 657.184213644,
+          "quantiles": {
+            "0.05": 339.569722978,
+            "0.25": 401.272644223,
+            "0.5": 443.431710063,
+            "0.75": 493.797110781,
+            "0.95": 571.802922604
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 182.977746383,
+          "population_std": 145.842178468,
+          "minimum": 0.0,
+          "maximum": 898.080486368,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 71.740168157,
+            "0.5": 154.605127612,
+            "0.75": 267.311975778,
+            "0.95": 456.767415359
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.499384615,
+          "population_std": 0.141126826,
+          "minimum": 0.076923077,
+          "maximum": 0.923076923,
+          "quantiles": {
+            "0.05": 0.303846154,
+            "0.25": 0.384615385,
+            "0.5": 0.461538462,
+            "0.75": 0.615384615,
+            "0.95": 0.692307692
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.514661508,
+          "population_std": 0.25359344,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.714285714,
+            "0.95": 0.888888889
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": 0.012612414,
+          "population_std": 0.355135479,
+          "minimum": -0.984205652,
+          "maximum": 0.960611523,
+          "quantiles": {
+            "0.05": -0.637549042,
+            "0.25": -0.222776925,
+            "0.5": 0.048084024,
+            "0.75": 0.278597387,
+            "0.95": 0.535106253
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 717.442586618,
+            "mean_receiving_radius_m": 1351.726212385,
+            "mean_pairwise_source_distance_m": 972.832197078,
+            "source_mst_m_per_source": 357.974005418,
+            "mean_origin_to_receiving_region_m": 27.661439669,
+            "directional_fraction": 0.256153846,
+            "directional_outward_fraction": 0.220166667,
+            "directional_mean_outward_cosine": -0.392997654
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 780.815352646,
+            "mean_receiving_radius_m": 1308.884074154,
+            "mean_pairwise_source_distance_m": 1063.039045778,
+            "source_mst_m_per_source": 392.685160675,
+            "mean_origin_to_receiving_region_m": 65.722847309,
+            "directional_fraction": 0.353076923,
+            "directional_outward_fraction": 0.3375,
+            "directional_mean_outward_cosine": -0.202612626
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 845.090790562,
+            "mean_receiving_radius_m": 1292.183177942,
+            "mean_pairwise_source_distance_m": 1155.268093286,
+            "source_mst_m_per_source": 427.957022493,
+            "mean_origin_to_receiving_region_m": 100.017107815,
+            "directional_fraction": 0.409230769,
+            "directional_outward_fraction": 0.437333333,
+            "directional_mean_outward_cosine": -0.087469847
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 854.402708156,
+            "mean_receiving_radius_m": 1272.939265048,
+            "mean_pairwise_source_distance_m": 1158.437832902,
+            "source_mst_m_per_source": 422.663975226,
+            "mean_origin_to_receiving_region_m": 106.303503067,
+            "directional_fraction": 0.445384615,
+            "directional_outward_fraction": 0.440333333,
+            "directional_mean_outward_cosine": -0.080127212
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 883.157271718,
+            "mean_receiving_radius_m": 1256.553224462,
+            "mean_pairwise_source_distance_m": 1203.707994585,
+            "source_mst_m_per_source": 442.882500715,
+            "mean_origin_to_receiving_region_m": 141.05069353,
+            "directional_fraction": 0.480769231,
+            "directional_outward_fraction": 0.517857143,
+            "directional_mean_outward_cosine": 0.015653187
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 908.929918049,
+            "mean_receiving_radius_m": 1245.200842809,
+            "mean_pairwise_source_distance_m": 1230.841004726,
+            "source_mst_m_per_source": 452.534715764,
+            "mean_origin_to_receiving_region_m": 184.071001569,
+            "directional_fraction": 0.516153846,
+            "directional_outward_fraction": 0.575,
+            "directional_mean_outward_cosine": 0.096311376
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 937.262041876,
+            "mean_receiving_radius_m": 1228.700741024,
+            "mean_pairwise_source_distance_m": 1275.479172276,
+            "source_mst_m_per_source": 466.898032922,
+            "mean_origin_to_receiving_region_m": 211.466126289,
+            "directional_fraction": 0.555384615,
+            "directional_outward_fraction": 0.558035714,
+            "directional_mean_outward_cosine": 0.090859675
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 950.033702296,
+            "mean_receiving_radius_m": 1211.425868245,
+            "mean_pairwise_source_distance_m": 1291.353970829,
+            "source_mst_m_per_source": 475.506211779,
+            "mean_origin_to_receiving_region_m": 235.565052956,
+            "directional_fraction": 0.596923077,
+            "directional_outward_fraction": 0.6075,
+            "directional_mean_outward_cosine": 0.128431568
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 997.272224488,
+            "mean_receiving_radius_m": 1189.075427556,
+            "mean_pairwise_source_distance_m": 1352.202253124,
+            "source_mst_m_per_source": 502.234178989,
+            "mean_origin_to_receiving_region_m": 303.937964904,
+            "directional_fraction": 0.643076923,
+            "directional_outward_fraction": 0.668611111,
+            "directional_mean_outward_cosine": 0.20374595
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1077.647446541,
+            "mean_receiving_radius_m": 1150.073695882,
+            "mean_pairwise_source_distance_m": 1447.687496108,
+            "source_mst_m_per_source": 538.104665712,
+            "mean_origin_to_receiving_region_m": 453.981726726,
+            "directional_fraction": 0.737692308,
+            "directional_outward_fraction": 0.784277778,
+            "directional_mean_outward_cosine": 0.354329727
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.747954738,
+          "spearman": 0.723274827
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.979727044,
+          "spearman": -0.979632524
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.741636412,
+          "spearman": 0.722843727
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.711514455,
+          "spearman": 0.690978679
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.812159761,
+          "spearman": 0.818460186
+        },
+        "directional_fraction": {
+          "pearson": 0.97552797,
+          "spearman": 0.973228186
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.615893253,
+          "spearman": 0.590134039
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.575178045,
+          "spearman": 0.547121719
+        }
+      }
+    },
+    "14": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 899.384144814,
+          "population_std": 128.703309982,
+          "minimum": 502.474844817,
+          "maximum": 1272.080069785,
+          "quantiles": {
+            "0.05": 702.471542423,
+            "0.25": 807.609516034,
+            "0.5": 893.729143476,
+            "0.75": 983.762375682,
+            "0.95": 1117.923952263
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1249.046179428,
+          "population_std": 58.788341915,
+          "minimum": 1077.53355522,
+          "maximum": 1410.798961979,
+          "quantiles": {
+            "0.05": 1152.129560066,
+            "0.25": 1209.161209119,
+            "0.5": 1249.370115441,
+            "0.75": 1289.788091117,
+            "0.95": 1345.420860832
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1224.710428881,
+          "population_std": 169.511734053,
+          "minimum": 670.560313085,
+          "maximum": 1760.822099324,
+          "quantiles": {
+            "0.05": 956.297424928,
+            "0.25": 1112.939707394,
+            "0.5": 1219.872084925,
+            "0.75": 1343.532093257,
+            "0.95": 1508.021455709
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 436.240905008,
+          "population_std": 64.487992454,
+          "minimum": 226.452700306,
+          "maximum": 665.199162123,
+          "quantiles": {
+            "0.05": 334.082329397,
+            "0.25": 392.390353578,
+            "0.5": 434.034292726,
+            "0.75": 478.134882023,
+            "0.95": 546.009082342
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 182.605663825,
+          "population_std": 149.862598965,
+          "minimum": 0.0,
+          "maximum": 803.713551177,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 67.090096355,
+            "0.5": 145.929255391,
+            "0.75": 262.293022982,
+            "0.95": 473.511672788
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.499928571,
+          "population_std": 0.143480764,
+          "minimum": 0.142857143,
+          "maximum": 0.928571429,
+          "quantiles": {
+            "0.05": 0.285714286,
+            "0.25": 0.428571429,
+            "0.5": 0.5,
+            "0.75": 0.571428571,
+            "0.95": 0.714285714
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.499502009,
+          "population_std": 0.247343071,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.666666667,
+            "0.95": 0.888888889
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": -0.001209109,
+          "population_std": 0.342187769,
+          "minimum": -0.986810643,
+          "maximum": 0.780406637,
+          "quantiles": {
+            "0.05": -0.601597328,
+            "0.25": -0.236138279,
+            "0.5": 0.019978217,
+            "0.75": 0.249732301,
+            "0.95": 0.541993383
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 725.69509849,
+            "mean_receiving_radius_m": 1348.952853971,
+            "mean_pairwise_source_distance_m": 992.099190238,
+            "source_mst_m_per_source": 355.195783743,
+            "mean_origin_to_receiving_region_m": 23.444577614,
+            "directional_fraction": 0.252142857,
+            "directional_outward_fraction": 0.1785,
+            "directional_mean_outward_cosine": -0.413108024
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 800.853679037,
+            "mean_receiving_radius_m": 1309.973364147,
+            "mean_pairwise_source_distance_m": 1096.429968528,
+            "source_mst_m_per_source": 391.132842405,
+            "mean_origin_to_receiving_region_m": 59.746661055,
+            "directional_fraction": 0.351428571,
+            "directional_outward_fraction": 0.326166667,
+            "directional_mean_outward_cosine": -0.204514787
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 828.721784424,
+            "mean_receiving_radius_m": 1288.629625736,
+            "mean_pairwise_source_distance_m": 1125.33798348,
+            "source_mst_m_per_source": 401.628441196,
+            "mean_origin_to_receiving_region_m": 83.921961989,
+            "directional_fraction": 0.405714286,
+            "directional_outward_fraction": 0.411333333,
+            "directional_mean_outward_cosine": -0.136182763
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 873.674300968,
+            "mean_receiving_radius_m": 1272.054165419,
+            "mean_pairwise_source_distance_m": 1179.495641941,
+            "source_mst_m_per_source": 416.521783666,
+            "mean_origin_to_receiving_region_m": 116.974681627,
+            "directional_fraction": 0.442142857,
+            "directional_outward_fraction": 0.460047619,
+            "directional_mean_outward_cosine": -0.040010074
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 876.319493124,
+            "mean_receiving_radius_m": 1258.440732363,
+            "mean_pairwise_source_distance_m": 1205.40804338,
+            "source_mst_m_per_source": 430.184117221,
+            "mean_origin_to_receiving_region_m": 129.450881377,
+            "directional_fraction": 0.482142857,
+            "directional_outward_fraction": 0.487619048,
+            "directional_mean_outward_cosine": -0.045492391
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 915.054129723,
+            "mean_receiving_radius_m": 1241.38085289,
+            "mean_pairwise_source_distance_m": 1246.507333059,
+            "source_mst_m_per_source": 441.533478471,
+            "mean_origin_to_receiving_region_m": 164.71068142,
+            "directional_fraction": 0.518571429,
+            "directional_outward_fraction": 0.506428571,
+            "directional_mean_outward_cosine": 0.012431281
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 933.335080321,
+            "mean_receiving_radius_m": 1224.598422972,
+            "mean_pairwise_source_distance_m": 1278.101379394,
+            "source_mst_m_per_source": 456.776066176,
+            "mean_origin_to_receiving_region_m": 205.517970491,
+            "directional_fraction": 0.557857143,
+            "directional_outward_fraction": 0.568214286,
+            "directional_mean_outward_cosine": 0.076414548
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 972.679222325,
+            "mean_receiving_radius_m": 1211.47000444,
+            "mean_pairwise_source_distance_m": 1316.998704901,
+            "source_mst_m_per_source": 466.915538786,
+            "mean_origin_to_receiving_region_m": 252.397906664,
+            "directional_fraction": 0.594285714,
+            "directional_outward_fraction": 0.59625,
+            "directional_mean_outward_cosine": 0.132813883
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1003.610675072,
+            "mean_receiving_radius_m": 1187.783305575,
+            "mean_pairwise_source_distance_m": 1370.039024625,
+            "source_mst_m_per_source": 489.036976064,
+            "mean_origin_to_receiving_region_m": 327.091826741,
+            "directional_fraction": 0.648571429,
+            "directional_outward_fraction": 0.670694444,
+            "directional_mean_outward_cosine": 0.220827467
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1063.897984653,
+            "mean_receiving_radius_m": 1147.178466762,
+            "mean_pairwise_source_distance_m": 1436.687019265,
+            "source_mst_m_per_source": 513.484022348,
+            "mean_origin_to_receiving_region_m": 462.799489276,
+            "directional_fraction": 0.746428571,
+            "directional_outward_fraction": 0.789766123,
+            "directional_mean_outward_cosine": 0.384729771
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.750862724,
+          "spearman": 0.736892885
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.980636834,
+          "spearman": -0.979240027
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.759316779,
+          "spearman": 0.749174681
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.710545721,
+          "spearman": 0.699992308
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.830402756,
+          "spearman": 0.845369567
+        },
+        "directional_fraction": {
+          "pearson": 0.980105719,
+          "spearman": 0.978243322
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.668385988,
+          "spearman": 0.645918475
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.622188459,
+          "spearman": 0.604555793
+        }
+      }
+    },
+    "15": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 897.995483391,
+          "population_std": 128.537632892,
+          "minimum": 562.015169912,
+          "maximum": 1359.68417134,
+          "quantiles": {
+            "0.05": 690.2856619,
+            "0.25": 810.994569512,
+            "0.5": 891.617386787,
+            "0.75": 984.926043942,
+            "0.95": 1116.136176166
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1250.805434703,
+          "population_std": 58.073552339,
+          "minimum": 1077.956492126,
+          "maximum": 1421.321701823,
+          "quantiles": {
+            "0.05": 1153.095113101,
+            "0.25": 1210.661405598,
+            "0.5": 1251.061902521,
+            "0.75": 1290.385989016,
+            "0.95": 1346.358507203
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1221.733754426,
+          "population_std": 173.088461358,
+          "minimum": 781.559084731,
+          "maximum": 1835.23173809,
+          "quantiles": {
+            "0.05": 940.315492484,
+            "0.25": 1105.999541529,
+            "0.5": 1215.394994358,
+            "0.75": 1335.262403394,
+            "0.95": 1518.017245976
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 421.797355561,
+          "population_std": 61.125775568,
+          "minimum": 256.812943552,
+          "maximum": 626.864345218,
+          "quantiles": {
+            "0.05": 322.769145566,
+            "0.25": 378.471570514,
+            "0.5": 421.348586752,
+            "0.75": 462.093452764,
+            "0.95": 521.752906645
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 180.013021958,
+          "population_std": 150.022513301,
+          "minimum": 0.0,
+          "maximum": 943.416620838,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 63.890436493,
+            "0.5": 143.945130827,
+            "0.75": 269.544589905,
+            "0.95": 451.595543895
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.5002,
+          "population_std": 0.14560206,
+          "minimum": 0.066666667,
+          "maximum": 0.933333333,
+          "quantiles": {
+            "0.05": 0.266666667,
+            "0.25": 0.4,
+            "0.5": 0.533333333,
+            "0.75": 0.6,
+            "0.95": 0.733333333
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.496194461,
+          "population_std": 0.248496315,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.666666667,
+            "0.95": 0.889444444
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": -0.001221473,
+          "population_std": 0.336677585,
+          "minimum": -0.999660646,
+          "maximum": 0.812426178,
+          "quantiles": {
+            "0.05": -0.618112155,
+            "0.25": -0.236903148,
+            "0.5": 0.020532572,
+            "0.75": 0.241354068,
+            "0.95": 0.517290937
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 732.287443468,
+            "mean_receiving_radius_m": 1351.668978153,
+            "mean_pairwise_source_distance_m": 997.369185948,
+            "source_mst_m_per_source": 344.101448375,
+            "mean_origin_to_receiving_region_m": 27.063755088,
+            "directional_fraction": 0.250666667,
+            "directional_outward_fraction": 0.226333333,
+            "directional_mean_outward_cosine": -0.338602877
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 795.261042917,
+            "mean_receiving_radius_m": 1310.741574662,
+            "mean_pairwise_source_distance_m": 1083.465407612,
+            "source_mst_m_per_source": 378.16580483,
+            "mean_origin_to_receiving_region_m": 52.468757067,
+            "directional_fraction": 0.348666667,
+            "directional_outward_fraction": 0.311166667,
+            "directional_mean_outward_cosine": -0.218467514
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 817.158516145,
+            "mean_receiving_radius_m": 1290.270437664,
+            "mean_pairwise_source_distance_m": 1117.853346768,
+            "source_mst_m_per_source": 386.16485413,
+            "mean_origin_to_receiving_region_m": 72.479111988,
+            "directional_fraction": 0.402,
+            "directional_outward_fraction": 0.365333333,
+            "directional_mean_outward_cosine": -0.185993748
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 862.286818393,
+            "mean_receiving_radius_m": 1271.634587827,
+            "mean_pairwise_source_distance_m": 1168.680417603,
+            "source_mst_m_per_source": 400.76725375,
+            "mean_origin_to_receiving_region_m": 101.284972756,
+            "directional_fraction": 0.444,
+            "directional_outward_fraction": 0.423809524,
+            "directional_mean_outward_cosine": -0.089768904
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 890.471709504,
+            "mean_receiving_radius_m": 1256.471888272,
+            "mean_pairwise_source_distance_m": 1216.812156031,
+            "source_mst_m_per_source": 420.448239637,
+            "mean_origin_to_receiving_region_m": 132.649522819,
+            "directional_fraction": 0.482,
+            "directional_outward_fraction": 0.459107143,
+            "directional_mean_outward_cosine": -0.055537148
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 907.854235943,
+            "mean_receiving_radius_m": 1244.760113017,
+            "mean_pairwise_source_distance_m": 1233.965684746,
+            "source_mst_m_per_source": 432.519244303,
+            "mean_origin_to_receiving_region_m": 159.166709822,
+            "directional_fraction": 0.520666667,
+            "directional_outward_fraction": 0.496785714,
+            "directional_mean_outward_cosine": 0.004735686
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 932.303537294,
+            "mean_receiving_radius_m": 1228.696973635,
+            "mean_pairwise_source_distance_m": 1260.606809451,
+            "source_mst_m_per_source": 431.74467653,
+            "mean_origin_to_receiving_region_m": 212.024642189,
+            "directional_fraction": 0.552,
+            "directional_outward_fraction": 0.587638889,
+            "directional_mean_outward_cosine": 0.10775999
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 970.954959912,
+            "mean_receiving_radius_m": 1210.919497267,
+            "mean_pairwise_source_distance_m": 1315.21835066,
+            "source_mst_m_per_source": 449.193959174,
+            "mean_origin_to_receiving_region_m": 260.722921857,
+            "directional_fraction": 0.6,
+            "directional_outward_fraction": 0.623166667,
+            "directional_mean_outward_cosine": 0.159472476
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 995.955813864,
+            "mean_receiving_radius_m": 1192.599043999,
+            "mean_pairwise_source_distance_m": 1343.824854317,
+            "source_mst_m_per_source": 465.877653476,
+            "mean_origin_to_receiving_region_m": 321.195572853,
+            "directional_fraction": 0.650666667,
+            "directional_outward_fraction": 0.683161616,
+            "directional_mean_outward_cosine": 0.24155465
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1075.420756464,
+            "mean_receiving_radius_m": 1150.291252532,
+            "mean_pairwise_source_distance_m": 1479.541331119,
+            "source_mst_m_per_source": 508.990421407,
+            "mean_origin_to_receiving_region_m": 461.07425314,
+            "directional_fraction": 0.751333333,
+            "directional_outward_fraction": 0.785441725,
+            "directional_mean_outward_cosine": 0.362632663
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.769044208,
+          "spearman": 0.757885034
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.983105452,
+          "spearman": -0.980697573
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.776208809,
+          "spearman": 0.76181445
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.737174826,
+          "spearman": 0.723154119
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.847315511,
+          "spearman": 0.87129074
+        },
+        "directional_fraction": {
+          "pearson": 0.98238148,
+          "spearman": 0.981196227
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.678279236,
+          "spearman": 0.666174183
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.628660518,
+          "spearman": 0.628156156
+        }
+      }
+    },
+    "16": {
+      "case_count": 1000,
+      "score": {
+        "mean": 0.5,
+        "population_std": 0.164420497,
+        "minimum": 0.016181209,
+        "maximum": 0.983818791,
+        "quantiles": {
+          "0.05": 0.228510732,
+          "0.25": 0.388069225,
+          "0.5": 0.5,
+          "0.75": 0.611930775,
+          "0.95": 0.771489268
+        }
+      },
+      "z": {
+        "mean": 0.0,
+        "population_std": 0.986522982,
+        "minimum": -2.902912746,
+        "maximum": 2.902912746,
+        "quantiles": {
+          "0.05": -1.628935606,
+          "0.25": -0.671584648,
+          "0.5": 0.0,
+          "0.75": 0.671584648,
+          "0.95": 1.628935606
+        }
+      },
+      "interval_counts": {
+        "z_lt_minus1": 158,
+        "minus1_le_z_le_1": 684,
+        "z_gt_1": 158
+      },
+      "geometry": {
+        "mean_source_distance_from_origin_m": {
+          "mean": 897.918555631,
+          "population_std": 128.827034864,
+          "minimum": 489.104194511,
+          "maximum": 1348.732038615,
+          "quantiles": {
+            "0.05": 690.492047626,
+            "0.25": 809.262492193,
+            "0.5": 896.628245777,
+            "0.75": 978.971042572,
+            "0.95": 1122.216628779
+          }
+        },
+        "mean_receiving_radius_m": {
+          "mean": 1249.895211674,
+          "population_std": 58.574840642,
+          "minimum": 1083.000767126,
+          "maximum": 1426.860708683,
+          "quantiles": {
+            "0.05": 1152.650087397,
+            "0.25": 1210.351590995,
+            "0.5": 1250.035422715,
+            "0.75": 1288.294175704,
+            "0.95": 1349.09460835
+          }
+        },
+        "mean_pairwise_source_distance_m": {
+          "mean": 1216.065749912,
+          "population_std": 171.47470914,
+          "minimum": 644.573473313,
+          "maximum": 1803.855158274,
+          "quantiles": {
+            "0.05": 943.004146589,
+            "0.25": 1102.515141962,
+            "0.5": 1214.232435936,
+            "0.75": 1331.231562454,
+            "0.95": 1507.284964623
+          }
+        },
+        "source_mst_m_per_source": {
+          "mean": 405.474457942,
+          "population_std": 59.34064632,
+          "minimum": 219.971140875,
+          "maximum": 617.542284257,
+          "quantiles": {
+            "0.05": 313.487863401,
+            "0.25": 365.992985482,
+            "0.5": 402.46973911,
+            "0.75": 443.192190258,
+            "0.95": 511.666898825
+          }
+        },
+        "mean_origin_to_receiving_region_m": {
+          "mean": 185.196319078,
+          "population_std": 151.89080146,
+          "minimum": 0.0,
+          "maximum": 791.308148441,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 67.967020945,
+            "0.5": 153.234249147,
+            "0.75": 263.09895708,
+            "0.95": 490.205381361
+          }
+        },
+        "directional_fraction": {
+          "mean": 0.4993125,
+          "population_std": 0.146640491,
+          "minimum": 0.125,
+          "maximum": 0.9375,
+          "quantiles": {
+            "0.05": 0.25,
+            "0.25": 0.375,
+            "0.5": 0.5,
+            "0.75": 0.625,
+            "0.95": 0.75
+          }
+        },
+        "directional_outward_fraction": {
+          "mean": 0.506944417,
+          "population_std": 0.244197409,
+          "minimum": 0,
+          "maximum": 1,
+          "quantiles": {
+            "0.05": 0.0,
+            "0.25": 0.333333333,
+            "0.5": 0.5,
+            "0.75": 0.7,
+            "0.95": 0.888888889
+          }
+        },
+        "directional_mean_outward_cosine": {
+          "mean": 0.014492345,
+          "population_std": 0.328871399,
+          "minimum": -0.959846991,
+          "maximum": 0.83075647,
+          "quantiles": {
+            "0.05": -0.552362565,
+            "0.25": -0.204641767,
+            "0.5": 0.030975335,
+            "0.75": 0.246296325,
+            "0.95": 0.527515303
+          }
+        }
+      },
+      "equal_frequency_score_bins": [
+        {
+          "bin": 1,
+          "case_count": 100,
+          "score_min": 0.016181209,
+          "score_max": 0.286958922,
+          "score_mean": 0.211824896,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 723.317897799,
+            "mean_receiving_radius_m": 1351.52035378,
+            "mean_pairwise_source_distance_m": 982.771008842,
+            "source_mst_m_per_source": 328.777321826,
+            "mean_origin_to_receiving_region_m": 20.581418599,
+            "directional_fraction": 0.248125,
+            "directional_outward_fraction": 0.162666667,
+            "directional_mean_outward_cosine": -0.399157991
+          }
+        },
+        {
+          "bin": 2,
+          "case_count": 100,
+          "score_min": 0.287898647,
+          "score_max": 0.359915024,
+          "score_mean": 0.326592944,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 790.153696976,
+            "mean_receiving_radius_m": 1310.984572592,
+            "mean_pairwise_source_distance_m": 1069.844616077,
+            "source_mst_m_per_source": 360.464946632,
+            "mean_origin_to_receiving_region_m": 58.98416881,
+            "directional_fraction": 0.3475,
+            "directional_outward_fraction": 0.356952381,
+            "directional_mean_outward_cosine": -0.179560085
+          }
+        },
+        {
+          "bin": 3,
+          "case_count": 100,
+          "score_min": 0.360507297,
+          "score_max": 0.412619715,
+          "score_mean": 0.387474688,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 837.770794708,
+            "mean_receiving_radius_m": 1288.210604698,
+            "mean_pairwise_source_distance_m": 1129.099083259,
+            "source_mst_m_per_source": 376.365032988,
+            "mean_origin_to_receiving_region_m": 86.748381629,
+            "directional_fraction": 0.396875,
+            "directional_outward_fraction": 0.394047619,
+            "directional_mean_outward_cosine": -0.11922927
+          }
+        },
+        {
+          "bin": 4,
+          "case_count": 100,
+          "score_min": 0.413097384,
+          "score_max": 0.457676828,
+          "score_mean": 0.435767459,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 852.813209583,
+            "mean_receiving_radius_m": 1271.491490922,
+            "mean_pairwise_source_distance_m": 1152.397710145,
+            "source_mst_m_per_source": 383.300177672,
+            "mean_origin_to_receiving_region_m": 108.021178867,
+            "directional_fraction": 0.444375,
+            "directional_outward_fraction": 0.446071429,
+            "directional_mean_outward_cosine": -0.058834596
+          }
+        },
+        {
+          "bin": 5,
+          "case_count": 100,
+          "score_min": 0.458106983,
+          "score_max": 0.499791678,
+          "score_mean": 0.479057728,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 877.948754076,
+            "mean_receiving_radius_m": 1257.671225782,
+            "mean_pairwise_source_distance_m": 1185.65481605,
+            "source_mst_m_per_source": 397.665745655,
+            "mean_origin_to_receiving_region_m": 142.970650776,
+            "directional_fraction": 0.48125,
+            "directional_outward_fraction": 0.509642857,
+            "directional_mean_outward_cosine": 0.00840738
+          }
+        },
+        {
+          "bin": 6,
+          "case_count": 100,
+          "score_min": 0.500208322,
+          "score_max": 0.541893017,
+          "score_mean": 0.520942272,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 913.212374739,
+            "mean_receiving_radius_m": 1242.67518161,
+            "mean_pairwise_source_distance_m": 1244.067470245,
+            "source_mst_m_per_source": 414.512396347,
+            "mean_origin_to_receiving_region_m": 165.015023776,
+            "directional_fraction": 0.514375,
+            "directional_outward_fraction": 0.525138889,
+            "directional_mean_outward_cosine": 0.028752026
+          }
+        },
+        {
+          "bin": 7,
+          "case_count": 100,
+          "score_min": 0.542323172,
+          "score_max": 0.586902616,
+          "score_mean": 0.564232541,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 927.619731333,
+            "mean_receiving_radius_m": 1228.318050991,
+            "mean_pairwise_source_distance_m": 1254.090287986,
+            "source_mst_m_per_source": 419.219673015,
+            "mean_origin_to_receiving_region_m": 199.880313003,
+            "directional_fraction": 0.555625,
+            "directional_outward_fraction": 0.559138889,
+            "directional_mean_outward_cosine": 0.076044334
+          }
+        },
+        {
+          "bin": 8,
+          "case_count": 100,
+          "score_min": 0.587380285,
+          "score_max": 0.639492703,
+          "score_mean": 0.612525312,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 960.06526795,
+            "mean_receiving_radius_m": 1210.187591865,
+            "mean_pairwise_source_distance_m": 1306.476000165,
+            "source_mst_m_per_source": 431.692477609,
+            "mean_origin_to_receiving_region_m": 259.395054159,
+            "directional_fraction": 0.6,
+            "directional_outward_fraction": 0.641111111,
+            "directional_mean_outward_cosine": 0.165004125
+          }
+        },
+        {
+          "bin": 9,
+          "case_count": 100,
+          "score_min": 0.640084976,
+          "score_max": 0.712101353,
+          "score_mean": 0.673407056,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 999.88844365,
+            "mean_receiving_radius_m": 1189.63136732,
+            "mean_pairwise_source_distance_m": 1357.685873211,
+            "source_mst_m_per_source": 450.209791761,
+            "mean_origin_to_receiving_region_m": 328.932939383,
+            "directional_fraction": 0.65375,
+            "directional_outward_fraction": 0.674454545,
+            "directional_mean_outward_cosine": 0.236449278
+          }
+        },
+        {
+          "bin": 10,
+          "case_count": 100,
+          "score_min": 0.713041078,
+          "score_max": 0.983818791,
+          "score_mean": 0.788175104,
+          "mean_geometry": {
+            "mean_source_distance_from_origin_m": 1096.395385496,
+            "mean_receiving_radius_m": 1148.261677182,
+            "mean_pairwise_source_distance_m": 1478.570633135,
+            "source_mst_m_per_source": 492.537015915,
+            "mean_origin_to_receiving_region_m": 481.434061782,
+            "directional_fraction": 0.75125,
+            "directional_outward_fraction": 0.80021978,
+            "directional_mean_outward_cosine": 0.387048243
+          }
+        }
+      ],
+      "score_correlations": {
+        "mean_source_distance_from_origin_m": {
+          "pearson": 0.802154392,
+          "spearman": 0.780280536
+        },
+        "mean_receiving_radius_m": {
+          "pearson": -0.983613223,
+          "spearman": -0.982584791
+        },
+        "mean_pairwise_source_distance_m": {
+          "pearson": 0.81272573,
+          "spearman": 0.795733744
+        },
+        "source_mst_m_per_source": {
+          "pearson": 0.763032728,
+          "spearman": 0.744209232
+        },
+        "mean_origin_to_receiving_region_m": {
+          "pearson": 0.856318002,
+          "spearman": 0.87545521
+        },
+        "directional_fraction": {
+          "pearson": 0.984266493,
+          "spearman": 0.982687708
+        },
+        "directional_outward_fraction": {
+          "pearson": 0.706150367,
+          "spearman": 0.680621382
+        },
+        "directional_mean_outward_cosine": {
+          "pearson": 0.653006468,
+          "spearman": 0.630071262
+        }
+      }
+    }
+  }
+}
